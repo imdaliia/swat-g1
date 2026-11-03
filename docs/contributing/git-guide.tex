@@ -1,0 +1,143 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[margin=2cm]{geometry}
+
+\title{Software Atelier 1 --- Group Project\\[0.3em] \large{How to contribute to the GitHub repository}}
+\author{Edoardo Beretta}
+\date{Latest update: November 3, 2026}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\maketitle
+
+We are about 20 people working on the same repo, so we can't all push directly to \texttt{master} like in the hands-on. Hence, the branch \texttt{master} is protected: nobody can push to it directly. Every change goes through a \emph{branch} and a \emph{pull request}.
+
+\vspace{0.8em}
+
+The basics (\texttt{clone}, \texttt{add}, \texttt{commit}, \texttt{push}, \texttt{pull}, conflicts) work exactly like we saw in class. This document only explains branches and pull requests, and what you have to do step by step.
+
+% section 1 ------------------------------
+\section{Branches and pull requests}
+
+A \textbf{branch} is a separate line of commits. \texttt{master} is the main branch: it's the shared version of the site, the one that is online, and it must always work.
+
+\vspace{0.6em}
+
+When you create a branch, it starts as a copy of \texttt{master} at that moment. All the commits you make go on your branch only, so you can work without touching \texttt{master} and without getting in the way of the others. Nobody sees your work until you push the branch.
+
+\vspace{0.6em}
+
+When your work is done, you open a \textbf{pull request} (PR) on GitHub: it's a request to merge your branch into \texttt{master}. GitHub shows exactly which lines you changed, someone else reviews them and approves, and then the branch is \textbf{merged} into \texttt{master}. At that point your changes are part of the shared version.
+
+% section 2 ------------------------------
+\section{Setup (only to do once)}
+
+\begin{enumerate}
+  \item Accept the invitation to the repository (you get it by email or in your GitHub notifications). Without it you can't push.
+  \item Clone the repo, like in the hands-on:
+    \vspace{-0.8em}
+    \begin{verbatim}
+    git clone https://github.com/imdaliia/swat-g1.git
+    \end{verbatim}
+    \vspace{-1.6em}
+
+  \item Configure git, like in the hands-on (if you already did it, nothing changes):
+    \vspace{-0.8em}
+    \begin{verbatim}
+    git config --global user.name "Name Surname"
+    git config --global user.email "you@example.com"
+    git config --global pull.rebase false
+    \end{verbatim}
+    \vspace{-1.6em}
+    Use the same email as your GitHub account. The last line makes \texttt{git pull} merge instead of rebase, like we saw in class.
+\end{enumerate}
+
+Clone only \textbf{once}. For each new task you create a new branch, not a new clone.
+
+% section 3 ------------------------------
+\section{What to do for every task}
+
+\begin{enumerate}
+  \item Go on \texttt{master} and get the latest version:
+    \vspace{-0.8em}
+    \begin{verbatim}
+    git checkout master
+    git pull
+    \end{verbatim}
+    \vspace{-1.6em}
+
+  \item Create your branch and move onto it (\texttt{-b} creates it):
+    \vspace{-0.8em}
+    \begin{verbatim}
+    git checkout -b yoursurname/what-you-do
+    \end{verbatim}
+    \vspace{-1.6em}
+    For example \texttt{beretta/contrib-docs} or \texttt{berti/global-css}: lowercase, no spaces, words separated by \texttt{-}.
+  
+  \item Work on the files, then add and commit as usual:
+    \vspace{-0.8em}
+    \begin{verbatim}
+    git add style.css
+    git commit -m "edit: menu colors"
+    \end{verbatim}
+    \vspace{-1.6em}
+    You can make as many commits as you want. Before committing, check with \texttt{git status} that you are on your branch and not on \texttt{master}.
+  
+  \item Push your branch. The first time you need \texttt{-u origin} and the branch name, after that just \texttt{git push}:
+    \vspace{-0.8em}
+    \begin{verbatim}
+    git push -u origin yoursurname/what-you-do
+    \end{verbatim}
+    \vspace{-1.6em}
+ 
+  \item Open the pull request: on the repo page GitHub shows a \emph{Compare \& pull request} button right after the push. Write a short title and what you changed as description, then create it and send the link in the group chat.
+ 
+  \item Wait for someone to review it. If they ask for changes, fix them \emph{on the same branch}, commit and \texttt{git push} again: the PR updates by itself, don't open a new one.
+ 
+  \item Once it's approved, it gets merged into \texttt{master} (don't force merge your own PR). The demo website updates by itself within a couple of minutes.
+ 
+  \item For the next task, start again from step 1 with a new branch.
+\end{enumerate}
+
+% section 4 ------------------------------
+\section{When to create a branch}
+
+\begin{itemize}
+  \item One branch for each task, \textbf{not one branch for each person}. A task is something you can describe in one short sentence, like ``add the contribution docs'' or ``modify the global css''.
+  \item Keep them small. A PR with a few files is reviewed in five minutes, one with thirty files sits there for days.
+  \item Don't mix different things in the same branch. If the menu fix is fine but the new colors aren't, the whole PR is blocked.
+  \item Never reuse a branch after it's been merged. Next task, new branch from an updated \texttt{master}.
+  \item Always create the branch from an updated \texttt{master} (step 1), otherwise you start from an old version of the site.
+\end{itemize}
+
+If you know someone else is working on the same part of a file, talk to them first and decide who goes first. It saves you a conflict.
+
+% section 5 ------------------------------
+\section{If master changed in the meantime}
+
+While you work, other PRs get merged into \texttt{master}. Usually you don't have to do anything. You need to bring \texttt{master} into your branch only if GitHub says that your PR has conflicts:
+ 
+\begin{verbatim}
+  git checkout master
+  git pull
+  git checkout yoursurname/what-you-do
+  git merge master
+\end{verbatim}
+ 
+If there are conflicts, you solve them like in class: open the file, keep the right version between the \texttt{<<<<<<<}, \texttt{=======} and \texttt{>>>>>>>} markers, remove the markers, then \texttt{git add} and \texttt{git commit}. Then \texttt{git push}.
+
+% section 6 ------------------------------
+\section{If something goes wrong}
+ 
+\paragraph{You committed on master by mistake.} Your push will be rejected (\texttt{GH013: Repository rule violations}). Nothing is lost: move your commits to a new branch and put \texttt{master} back as it is on GitHub:
+\begin{verbatim}
+  git checkout -b yoursurname/what-you-do
+  git push -u origin yoursurname/what-you-do
+  git checkout master
+  git reset --hard origin/master
+\end{verbatim}
+Then open the PR as usual. Use \texttt{reset --hard} only in this case.
+ 
+\paragraph{Anything else.} Don't try random commands from the internet and never use \texttt{--force}. Run \texttt{git status}, take a screenshot and ask in the group chat.
+
+\end{document}
