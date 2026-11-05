@@ -1,0 +1,59 @@
+name: HTML validation
+
+on:
+  pull_request:
+    branches: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate HTML
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Find changed HTML files
+        id: changed
+        run: |
+          git diff --name-only -z --diff-filter=ACMR \
+            "origin/${{ github.base_ref }}...HEAD" -- '*.html' '*.htm' > "$RUNNER_TEMP/files"
+          count=$(tr -cd '\0' < "$RUNNER_TEMP/files" | wc -c)
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          if [ "$count" -eq 0 ]; then
+            echo "No HTML files changed in this pull request."
+          else
+            echo "HTML files to check:"
+            tr '\0' '\n' < "$RUNNER_TEMP/files"
+          fi
+
+      - uses: actions/setup-java@v4
+        if: steps.changed.outputs.count != '0'
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Install Nu Html Checker
+        if: steps.changed.outputs.count != '0'
+        run: npm install --silent --prefix "$RUNNER_TEMP/vnu" vnu-jar@26.10.12
+
+      - name: Validate HTML files
+        if: steps.changed.outputs.count != '0'
+        run: |
+          set +e
+          xargs -0 java -jar "$RUNNER_TEMP/vnu/node_modules/vnu-jar/build/dist/vnu.jar" \
+            --format json < "$RUNNER_TEMP/files" 2> "$RUNNER_TEMP/vnu.json"
+          status=$?
+          jq -r --arg root "$PWD/" '
+            .messages[]
+            | (if .type == "error" then "error" else "warning" end) as $level
+            | (.url // "" | sub("^file:"; "") | sub("^" + $root; "") | sub("^\\./"; "") | gsub("%20"; " ")) as $file
+            | "::\($level) file=\($file),line=\(.lastLine // 1),title=HTML \($level)::\(.message)"
+          ' "$RUNNER_TEMP/vnu.json"
+          if [ "$status" -eq 0 ]; then
+            echo "All changed HTML files are valid."
+          fi
+          exit $status
