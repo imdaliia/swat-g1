@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#242424">
+  <meta name="description" content="Human-Computer Interaction and Digital Accessibility: exploring people, technology, and inclusive design.">
+  <title>Human-Computer Interaction and Digital Accessibility</title>
+  <link rel="stylesheet" href="source/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="site" id="home">
+    <header class="site-header">
+      <h1 class="site-title">Human-Computer Interaction and Digital Accessibility</h1>
+    </header>
+
+    <!-- Shared navigation: copy this block into future pages, updating aria-current. -->
+    <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" href="index.html" aria-current="page">Home</a></li>
+        <li><a class="site-nav__link" href="index.html#potential">Potential</a></li>
+        <li><a class="site-nav__link" href="index.html#accessibility">Accessibility</a></li>
+        <li><a class="site-nav__link" href="index.html#topics">Topics</a></li>
+        <li><a class="site-nav__link" href="lorem.html">Style demo</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-content">
+      <section class="section section--flush" id="potential" aria-labelledby="potential-title">
+        <div class="hover-image aspect-wide">
+          <img src="source/images/index/robotic-hands-solving-rubiks-cube.jpg"
+               alt="Robotic hands solving a Rubik's Cube in front of a researcher." fetchpriority="high">
+        </div>
+        <div class="section section--compact">
+          <h2 class="measure-short" id="potential-title">Connect to your potential. Interact with your mind.</h2>
+        </div>
+      </section>
+
+      <figure class="image-overlay image-overlay--top-right aspect-wide hover-image">
+        <img src="source/images/index/historic-mechanical-calculator.png"
+             alt="Historical mechanical calculator with intricately assembled brass gears." loading="lazy">
+        <figcaption class="image-overlay__caption text-invert">The wonders of the human mind can be expanded by the wise use of machines.</figcaption>
+      </figure>
+
+      <section class="section stack" id="accessibility" aria-labelledby="accessibility-title">
+        <h2 class="measure-medium push-right text-right" id="accessibility-title">Accessibility is a bridge. Let it reach everyone.</h2>
+        <p class="measure-short text-muted">Computers are everywhere. Now you can enable anyone through accessibility.</p>
+        <figure class="media media--inset">
+          <div class="hover-image aspect-panoramic">
+            <img src="source/images/index/child-using-tablet.webp"
+                 alt="A child interacting with a tablet in a dimly lit room." loading="lazy">
+          </div>
+        </figure>
+      </section>
+
+      <section class="section stack" id="topics" aria-labelledby="topics-title">
+        <h2 class="section-heading center text-center" id="topics-title">Explore deep knowledge. Become an expert.</h2>
+        <!-- The topic cards are deliberately not linked until the topic pages exist. -->
+        <div class="tile-grid">
+          <article class="image-overlay aspect-card hover-image">
+            <img src="source/images/index/human-computer-interface-design.webp" alt="Human-computer interface design concept." loading="lazy">
+            <h3 class="image-overlay__caption image-overlay__caption--label">Designing human-machine interfaces</h3>
+          </article>
+          <article class="image-overlay aspect-card hover-image">
+            <img src="source/images/index/web-accessibility-concept.jpg" alt="Illustration of accessible digital technology." loading="lazy">
+            <h3 class="image-overlay__caption image-overlay__caption--label">Web accessibility</h3>
+          </article>
+          <article class="image-overlay aspect-card hover-image">
+            <img src="source/images/index/future-human-machine-interaction.webp" alt="Illustration of a human brain alongside robotic machinery." loading="lazy">
+            <h3 class="image-overlay__caption image-overlay__caption--label">Future of human-machine interfaces</h3>
+          </article>
+          <article class="image-overlay aspect-card hover-image">
+            <img src="source/images/index/vintage-computer-and-keyboard.jpg" alt="Vintage computer and keyboard." loading="lazy">
+            <h3 class="image-overlay__caption image-overlay__caption--label">Input output devices</h3>
+          </article>
+          <article class="image-overlay aspect-card hover-image">
+            <img src="source/images/index/square-wheel-bicycle-design-failure.jpg" alt="Blue bicycle fitted with square wheels." loading="lazy">
+            <h3 class="image-overlay__caption image-overlay__caption--label">Design failures</h3>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

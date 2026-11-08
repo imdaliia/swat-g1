@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#242424">
+  <meta name="description" content="Demonstration of the reusable styles for the HCI and Digital Accessibility website.">
+  <title>Lorem Ipsum | HCI Style Demonstration</title>
+  <link rel="stylesheet" href="source/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="site">
+    <header class="site-header">
+      <h1 class="site-title">Human-Computer Interaction and Digital Accessibility</h1>
+    </header>
+
+    <!-- Shared navigation: copy this block into future pages, updating aria-current. -->
+    <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" href="index.html">Home</a></li>
+        <li><a class="site-nav__link" href="index.html#potential">Potential</a></li>
+        <li><a class="site-nav__link" href="index.html#accessibility">Accessibility</a></li>
+        <li><a class="site-nav__link" href="index.html#topics">Topics</a></li>
+        <li><a class="site-nav__link" href="lorem.html" aria-current="page">Style demo</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-content">
+      <!-- General article introduction: section, stack, typography utilities. -->
+      <section class="section stack stack--tight" id="overview" aria-labelledby="article-title">
+        <p class="eyebrow">Sample article / Typography</p>
+        <h2 class="display-title" id="article-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        <p class="lead">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+      </section>
+
+      <!-- The same overlay and image-hover classes used on the homepage. -->
+      <section class="section section--compact stack stack--tight" aria-label="Full-width image with inverted text">
+        <figure class="media">
+          <div class="image-overlay aspect-wide hover-image">
+            <img src="source/images/index/robotic-hands-solving-rubiks-cube.jpg"
+                 alt="Robotic hands holding a Rubik’s Cube." loading="lazy">
+            <p class="image-overlay__caption image-overlay__caption--large text-invert">Lorem ipsum dolor sit amet.</p>
+          </div>
+          <figcaption class="media__caption">A wide image with a reusable overlay, inverted text and CSS-only zoom and light-sweep interaction.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section stack" aria-labelledby="text-title">
+        <div class="split">
+          <div class="prose">
+            <h2 id="text-title">Nulla facilisi etiam dignissim diam.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            <p>Donec pretium vulputate sapien nec sagittis aliquam malesuada. Vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor.</p>
+            <h3>Quisque egestas diam</h3>
+            <ul>
+              <li>Aliquam faucibus purus in massa tempor nec.</li>
+              <li>Viverra nam libero justo laoreet sit amet.</li>
+              <li>Facilisi cras fermentum odio eu feugiat.</li>
+            </ul>
+          </div>
+          <figure class="media">
+            <div class="hover-image aspect-landscape">
+              <img src="source/images/index/child-using-tablet.webp"
+                   alt="Child using a touchscreen tablet." loading="lazy">
+            </div>
+            <figcaption class="media__caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section stack" id="components" aria-labelledby="cards-title">
+        <h2 id="cards-title">Lorem ipsum: cards and components</h2>
+        <div class="card-grid">
+          <article class="content-card">
+            <div class="hover-image aspect-card">
+              <img src="source/images/index/human-computer-interface-design.webp" alt="Diagram of a human-computer interface." loading="lazy">
+            </div>
+            <h3>Dolor sit amet</h3>
+            <p>Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla.</p>
+          </article>
+          <article class="content-card">
+            <div class="hover-image aspect-card">
+              <img src="source/images/index/web-accessibility-concept.jpg" alt="Illustration of accessible digital technology." loading="lazy">
+            </div>
+            <h3>Consectetur adipiscing</h3>
+            <p>Neque vitae tempus quam pellentesque nec nam aliquam sem et tortor.</p>
+          </article>
+          <article class="content-card">
+            <div class="hover-image aspect-card">
+              <img src="source/images/index/future-human-machine-interaction.webp" alt="Artwork depicting a human brain and robotics." loading="lazy">
+            </div>
+            <h3>Eiusmod tempor</h3>
+            <p>Morbi tristique senectus et netus et malesuada fames ac turpis.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Example quotation">
+        <blockquote class="quote">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”</blockquote>
+      </section>
+
+      <!-- Reuse the same tile-grid/overlay components shown on index.html. -->
+      <section class="section stack" aria-labelledby="tiles-title">
+        <h2 class="section-heading text-center center" id="tiles-title">Lorem ipsum image tiles</h2>
+        <div class="tile-grid">
+          <!-- Example: an entire image tile can be a link. -->
+          <a class="image-overlay aspect-card hover-image image-link" href="index.html#topics">
+            <img src="source/images/index/historic-mechanical-calculator.png" alt="" loading="lazy">
+            <h3 class="image-overlay__caption image-overlay__caption--label">Return to topics</h3>
+          </a>
+          <article class="image-overlay aspect-card hover-image">
+            <img src="source/images/index/vintage-computer-and-keyboard.jpg" alt="Vintage personal computer." loading="lazy">
+            <h3 class="image-overlay__caption image-overlay__caption--label">Dolor sit amet</h3>
+          </article>
+          <article class="image-overlay aspect-card hover-image">
+            <img src="source/images/index/square-wheel-bicycle-design-failure.jpg" alt="Bicycle with square wheels." loading="lazy">
+            <h3 class="image-overlay__caption image-overlay__caption--label">Consectetur adipiscing</h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="section stack" id="gallery" aria-labelledby="gallery-title">
+        <h2 id="gallery-title">Images and captions</h2>
+        <div class="split">
+          <figure class="media">
+            <!-- External link: no JavaScript or extra CSS is required. -->
+            <a class="hover-image image-link aspect-landscape" href="https://www.w3.org/WAI/"
+               aria-label="Visit W3C Web Accessibility Initiative">
+              <img src="source/images/index/web-accessibility-concept.jpg"
+                   alt="Illustration of accessible digital technology." loading="lazy">
+            </a>
+            <figcaption class="media__caption">Click the image to visit the W3C Web Accessibility Initiative.</figcaption>
+          </figure>
+          <figure class="media">
+            <!-- Internal link: replace href with the future article's address. -->
+            <a class="hover-image image-link aspect-landscape" href="index.html#topics"
+               aria-label="Visit the homepage topics section">
+              <img src="source/images/index/vintage-computer-and-keyboard.jpg"
+                   alt="Vintage personal computer and keyboard." loading="lazy">
+            </a>
+            <figcaption class="media__caption">Click the image to return to the homepage topics.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <footer class="section section--compact">
+        <div class="page-footer">
+          <p><a href="index.html">Return to the homepage</a></p>
+        </div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
