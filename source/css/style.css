@@ -11,7 +11,7 @@
   --space: clamp(1.25rem, 4vw, 3rem);
 }
 
-/* All pages share the same basic elements. */
+
 *,
 *::before,
 *::after {
@@ -39,8 +39,8 @@ h4 {
 h1 {
   max-width: 32ch;
   margin-inline: auto;
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  font-weight: 300;
+  font-size: clamp(3rem, 3vw, 3rem); /* increase the minimum size to 3rem as requested*/
+  font-weight: 600;
 }
 
 h2 {
@@ -158,7 +158,7 @@ section> :last-child {
   margin-bottom: 0;
 }
 
-/* Generic layout utilities: do not style individual pages. */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
