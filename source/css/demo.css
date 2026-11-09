@@ -1,0 +1,30 @@
+/* Only for demo.html: frames that show the examples. Do not use in site pages. */
+
+.demo > section + section { border-top: 1px solid var(--border); }
+
+/* Live example, followed by a <details class="markup"> with its code. */
+.example {
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border: 1px dashed rgb(255 255 255 / 20%);
+  border-radius: var(--radius);
+}
+.example > :first-child { margin-top: 0; }
+.example > :last-child, .example .breadcrumb ol { margin-bottom: 0; }
+
+.markup { margin-bottom: 2rem; background: none; }
+.markup summary { color: var(--muted); font-weight: 500; }
+details.markup > pre { margin: 0; }
+
+/* Colour samples: the colour comes from --swatch in the style attribute. */
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 10rem), 1fr));
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+.swatches li { overflow: hidden; border: 1px solid var(--border); border-radius: .6rem; background: var(--raised); }
+.swatches li::before { content: ""; display: block; height: 3.5rem; background: var(--swatch, var(--accent)); }
+.swatches code, .swatches span { display: block; padding: .3rem .75rem; background: none; }
+.swatches span { color: var(--muted); font-size: .85rem; }
