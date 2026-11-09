@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sample article: how the bicycle went from a wooden running machine to the safety bicycle we ride today.">
+  <meta name="author" content="Name Surname">
+  <meta name="theme-color" content="#0b0d12">
+  <title>A short history of the bicycle | HCI</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<!-- In your pages put your topic class here, e.g. <body class="topic-web-accessibility"> -->
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="demo.html">Demo</a></li>
+        <li><span aria-current="page">Sample article</span></li>
+      </ol>
+    </nav>
+    <p class="eyebrow">Sample article - not part of the site content</p>
+    <h1>A short history of the bicycle</h1>
+    <p class="lead">From a wooden machine you pushed with your feet to the bicycle we ride today: seventy years of trial, error and very painful falls.</p>
+    <ul class="pills" aria-label="About this page">
+      <li><span class="pill">By Name Surname</span></li>
+      <li><span class="pill">4 min read</span></li>
+      <li><span class="pill tip">Sample</span></li>
+    </ul>
+  </header>
+  <nav aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#topics">Topics</a></li>
+      <li><a href="demo.html">Demo</a></li>
+    </ul>
+  </nav>
+  <main id="main">
+    <div class="article-layout">
+      <nav class="toc" aria-labelledby="toc-title">
+        <h2 id="toc-title">On this page</h2>
+        <ol>
+          <li><a href="#start">A machine without pedals</a></li>
+          <li><a href="#timeline">Timeline</a></li>
+          <li><a href="#compare">Four designs compared</a></li>
+          <li><a href="#lesson">A lesson in design</a></li>
+          <li><a href="#faq">Questions</a></li>
+          <li><a href="#sources">Sources</a></li>
+        </ol>
+      </nav>
+
+      <article>
+        <section id="start">
+          <h2>A machine without pedals</h2>
+          <p>In 1817 the German inventor Karl Drais rode a strange wooden machine through Mannheim. It had two wheels in a line, a seat and a handlebar, but <strong>no pedals</strong>: the rider pushed against the ground with their feet, like a child on a balance bike<sup><a id="cite-1" href="#ref-1">[1]</a></sup>.</p>
+          <p>Drais called it the <em>Laufmaschine</em>, the "running machine". It was fast on good roads and useless on bad ones, but it proved one important idea: a person can keep their balance on two wheels while moving.</p>
+          <blockquote>
+            <p>Life is like riding a bicycle. To keep your balance you must keep moving.</p>
+            <footer>- Albert Einstein, letter to his son Eduard (1930)</footer>
+          </blockquote>
+        </section>
+
+        <section id="timeline">
+          <h2>Timeline</h2>
+          <ol class="timeline">
+            <li><time datetime="1817">1817</time> Karl Drais presents the running machine, pushed with the feet.</li>
+            <li><time datetime="1860">1860s</time> In France, pedals are fixed to the front wheel. In English this machine is nicknamed the "boneshaker".</li>
+            <li><time datetime="1870">1870s</time> The high-wheeler, or penny-farthing, makes the front wheel huge to go further with each turn of the pedals.</li>
+            <li><time datetime="1885">1885</time> John Kemp Starley's Rover "safety bicycle" uses two similar wheels and a chain to the rear wheel<sup><a id="cite-2" href="#ref-2">[2]</a></sup>.</li>
+            <li><time datetime="1888">1888</time> John Boyd Dunlop patents the pneumatic tyre, and the ride stops shaking your bones<sup><a href="#ref-2">[2]</a></sup>.</li>
+          </ol>
+        </section>
+
+        <section id="compare">
+          <h2>Four designs compared</h2>
+          <div class="table-wrap">
+            <table>
+              <caption>How each design moved the rider</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Design</th>
+                  <th scope="col" class="num">Year</th>
+                  <th scope="col">Drive</th>
+                  <th scope="col">Main problem</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Running machine</th>
+                  <td class="num">1817</td>
+                  <td>Feet on the ground</td>
+                  <td>Needs smooth roads</td>
+                </tr>
+                <tr>
+                  <th scope="row">Boneshaker</th>
+                  <td class="num">1860s</td>
+                  <td>Pedals on the front wheel</td>
+                  <td>Heavy and uncomfortable</td>
+                </tr>
+                <tr>
+                  <th scope="row">Penny-farthing</th>
+                  <td class="num">1870s</td>
+                  <td>Pedals on a huge front wheel</td>
+                  <td><span class="pill danger">Dangerous falls</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Safety bicycle</th>
+                  <td class="num">1885</td>
+                  <td>Chain to the rear wheel</td>
+                  <td><span class="pill tip">Solved</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <dl>
+            <dt>Penny-farthing</dt>
+            <dd>Named after two British coins of different sizes, like its two wheels.</dd>
+            <dt>Safety bicycle</dt>
+            <dd>The name says it all: compared with the penny-farthing, its rider sat low and could put a foot down.</dd>
+          </dl>
+        </section>
+
+        <section id="lesson">
+          <h2>A lesson in design</h2>
+          <p>The penny-farthing was fast, but a small bump could throw the rider over the handlebar. The safety bicycle won because it fixed the problem for the <strong>person</strong>, not for the machine: same speed thanks to the chain, but a rider who could reach the ground.</p>
+          <figure class="caption-below">
+            <img src="../images/index/square-wheel-bicycle-design-failure.jpg" alt="A bicycle with square wheels." loading="lazy">
+            <figcaption>Figure 1. Not every redesign is an improvement: a bicycle with square wheels.</figcaption>
+          </figure>
+          <div class="callout tip">
+            <strong>Good practice</strong>
+            <p>Test a design with the people who will use it. Many problems of the penny-farthing were obvious only after a fall.</p>
+          </div>
+          <div class="callout warning">
+            <strong>Be careful</strong>
+            <p>The oldest design is not always the worst one. Today's balance bikes for children are basically Drais's running machine.</p>
+          </div>
+        </section>
+
+        <section id="faq">
+          <h2>Questions</h2>
+          <details>
+            <summary>Why was the front wheel of the penny-farthing so big?</summary>
+            <p>The pedals were fixed to the wheel, so one turn of the pedals meant one turn of the wheel. A bigger wheel covered more ground with every turn.</p>
+          </details>
+          <details>
+            <summary>What made the safety bicycle safer?</summary>
+            <p>The chain let the designers make the wheels small without losing speed. The rider sat lower, behind the front wheel, and was much less likely to fall over the handlebar.</p>
+          </details>
+        </section>
+
+        <section id="sources">
+          <h2>Sources</h2>
+          <ol class="references">
+            <li id="ref-1">Wikipedia. <cite>Dandy horse</cite>. <a href="https://en.wikipedia.org/wiki/Dandy_horse">en.wikipedia.org</a> <a href="#cite-1">back to text</a></li>
+            <li id="ref-2">Wikipedia. <cite>History of the bicycle</cite>. <a href="https://en.wikipedia.org/wiki/History_of_the_bicycle">en.wikipedia.org</a> <a href="#cite-2">back to text</a></li>
+          </ol>
+        </section>
+
+        <nav class="pager" aria-label="Related pages">
+          <a href="demo.html" rel="prev"><span>Previous</span>Theme demo</a>
+          <a href="index.html" rel="next"><span>Next</span>Home</a>
+        </nav>
+      </article>
+    </div>
+  </main>
+  <footer>
+    <p>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</p>
+  </footer>
+</body>
+</html>

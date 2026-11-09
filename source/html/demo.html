@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Theme demo and guide: every element of the shared CSS, with the markup to copy for your articles.">
+  <meta name="author" content="HCI and Digital Accessibility Team">
+  <meta name="theme-color" content="#0b0d12">
+  <title>Theme demo | HCI</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li><span aria-current="page">Theme demo</span></li>
+      </ol>
+    </nav>
+    <p class="eyebrow">Shared CSS - guide for authors</p>
+    <h1>Theme demo</h1>
+    <p class="lead">Every element of <code>source/css/style.css</code>, live, with the markup to copy. If you need something that is not here, ask the CSS team before inventing a new style.</p>
+    <ul class="pills" aria-label="About this page">
+      <li><span class="pill">Markup to copy</span></li>
+      <li><span class="pill tip">WCAG AA colours</span></li>
+      <li><span class="pill warning">Read before writing</span></li>
+    </ul>
+  </header>
+  <nav aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#topics">Topics</a></li>
+      <li><a href="demo.html" aria-current="page">Demo</a></li>
+    </ul>
+  </nav>
+  <main id="main">
+    <div class="article-layout">
+      <nav class="toc" aria-labelledby="toc-title">
+        <h2 id="toc-title">On this page</h2>
+        <ol>
+          <li><a href="#start">Start a page</a></li>
+          <li><a href="#rules">Rules</a></li>
+          <li><a href="#colours">Colours and topics</a></li>
+          <li><a href="#text">Text</a></li>
+          <li><a href="#lists">Lists and timeline</a></li>
+          <li><a href="#pills">Pills and buttons</a></li>
+          <li><a href="#callouts">Callouts</a></li>
+          <li><a href="#quotes">Quotes and code</a></li>
+          <li><a href="#tables">Tables</a></li>
+          <li><a href="#images">Images</a></li>
+          <li><a href="#layout">Layout and cards</a></li>
+          <li><a href="#references">References</a></li>
+          <li><a href="#faq">Collapsible blocks</a></li>
+          <li><a href="#navigation">Navigation</a></li>
+          <li><a href="#template">Article template</a></li>
+          <li><a href="#a11y">Accessibility checklist</a></li>
+        </ol>
+      </nav>
+
+      <div class="demo">
+        <!-- START -->
+        <section id="start">
+          <h2>Start a page</h2>
+          <p>Every page links <strong>only</strong> <code>style.css</code>. The path depends on how deep your file is: count the folders between your page and the project root.</p>
+          <div class="table-wrap">
+            <table>
+              <caption>Paths from your page to the shared files</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Your page</th>
+                  <th scope="col">Stylesheet</th>
+                  <th scope="col">Home</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><code>source/html/sample-article.html</code></th>
+                  <td><code>../css/style.css</code></td>
+                  <td><code>index.html</code></td>
+                </tr>
+                <tr>
+                  <th scope="row"><code>source/html/web_accessibility/page.html</code></th>
+                  <td><code>../../css/style.css</code></td>
+                  <td><code>../index.html</code></td>
+                </tr>
+                <tr>
+                  <th scope="row"><code>source/html/design_failures/dark_patterns/page.html</code></th>
+                  <td><code>../../../css/style.css</code></td>
+                  <td><code>../../index.html</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Images work the same way, e.g. <code>../../images/web_accessibility/photo.jpg</code>. The fonts are loaded by the stylesheet itself: nothing to add.</p>
+        </section>
+
+        <!-- RULES -->
+        <section id="rules">
+          <h2>Rules</h2>
+          <ol>
+            <li>Every page has <code>&lt;meta name="author" content="Name Surname"&gt;</code> (it is graded) and passes the <a href="https://validator.w3.org/">W3C validator</a>.</li>
+            <li>Write plain HTML elements. Use a class only when this page tells you to.</li>
+            <li>Put your topic class on <code>&lt;body&gt;</code>: the whole page takes the topic colour.</li>
+            <li>Your topic stylesheet may <strong>add</strong> classes with a prefix (<code>wa-</code>, <code>df-</code>...) but never restyle a shared selector like <code>p</code> or <code>.callout</code>.</li>
+            <li>No colours, fonts or sizes written by hand: use the variables, e.g. <code>var(--accent)</code>.</li>
+            <li>Headings go in order (<code>h1</code>, then <code>h2</code>, then <code>h3</code>), and there is one <code>h1</code> per page.</li>
+          </ol>
+        </section>
+
+        <!-- COLOURS -->
+        <section id="colours">
+          <h2>Colours and topics</h2>
+          <p>All text colours have a contrast of at least 4.5:1 on the background.</p>
+          <h3>Base colours</h3>
+          <ul class="swatches">
+            <li style="--swatch: var(--bg)"><code>--bg</code><span>Page background</span></li>
+            <li style="--swatch: var(--raised)"><code>--raised</code><span>Cards, boxes</span></li>
+            <li style="--swatch: var(--text)"><code>--text</code><span>Main text</span></li>
+            <li style="--swatch: var(--muted)"><code>--muted</code><span>Secondary text</span></li>
+            <li style="--swatch: var(--accent)"><code>--accent</code><span>Links, details</span></li>
+          </ul>
+          <h3>Tones</h3>
+          <ul class="swatches">
+            <li style="--swatch: var(--tip)"><code>.tip</code><span>Good practice</span></li>
+            <li style="--swatch: var(--warning)"><code>.warning</code><span>Be careful</span></li>
+            <li style="--swatch: var(--danger)"><code>.danger</code><span>Do not do this</span></li>
+          </ul>
+          <h3>Topic accents</h3>
+          <p>One class on <code>&lt;body&gt;</code> changes <code>--accent</code>: links, pills, buttons, callouts, list markers and the timeline follow.</p>
+          <ul class="swatches">
+            <li class="topic-io-devices"><code>.topic-io-devices</code><span>Input/Output devices</span></li>
+            <li class="topic-design-interfaces"><code>.topic-design-interfaces</code><span>Designing interfaces</span></li>
+            <li class="topic-web-accessibility"><code>.topic-web-accessibility</code><span>Web accessibility</span></li>
+            <li class="topic-design-failures"><code>.topic-design-failures</code><span>Design failures</span></li>
+            <li class="topic-future-interfaces"><code>.topic-future-interfaces</code><span>Future interfaces</span></li>
+          </ul>
+          <div class="example topic-web-accessibility">
+            <p class="eyebrow">Web accessibility</p>
+            <p>The same markup in another topic: <a href="#colours">a link</a>, <span class="pill">a pill</span> and a button.</p>
+            <p class="row"><a class="button" href="#colours">Button</a></p>
+          </div>
+          <details class="markup">
+            <summary>Markup</summary>
+<pre><code>&lt;body class="topic-web-accessibility"&gt;</code></pre>
+          </details>
+        </section>
+
+        <!-- TEXT -->
+        <section id="text">
+          <h2>Text</h2>
+          <div class="example">
+            <p class="eyebrow">Eyebrow</p>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <p class="lead">Lead paragraph: one or two sentences that open the page or a section.</p>
+            <p>Body text with <a href="#text">a link</a>, <strong>important words</strong>, <em>emphasis</em>, <mark>highlighted text</mark>, an abbreviation like <abbr title="Human-Computer Interaction">HCI</abbr>, inline <code>code</code> and keys such as <kbd>Ctrl</kbd> + <kbd>F</kbd>. Formulas can use H<sub>2</sub>O or x<sup>2</sup>.</p>
+            <p><small>Small text for notes, dates and credits.</small></p>
+          </div>
+          <details class="markup">
+            <summary>Markup</summary>
+<pre><code>&lt;p class="eyebrow"&gt;Eyebrow&lt;/p&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;p class="lead"&gt;Lead paragraph.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a href="..."&gt;a link&lt;/a&gt;, &lt;strong&gt;important&lt;/strong&gt;, &lt;em&gt;emphasis&lt;/em&gt;,
+  &lt;mark&gt;highlight&lt;/mark&gt;, &lt;abbr title="Human-Computer Interaction"&gt;HCI&lt;/abbr&gt;,
+  &lt;code&gt;code&lt;/code&gt;, &lt;kbd&gt;Ctrl&lt;/kbd&gt;, H&lt;sub&gt;2&lt;/sub&gt;O, x&lt;sup&gt;2&lt;/sup&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;Small text.&lt;/small&gt;&lt;/p&gt;</code></pre>
+          </details>
+        </section>
+
+        <!-- LISTS -->
+        <section id="lists">
+          <h2>Lists and timeline</h2>
+          <div class="example">
+            <div class="grid">
+              <div>
+                <h3>Unordered</h3>
+                <ul>
+                  <li>Keyboards</li>
+                  <li>Mice and trackpads</li>
+                  <li>Touchscreens</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Ordered</h3>
+                <ol>
+                  <li>Perceivable</li>
+                  <li>Operable</li>
+                  <li>Understandable</li>
+                  <li>Robust</li>
+                </ol>
+              </div>
+              <div>
+                <h3>Definitions</h3>
+                <dl>
+                  <dt>Affordance</dt>
+                  <dd>What an object suggests you can do with it.</dd>
+                  <dt>Feedback</dt>
+                  <dd>How the system answers an action.</dd>
+                </dl>
+              </div>
+            </div>
+            <h3>Timeline</h3>
+            <ol class="timeline">
+              <li><time datetime="1968">1968</time> Douglas Engelbart shows the mouse in "The Mother of All Demos".</li>
+              <li><time datetime="1984">1984</time> The Apple Macintosh brings the graphical interface to the home.</li>
+              <li><time datetime="2007">2007</time> The iPhone makes multi-touch the default.</li>
+            </ol>
+          </div>
+          <details class="markup">
+            <summary>Markup</summary>
+<pre><code>&lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ul&gt;
+&lt;ol&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ol&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Affordance&lt;/dt&gt;
+  &lt;dd&gt;What an object suggests you can do with it.&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;ol class="timeline"&gt;
+  &lt;li&gt;&lt;time datetime="1968"&gt;1968&lt;/time&gt; What happened.&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+          </details>
+        </section>
+
+        <!-- PILLS & BUTTONS -->
+        <section id="pills">
+          <h2>Pills and buttons</h2>
+          <p>Pills are small labels: tags, status, reading time. Add a tone class when the colour has a meaning, and always say it in the text too.</p>
+          <div class="example">
+            <ul class="pills" aria-label="Tags">
+              <li><span class="pill">Accent</span></li>
+              <li><span class="pill tip">Tip</span></li>
+              <li><span class="pill warning">Warning</span></li>
+              <li><span class="pill danger">Danger</span></li>
+              <li><a class="pill" href="#pills">Link pill</a></li>
+            </ul>
+            <p class="row">
+              <a class="button" href="#pills">Primary button</a>
+              <a class="button ghost" href="#pills">Secondary button</a>
+            </p>
+          </div>
+          <details class="markup">
+            <summary>Markup</summary>
+<pre><code>&lt;span class="pill"&gt;Accent&lt;/span&gt;
+&lt;span class="pill tip"&gt;Tip&lt;/span&gt;   &lt;!-- also: warning, danger --&gt;
+
+&lt;!-- A list of pills --&gt;
+&lt;ul class="pills" aria-label="Tags"&gt;
+  &lt;li&gt;&lt;span class="pill"&gt;Mobile&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Buttons are links styled as buttons; .row puts them side by side --&gt;
+&lt;p class="row"&gt;
+  &lt;a class="button" href="..."&gt;Primary&lt;/a&gt;
+  &lt;a class="button ghost" href="..."&gt;Secondary&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+          </details>
+        </section>
+
+        <!-- CALLOUTS -->
+        <section id="callouts">
+          <h2>Callouts</h2>
+          <p>Boxes that stand out from the text. Start with a short title that says what kind of box it is: colour alone does not carry meaning.</p>
+          <div class="example">
+            <div class="callout">
+              <strong>Did you know?</strong>
+              <p>Plain callout, in the topic colour.</p>
+            </div>
+            <div class="callout tip">
+              <strong>Good practice</strong>
+              <p>Give both options the same visual weight.</p>
+            </div>
+            <div class="callout warning">
+              <strong>Be careful</strong>
+              <p>Colour alone is not enough to show an error.</p>
+            </div>
+            <div class="callout danger">
+              <strong>Avoid</strong>
+              <p>Never disable zoom on mobile.</p>
+            </div>
+          </div>
+          <details class="markup">
+            <summary>Markup</summary>
+<pre><code>&lt;div class="callout tip"&gt;   &lt;!-- or: callout, callout warning, callout danger --&gt;
+  &lt;strong&gt;Good practice&lt;/strong&gt;
+  &lt;p&gt;Text of the callout.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+          </details>
+        </section>
+
+        <!-- QUOTES & CODE -->
+        <section id="quotes">
+          <h2>Quotes and code</h2>
+          <div class="example">
+            <blockquote>
+              <p>The best interface is no interface.</p>
+              <footer>- Golden Krishna, <cite>The Best Interface Is No Interface</cite> (2015)</footer>
+            </blockquote>
+<pre><code>&lt;button type="button"&gt;Save&lt;/button&gt;</code></pre>
+          </div>
+          <details class="markup">
+            <summary>Markup</summary>
+<pre><code>&lt;blockquote&gt;
+  &lt;p&gt;The quotation.&lt;/p&gt;
+  &lt;footer&gt;&amp;mdash; Author, &lt;cite&gt;Source title&lt;/cite&gt; (year)&lt;/footer&gt;
+&lt;/blockquote&gt;
+
+&lt;!-- In a code block write &amp;lt; for &lt; and &amp;gt; for &gt; --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;button&amp;gt;Save&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+          </details>
+        </section>
+
+        <!-- TABLES -->
+        <section id="tables">
+          <h2>Tables</h2>
+          <p>Wrap every table in <code>.table-wrap</code>: on phones it scrolls sideways instead of breaking the page. Always give it a <code>&lt;caption&gt;</code> and use <code>&lt;th scope&gt;</code> for headers. Add <code>.num</code> to cells with numbers.</p>
+          <div class="example">
+            <div class="table-wrap">
+              <table>
+                <caption>Confirmshaming vs honest wording</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Element</th>
+                    <th scope="col">Confirmshaming</th>
+                    <th scope="col">Honest</th>
+                    <th scope="col" class="num">Clicks on "no"</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Decline text</th>
+                    <td>"No, I hate saving money"</td>
+                    <td>"No thanks"</td>
+                    <td class="num">12%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Buttons</th>
+                    <td>One big, one tiny</td>
+                    <td>Same size</td>
+                    <td class="num">31%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Status</th>
+                    <td><span class="pill danger">Dark pattern</span></td>
+                    <td><span class="pill tip">Fair</span></td>
+                    <td class="num">-</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p><small>Numbers are example data.</small></p>
+          </div>
+          <details class="markup">
+            <summary>Markup</summary>
+<pre><code>&lt;div class="table-wrap"&gt;
+  &lt;table&gt;
+    &lt;caption&gt;What the table shows&lt;/caption&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th scope="col"&gt;Element&lt;/th&gt;
+        &lt;th scope="col" class="num"&gt;Clicks&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;th scope="row"&gt;Decline text&lt;/th&gt;
+        &lt;td class="num"&gt;12%&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+          </details>
+        </section>
+
+        <!-- IMAGES -->
+        <section id="images">
+          <h2>Images</h2>
+          <p>Every image needs an <code>alt</code> that describes it (or <code>alt=""</code> if it is only decoration). Images below the first screen get <code>loading="lazy"</code>. By default images are cropped to 16:9.</p>
+          <h3>Caption chip</h3>
+          <div class="example">
+            <figure>
+              <img src="../images/index/vintage-computer-and-keyboard.jpg" alt="Vintage personal computer and keyboard." loading="lazy">
+              <figcaption>Short label</figcaption>
+            </figure>
+          </div>
+          <h3>Caption below, with source</h3>
+          <p>Use it in articles, where captions are longer. Add <code>.natural</code> for diagrams and screenshots that must not be cropped.</p>
+          <div class="example">
+            <figure class="caption-below natural">
+              <img src="../images/index/historic-mechanical-calculator.png" alt="Historic brass mechanical calculating machine with exposed gears." loading="lazy">
+              <figcaption>Figure 1. A mechanical calculator. Source: <a href="#images">name of the source</a>.</figcaption>
+            </figure>
+          </div>
+          <h3>Large overlay caption</h3>
+          <div class="example">
+            <figure>
+              <img src="../images/index/robotic-hands-solving-rubiks-cube.jpg" alt="Robotic hands solving a Rubik's Cube." loading="lazy">
+              <figcaption class="text-invert">A strong statement over a full-width image.</figcaption>
+            </figure>
+          </div>
+          <details class="markup">
+            <summary>Markup</summary>
+<pre><code>&lt;!-- Caption chip --&gt;
+&lt;figure&gt;
+  &lt;img src="..." alt="What the image shows." loading="lazy"&gt;
+  &lt;figcaption&gt;Short label&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;!-- Caption below; .natural keeps the original proportions --&gt;
+&lt;figure class="caption-below natural"&gt;
+  &lt;img src="..." alt="..." loading="lazy"&gt;
+  &lt;figcaption&gt;Figure 1. What it shows. Source: &lt;a href="..."&gt;site&lt;/a&gt;.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;!-- Large overlay caption --&gt;
+&lt;figure&gt;
+  &lt;img src="..." alt="..." loading="lazy"&gt;
+  &lt;figcaption class="text-invert"&gt;A strong statement.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+          </details>
+        </section>
+
+        <!-- LAYOUT -->
+        <section id="layout">
+          <h2>Layout and cards</h2>
+          <h3>Two columns: <code>.split</code></h3>
+          <div class="example">
+            <div class="split">
+              <div>
+                <h4>Text on one side</h4>
+                <p>Image on the other. On phones they stack.</p>
+              </div>
+              <figure>
+                <img src="../images/index/child-using-tablet.webp" alt="Child using a tablet in a dimly lit room." loading="lazy">
+              </figure>
+            </div>
+          </div>
+          <h3>Cards: <code>&lt;article&gt;</code> inside <code>.grid</code></h3>
+          <div class="example">
+            <div class="grid">
+              <article>
+                <figure><img src="../images/index/human-computer-interface-design.webp" alt="" loading="lazy"></figure>
+                <span class="pill">4 pages</span>
+                <h4><a href="#layout">Card with image</a></h4>
+                <p>One or two sentences about the page.</p>
+              </article>
+              <article class="topic-design-failures">
+                <span class="pill">Design failures</span>
+                <h4><a href="#layout">Card without image</a></h4>
+                <p>A topic class on the card changes its colour.</p>
+              </article>
+            </div>
+          </div>
+          <h3>Image gallery: <code>.gallery</code></h3>
+          <div class="example">
+            <div class="gallery">
+              <figure>
+                <img src="../images/index/web-accessibility-concept.jpg" alt="Web accessibility illustration." loading="lazy">
+                <figcaption>One</figcaption>
+              </figure>
+              <figure>
+                <img src="../images/index/future-human-machine-interaction.webp" alt="Future human-machine interaction illustration." loading="lazy">
+                <figcaption>Two</figcaption>
+              </figure>
+              <figure>
+                <img src="../images/index/square-wheel-bicycle-design-failure.jpg" alt="Bicycle with square wheels." loading="lazy">
+                <figcaption>Three</figcaption>
+              </figure>
+            </div>
+          </div>
+          <details class="markup">
+            <summary>Markup</summary>
+<pre><code>&lt;div class="split"&gt;
+  &lt;div&gt;&lt;h3&gt;Title&lt;/h3&gt;&lt;p&gt;Text&lt;/p&gt;&lt;/div&gt;
+  &lt;figure&gt;&lt;img src="..." alt="..."&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;div class="grid"&gt;
+  &lt;article&gt;
+    &lt;figure&gt;&lt;img src="..." alt=""&gt;&lt;/figure&gt;   &lt;!-- optional --&gt;
+    &lt;span class="pill"&gt;4 pages&lt;/span&gt;
+    &lt;h3&gt;&lt;a href="..."&gt;Card title&lt;/a&gt;&lt;/h3&gt;
+    &lt;p&gt;One or two sentences.&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/div&gt;
+
+&lt;div class="gallery"&gt;
+  &lt;figure&gt;&lt;img src="..." alt="..."&gt;&lt;figcaption&gt;Label&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;!-- Other helpers: .center (centred text), .inset (narrower block) --&gt;</code></pre>
+          </details>
+        </section>
+
+        <!-- REFERENCES -->
+        <section id="references">
+          <h2>References</h2>
+          <p>Every fact taken from somewhere gets a numbered link to the list at the end of the article. Clicking the number highlights the source.</p>
+          <div class="example">
+            <p>The four principles of web accessibility are perceivable, operable, understandable and robust<sup><a id="cite-1" href="#ref-1">[1]</a></sup>. About 16% of the world population lives with a significant disability<sup><a id="cite-2" href="#ref-2">[2]</a></sup>.</p>
+            <h3>Sources</h3>
+            <ol class="references">
+              <li id="ref-1">W3C. <cite>Web Content Accessibility Guidelines (WCAG) 2.2</cite>. 2023. <a href="https://www.w3.org/TR/WCAG22/">w3.org/TR/WCAG22</a> <a href="#cite-1">back to text</a></li>
+              <li id="ref-2">World Health Organization. <cite>Global report on health equity for persons with disabilities</cite>. 2022. <a href="https://www.who.int/publications/i/item/9789240063600">who.int</a> <a href="#cite-2">back to text</a></li>
+            </ol>
+          </div>
+          <details class="markup">
+            <summary>Markup</summary>
+<pre><code>&lt;!-- In the text --&gt;
+&lt;p&gt;A fact&lt;sup&gt;&lt;a id="cite-1" href="#ref-1"&gt;[1]&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;!-- At the end of the article --&gt;
+&lt;h2&gt;Sources&lt;/h2&gt;
+&lt;ol class="references"&gt;
+  &lt;li id="ref-1"&gt;
+    Author. &lt;cite&gt;Title&lt;/cite&gt;. Year. &lt;a href="https://..."&gt;site&lt;/a&gt;
+    &lt;a href="#cite-1"&gt;back to text&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+          </details>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+          <h2>Collapsible blocks</h2>
+          <p>For FAQs, solutions to exercises or details most readers can skip. Works without JavaScript.</p>
+          <div class="example">
+            <details>
+              <summary>What is a dark pattern?</summary>
+              <p>An interface designed to push users into doing something they did not mean to do.</p>
+            </details>
+            <details>
+              <summary>Is every pop-up a dark pattern?</summary>
+              <p>No. It becomes one when it hides, shames or tricks.</p>
+            </details>
+          </div>
+          <details class="markup">
+            <summary>Markup</summary>
+<pre><code>&lt;details&gt;
+  &lt;summary&gt;Question&lt;/summary&gt;
+  &lt;p&gt;Answer.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+          </details>
+        </section>
+
+        <!-- NAVIGATION -->
+        <section id="navigation">
+          <h2>Navigation</h2>
+          <h3>Breadcrumb</h3>
+          <p>Goes in the page <code>&lt;header&gt;</code>, above the title. The last item is the current page.</p>
+          <div class="example">
+            <nav class="breadcrumb" aria-label="Breadcrumb example">
+              <ol>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#navigation">Design failures</a></li>
+                <li><a href="#navigation">Dark patterns</a></li>
+                <li><span aria-current="page">Confirmshaming</span></li>
+              </ol>
+            </nav>
+          </div>
+          <h3>Table of contents</h3>
+          <p>The box on the right of this page (on top on phones). It stays in view while you scroll.</p>
+          <h3>Previous / next</h3>
+          <div class="example">
+            <nav class="pager" aria-label="Pager example">
+              <a href="#navigation" rel="prev"><span>Previous</span>What are dark patterns?</a>
+              <a href="#navigation" rel="next"><span>Next</span>The roach motel</a>
+            </nav>
+          </div>
+          <details class="markup">
+            <summary>Markup</summary>
+<pre><code>&lt;nav class="breadcrumb" aria-label="Breadcrumb"&gt;
+  &lt;ol&gt;
+    &lt;li&gt;&lt;a href="..."&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span aria-current="page"&gt;This page&lt;/span&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;
+
+&lt;nav class="toc" aria-labelledby="toc-title"&gt;
+  &lt;h2 id="toc-title"&gt;On this page&lt;/h2&gt;
+  &lt;ol&gt;&lt;li&gt;&lt;a href="#what"&gt;What it is&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;
+&lt;/nav&gt;
+
+&lt;!-- Only one link? Keep its rel: prev stays left, next stays right --&gt;
+&lt;nav class="pager" aria-label="Pages in this topic"&gt;
+  &lt;a href="..." rel="prev"&gt;&lt;span&gt;Previous&lt;/span&gt;Title&lt;/a&gt;
+  &lt;a href="..." rel="next"&gt;&lt;span&gt;Next&lt;/span&gt;Title&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+          </details>
+        </section>
+
+        <!-- TEMPLATE -->
+        <section id="template">
+          <h2>Article template</h2>
+          <p>The skeleton of a page in <code>source/html/design_failures/dark_patterns/</code>. Copy it, then change the paths, the topic class, the author and the content.</p>
+          <div class="callout tip">
+            <strong>See it filled in</strong>
+            <p>The <a href="sample-article.html">sample article</a> uses this template with real content: open it and look at its source.</p>
+          </div>
+          <details class="markup" open>
+            <summary>Full page</summary>
+<pre><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;meta name="description" content="One sentence about this page."&gt;
+  &lt;meta name="author" content="Name Surname"&gt;
+  &lt;title&gt;Confirmshaming | HCI&lt;/title&gt;
+  &lt;link rel="stylesheet" href="../../../css/style.css"&gt;
+&lt;/head&gt;
+&lt;body class="topic-design-failures"&gt;
+  &lt;a class="skip-link" href="#main"&gt;Skip to content&lt;/a&gt;
+  &lt;header&gt;
+    &lt;nav class="breadcrumb" aria-label="Breadcrumb"&gt;...&lt;/nav&gt;
+    &lt;p class="eyebrow"&gt;Dark patterns - Page 2 of 4&lt;/p&gt;
+    &lt;h1&gt;Confirmshaming&lt;/h1&gt;
+    &lt;p class="lead"&gt;One sentence that sums up the page.&lt;/p&gt;
+    &lt;ul class="pills" aria-label="About this page"&gt;
+      &lt;li&gt;&lt;span class="pill"&gt;By Name Surname&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span class="pill"&gt;5 min read&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/header&gt;
+  &lt;nav aria-label="Primary navigation"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="../../index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="../../index.html#topics" aria-current="true"&gt;Topics&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="../../demo.html"&gt;Demo&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+  &lt;main id="main"&gt;
+    &lt;div class="article-layout"&gt;
+      &lt;nav class="toc" aria-labelledby="toc-title"&gt;...&lt;/nav&gt;
+      &lt;article&gt;
+        &lt;section id="what"&gt;
+          &lt;h2&gt;What it is&lt;/h2&gt;
+          &lt;p&gt;...&lt;/p&gt;
+        &lt;/section&gt;
+        ...
+        &lt;section id="sources"&gt;
+          &lt;h2&gt;Sources&lt;/h2&gt;
+          &lt;ol class="references"&gt;...&lt;/ol&gt;
+        &lt;/section&gt;
+        &lt;nav class="pager" aria-label="Pages in this topic"&gt;...&lt;/nav&gt;
+      &lt;/article&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;
+    &lt;p&gt;Software Atelier 1 - Human-Computer Interaction and Digital Accessibility&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          </details>
+        </section>
+
+        <!-- ACCESSIBILITY -->
+        <section id="a11y">
+          <h2>Accessibility checklist</h2>
+          <p>Try it now: reload the page and press <kbd>Tab</kbd>.</p>
+          <ul>
+            <li><strong>Skip link:</strong> the first <kbd>Tab</kbd> shows "Skip to content". Keep it as the first element of <code>&lt;body&gt;</code>.</li>
+            <li><strong>Focus ring:</strong> every link and button shows an outline in the accent colour. Never remove it.</li>
+            <li><strong>Current page:</strong> mark it with <code>aria-current="page"</code>, the style follows.</li>
+            <li><strong>Reduced motion:</strong> hover animations switch off when the system asks for it.</li>
+            <li><strong>Links:</strong> say where they go. "Read the WCAG guidelines", not "click here".</li>
+          </ul>
+          <p class="row"><a class="button ghost" href="#main">Back to top</a></p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</p>
+  </footer>
+</body>
+</html>
