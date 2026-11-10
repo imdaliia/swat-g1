@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hello! This is the example article">
+    <meta name="author" content="Giulio Berti">
+    <title>HCI - Theme Demo</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <a class="skip" href="#article">Skip to content</a>
+
+    <nav aria-label="Main">
+        <a class="brand" href="index.html">HCI</a>
+        <a href="index.html">Home</a>
+        <a href="demo.html" aria-current="page">Demo</a>
+    </nav>
+
+    <header>
+        <h1>Theme Demo</h1>
+        <p class="lead">Here you can find ready building blocks for your article</p>
+    </header>
+
+    <main id="article" class="sheet">
+        <section>
+            <h2>A first description</h2>
+            <p>Here are the main features of the site, implemented according to this style:</p>
+            <ul>
+                <li>A top bar containing the site title and links to other pages.</li>
+                <li>A simple footer.</li>
+                <li>A patterned background inspired by WhatsApp and Telegram, the platforms through which we most
+                    frequently interact with a computer.</li>
+                <li>The article itself, consisting of:
+                    <ol>
+                        <li>A header with a title and description.</li>
+                        <li>A main section for developing your content.</li>
+                    </ol>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>When making an article...</h2>
+            <p>Many graphical elements are ready to be used, but make sure to do the following first:</p>
+            <ul>
+                <li>Copy <code>example-article.html</code>. You can find it <a href="example-article.html">here</a>.
+                </li>
+                <li>Follow the commented instructions inside it:
+                    <ul>
+                        <li>Update the <code>&lt;body&gt;</code> class with the correct topic to keep colours
+                            consistent.</li>
+                        <li>Update the "previous" and "next" links in the body's <code>&lt;nav&gt;</code>.</li>
+                        <li>Update the title, description, and info pills in the body's header.</li>
+                        <li>Write your article inside <code>&lt;main&gt;</code>, keeping accessibility best</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Colours</h2>
+            <p>Every coloured element can take one of three kinds of colour. Add the class next to the element's own
+                class:</p>
+            <ul>
+                <li><strong>Default:</strong> no extra class, the site blue.</li>
+                <li><strong>Topic:</strong> <code>topic-...</code>, the colour of a topic. Put it on
+                    <code>&lt;body&gt;</code> to colour the whole page, or on a single card.
+                </li>
+                <li><strong>Status:</strong> <code>good</code>, <code>warn</code> or <code>bad</code>, for a single
+                    element that says if something is right or wrong.</li>
+            </ul>
+
+            <h3>Pills</h3>
+            <p><span class="pill">default</span></p>
+            <p>
+                <span class="pill topic-io-devices">topic-io-devices</span>
+                <span class="pill topic-design-interfaces">topic-design-interfaces</span>
+                <span class="pill topic-web-accessibility">topic-web-accessibility</span>
+                <span class="pill topic-design-failures">topic-design-failures</span>
+                <span class="pill topic-future-interfaces">topic-future-interfaces</span>
+            </p>
+            <p>
+                <span class="pill good">good</span>
+                <span class="pill warn">warn</span>
+                <span class="pill bad">bad</span>
+            </p>
+
+            <h3>Buttons</h3>
+            <p>The same classes work on buttons (actually they are just <code>&lt;a&gt;</code> behind the
+                scenes):</p>
+            <p>
+                <a class="button" href="#article">Default</a>
+                <a class="button topic-web-accessibility" href="#article">Topic</a>
+                <a class="button good" href="#article">Good</a>
+                <a class="button bad" href="#article">Bad</a>
+            </p>
+            <pre><code>&lt;span class="pill topic-io-devices"&gt;I/O devices&lt;/span&gt;
+&lt;a class="button good" href="..."&gt;Read more&lt;/a&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>Text</h2>
+            <p class="lead">Lead paragraph (<code>class="lead"</code>). Use it once, right after the title, to sum it
+                up.</p>
+            <h3>This is h3 and can be used for subtopics</h3>
+            <p>A normal paragraph with <a href="#article">a link</a>, <strong>bold</strong>, <em>italic</em> and
+                <code>code</code>. Always have accessibility in your mind, like:
+            </p>
+            <ul>
+                <li>Write short paragraphs</li>
+                <li>Give every image a description</li>
+            </ul>
+            <blockquote>To be or not to be, that is the question.</blockquote>
+            <pre><code>&lt;pre&gt;&lt;code&gt;A block of code&lt;/code&gt;&lt;/pre&gt;</code></pre>
+
+        </section>
+
+        <section>
+            <h2>Boxes and notes</h2>
+            <div class="box">
+                <p>A plain box (<code>class="box"</code>) with some text inside</p>
+            </div>
+            <div class="box note">
+                <strong>Note</strong>
+                <p>A box with <code>note</code> gets a coloured bar (the colour depends on the specified topic).</p>
+            </div>
+            <div class="box note good">
+                <strong>Good practice</strong>
+                <p>Add <code>good</code>, <code>warn</code> or <code>bad</code> to change its colour.</p>
+            </div>
+            <div class="box note bad">
+                <strong>Avoid</strong>
+                <p>Some more text here.</p>
+            </div>
+            <details class="box">
+                <summary>Probably useful for a Q&A or some fun fucts</summary>
+                <p>Hello!</p>
+            </details>
+        </section>
+
+        <section>
+            <h2>Table</h2>
+            <div class="box">
+                <p>Tables inside <code>&lt;div class="box"&gt;</code> can be useful, too!</p>
+                <table>
+                    <caption>This is the caption of your table</caption>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>John</th>
+                            <th>Mike</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Net worth</td>
+                            <td>Not much</td>
+                            <td>A gazillion</td>
+                        </tr>
+                        <tr>
+                            <td>Comparison</td>
+                            <td><span class="pill bad">Poorer</span></td>
+                            <td><span class="pill good">Richer</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Images</h2>
+            <p>Try moving the mouse over an image and see the effect.</p>
+            <div class="grid">
+                <figure>
+                    <img src="../images/index/vintage-computer-and-keyboard.jpg" alt="Vintage computer and keyboard."
+                        loading="lazy">
+                    <figcaption>Small caption</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/index/historic-mechanical-calculator.png" alt="Historic mechanical calculator."
+                        loading="lazy">
+                    <figcaption class="big">Big caption</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/index/child-using-tablet.webp" alt="Child using a tablet." loading="lazy">
+                </figure>
+            </div>
+        </section>
+
+        <section>
+            <h2>Cards</h2>
+            <p>A <code>box</code> inside a <code>grid</code>. An image at the start goes edge to edge; a topic class
+                changes its colour.</p>
+            <div class="grid">
+                <div class="box">
+                    <figure><img src="../images/index/square-wheel-bicycle-design-failure.jpg" alt="bicycle"
+                            loading="lazy">
+                    </figure>
+                    <h3><a href="sample-article.html">See the example article</a></h3>
+                    <p>A bicycle with square wheels: what happens when design forgets the people who use it.</p>
+                </div>
+                <div class="box topic-design-failures">
+                    <span class="pill good">Can be useful...</span>
+                    <h3><a href="#article">Another link</a></h3>
+                    <p>To the start of the page</p>
+                </div>
+                <div class="box">
+                    <strong>Notice</strong>
+                    <p>Notice that links (when used as titles) appear bigger.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>All the classes</h2>
+            <div class="box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>What it does</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>topic-...</code></td>
+                            <td>Colours a page or a card with a topic</td>
+                        </tr>
+                        <tr>
+                            <td><code>good</code> <code>warn</code> <code>bad</code></td>
+                            <td>Green, yellow or red</td>
+                        </tr>
+                        <tr>
+                            <td><code>brand</code></td>
+                            <td>Site name in the top bar</td>
+                        </tr>
+                        <tr>
+                            <td><code>skip</code></td>
+                            <td>"Skip to content" link for keyboard users</td>
+                        </tr>
+                        <tr>
+                            <td><code>lead</code></td>
+                            <td>Bigger grey intro text</td>
+                        </tr>
+                        <tr>
+                            <td><code>grid</code></td>
+                            <td>Children in rows of three</td>
+                        </tr>
+                        <tr>
+                            <td><code>sheet</code></td>
+                            <td>On <code>&lt;main&gt;</code> of an article: white page over the pattern</td>
+                        </tr>
+                        <tr>
+                            <td><code>box</code></td>
+                            <td>White rounded box</td>
+                        </tr>
+                        <tr>
+                            <td><code>note</code></td>
+                            <td>Coloured bar on the left of a box</td>
+                        </tr>
+                        <tr>
+                            <td><code>pill</code></td>
+                            <td>Small label</td>
+                        </tr>
+                        <tr>
+                            <td><code>button</code></td>
+                            <td>Link that looks like a button</td>
+                        </tr>
+                        <tr>
+                            <td><code>big</code></td>
+                            <td>Big caption over an image</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>
