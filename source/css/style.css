@@ -18,17 +18,6 @@ Quite useful stuff you may use for your articles:
  - for clamp() calculations https://royalfig.github.io/fluid-typography-calculator/
 */
 
-
-/* Felix did
-0) fancy drop down menu for the homepage (with subtopics) and slighlty reworked the top bar (now it is much much more compact and elegant).
-1) added hdr support for fun because I am in the mood.
-2) From suggestions, centered the last row of grid if content is odd and hence not aligned center as it was left aligned.
-3) Produly, added liquid glass effect to the top bar and footer, and also to the boxes in the grid. *It is a nice effect that makes the page look more modern and elegant.* 
-4) Night mode is now supported for our vampires. 
-5) Tables done.
-6) fix tab navigations for accessibily on the accessibility website. 
-
-
 /* === fonts ==================================================================================================== */
 
 @font-face {
