@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lists who contributed to the project and what they did">
+    <meta name="author" content="Edoardo Beretta">
+
+    <title>HCI - Contributions</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        td ul { margin: 0; padding-left: 1.2em; }
+        tbody th { white-space: nowrap; font-size: 1.1rem; }
+        td > .pill { display: block; width: fit-content; margin-bottom: 6px; }
+    </style>
+</head>
+
+<body>
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="index.html">HCI</a>
+        <a href="index.html">Home</a>
+        <a href="demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul><li><a href="index.html#topics" tabindex="0">topic1</a></li><li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQtopics" tabindex="0">Special topic</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul><li><a href="index.html#topics" tabindex="0">topic1</a></li><li><a href="index.html#topics" tabindex="0">topic2</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul><li><a href="index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul><li><a href="index.html#topics" tabindex="0">topic1</a></li><li><a href="index.html#topics" tabindex="0">topic2</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul><li><a href="index.html#topics" tabindex="0">topic1</a></li><li><a href="index.html#topics" tabindex="0">topic2</a></li><li><a href="index.html#topics" tabindex="0">topic3</a></li></ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+        <a href="contributions.html" aria-current="page">Contributions</a>
+    </nav>
+
+    <!-- Header (article's title, description and info pills)-->
+    <header>
+        <h1>Contributions</h1>
+        <p class="lead">This page lists who did what in this project</p>
+        <p><span class="pill">By Edoardo Beretta</span></p>
+    </header>
+
+    <!-- The actual article -->
+    <main id="article" class="sheet">
+        <section>
+            <h2>The Team&trade;</h2>
+            <div class="box table-scroll" tabindex="0" role="region" aria-labelledby="contributions-caption">
+                <table>
+                    <caption id="contributions-caption">Contributions to the project</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Contributions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <!-- Coordination -->
+                        <tr>
+                            <th scope="row">Giulio Berti</th>
+                            <td>
+                                <span class="pill">Group leader</span>
+                                <span class="pill">CSS leader</span>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><strong>Organization:</strong> defined the five topics and organized the work between the groups</li>
+                                    <li><strong>Pages:</strong> <a href="index.html">homepage</a>, <a href="demo.html">theme demo page</a> and <a href="example-article.html">article template</a></li>
+                                    <li><strong>Stylesheet:</strong>
+                                        <ul>
+                                            <li>colour palette and topic colours</li>
+                                            <li>page layout: header, article sheet, skip link and footer</li>
+                                            <li>top bar navigation</li>
+                                            <li>text styles: headings, links, lead paragraphs, code and quotes</li>
+                                            <li>building blocks: grids, boxes, notes, pills and buttons</li>
+                                            <li>images and captions</li>
+                                            <li>base table style</li>
+                                            <li>responsive layout for smaller screens</li>
+                                            <li>hover effects that respect reduced motion</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Lorenzo Felix</th>
+                            <td>
+                                <span class="pill">Group leader</span>
+                                <span class="pill">CSS leader</span>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><strong>Organization:</strong> defined the five topics and organized the work between the groups</li>
+                                    <li><strong>Pages:</strong> <a href="index.html">homepage</a>, <a href="demo.html">theme demo page</a> and <a href="example-article.html">article template</a></li>
+                                    <li><strong>Stylesheet:</strong>
+                                        <ul>
+                                            <li>dark mode</li>
+                                            <li>Topics dropdown menu and compact top bar</li>
+                                            <li>liquid glass effect on the top bar, footer and boxes</li>
+                                            <li>HDR support</li>
+                                            <li>table styles: striped rows, row highlight, footer and rounded corners</li>
+                                            <li>keyboard navigation fixes</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Edoardo Beretta</th>
+                            <td>
+                                <span class="pill">Git leader</span>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><strong>Repository:</strong>
+                                        <ul>
+                                            <li>GitHub repository setup and review rules</li>
+                                            <li>defined with Group Leaders the repository structure</li>
+                                            <li>contribution guide (<a href="https://github.com/imdaliia/swat-g1/blob/master/CONTRIBUTING.md"><code>CONTRIBUTING.md</code></a>) and <a href="https://github.com/imdaliia/swat-g1/blob/master/docs/contributing/git-guide.pdf">Git guide</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Automation:</strong>
+                                        <ul>
+                                            <li>automatic HTML validation on pull requests</li>
+                                            <li>live demo website with automatic deploy</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Pages:</strong> <a href="./contributions.html">contributions.html</a> page</li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <!-- Input/output devices -->
+                        <tr class="topic-io-devices">
+                            <th scope="row">Vlad-Mihai Lungu</th>
+                            <td>
+                                <span class="pill topic-io-devices">Topic leader</span>
+                                <span class="pill topic-io-devices">Input/output devices</span>
+                            </td>
+                            <td></td>
+                        </tr>
+
+                        <tr class="topic-io-devices">
+                            <th scope="row">Modou Lamin Camara</th>
+                            <td><span class="pill topic-io-devices">Input/output devices</span></td>
+                            <td></td>
+                        </tr>
+
+                        <tr class="topic-io-devices">
+                            <th scope="row">Francesco Corti</th>
+                            <td><span class="pill topic-io-devices">Input/output devices</span></td>
+                            <td></td>
+                        </tr>
+
+                        <tr class="topic-io-devices">
+                            <th scope="row">Yifei Wang</th>
+                            <td><span class="pill topic-io-devices">Input/output devices</span></td>
+                            <td></td>
+                        </tr>
+
+                        <!-- Designing interfaces -->
+                        <tr class="topic-design-interfaces">
+                            <th scope="row">Mirco Togni</th>
+                            <td>
+                                <span class="pill topic-design-interfaces">Topic leader</span>
+                                <span class="pill topic-design-interfaces">Designing interfaces</span>
+                            </td>
+                            <td></td>
+                        </tr>
+
+                        <tr class="topic-design-interfaces">
+                            <th scope="row">Alessandro Campanari</th>
+                            <td><span class="pill topic-design-interfaces">Designing interfaces</span></td>
+                            <td></td>
+                        </tr>
+
+                        <tr class="topic-design-interfaces">
+                            <th scope="row">Massimiliano Cipriani</th>
+                            <td><span class="pill topic-design-interfaces">Designing interfaces</span></td>
+                            <td></td>
+                        </tr>
+
+                        <tr class="topic-design-interfaces">
+                            <th scope="row">Maria Miteva</th>
+                            <td><span class="pill topic-design-interfaces">Designing interfaces</span></td>
+                            <td></td>
+                        </tr>
+
+                        <!-- Web accessibility -->
+                        <tr class="topic-web-accessibility">
+                            <th scope="row">Shalini Denti</th>
+                            <td>
+                                <span class="pill topic-web-accessibility">Topic leader</span>
+                                <span class="pill topic-web-accessibility">Web accessibility</span>
+                            </td>
+                            <td></td>
+                        </tr>
+
+                        <tr class="topic-web-accessibility">
+                            <th scope="row">Manuel Pollazzon</th>
+                            <td><span class="pill topic-web-accessibility">Web accessibility</span></td>
+                            <td></td>
+                        </tr>
+
+                        <tr class="topic-web-accessibility">
+                            <th scope="row">Andrii Synelnyk</th>
+                            <td><span class="pill topic-web-accessibility">Web accessibility</span></td>
+                            <td></td>
+                        </tr>
+
+                        <!-- Design failures -->
+                        <tr class="topic-design-failures">
+                            <th scope="row">Tommaso Russo</th>
+                            <td>
+                                <span class="pill topic-design-failures">Topic leader</span>
+                                <span class="pill topic-design-failures">Design failures</span>
+                            </td>
+                            <td></td>
+                        </tr>
+
+                        <tr class="topic-design-failures">
+                            <th scope="row">Mohamed Chaker Boukhezna</th>
+                            <td><span class="pill topic-design-failures">Design failures</span></td>
+                            <td></td>
+                        </tr>
+
+                        <tr class="topic-design-failures">
+                            <th scope="row">Emilie Bui</th>
+                            <td><span class="pill topic-design-failures">Design failures</span></td>
+                            <td></td>
+                        </tr>
+
+                        <tr class="topic-design-failures">
+                            <th scope="row">Daniel Lula</th>
+                            <td><span class="pill topic-design-failures">Design failures</span></td>
+                            <td></td>
+                        </tr>
+
+                        <!-- Future interfaces -->
+                        <tr class="topic-future-interfaces">
+                            <th scope="row">Edoardo Fiorini</th>
+                            <td>
+                                <span class="pill topic-future-interfaces">Topic leader</span>
+                                <span class="pill topic-future-interfaces">Future interfaces</span>
+                            </td>
+                            <td></td>
+                        </tr>
+
+                        <tr class="topic-future-interfaces">
+                            <th scope="row">Seo Dazio</th>
+                            <td><span class="pill topic-future-interfaces">Future interfaces</span></td>
+                            <td></td>
+                        </tr>
+
+                        <tr class="topic-future-interfaces">
+                            <th scope="row">Jonah de Lieme</th>
+                            <td><span class="pill topic-future-interfaces">Future interfaces</span></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><a href="https://github.com/imdaliia/swat-g1/commits/master/">See every commit on master on GitHub</a></p>
+            </div>
+        </section>
+    </main>
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+</html>
