@@ -1,0 +1,104 @@
+/* =========================================================================================================================
+   DESIGN FAILURES: LOCAL STYLES
+
+   What it is for:
+     The common style.css is frozen. This file holds the extra styles our design failures pages need,
+     without touching it. Pages that do not link this file look exactly the same as before.
+
+   How to use it (in the <head> of your page, AFTER style.css so it can override it):
+       <link rel="stylesheet" href="../../../css/style.css">
+       <link rel="stylesheet" href="../../../css/design_failures/design-failures.css">
+
+   What is inside:
+       figure.portrait   tall images (phone screenshots) shown whole, without the 16:9 crop
+       figure.small      low-resolution images, half width
+       blockquote        quotes with their author in <cite>
+
+   Rules for adding styles: see "ADD YOUR STYLES HERE" at the bottom of the file.
+   ========================================================================================================================= */
+
+
+/* === portrait images ====================================================================================================
+   style.css crops every image to 16:9, which hides most of a tall picture (e.g. phone screenshots).
+   Use <figure class="portrait"> to show the whole image, centered, at most 70% of the screen height.
+   Also works inside a .grid (e.g. two screenshots side by side). */
+
+figure.portrait {
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+}
+
+figure.portrait img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 70vh;
+    aspect-ratio: auto;
+    object-fit: contain;
+}
+
+.grid > figure.portrait {
+    margin: 0;                      /* the grid already handles spacing and centering */
+}
+
+.grid > figure.portrait img {
+    margin-inline: auto;
+}
+
+
+/* === small images =======================================================================================================
+   For low-resolution images that look blurry at full width: <figure class="small">.
+   Full width again on phones. */
+
+figure.small {
+    max-width: 50%;
+    margin-inline: auto;
+}
+
+@media (max-width: 600px) {
+    figure.small {
+        max-width: 100%;
+    }
+}
+
+
+/* === quotes =============================================================================================================
+   <blockquote>
+       <p>"a wealth of information creates a poverty of attention"</p>
+       <cite>Herbert Simon, 1971</cite>
+   </blockquote> */
+
+blockquote {
+    margin: 24px 0;
+    padding: 12px 20px;
+    border-left: 4px solid var(--accent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    background-color: var(--box);
+    box-shadow: var(--shadow);
+}
+
+blockquote p {
+    margin: 0;
+    font-size: 1.15rem;
+    font-style: italic;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.9rem;
+    font-style: normal;
+    color: var(--muted);
+}
+
+blockquote cite::before {
+    content: "— ";
+}
+
+
+/* === ADD YOUR STYLES HERE ===============================================================================================
+   Ask Tommaso, Giulio or Felix before changing this file.
+   Check demo.html first: style.css may already have what you need.
+   Only add new classes, and use the style.css variables (var(--accent), var(--box)...) so dark mode keeps working.
+   ========================================================================================================================= */
