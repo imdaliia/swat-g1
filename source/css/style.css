@@ -1,0 +1,829 @@
+/*
+This is the pillar style for the whole website
+Don't worry: length doesn't mean scary, there are a lot of comments :)
+
+It's organized as follows:
+ - fonts
+ - palette and definitions
+ - page (<html>, top-bar, footer)
+ - article space
+ - text
+ - glass effect
+ - building blocks
+ - images
+ - special effects
+ - smaller screens
+
+Quite useful stuff you may use for your articles:
+ - for clamp() calculations https://royalfig.github.io/fluid-typography-calculator/
+*/
+
+/* === fonts ==================================================================================================== */
+
+@font-face {
+    font-family: "Atkinson";
+    src: url("../fonts/atkinson.woff2") format("woff2");
+    font-weight: 200 800;
+}
+
+@font-face {
+    font-family: "Atkinson";
+    src: url("../fonts/atkinson-italic.woff2") format("woff2");
+    font-weight: 200 800;
+    font-style: italic;
+}
+
+
+
+/* === palette and definitions ==================================================================================================== */
+
+:root {
+    color-scheme: light;
+    /* colors */
+    --bg: #edeff3;          /* used for <body> */
+    --box: #ffffff;         /* used for "box" elements (like tables and code snippets) */
+    --accent: #2b59c3;      /* every topic has its own accent color... this is just default (below there are specific definitions) */
+    --text: #222326;        /* default text color */
+    --muted: #5b6172;       /* e.g. used for .lead */
+    --line: #d6d9e0;        /* used for thin lines (take a look at the footer) */
+    --on-strong: #fff;     /* text on the selected navigation and other strong surfaces */
+    --on-accent: #fff;     /* text on accent-coloured buttons */
+    --hover: rgba(0, 0, 0, 0.05);
+    --code-bg: rgba(0, 0, 0, 0.06);
+    --header-glow: rgba(255, 255, 255, 0.85);
+
+    /* effects */
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    --glass-opacity: 0.56;     /* glass surface opacity: 0 = clear, 1 = opaque; text stays solid */
+    --glass-rgb: 255, 255, 255;
+    --glass-highlight: rgba(255, 255, 255, 0.90);
+    --glass-glow: rgba(255, 255, 255, 0.48);
+    --glass-sheen: rgba(255, 255, 255, 0.24);
+    --glass-tail: rgba(255, 255, 255, 0.10);
+    --glass-border: rgba(255, 255, 255, 0.65);
+    --glass-side: rgba(255, 255, 255, 0.45);
+    --glass-edge: rgba(65, 80, 110, 0.15);
+    --glass-nav-edge: rgba(65, 80, 110, 0.18);
+    --glass-shadow: 0 8px 24px rgba(35, 45, 70, 0.10);
+
+    /* standard measures */
+    --radius: 12px;         /* for corners (boxes, images, code) */
+    --round: 999px;         /* for fully rounded stuff (I'm just using a big number here to ensure roundness) */
+}
+
+
+/* specific "--accent" definitions (by topic or by status) */
+/* if you assign one of these classes to <body>, --accent will be defined as such for all its children
+   (.good, .warn and .bad are suggested for elements like pills...) */
+.topic-io-devices        { --accent: #16716b; }
+.topic-design-interfaces { --accent: #a84a14; }
+.topic-web-accessibility { --accent: #a8306b; }
+.topic-design-failures   { --accent: #a8322d; }
+.topic-future-interfaces { --accent: #6a3fb0; }
+.good { --accent: #2f7a3a; }
+.warn { --accent: #8a6100; }
+.bad  { --accent: #b03030; }
+
+/* follow the device appearance in dark mode. */
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+        --bg: #101318;
+        --box: #202630;
+        --accent: #9bbcff;
+        --text: #edf0f7;
+        --muted: #b6bfce;
+        --line: #414b5b;
+        --on-strong: #101318;
+        --on-accent: #101318;
+        --hover: rgba(255, 255, 255, 0.08);
+        --code-bg: rgba(255, 255, 255, 0.08);
+        --header-glow: rgba(32, 38, 48, 0.85);
+        --shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
+        --glass-rgb: 27, 33, 43;
+        --glass-opacity: 0.82;
+        --glass-highlight: rgba(255, 255, 255, 0.16);
+        --glass-glow: rgba(255, 255, 255, 0.045);
+        --glass-sheen: rgba(255, 255, 255, 0.025);
+        --glass-tail: rgba(255, 255, 255, 0.01);
+        --glass-border: rgba(190, 205, 230, 0.20);
+        --glass-side: rgba(255, 255, 255, 0.07);
+        --glass-edge: rgba(0, 0, 0, 0.30);
+        --glass-nav-edge: rgba(190, 205, 230, 0.20);
+        --glass-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+    }
+
+    /* lighter accents stay readable as links, pill labels and list markers. */
+    .topic-io-devices        { --accent: #76d5c9; }
+    .topic-design-interfaces { --accent: #ffb785; }
+    .topic-web-accessibility { --accent: #f69fca; }
+    .topic-design-failures   { --accent: #ffaaa4; }
+    .topic-future-interfaces { --accent: #c5adff; }
+    .good { --accent: #91d89b; }
+    .warn { --accent: #eacb78; }
+    .bad  { --accent: #ffaaa4; }
+}
+
+
+
+/* === page (<html>, top-bar, footer) ==================================================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 5rem;   /* when you goto #section, now it stops below the top bar */
+}
+
+body {
+    margin: 0;
+    color: var(--text);
+
+    font-size: 1.0625rem;       /* since 1rem = 16 pixel => 1.0625rem = 17 pixel (for better readability) */
+    line-height: 1.6;           /* vertical line spacing */
+    font-family: "Atkinson", Arial, sans-serif;
+
+    /* background pattern (over a light grey) */
+    background: var(--bg) url("../images/pattern.svg") repeat;
+    background-size: 36rem;
+    background-attachment: fixed;
+}
+
+/* === navbar ==================================================================================================== */
+
+/* the top bar */
+nav {
+    /* the bar */
+    position: sticky;
+    top: 0;
+    z-index: 10;                /* always above */
+    padding: 10px 24px;
+    border-bottom: 1px solid var(--line);
+
+    /* the children (one next to the other with a little gap; aligned, but for small screens they wrap below) */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+}
+
+nav a {
+    padding: 6px 12px;
+    border-radius: var(--round);
+    color: var(--muted);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--text);
+    background-color: var(--hover);
+}
+
+nav a[aria-current="page"] {
+    /* Style for the selected page in top bar */
+    /* I could have defined a class, but "aria-current" is used by screen readers to know "demo.html link" (for example) is the current page */
+    color: var(--on-strong);
+    background-color: var(--text);
+}
+
+nav .brand {
+    /* Style for "HCI" link in top-left of the top-bar */
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--text);
+}
+
+/* previous / next */
+nav a[rel="prev"],
+nav a[rel="next"] {
+    border: 1px solid var(--line);
+}
+
+nav a[rel="prev"],
+nav a[rel="next"]:not(a[rel="prev"] + a[rel="next"]) {
+    margin-left: auto;         /* pushes previous/next to the right */
+}
+
+/* === navbar dropdown ==================================================================================================== */
+
+/* homepage dropdown */
+nav .nav-topics {
+    position: relative; /* anchors the dropdown panel to the topics menu */
+}
+
+/* shared alignment and touch targets, scoped to the homepage navbar. */
+.main-nav a,
+nav .nav-topics summary {
+    display: flex;
+    align-items: center;
+    min-height: 44px; /* keeps links and menu controls easy to tap */
+}
+
+nav .nav-topics summary {
+    justify-content: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: var(--round);
+    color: var(--muted);
+    font-weight: 400;
+    list-style: none;
+    cursor: pointer;
+}
+
+/* replace the browser's marker with the same small chevron on every disclosure. */
+nav .nav-topics summary::-webkit-details-marker {
+    display: none;
+}
+
+nav .nav-topics summary::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
+}
+
+.main-nav details[open] > summary::after {
+    /* the native open attribute controls the chevron direction. */
+    transform: translateY(2px) rotate(225deg);
+}
+
+nav .nav-topics summary:hover,
+nav .nav-topics[open] > summary {
+    color: var(--text);
+    background-color: var(--hover);
+}
+
+nav .nav-topics-panel {
+    position: absolute;
+    top: calc(100% + 10px); /* places the panel below the menu with a small gap */
+    left: 0;
+    width: min(24rem, calc(100vw - 48px));
+    /* long menus scroll inside the viewport, including when several categories are open. */
+    max-height: calc(100dvh - 90px);
+    overflow-y: auto;
+    padding: 12px;
+    /* reuse .liquid-glass for opacity, reflections, blur and shadows: IMPORTANT TO GUARANTEE CONTINUITY */
+    border-width: 1px;
+    border-style: solid;
+    border-radius: var(--radius);
+}
+
+nav .nav-topics ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav .nav-categories > li + li {
+    border-top: 1px solid var(--line);
+}
+
+nav .nav-categories summary {
+    justify-content: space-between;
+    border-radius: 8px;
+    color: var(--text);
+}
+
+nav .nav-categories details > ul {
+    padding: 4px 12px 12px 24px; /* indents subtopics beneath their category */
+    font-size: 0.9375rem;
+}
+
+/* a visible outline follows keyboard focus through links and disclosure controls */
+.main-nav :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+    .main-nav {
+        padding: 10px 12px;
+    }
+
+    .main-nav > a,
+    nav .nav-topics > summary {
+        padding: 6px 8px;
+    }
+
+    nav .nav-topics {
+        /* on phones, anchor the panel to the sticky bar so it spans the available width */
+        position: static;
+    }
+
+    nav .nav-topics-panel {
+        top: 100%;
+        right: 12px;
+        left: 12px;
+        width: auto;
+        max-height: calc(100dvh - 130px);
+    }
+}
+
+body > footer {
+    padding: 32px 24px;
+    border-top: 1px solid var(--line);
+    font-size: 0.9rem;
+    text-align: center;
+    color: var(--muted);
+}
+
+
+
+/* === article space ==================================================================================================== */
+
+body > header {
+    padding: 72px 24px 40px;
+    text-align: center;
+
+    /* a small white ellipse that blends with the background pattern to make the header better to read */
+    background: radial-gradient(ellipse 60% 70% at 50% 45%, var(--header-glow), transparent);
+}
+
+body > header p {
+    margin-left: auto;          /* centered */
+    margin-right: auto;
+}
+
+main {
+    width: 92%;                 /* either almost all the screen (for small screens) or 72rem */
+    max-width: 72rem;
+    margin: 0 auto 48px;        /* above no margin, same left and right, a little gap between this and footer */
+}
+
+section {
+    padding: 32px 0;            /* above and below the block */
+}
+
+/* the white page behind an article */
+.sheet {
+    padding: 0 40px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* "skip"-to-content shows up only when pressing TAB (it's the first of tabulation; nice for accessibility) */
+.skip {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    z-index: 20;
+    padding: 8px 16px;
+    color: var(--on-strong);
+    background-color: var(--text);
+}
+
+.skip:focus {
+    top: 16px;
+}
+
+
+
+/* === text ==================================================================================================== */
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h1 {
+    max-width: 22ch;            /* max 22 characters per line */
+    margin: 0 auto;
+    font-size: 3.5rem;          /* it gets smaller on small screens (take a look at the bottom) */
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    max-width: 68ch;            /* max chars per line */
+}
+
+a {
+    color: var(--accent);
+}
+
+li::marker {
+    /* colors the "1., 2., 3., ..."-part of a list */
+    color: var(--accent);
+}
+
+.lead {
+    font-size: 1.25rem;
+    color: var(--muted);
+}
+
+/* <code> by itself is used inside a phrase. use <pre><code>...</code></pre> for snippets */
+code {
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: Consolas, "Courier New", monospace;
+    background-color: var(--code-bg);
+}
+
+pre {
+    overflow-x: auto;           /* shows horizontal bar if needed */
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background-color: var(--box);
+}
+
+pre code {
+    padding: 0;
+    background: none;
+}
+
+blockquote {
+    margin: 0 0 1em;
+    padding-left: 20px;
+    border-left: 3px solid var(--accent);
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+
+
+/* === glass effect ==================================================================================================== */
+
+/* Keep the homepage navbar's blur on a separate layer: nested dropdowns can then blur the page. */
+.main-nav {
+    border-bottom-color: transparent;
+}
+
+.main-nav::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;             /* sticky nav already creates a stacking context; links stay above */
+    pointer-events: none;
+    border-bottom: 1px solid;
+}
+
+nav:not(.main-nav),
+.main-nav::before,
+body > footer,
+.sheet,
+.grid > .box,
+table,
+.liquid-glass,
+.box.liquid-glass {
+    background-color: rgba(var(--glass-rgb), var(--glass-opacity)); /* adds a transparent tint to the glass */
+    background-image: /* layers a soft glow and a diagonal reflection */
+        radial-gradient(
+            ellipse at top left,
+            var(--glass-glow),
+            transparent 65%
+        ),
+        linear-gradient(
+            135deg,
+            var(--glass-sheen),
+            transparent 45%,
+            var(--glass-tail)
+        );
+
+    -webkit-backdrop-filter: blur(8px) saturate(140%); /* supports browsers that need the webkit prefix (tested good on chromium and safari) */
+    backdrop-filter: blur(8px) saturate(140%); /* blurs the content behind the glass and boosts its colors */
+
+    border-color: var(--glass-border); /* gives the glass a visible outline */
+
+    box-shadow: /* adds reflections along the inner edges and a shadow outside */
+        inset 0 1px 0 var(--glass-highlight),
+        inset 1px 0 0 var(--glass-side),
+        inset 0 -1px 0 var(--glass-edge),
+        var(--glass-shadow);
+}
+
+/* one bottom edge on the navigation, without a second inset line */
+nav:not(.main-nav),
+.main-nav::before {
+    border-bottom-color: var(--glass-nav-edge);
+
+    box-shadow:
+        inset 0 1px 0 var(--glass-highlight),
+        var(--glass-shadow);
+}
+
+/* brighten the top reflection on HDR screens, only in light mode */
+@supports (color: color(rec2100-linear 2 2 2)) {
+    @media (dynamic-range: high) and (prefers-color-scheme: light) {
+        :root {
+            --glass-highlight: color(rec2100-linear 2 2 2);
+        }
+    }
+}
+
+/* without backdrop blur, make the glass more opaque to keep text readable */
+@supports not (
+    (backdrop-filter: blur(1px)) or
+    (-webkit-backdrop-filter: blur(1px))
+) {
+    :root {
+        --glass-opacity: 0.92;
+    }
+}
+
+/* === building blocks ==================================================================================================== */
+
+/* "rows of three" (two on tablets, one on phones: take a look at the bottom) */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    /* centers an incomplete last row */
+    gap: 16px;
+}
+
+.grid > * {
+    flex: 0 0 calc((100% - 32px) / 3);
+    min-width: 0;
+    margin: 0;
+}
+
+.grid h2,
+.grid h3 {
+    /* card titles (they must have less margin and be a little bit smaller) */
+    margin: 10px 0 6px;
+    font-size: 1.3rem;
+}
+
+/* boxes */
+.box {
+    overflow-x: auto;           /* a wide table scrolls sideways on phones */
+    margin-bottom: 16px;
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background-color: var(--box);
+    box-shadow: var(--shadow);
+}
+
+.box > :first-child {
+    margin-top: 0;
+}
+
+.box > :last-child {
+    margin-bottom: 0;
+}
+
+.box > figure:first-child {
+    /* image edge to edge */
+    margin: -20px -20px 16px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* notes (to be used with .box) */
+.note {
+    border-left: 4px solid var(--accent);   /* a note has --accent left border */
+}
+
+.note > strong:first-child {
+    display: block;
+    color: var(--accent);       /* set --accent font-color to <strong> element */
+}
+
+/* pills (for <span>) */
+.pill {
+    padding: 2px 10px;
+    border: 1px solid var(--accent);
+    border-radius: var(--round);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent);
+    white-space: nowrap;
+}
+
+/* buttons (for <a>) */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: var(--round);
+    font-weight: 600;
+    color: var(--on-accent);
+    text-decoration: none;      /* since .button is applied to <a> (link), this removes underlines and stuff like that */
+    background-color: var(--accent);
+}
+
+.button:hover {
+    color: var(--on-strong);
+    background-color: var(--text);
+}
+
+/* === tables! ==================================================================================================== */
+table {
+    width: 100%;
+    border-collapse: separate;  /* lets the rounded border clip the header and striped rows */
+    border-spacing: 0;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    font-variant-numeric: tabular-nums;
+}
+
+/* let the table's glass show through its existing box wrapper */
+.box:has(> table) {
+    background-color: transparent;
+}
+
+th,
+td {
+    padding: 14px 16px; /* leaves space around the content of each cell */
+    border-bottom: 1px solid var(--line); /* separates the rows with a thin line */
+    text-align: left; /* aligns cell text to the left */
+    vertical-align: top; /* keeps content at the top when cells have different heights */
+    overflow-wrap: break-word; /* lets long words wrap instead of overflowing the cell */
+}
+
+thead,
+tfoot {
+    background-color: var(--code-bg); /* distinguishes the header and footer from the table body */
+}
+
+thead th {
+    font-size: 0.8rem; /* makes column headings smaller than body text */
+    text-transform: uppercase; /* displays column headings in uppercase */
+    color: var(--muted); /* uses a softer color for column headings */
+}
+
+tbody th {
+    font-weight: 600; /* makes row headings stand out */
+    color: var(--accent); /* uses the topic accent color for row headings */
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--hover); /* shades every second row to make the table easier to follow */
+}
+
+tbody tr:hover,
+tbody tr:focus-within {
+    background-color: var(--code-bg); /* highlights a row when hovered or when an element inside has focus */
+}
+
+tfoot {
+    font-weight: 600; /* emphasizes summary values in the footer */
+}
+
+tfoot > tr:first-child > * {
+    border-top: 2px solid var(--line); /* separates the footer from the body with a thicker line */
+}
+
+/* the table's outer border already closes the final row */
+table > :last-child > tr:last-child > * {
+    border-bottom: 0;
+}
+
+caption {
+    /* title of a table */
+    padding-bottom: 12px;
+    font-weight: 600;
+    text-align: left;
+    color: var(--accent);
+}
+
+/* optional wrapper for wide tables, with a keyboard-accessible scroll area */
+.table-scroll {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+}
+
+.table-scroll:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.table-scroll > table {
+    min-width: 38rem;
+}
+
+/* for Q&A */
+summary {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+/* === images ==================================================================================================== */
+
+/* every image is ratio-ed 16:9 */
+img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;          /* fills the space without distortions */
+}
+
+figure {
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 24px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* figcaption is either small (default) or big (with .big) */
+figcaption {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    margin-right: 12px;
+    padding: 4px 12px;
+    border-radius: var(--round);
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: rgba(20, 20, 30, 0.75);
+}
+
+figcaption.big {
+    left: 0;                    /* covers the whole width of the image (the top stays free) */
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 60px 24px 20px;
+    border-radius: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+}
+
+
+
+/* === special effects ==================================================================================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+    img,
+    .grid > .box {
+        transition: transform 0.5s;             /* timings */
+    }
+
+    figure:hover img {
+        transform: scale(1.04);                 /* hovered image goes zoom positive */
+    }
+
+    .grid > .box:hover {
+        transform: translateY(-4px);            /* hovered card rises */
+    }
+
+    /* Lorenzo Felix's special effect for images */
+    figure::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(110deg, transparent 35%, rgba(255, 255, 255, 0.3) 50%, transparent 65%);
+        transform: translateX(-130%);
+    }
+
+    figure:hover::after {
+        transform: translateX(130%);
+        transition: transform 1s ease-out;
+    }
+}
+
+
+
+/* === smaller screens ==================================================================================================== */
+
+/* tablets */
+@media (max-width: 900px) {
+    .grid > * {
+        flex-basis: calc((100% - 16px) / 2);
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+}
+
+/* phones */
+@media (max-width: 600px) {
+    .grid > * {
+        flex-basis: 100%;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    body > header {
+        padding-top: 48px;
+    }
+
+    .sheet {
+        padding: 0 20px;
+    }
+}
