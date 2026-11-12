@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hello! This is the example article">
+    <meta name="author" content="Giulio Berti">
+    <title>HCI - Example Article</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<!-- 
+Things to do: 
+ - update <body> class with correct topic                       (for color consistency)
+ - update "previous" and "next" links                           (in body -> nav)
+ - update title, description and info pills                     (in body -> header)
+ - make your article inside <main> and always have in mind good practices for accessibility
+ -->
+
+<body class="topic-io-devices">
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="index.html">HCI</a>
+        <a href="index.html">Home</a>
+        <a href="demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul><li><a href="index.html#topics" tabindex="0">topic1</a></li><li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQtopics" tabindex="0">Special topic</a></li></ul> 
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul><li><a href="index.html#topics" tabindex="0">topic1</a></li><li><a href="index.html#topics" tabindex="0">topic2</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul><li><a href="index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul><li><a href="index.html#topics" tabindex="0">topic1</a></li><li><a href="index.html#topics" tabindex="0">topic2</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul><li><a href="index.html#topics" tabindex="0">topic1</a></li><li><a href="index.html#topics" tabindex="0">topic2</a></li><li><a href="index.html#topics" tabindex="0">topic3</a></li></ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+        <a href="previos_article.html" rel="prev">← previous</a>
+        <a href="next_article.html" rel="next">next →</a>
+    </nav>
+
+    <!-- Header (article's title, description and info pills)-->
+    <header>
+        <h1>Example Article</h1>
+        <p class="lead">Here you should put a small description of the article</p>
+        <p><span class="pill">By Name Surname</span> <span class="pill">3 min read</span></p>
+    </header>
+
+    <!-- The actual article -->
+    <main id="article" class="sheet">
+        <section>
+            <h2>Part 1: a simple article implementation</h2>
+            <p>I just realized our full Computer Architecture book is online and free
+                <sup><a href="#source-1">[1]</a></sup>... did you know?
+            </p>
+            <figure>
+                <img src="../images/index/square-wheel-bicycle-design-failure.jpg" alt="a bicycle with square wheels"
+                    loading="lazy">
+                <figcaption>Can this be considered to be a design failure?</figcaption>
+            </figure>
+            <p>Some filler text goes here</p>
+            <div class="box note good">
+                <strong>A tip for you</strong>
+                <p>It can be useful to use a <code>div</code> with <code>.box</code> and <code>.note</code> and
+                    <code>.good</code> classes.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Part 2: remember to make it appealing</h2>
+            <p>There are many bulding blocks ready for you. Check them out in the <a href="demo.html">demo page</a></p>
+            <p>A <code>div</code> is more useful thank you think. Here's one with a table inside!
+            </p>
+            <div class="box">
+                <table>
+                    <caption>This is the caption of your table</caption>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>John</th>
+                            <th>Mike</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Net worth</td>
+                            <td>Not much</td>
+                            <td>A gazillion</td>
+                        </tr>
+                        <tr>
+                            <td>Comparison</td>
+                            <td><span class="pill bad">Poorer</span></td>
+                            <td><span class="pill good">Richer</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Sources</h2>
+            <ol>
+                <li id="source-1">Andrew S. Tanenbaum. <cite>Structured Computer Organization</cite>.
+                    Year 2012.
+                    <a href="https://nuleren.be/ebooks/StructuredComputerOrganization.pdf">book.pdf</a>
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>

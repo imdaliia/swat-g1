@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hello! This is the example article">
+    <meta name="author" content="Giulio Berti">
+    <title>HCI - Theme Demo</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <a class="skip" href="#article">Skip to content</a>
+
+    <nav aria-label="Main">
+        <a class="brand" href="index.html">HCI</a>
+        <a href="index.html">Home</a>
+        <a href="demo.html" aria-current="page">Demo</a>
+    </nav>
+
+    <header>
+        <h1>Theme Demo</h1>
+        <p class="lead">Here you can find ready building blocks for your article</p>
+    </header>
+
+    <main id="article" class="sheet">
+        <section>
+            <h2>A first description</h2>
+            <p>Here are the main features of the site, implemented according to this style:</p>
+            <ul>
+                <li>A top bar containing the site title and links to other pages.</li>
+                <li>A simple footer.</li>
+                <li>A patterned background inspired by WhatsApp and Telegram, the platforms through which we most
+                    frequently interact with a computer.</li>
+                <li>The article itself, consisting of:
+                    <ol>
+                        <li>A header with a title and description.</li>
+                        <li>A main section for developing your content.</li>
+                    </ol>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>When making an article...</h2>
+            <p>Many graphical elements are ready to be used, but make sure to do the following first:</p>
+            <ul>
+                <li>Copy <code>example-article.html</code>. You can find it <a href="example-article.html">here</a>.
+                </li>
+                <li>Follow the commented instructions inside it:
+                    <ul>
+                        <li>Update the <code>&lt;body&gt;</code> class with the correct topic to keep colours
+                            consistent.</li>
+                        <li>Update the "previous" and "next" links in the body's <code>&lt;nav&gt;</code>.</li>
+                        <li>Update the title, description, and info pills in the body's header.</li>
+                        <li>Write your article inside <code>&lt;main&gt;</code>, keeping accessibility best</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Colours</h2>
+            <p>Every coloured element can take one of three kinds of colour. Add the class next to the element's own
+                class:</p>
+            <ul>
+                <li><strong>Default:</strong> no extra class, the site blue.</li>
+                <li><strong>Topic:</strong> <code>topic-...</code>, the colour of a topic. Put it on
+                    <code>&lt;body&gt;</code> to colour the whole page, or on a single card.
+                </li>
+                <li><strong>Status:</strong> <code>good</code>, <code>warn</code> or <code>bad</code>, for a single
+                    element that says if something is right or wrong.</li>
+            </ul>
+
+            <h3>Pills</h3>
+            <p><span class="pill">default</span></p>
+            <p>
+                <span class="pill topic-io-devices">topic-io-devices</span>
+                <span class="pill topic-design-interfaces">topic-design-interfaces</span>
+                <span class="pill topic-web-accessibility">topic-web-accessibility</span>
+                <span class="pill topic-design-failures">topic-design-failures</span>
+                <span class="pill topic-future-interfaces">topic-future-interfaces</span>
+            </p>
+            <p>
+                <span class="pill good">good</span>
+                <span class="pill warn">warn</span>
+                <span class="pill bad">bad</span>
+            </p>
+
+            <h3>Buttons</h3>
+            <p>The same classes work on buttons (actually they are just <code>&lt;a&gt;</code> behind the
+                scenes):</p>
+            <p>
+                <a class="button" href="#article">Default</a>
+                <a class="button topic-web-accessibility" href="#article">Topic</a>
+                <a class="button good" href="#article">Good</a>
+                <a class="button bad" href="#article">Bad</a>
+                <a class="button warn" href="#article">Warn</a>
+            </p>
+            <pre><code>&lt;span class="pill topic-io-devices"&gt;I/O devices&lt;/span&gt;
+&lt;a class="button good" href="..."&gt;Read more&lt;/a&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>Text</h2>
+            <p class="lead">Lead paragraph (<code>class="lead"</code>). Use it once, right after the title, to sum it
+                up.</p>
+            <h3>This is h3 and can be used for subtopics</h3>
+            <p>A normal paragraph with <a href="#article">a link</a>, <strong>bold</strong>, <em>italic</em> and
+                <code>code</code>. Always have accessibility in your mind, like:
+            </p>
+            <ul>
+                <li>Write short paragraphs</li>
+                <li>Give every image a description</li>
+            </ul>
+            <blockquote>To be or not to be, that is the question.</blockquote>
+            <pre><code>&lt;pre&gt;&lt;code&gt;A block of code&lt;/code&gt;&lt;/pre&gt;</code></pre>
+
+        </section>
+
+        <section>
+            <h2>Boxes and notes</h2>
+            <div class="box">
+                <p>A plain box (<code>class="box"</code>) with some text inside</p>
+            </div>
+            <div class="box note">
+                <strong>Note</strong>
+                <p>A box with <code>note</code> gets a coloured bar (the colour depends on the specified topic).</p>
+            </div>
+            <div class="box note good">
+                <strong>Good practice</strong>
+                <p>Add <code>good</code>, <code>warn</code> or <code>bad</code> to change its colour.</p>
+            </div>
+            <div class="box note bad">
+                <strong>Avoid</strong>
+                <p>Some more text here.</p>
+            </div>
+            <details class="box">
+                <summary>Probably useful for a Q&A or some fun fucts</summary>
+                <p>Hello!</p>
+            </details>
+            <div class="box note warn">
+                <strong>Check before publishing</strong>
+                <p>Use <code>warn</code> for a caution, and explain it in words as well as colour.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Table</h2>
+            <h3>Plain table</h3>
+            <div class="box">
+                <p>Tables inside <code>&lt;div class="box"&gt;</code> can be useful, too!</p>
+                <table>
+                    <caption>This is the caption of your table</caption>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>John</th>
+                            <th>Mike</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Net worth</td>
+                            <td>Not much</td>
+                            <td>A gazillion</td>
+                        </tr>
+                        <tr>
+                            <td>Comparison</td>
+                            <td><span class="pill bad">Poorer</span></td>
+                            <td><span class="pill good">Richer</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Comparison table</h3>
+            <p>All tables automatically get styled headings, alternating row colours and highlighted rows on hover.
+                Put a wide table inside a
+                <code>box table-scroll</code> to scroll wide content sideways on small screens, using touch
+                or the arrow keys when the box has keyboard focus.</p>
+            <div class="box table-scroll" tabindex="0" role="region" aria-labelledby="input-table-caption">
+                <table>
+                    <caption id="input-table-caption">Comparing input methods</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Input method</th>
+                            <th scope="col">Common use</th>
+                            <th scope="col">Strength</th>
+                            <th scope="col">Design consideration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Keyboard</th>
+                            <td>Writing and navigating forms</td>
+                            <td>Precise input and shortcuts</td>
+                            <td>Keep focus visible and follow a logical tab order.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Mouse</th>
+                            <td>Selecting and moving objects</td>
+                            <td>Direct pointing on a large screen</td>
+                            <td>Provide keyboard alternatives to pointing and dragging.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Touchscreen</th>
+                            <td>Using phones and tablets</td>
+                            <td>Interacting directly with content</td>
+                            <td>Make targets large enough and leave space between them.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Voice</th>
+                            <td>Hands-free commands and dictation</td>
+                            <td>Input without touching a device</td>
+                            <td>Offer another input method for noisy or shared spaces.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <pre><code>&lt;div class="box table-scroll" tabindex="0" role="region" aria-labelledby="table-caption"&gt;
+    &lt;table&gt;
+        &lt;caption id="table-caption"&gt;Comparing input methods&lt;/caption&gt;
+        &lt;!-- Use scope="col" for column headers and scope="row" for row headers. --&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+
+            <h3>Table footer</h3>
+            <p>Add <code>&lt;tfoot&gt;</code> after the table body for a summary or total. It gets a stronger
+                dividing line and bold text. Links inside rows also highlight the row when they have keyboard focus.</p>
+            <div class="box">
+                <table>
+                    <caption>A reading plan (example times)</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Page</th>
+                            <th scope="col">Minutes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><a href="example-article.html">Example article</a></th>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href="demo.html">Theme demo</a></th>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row">Total</th>
+                            <td>8</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <pre><code>&lt;tfoot&gt;
+    &lt;tr&gt;
+        &lt;th scope="row"&gt;Total&lt;/th&gt;
+        &lt;td&gt;8&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/tfoot&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>Images</h2>
+            <p>Try moving the mouse over an image and see the effect.</p>
+            <div class="grid">
+                <figure>
+                    <img src="../images/index/vintage-computer-and-keyboard.jpg" alt="Vintage computer and keyboard."
+                        loading="lazy">
+                    <figcaption>Small caption</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/index/historic-mechanical-calculator.png" alt="Historic mechanical calculator."
+                        loading="lazy">
+                    <figcaption class="big">Big caption</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/index/child-using-tablet.webp" alt="Child using a tablet." loading="lazy">
+                </figure>
+            </div>
+        </section>
+
+        <section>
+            <h2>Cards</h2>
+            <p>A <code>box</code> inside a <code>grid</code>. An image at the start goes edge to edge; a topic class
+                changes its colour.</p>
+            <div class="grid">
+                <div class="box">
+                    <figure><img src="../images/index/square-wheel-bicycle-design-failure.jpg" alt="bicycle"
+                            loading="lazy">
+                    </figure>
+                    <h3><a href="sample-article.html">See the example article</a></h3>
+                    <p>A bicycle with square wheels: what happens when design forgets the people who use it.</p>
+                </div>
+                <div class="box topic-design-failures">
+                    <span class="pill good">Can be useful...</span>
+                    <h3><a href="#article">Another link</a></h3>
+                    <p>To the start of the page</p>
+                </div>
+                <div class="box">
+                    <strong>Notice</strong>
+                    <p>Notice that links (when used as titles) appear bigger.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>Topic navigation</h2>
+            <p>The homepage has a Topics dropdown with two levels: topics and subtopic links. Click a topic
+                row to open its subtopics. Native <code>&lt;details&gt;</code> and
+                <code>&lt;summary&gt;</code> work with a mouse, touch or keyboard, without JavaScript.</p>
+            <p>Try opening Topics, then Input/output devices. The example subtopic leads to the
+                article template; replace it with your own page links when reusing the menu.</p>
+            <nav class="main-nav" aria-label="Topic navigation example">
+                <a href="index.html">Home</a>
+                <details class="nav-topics">
+                    <summary>Topics</summary>
+                    <div class="nav-topics-panel liquid-glass">
+                        <ul class="nav-categories">
+                            <li>
+                                <details>
+                                    <summary>Input/output devices</summary>
+                                    <ul>
+                                        <li><a href="example-article.html" tabindex="0">Example article</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+            </nav>
+            <p>Use Tab to move between links and controls, and Enter or Space to open or close a focused summary.
+                Subtopic links use <code>tabindex="0"</code> so Tab also reaches them in Safari with its default keyboard settings.
+                Keyboard focus has a visible outline. On phones the panel spans the bar's available width; long menus
+                scroll vertically inside the viewport.</p>
+            <pre><code>&lt;nav class="main-nav" aria-label="Main"&gt;
+    &lt;a href="index.html"&gt;Home&lt;/a&gt;
+    &lt;details class="nav-topics"&gt;
+        &lt;summary&gt;Topics&lt;/summary&gt;
+        &lt;div class="nav-topics-panel liquid-glass"&gt;
+            &lt;ul class="nav-categories"&gt;
+                &lt;li&gt;
+                    &lt;details&gt;
+                        &lt;summary&gt;Input/output devices&lt;/summary&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a href="example-article.html" tabindex="0"&gt;Example article&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/details&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/details&gt;
+&lt;/nav&gt;</code></pre>
+            <p>The article template also demonstrates <code>rel="prev"</code> and <code>rel="next"</code>
+                navigation links. They align to the right of the top bar; update their destinations for your articles.
+                Use <code>aria-current="page"</code> on the link to the current page, as in this demo's top bar.</p>
+        </section>
+
+        <section>
+            <h2>Glass panels</h2>
+            <p>The top bar, footer, article sheet, grid cards and tables already use translucent glass surfaces.
+                Add <code>liquid-glass</code> to a standalone box to reuse the blur, reflections and shadows.</p>
+            <div class="box liquid-glass">
+                <strong>A reusable glass panel</strong>
+                <p>This is <code>class="box liquid-glass"</code>. The box provides spacing and rounded corners;
+                    the extra class supplies the glass surface.</p>
+            </div>
+            <pre><code>&lt;div class="box liquid-glass"&gt;
+    &lt;p&gt;Your content here&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            <p>The stylesheet's <code>--glass-opacity</code> variable controls surface opacity while text stays solid.
+                Browsers without backdrop blur get a more opaque background. In light mode, supported browsers and
+                HDR displays can show a brighter top reflection using <code>color(rec2100-linear 2 2 2)</code>;
+                otherwise the standard reflection remains.</p>
+        </section>
+
+        <section>
+            <h2>Automatic appearance and layout</h2>
+            <h3>Dark mode</h3>
+            <p>The website follows your device's light or dark appearance through
+                <code>prefers-color-scheme</code>. Change your device appearance to preview both versions of this page.
+                Backgrounds, text, glass surfaces and topic and status colours adapt together; no extra class is needed.</p>
+            <h3>Responsive grids</h3>
+            <p>Resize the window to try the existing image and card grids. They show three columns above 900px,
+                two from 601px to 900px, and one at 600px or below. An incomplete last row stays centred.
+                Headings and article padding also become smaller on narrower screens.</p>
+            <h3>Reduced motion</h3>
+            <p>Image zoom, the moving image sheen and the card lift on hover run only when
+                <code>prefers-reduced-motion: no-preference</code> matches. Enable reduced motion in your device's
+                accessibility settings to view the page without those effects.</p>
+            <h3>Skip to content</h3>
+            <p>Press Tab after loading the page to reveal its Skip to content link. Activating it jumps past the
+                navigation to the main content. Keep the link's destination matched to the main element's
+                <code>id</code> when copying the article template.</p>
+        </section>
+
+        <section>
+            <h2>All the classes</h2>
+            <div class="box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>What it does</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>topic-...</code></td>
+                            <td>Colours a page or a card with a topic</td>
+                        </tr>
+                        <tr>
+                            <td><code>good</code> <code>warn</code> <code>bad</code></td>
+                            <td>Green, yellow or red</td>
+                        </tr>
+                        <tr>
+                            <td><code>brand</code></td>
+                            <td>Site name in the top bar</td>
+                        </tr>
+                        <tr>
+                            <td><code>skip</code></td>
+                            <td>"Skip to content" link for keyboard users</td>
+                        </tr>
+                        <tr>
+                            <td><code>lead</code></td>
+                            <td>Bigger grey intro text</td>
+                        </tr>
+                        <tr>
+                            <td><code>grid</code></td>
+                            <td>Children in rows of three</td>
+                        </tr>
+                        <tr>
+                            <td><code>sheet</code></td>
+                            <td>On <code>&lt;main&gt;</code> of an article: white page over the pattern</td>
+                        </tr>
+                        <tr>
+                            <td><code>box</code></td>
+                            <td>White rounded box</td>
+                        </tr>
+                        <tr>
+                            <td><code>table-scroll</code></td>
+                            <td>Wrapper for wide tables; add <code>tabindex="0"</code> and an accessible name for keyboard scrolling</td>
+                        </tr>
+                        <tr>
+                            <td><code>note</code></td>
+                            <td>Coloured bar on the left of a box</td>
+                        </tr>
+                        <tr>
+                            <td><code>pill</code></td>
+                            <td>Small label</td>
+                        </tr>
+                        <tr>
+                            <td><code>button</code></td>
+                            <td>Link that looks like a button</td>
+                        </tr>
+                        <tr>
+                            <td><code>big</code></td>
+                            <td>Big caption over an image</td>
+                        </tr>
+                        <tr>
+                            <td><code>liquid-glass</code></td>
+                            <td>Reusable glass surface; combine with <code>box</code> for a standalone panel</td>
+                        </tr>
+                        <tr>
+                            <td><code>main-nav</code></td>
+                            <td>Navigation with aligned touch targets, focus outlines and a separate glass background layer</td>
+                        </tr>
+                        <tr>
+                            <td><code>nav-topics</code></td>
+                            <td>On a navigation disclosure: positions the Topics dropdown</td>
+                        </tr>
+                        <tr>
+                            <td><code>nav-topics-panel</code></td>
+                            <td>Dropdown panel with a viewport-limited height and vertical scrolling</td>
+                        </tr>
+                        <tr>
+                            <td><code>nav-categories</code></td>
+                            <td>Topic rows that expand to show subtopic links</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>
