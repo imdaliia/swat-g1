@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480" fill="none" stroke-opacity=".08" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- One tile of the page background; CSS repeats it.
+       A 4 x 4 grid of 120 x 120 squares. Two series of icons alternate like a chessboard,
+       one blue and one purple, so they never overlap.
+       Visibility: stroke-opacity above. Colours: the two <g> groups at the bottom. -->
+
+  <!-- Each icon is drawn once, centred on 0,0. -->
+  <defs>
+    <g id="mouse"><rect x="-14" y="-22" width="28" height="44" rx="14"/><path d="M0-22v14"/></g>
+    <g id="monitor"><rect x="-30" y="-26" width="60" height="40" rx="4"/><path d="M0 14v10M-14 26h28"/></g>
+    <g id="cursor"><path d="M-18-21v36l10-9 7 15 7-3-7-15 13-1z"/></g>
+    <g id="keyboard"><rect x="-32" y="-15" width="64" height="30" rx="4"/><path d="M-24-6h4M-14-6h4M-4-6h4M6-6h4M16-6h8M-24 2h4M-14 2h4M-4 2h4M6 2h4M16 2h8M-16 8h32"/></g>
+    <g id="access"><circle r="24"/><circle cy="-12" r="3.5"/><path d="M-13-5l13 3 13-3M0-2v10M0 8l-7 11M0 8l7 11"/></g>
+    <g id="eye"><path d="M-28 0C-18-16 18-16 28 0C18 16-18 16-28 0z"/><circle r="7"/></g>
+    <g id="phone"><rect x="-14" y="-24" width="28" height="48" rx="5"/><path d="M-4 18h8"/></g>
+  </defs>
+
+  <!-- Blue series: squares where row + column is even. -->
+  <g stroke="#2563eb">
+    <use href="#mouse" transform="translate(56 64) rotate(-12)"/>
+    <use href="#keyboard" transform="translate(306 56) rotate(8)"/>
+    <use href="#cursor" transform="translate(184 186) rotate(-8)"/>
+    <use href="#mouse" transform="translate(424 176) rotate(14)"/>
+    <use href="#monitor" transform="translate(64 296) rotate(-6)"/>
+    <use href="#cursor" transform="translate(296 304) rotate(10)"/>
+    <use href="#phone" transform="translate(176 424) rotate(-14)"/>
+    <use href="#monitor" transform="translate(416 416) rotate(6)"/>
+  </g>
+
+  <!-- Purple series: the other squares. -->
+  <g stroke="#7e22ce">
+    <use href="#eye" transform="translate(184 64) rotate(6)"/>
+    <use href="#phone" transform="translate(420 60) rotate(-10)"/>
+    <use href="#access" transform="translate(60 184)"/>
+    <use href="#monitor" transform="translate(304 180) rotate(6)"/>
+    <use href="#access" transform="translate(184 300)"/>
+    <use href="#keyboard" transform="translate(420 296) rotate(-8)"/>
+    <use href="#phone" transform="translate(56 420) rotate(10)"/>
+    <use href="#eye" transform="translate(300 424) rotate(-4)"/>
+  </g>
+</svg>

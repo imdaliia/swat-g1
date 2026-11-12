@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hello! This is the example article">
+    <meta name="author" content="Giulio Berti">
+    <title>HCI - Theme Demo</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+    <!-- /* tabindex is needed as without the website isnt accessible thru keybord navigation, and the links are not reachable /* -->
+     <!-- it uses currently place holder values, to be inserted when pages are ready -->
+    <!-- START NAVBAR -->
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="index.html">HCI</a>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul><li><a href="#topics" tabindex="0">topic1</a></li><li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQtopics" tabindex="0">Special topic</a></li></ul> 
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul><li><a href="#topics" tabindex="0">topic1</a></li><li><a href="#topics" tabindex="0">topic2</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul><li><a href="#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul><li><a href="#topics" tabindex="0">topic1</a></li><li><a href="#topics" tabindex="0">topic2</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul><li><a href="#topics" tabindex="0">topic1</a></li><li><a href="#topics" tabindex="0">topic2</a></li><li><a href="#topics" tabindex="0">topic3</a></li></ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+    </nav>
+    <!-- STOP NAVBAR -- copy paste this into your HTML file --> 
+
+    <header>
+        <h1>Human-Computer Interaction and Digital Accessibility</h1>
+        <p class="lead">An overview of how people and computers interact. Check out the topics!</p>
+    </header>
+
+    <main id="main">
+        <section id="topics">
+            <div class="grid">
+                <div class="box topic-io-devices">
+                    <figure><img src="../images/index/vintage-computer-and-keyboard.jpg" alt=""></figure>
+                    <h2><a href="sample-article.html">Input/output devices</a></h2>
+                    <p>From punch cards to touchscreens: the tools we use to talk to computers.</p>
+                </div>
+                <div class="box topic-design-interfaces">
+                    <figure><img src="../images/index/human-computer-interface-design.webp" alt=""></figure>
+                    <h2><a href="sample-article.html">Designing interfaces</a></h2>
+                    <p>The principles that make an interface easy to understand and use.</p>
+                </div>
+                <div class="box topic-web-accessibility">
+                    <figure><img src="../images/index/web-accessibility-concept.jpg" alt=""></figure>
+                    <h2><a href="sample-article.html">Web accessibility</a></h2>
+                    <p>How to build websites that work for everyone, whatever their abilities.</p>
+                </div>
+                <div class="box topic-design-failures">
+                    <figure><img src="../images/index/square-wheel-bicycle-design-failure.jpg" alt="" loading="lazy">
+                    </figure>
+                    <h2><a href="sample-article.html">Design failures</a></h2>
+                    <p>Dark patterns and famous mistakes, and what we can learn from them.</p>
+                </div>
+                <div class="box topic-future-interfaces">
+                    <figure><img src="../images/index/future-human-machine-interaction.webp" alt="" loading="lazy">
+                    </figure>
+                    <h2><a href="sample-article.html">Future interfaces</a></h2>
+                    <p>Voice, gestures, virtual reality and brain-computer interfaces.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>
