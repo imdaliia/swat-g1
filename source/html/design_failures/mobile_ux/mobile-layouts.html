@@ -163,166 +163,195 @@ https://www.w3.org/WAI/
 -->
 <!DOCTYPE html>
 <head>
-    <meta name="author" content="BUI Emilie">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="BUI Emilie">
     
-    <title>Mobile Layout Failures | Design Failures</title>
+        <title>Mobile Layout Failures | Design Failures</title>
 
-    <link rel="stylesheet" href="../../../css/style.css">
-    <link rel="stylesheet" href="../../../css/design_failures/design-failures.css">
+        <!-- Shared stylesheets -->
+                <link rel="stylesheet" href="../../../css/style.css">
+                <link rel="stylesheet" href="../../../css/design_failures/design-failures.css">
 </head>
 
-<body>
-      <header>
-        <a href="../index.html">Design Failures</a>
+<body class="topic-design-failures">
 
-        <h1>Mobile Layout Failures</h1>
+        <!-- Skip navigation -->
+        <a class="skip-link" href="#main-content">Skip to content</a>
 
-        <p>When desktop websites fail on smaller screens</p>
-    </header>
+        <!-- Top navigation -->
+        <nav class="main-nav" aria-label="Main navigation">
+                <a class="brand" href="../index.html">Design Failures</a>
+                <a href="../../index.html">Home</a>
+                <a href="mobile-popups.html" rel="next">Next →</a>
+        </nav>
+
+        <!-- Page header -->
+        <header>
+                <p class="lead">Mobile UX · Design Failures</p>
+                <h1>Mobile Layout Failures</h1>
+                <p class="lead">When websites fail on smaller screens</p>
+        </header>
   
-    <main>
+        <main id="main-content">
 
-        <section>
-                <h2>INTRODUCTION</h2>
+                <!-- Introduction -->
+                <section>
+                        <h2>Why Does Mobile Layout Matter?</h2>
 
-                <p>
-                        A website designed for desktop does not always work
-                        on a smartphone. Poor layouts can make content
-                        difficult to read and navigation frustrating.
-                </p>
-        </section>
+                        <p>
+                                A website designed for desktop does not always work
+                                on a smartphone. Poor layouts can make content
+                                difficult to read and navigation frustrating.
+                        </p>
+                </section>
 
-        <section>
-                <h2>SPACE JAM (1996)</h2>
+                <!-- Case Study 1 -->
+                <section>
+                        <h2>1. Space Jam (1996)</h2>
 
-                <figure>
-                        <img
-                                src="../../../images/design_failures/mobile_ux/layout-spacejam.jpg"
-                                alt="The original Space Jam website displayed on a smartphone"
-                        >
-                        <figcaption>
-                                The 1996 Space Jam website displayed on a phone in 2026.
-                                Screenshot: Tommaso Russo, 5 November 2026.
-                        </figcaption>
-                </figure>
+                        <figure class="portrait">
+                                <img
+                                        src="../../../images/design_failures/mobile_ux/layout-spacejam.jpg"
+                                        alt="The original Space Jam website displayed on a smartphone"
+                                >
+                                <figcaption>
+                                        The 1996 Space Jam website displayed on a phone in 2026.
+                                        Screenshot: Tommaso Russo, 5 November 2026.
+                                </figcaption>
+                        </figure>
 
-                <h3>THE PROBLEM</h3>
+                        <div class="box">
+                                <h3>The problem</h3>
+                                <p>
+                                        A desktop website that never adapted to modern
+                                        smartphone screens.
+                                </p>
+                        </div>
 
-                <p>
-                        A desktop website that never adapted to modern
-                        smartphone screens.
-                </p>
+                        <div class="box">
+                                <h3>Why does it fail?</h3>
+                                <ul>
+                                        <li>Tiny text and links.</li>
+                                        <li>Users need to zoom in.</li>
+                                        <li>Large unused screen areas.</li>
+                                </ul>
+                        </div>
 
-                <h3>WHY DOES IT FAIIL?</h3>
+                        <div class="box">
+                                <h3>How could it be improved?</h3>
+                                <p>
+                                        Use responsive layouts, readable text and
+                                        mobile-friendly navigation.
+                                </p>
+                        </div>
+                </section>
 
-                <ul>
-                        <li>Tiny text amd links.</li>
-                        <li>Users need to zoom in.</li>
-                        <li>Large unused screen areas.</li>
-                </ul>
+                <!-- Case Study 2 -->
+                <section>
+                        <h2>2. Berkshire Hathaway</h2>
 
-                <h3>HOW TO IMPROVE IT?</h3>
+                        <figure class="portrait">
+                                <img
+                                        src="../../../images/design_failures/mobile_ux/layout-berkshire.jpg"
+                                        alt="Berkshire Hathaway website displayed on a smartphone">
 
-                <p>
-                        Use responsive layouts, readable text and
-                        mobile-friendly navigation.
-                </p>
-        </section>
+                                <figcaption>
+                                        Berkshire Hathaway's website on a smartphone.
+                                        Screenshot: Tommaso Russo, 5 November 2026.
+                                </figcaption>
+                        </figure>
 
-        <section>
-                <h2>BERKSHIRE HATHAWAY</h2>
+                        <div class="box">
+                                <h3>The problem</h3>
+                                <p>
+                                        A traditional website with a layout that is not
+                                        optimised for mobile devices.
+                                </p>
+                        </div>
 
-                <figure>
-                        <img
-                                src="../../../images/design_failures/mobile_ux/layout-berkshire.jpg"
-                                alt="Berkshire Hathaway website displayed on a smartphone"
-                        >
-                        <figcaption>
-                                Berkshire Hathaway's website displayed on a smartphone.
-                                Screenshot: Tommaso Russo, 5 November 2026.
-                        </figcaption>
-                </figure>
+                        <div class="box">
+                                <h3>Why does it fail?</h3>
+                                <ul>
+                                        <li>Links are too close together.</li>
+                                        <li>Inconsistent text sizes.</li>
+                                        <li>Navigation is difficult.</li>
+                                </ul>
+                        </div>
 
-                <h3>THE PROBLEM</h3>
+                        <div class="box">
+                                <h3>How could it be improved?</h3>
+                                <p>
+                                        Improve spacing, typography and touch targets.
+                                </p>
+                        </div>
+                 </section>
 
-                <p>
-                        A traditional website with a layout that is not
-                        optimised for mobile devices.
-                </p>
+                 <!-- Key Takeaways -->
+                <section>
+                        <h2>3. Key Takeaways</h2>
 
-                <h3>WHY DOES IT FAIL?</h3>
+                        <div class="box note">
+                                <strong>Good mobile design should:</strong>
+                                <ul>
+                                        <li>Adapt to different screen sizes.</li>
+                                        <li>Keep text readable.</li>
+                                        <li>Make links easy to tap.</li>
+                                        <li>Provide clear navigation.</li>
+                                </ul>
+                        </div>
+                </section>
 
-                <ul>
-                        <li>Links are too close together.</li>
-                        <li>Inconsistent text sizes.</li>
-                        <li>Navigation is difficult.</li>
-                </ul>
+                <!-- CONCLUSION -->
+                <section>
+                        <h2>Conclusion</h2>
 
-                <h3>HOW TO IMPROVE IT?</h3>
+                        <p>
+                                A website should adapt to different screen sizes to provide a comfortable browsing experience. 
+                                Responsive design makes content easier to read, navigate and access on mobile devices.
+                        </p>
+                </section>
 
-                <p>
-                        Improve spacing, typography and touch targets.
+                <!-- Sources -->
+                <section>
+                        <h2>Sources</h2>
 
-                </p>
-        </section>
+                        <ul>
+                                <li>
+                                        <a href="https://www.spacejam.com/1996/">
+                                                Space Jam (1996) official website
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="https://www.berkshirehathaway.com/">
+                                                Berkshire Hathaway official website
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design">
+                                                MDN - Responsive Design
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="https://www.w3.org/WAI/">
+                                                W3C - Web Accessibility Initiative
+                                        </a>
+                                </li>
+                        </ul>
+                </section>
+        </main>
 
-        <section>
-                <h2>KEY TAKEAWAYS</h2>
+        <!-- Previous / Next navigation -->
+        <nav aria-label="Page navigation">
+                <a href="../historic-lessons.html" rel="prev">← Previous</a>
+                <a href="mobile-popups.html" rel="next">Next →</a>
+        </nav>
 
-                <ul>
-                        <li>Design for mobile screens.</li>
-                        <li>Keep text readable.</li>
-                        <li>Make links easy to tap.</li>
-                        <li>Use responsive web design.</li>
-                </ul>
-        </section>
-
-        <section>
-                <h2>CONCLUSION</h2>
-                <p>
-                        These examples show that a website can remain accessible
-                        online while still providing a poor user experience on
-                        modern devices. Responsive design is essential to make
-                        websites readable, usable and accessible across different
-                        screen sizes.
-                </p>
-        </section>
-
-        <section>
-                <h2>REFERENCES</h2>
-                <ul>
-                        <li>
-                                <a href="https://www.spacejam.com/1996/">
-                                        Space Jam (1996) official website
-                                </a>
-                        </li>
-                        <li>
-                                <a href="https://www.berkshirehathaway.com/">
-                                        Berkshire Hathaway official website
-                                </a>
-                        </li>
-                        <li>
-                                <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design">
-                                        MDN — Responsive Design
-                                </a>
-                        </li>
-                        <li>
-                                <a href="https://www.w3.org/WAI/">
-                                        W3C — Web Accessibility Initiative
-                                </a>
-                        </li>
-                </ul>
-        </section>
-    </main>
-
-    <nav aria-label="Page navigation">
-        <a href="../historic-lessons.html">← Previous</a>
-        <a href="mobile-popups.html">Next →</a>
-    </nav>
-
-    <footer>
-        <p>Design Failures — Mobile UX</p>
-        <a href="../index.html">Back to the main page</a>
-    </footer>
+        <!-- Footer -->
+        <footer>
+                <p>Design Failures — Mobile UX</p>
+                <a href="../../index.html">Back to main page</a>
+        </footer>
 
 </body>
+                
