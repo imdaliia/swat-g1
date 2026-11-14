@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User experience principles: honeycomb, emotional design, human-centred process, accessibility and ethics">
+    <meta name="author" content="Massimiliano Cipriani">
+    <title>HCI - UX Principles</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="topic-design-interfaces">
+
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
+
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="index.html">HCI</a>
+        <a href="../index.html">Home</a>
+        <a href="../demo.html">Demo</a>
+
+        <details class="nav-topics">
+            <summary>Topics</summary>
+
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul>
+                                <li><a href="index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="index.html#topics" tabindex="0">Special topic</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details open>
+                            <summary>Designing interfaces</summary>
+                            <ul>
+                                <li>
+                                    <a href="U-T%20and%20system%20requirements/user-task-system-requirements.html" tabindex="0">
+                                        User, Task and System Requirements
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="Inf-architecture/information-architecture-navigation.html" tabindex="0">
+                                        Information Architecture and Navigation
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="interaction-design.html" tabindex="0">
+                                        Interaction Design
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="workflow-design.html" tabindex="0">
+                                        Workflow Design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="usability.html" tabindex="0">
+                                        Usability
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ux-principles.html" tabindex="0" aria-current="page">
+                                        UX Principles
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="Prototyping/prototyping-usability-evaluation.html" tabindex="0">
+                                        Prototyping and Usability Evaluation
+                                    </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul>
+                                <li><a href="index.html#topics" tabindex="0">topic1</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="index.html#topics" tabindex="0">topic2</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul>
+                                <li><a href="index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="index.html#topics" tabindex="0">topic2</a></li>
+                                <li><a href="index.html#topics" tabindex="0">topic3</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                </ul>
+            </div>
+        </details>
+
+        <!-- Previous and next links -->
+        <a href="usability.html" rel="prev">← previous</a>
+        <a href="Prototyping/prototyping-usability-evaluation.html" rel="next">next →</a>
+
+    </nav>
+
+    <!-- Article header -->
+    <header>
+        <h1>UX Principles</h1>
+        <p class="lead">Beyond ease of use: how perception, emotion, trust and process shape the whole experience of a product.</p>
+        <p><span class="pill">Designing interfaces</span> <span class="pill">User experience</span> <span class="pill">Principles</span></p>
+    </header>
+
+    <main id="article">
+        <div class="sheet">
+
+            <section id="intro">
+                <h2>1. From usability to user experience</h2>
+                <p>The <a href="usability.html">previous article</a> asked whether a product can be used effectively,
+                    efficiently and without frustration. <strong>User experience (UX)</strong> asks a bigger
+                    question: what is it like to deal with this product, service or system, from the first
+                    expectation to the long-term memory? The ISO 9241-210 standard defines it as a person’s
+                    perceptions and responses resulting from the use or anticipated use of a product, system or
+                    service.</p>
+                <p>Two details of that definition are worth noticing. First, experience includes
+                    <em>anticipated</em> use: it starts before the first click, with advertising, reviews and
+                    expectations, and continues after the task is over. Second, it covers
+                    <em>perceptions and responses</em>: emotions, beliefs, preferences and behaviours, not only
+                    task performance.</p>
+
+                <div class="box note">
+                    <strong>Key idea</strong>
+                    Usability is a necessary foundation of good UX, but it is not sufficient. A usable product can
+                    still be forgettable, untrustworthy or irrelevant.
+                </div>
+            </section>
+
+            <section id="honeycomb">
+                <h2>2. The UX honeycomb</h2>
+                <p>Peter Morville’s “user experience honeycomb” breaks UX into seven facets. It is a handy way to
+                    check that a design is not strong in one dimension while failing in another.</p>
+
+                <div class="box table-scroll" tabindex="0" role="region" aria-label="UX honeycomb facets">
+                    <table>
+                        <caption>The seven facets of user experience</caption>
+                        <thead>
+                            <tr>
+                                <th>Facet</th>
+                                <th>Question to ask</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Useful</th>
+                                <td>Does it solve a real need or problem for the user?</td>
+                            </tr>
+                            <tr>
+                                <th>Usable</th>
+                                <td>Is it easy and efficient to use?</td>
+                            </tr>
+                            <tr>
+                                <th>Desirable</th>
+                                <td>Do the visual design, tone and brand evoke appreciation and emotion?</td>
+                            </tr>
+                            <tr>
+                                <th>Findable</th>
+                                <td>Can users find the product, and find what they need inside it?</td>
+                            </tr>
+                            <tr>
+                                <th>Accessible</th>
+                                <td>Can people with a wide range of abilities and devices use it?</td>
+                            </tr>
+                            <tr>
+                                <th>Credible</th>
+                                <td>Do users trust it, and does it deserve that trust?</td>
+                            </tr>
+                            <tr>
+                                <th>Valuable</th>
+                                <td>Does it deliver value to the user and to the organisation that provides it?</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="emotion">
+                <h2>3. Emotion in design</h2>
+                <p>People do not experience products with logic alone. Don Norman describes three levels of
+                    processing that shape how we respond to a design:</p>
+
+                <div class="grid">
+                    <div class="box">
+                        <h3>Visceral</h3>
+                        <p>The immediate, automatic reaction to appearance, sound and feel. It forms in a fraction of
+                            a second and sets the first impression.</p>
+                    </div>
+                    <div class="box">
+                        <h3>Behavioural</h3>
+                        <p>The experience of actually using the product: does it work as expected, is it
+                            responsive, does it make the user feel in control?</p>
+                    </div>
+                    <div class="box">
+                        <h3>Reflective</h3>
+                        <p>The conscious judgement afterwards: what the product says about me, whether I would
+                            recommend it, whether I trust the brand.</p>
+                    </div>
+                </div>
+
+                <p>Two well-known effects follow from this. The <strong>aesthetic-usability effect</strong> shows
+                    that people tend to perceive attractive interfaces as easier to use and are more forgiving of
+                    minor problems, which is a reason to care about visual quality but also a warning, because
+                    beauty can hide real usability issues during testing. The <strong>peak-end rule</strong>
+                    suggests that people judge an experience largely by its most intense moment and its ending
+                    rather than by the average, so a smooth final confirmation after a long process, or a helpful
+                    error message at a bad moment, can matter more than its share of screen time suggests.</p>
+            </section>
+
+            <section id="principles">
+                <h2>4. Visual and cognitive principles</h2>
+                <p>Many UX decisions rest on how human perception and cognition work. A few principles appear again
+                    and again:</p>
+                <ul>
+                    <li><strong>Gestalt grouping.</strong> We perceive elements that are close together
+                        (<em>proximity</em>), look alike (<em>similarity</em>) or are enclosed together as belonging
+                        to the same group. Spacing and alignment communicate structure before any label is read.</li>
+                    <li><strong>Visual hierarchy.</strong> Size, contrast, colour and position tell users what is
+                        most important and where to look first. If everything is emphasised, nothing is.</li>
+                    <li><strong>Jakob’s law.</strong> Users spend most of their time on other products, so they
+                        expect yours to work like those. Familiar patterns lower the learning cost.</li>
+                    <li><strong>Limited attention and memory.</strong> People scan rather than read and hold only a
+                        few items in working memory, which supports chunking, clear headings and
+                        progressive disclosure.</li>
+                    <li><strong>Response time.</strong> Interfaces feel instantaneous below roughly a tenth of a
+                        second, keep the user’s flow for about a second, and need explicit progress feedback beyond
+                        that.</li>
+                    <li><strong>Cognitive load.</strong> Remove anything that makes users think about the interface
+                        instead of their task: unclear labels, unexpected layouts, unnecessary choices.</li>
+                </ul>
+            </section>
+
+            <section id="process">
+                <h2>5. The user-centred design process</h2>
+                <p>UX is not a finishing coat of paint; it is a way of working. ISO 9241-210 describes
+                    <strong>human-centred design</strong> as an iterative cycle of four activities:</p>
+
+                <pre><code>Understand and specify the context of use
+          ↓
+Specify the user requirements
+          ↓
+Produce design solutions  (sketches, prototypes)
+          ↓
+Evaluate the designs against the requirements
+          ↓
+   (repeat until the requirements are met)</code></pre>
+
+                <p>At every stage, designers need evidence about real users. Research methods differ in what they
+                    tell you:</p>
+
+                <div class="box table-scroll" tabindex="0" role="region" aria-label="UX research methods">
+                    <table>
+                        <caption>Common UX research methods</caption>
+                        <thead>
+                            <tr>
+                                <th>Method</th>
+                                <th>Type of evidence</th>
+                                <th>Typically used to</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>User interviews</th>
+                                <td>Qualitative, attitudinal (what people say)</td>
+                                <td>Discover goals, needs and motivations</td>
+                            </tr>
+                            <tr>
+                                <th>Contextual inquiry</th>
+                                <td>Qualitative, behavioural (what people do)</td>
+                                <td>Observe real work and its constraints</td>
+                            </tr>
+                            <tr>
+                                <th>Surveys</th>
+                                <td>Quantitative, attitudinal</td>
+                                <td>Measure opinions and satisfaction at scale</td>
+                            </tr>
+                            <tr>
+                                <th>Analytics and A/B tests</th>
+                                <td>Quantitative, behavioural</td>
+                                <td>Measure what happens and compare variants</td>
+                            </tr>
+                            <tr>
+                                <th>Usability testing</th>
+                                <td>Mostly qualitative, behavioural</td>
+                                <td>Find out why users struggle</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>No single method is enough. What people say they do and what they actually do often differ, and
+                    numbers can reveal <em>that</em> something is wrong without explaining <em>why</em>. Combining
+                    methods gives a more reliable picture.</p>
+            </section>
+
+            <section id="inclusion">
+                <h2>6. Accessibility, inclusion and ethics</h2>
+                <p>A good experience must be available to everyone who needs it. The Web Content Accessibility
+                    Guidelines (WCAG) organise their requirements around four principles, often abbreviated POUR:</p>
+                <ul>
+                    <li><strong>Perceivable</strong>: information can be presented in ways every user can perceive
+                        (text alternatives, captions, sufficient contrast).</li>
+                    <li><strong>Operable</strong>: all functions are usable with a keyboard and other input devices,
+                        with enough time and no seizure-inducing content.</li>
+                    <li><strong>Understandable</strong>: content and behaviour are readable and predictable.</li>
+                    <li><strong>Robust</strong>: it works with a variety of browsers and assistive technologies.</li>
+                </ul>
+                <p>Accessible design is often better design for everyone: captions help in noisy places, high
+                    contrast helps in bright sunlight and keyboard support helps power users.</p>
+
+                <div class="box note bad">
+                    <strong>Dark patterns</strong>
+                    Interfaces can also be engineered against users: hidden costs, pre-ticked boxes, cancellation
+                    flows that are far harder than sign-up, or fake urgency. These may raise short-term numbers
+                    but they destroy trust and, in many places, are increasingly regulated. Ethical UX means
+                    being honest about what the product does and respecting users’ time, attention and
+                    choices.
+                </div>
+            </section>
+
+            <section id="pitfalls">
+                <h2>7. Frequent pitfalls</h2>
+                <ol>
+                    <li><strong>Designing for yourself.</strong> Designers and developers are rarely typical users.
+                        Test with representative people, not colleagues.</li>
+                    <li><strong>Confusing UX with UI.</strong> Screens are only the visible part of the experience;
+                        onboarding, support, performance and policies are part of it too.</li>
+                    <li><strong>Relying on a single method.</strong> Analytics alone, or interviews alone, tell
+                        only half of the story.</li>
+                    <li><strong>Testing too late.</strong> Problems found after release cost far more to fix than
+                        those found on a sketch.</li>
+                    <li><strong>Treating accessibility as an add-on.</strong> It is much cheaper to design it in from
+                        the start than to retrofit it.</li>
+                    <li><strong>Optimising a metric instead of the experience.</strong> A higher click rate achieved
+                        by confusing users is not an improvement.</li>
+                </ol>
+            </section>
+
+            <section id="qa">
+                <h2>8. Quick questions</h2>
+
+                <details class="box">
+                    <summary>Is UX the same as usability?</summary>
+                    <p>No. Usability is one important part of UX: the ease and efficiency of use. UX also includes
+                        usefulness, emotion, trust, accessibility and everything that happens before and after the
+                        interaction itself.</p>
+                </details>
+
+                <details class="box">
+                    <summary>Does good UX always mean “simple”?</summary>
+                    <p>Not always. Professional tools for complex domains may legitimately be rich in features.
+                        What matters is that complexity is organised, revealed when needed and matched to what
+                        users are trying to do, rather than removed at any cost.</p>
+                </details>
+
+                <details class="box">
+                    <summary>How do I measure UX?</summary>
+                    <p>Combine behavioural data (task success, time, drop-off), attitudinal data (satisfaction,
+                        perceived value, trust) and qualitative observation. Pick measures linked to the goals
+                        of users and of the organisation, and track them over time rather than once.</p>
+                </details>
+            </section>
+
+            <section id="conclusion">
+                <h2>9. Conclusion</h2>
+                <blockquote>Usability removes the obstacles; user experience gives the journey a point.</blockquote>
+                <p>Usability and UX principles work together. Heuristics and testing keep an interface free of
+                    friction, while the broader view of UX makes sure the product is useful, credible, accessible
+                    and worth coming back to. Both depend on the same habit: observing real people in real
+                    contexts, then improving the design and checking again.</p>
+                <p>The next article, <a href="Prototyping/prototyping-usability-evaluation.html">Prototyping and Usability Evaluation</a>,
+                    shows how to put these ideas to work by building early versions of a design and testing them
+                    before committing to the final product.</p>
+                <p><a class="button" href="index.html#topics">Back to topics</a></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>HCI - Designing Human-Machine Interfaces · UX Principles</p>
+    </footer>
+
+</body>
+
+</html>

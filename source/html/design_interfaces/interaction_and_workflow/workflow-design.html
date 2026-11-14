@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Workflows and automation in human-machine interfaces">
+    <meta name="author" content="Massimiliano Cipriani">
+    <title>HCI - Workflow Design</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="topic-design-interfaces">
+
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
+
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="index.html">HCI</a>
+        <a href="../index.html">Home</a>
+        <a href="../demo.html">Demo</a>
+
+        <details class="nav-topics">
+            <summary>Topics</summary>
+
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul>
+                                <li><a href="index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="index.html#topics" tabindex="0">Special topic</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details open>
+                            <summary>Designing interfaces</summary>
+                            <ul>
+                                <li>
+                                    <a href="U-T%20and%20system%20requirements/user-task-system-requirements.html" tabindex="0">
+                                        User, Task and System Requirements
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="Inf-architecture/information-architecture-navigation.html" tabindex="0">
+                                        Information Architecture and Navigation
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="interaction-design.html" tabindex="0">
+                                        Interaction Design
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="workflow-design.html" tabindex="0" aria-current="page">
+                                        Workflow Design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="usability.html" tabindex="0">
+                                        Usability
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ux-principles.html" tabindex="0">
+                                        UX Principles
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="Prototyping/prototyping-usability-evaluation.html" tabindex="0">
+                                        Prototyping and Usability Evaluation
+                                    </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul>
+                                <li><a href="index.html#topics" tabindex="0">topic1</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="index.html#topics" tabindex="0">topic2</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul>
+                                <li><a href="index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="index.html#topics" tabindex="0">topic2</a></li>
+                                <li><a href="index.html#topics" tabindex="0">topic3</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                </ul>
+            </div>
+        </details>
+
+        <!-- Previous and next links -->
+        <a href="interaction-design.html" rel="prev">← previous</a>
+        <a href="usability.html" rel="next">next →</a>
+
+    </nav>
+
+    <!-- Article header -->
+    <header>
+        <h1>Workflow Design</h1>
+        <p class="lead">How single interactions are organised into sequences of steps, and how the work is shared between people and machines.</p>
+        <p><span class="pill">Designing interfaces</span> <span class="pill">Workflows</span> <span class="pill">Automation</span></p>
+    </header>
+
+    <main id="article">
+        <div class="sheet">
+
+<section id="intro">
+                <h2>1. From interaction to workflow</h2>
+                <p>The <a href="interaction-design.html">previous article</a> looked at single exchanges between a
+                    person and a machine. Real goals, however, are rarely achieved in one exchange. Booking a flight,
+                    configuring a medical pump or approving an invoice all require a <strong>sequence</strong> of
+                    steps, decisions and hand-offs. That sequence is the <strong>workflow</strong>.</p>
+                <p>A system can have excellent individual interactions and still be exhausting to use because its
+                    workflow forces people to jump between screens, re-enter data or remember what they were doing
+                    three steps ago. Workflow design is about preventing this.</p>
+
+                <div class="box note">
+                    <strong>Key idea</strong>
+                    Good workflows are judged by how smoothly a person moves from <em>intention</em> to
+                    <em>outcome</em> across the whole task, including errors, interruptions and exceptions.
+                </div>
+            </section>
+
+            <section id="workflows">
+                <h2>2. From tasks to workflows</h2>
+                <p>A workflow is the ordered set of steps, decisions and hand-offs required to complete a task. In
+                    interface design it is usually derived from <strong>task analysis</strong>: observing or
+                    interviewing real users, listing their goals, and decomposing each goal into sub-tasks. A
+                    classic technique is <em>hierarchical task analysis</em> (HTA), which expresses a task as a tree
+                    of goals and plans.</p>
+
+                <pre><code>0. Pay an invoice
+   1. Locate the invoice
+      1.1 Search by supplier or number
+      1.2 Open the invoice detail
+   2. Verify the data
+      2.1 Compare amount with purchase order
+      2.2 Check due date
+   3. Approve and schedule payment
+Plan 0: do 1, then 2; if data matches do 3, otherwise return the invoice to the supplier.</code></pre>
+
+                <p>The plan line matters as much as the steps. It captures <strong>order</strong>,
+                    <strong>conditions</strong> and <strong>exceptions</strong>, which are precisely the parts that
+                    are forgotten when workflows are designed from the “happy path” alone.</p>
+
+                <h3>Anatomy of a workflow</h3>
+                <ul>
+                    <li><strong>Trigger</strong>: what starts the task (a notification, a customer call, a schedule).</li>
+                    <li><strong>Steps and decisions</strong>: the actions people take and the points where the path
+                        branches.</li>
+                    <li><strong>Information needs</strong>: what the user must know at each step, and where that
+                        information comes from.</li>
+                    <li><strong>Hand-offs</strong>: moments when responsibility passes to another person or system.</li>
+                    <li><strong>Interruptions</strong>: phone calls, emergencies and context switches that break the flow.</li>
+                    <li><strong>Completion and feedback</strong>: how the user knows the goal has been achieved.</li>
+                </ul>
+
+                <h3>Common workflow patterns</h3>
+                <div class="box table-scroll" tabindex="0" role="region" aria-label="Workflow patterns">
+                    <table>
+                        <caption>Workflow patterns in interface design</caption>
+                        <thead>
+                            <tr>
+                                <th>Pattern</th>
+                                <th>Description</th>
+                                <th>Best when</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Linear wizard</th>
+                                <td>Fixed sequence of screens with next/back</td>
+                                <td>Rare, unfamiliar tasks with strict order (installation, onboarding)</td>
+                            </tr>
+                            <tr>
+                                <th>Hub and spoke</th>
+                                <td>A central screen from which independent sub-tasks are launched</td>
+                                <td>Sub-tasks can be done in any order (settings, dashboards)</td>
+                            </tr>
+                            <tr>
+                                <th>Branching</th>
+                                <td>The path changes depending on user choices or system state</td>
+                                <td>Diagnosis, configuration, rule-driven processes</td>
+                            </tr>
+                            <tr>
+                                <th>Parallel / multitasking</th>
+                                <td>Several tasks progress at once, with the user switching between them</td>
+                                <td>Control rooms, call centres, trading desks</td>
+                            </tr>
+                            <tr>
+                                <th>Human-in-the-loop</th>
+                                <td>The machine proposes or executes; the person supervises and intervenes</td>
+                                <td>Automation, AI assistance, safety-critical operations</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="automation">
+                <h2>3. Sharing the work between human and machine</h2>
+                <p>Modern interfaces increasingly decide <em>who does what</em>. The question is no longer only “how
+                    does the user operate the machine?”, but “which parts of the workflow should the machine perform,
+                    suggest or merely monitor?”. Research on levels of automation describes a spectrum, which can be
+                    simplified as follows:</p>
+
+                <div class="box table-scroll" tabindex="0" role="region" aria-label="Levels of automation">
+                    <table>
+                        <caption>Simplified levels of automation</caption>
+                        <thead>
+                            <tr>
+                                <th>Level</th>
+                                <th>Machine role</th>
+                                <th>Human role</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Manual</th>
+                                <td>None</td>
+                                <td>Decides and acts</td>
+                                <td>Driving a car without assistance</td>
+                            </tr>
+                            <tr>
+                                <th>Advisory</th>
+                                <td>Offers suggestions or alerts</td>
+                                <td>Decides and acts</td>
+                                <td>Lane-departure warning</td>
+                            </tr>
+                            <tr>
+                                <th>Supervised</th>
+                                <td>Acts, then waits for veto or confirmation</td>
+                                <td>Approves or overrides</td>
+                                <td>Email “undo send”, adaptive cruise control</td>
+                            </tr>
+                            <tr>
+                                <th>Autonomous</th>
+                                <td>Decides and acts, informs afterwards</td>
+                                <td>Monitors outcomes</td>
+                                <td>Automatic spam filtering</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>Higher automation reduces workload in normal conditions, but it introduces well-documented
+                    risks:</p>
+                <ul>
+                    <li><strong>Out-of-the-loop problem</strong>: people who only monitor lose situational awareness
+                        and skill, and struggle to take over when the machine fails.</li>
+                    <li><strong>Automation surprises</strong>: the system does something the user did not expect
+                        because its mode or logic was not visible.</li>
+                    <li><strong>Over-trust and under-trust</strong>: users either follow wrong recommendations
+                        blindly or ignore correct ones after a few false alarms.</li>
+                </ul>
+
+                <div class="box note warn">
+                    <strong>Design guideline</strong>
+                    When a machine takes initiative, the interface must always answer three questions for the user:
+                    <em>what is the system doing now, why is it doing it, and what will it do next?</em>
+                    It must also make taking back control easy and immediate.
+                </div>
+            </section>
+
+            <section id="case">
+                <h2>4. A worked example: online checkout</h2>
+                <p>Consider the purchase flow of an online shop. It is a short workflow, but it contains all the
+                    typical problems.</p>
+
+                <div class="grid">
+                    <div class="box note good">
+                        <h3>Well designed <span class="pill good">good</span></h3>
+                        <p>Progress indicator, a persistent order summary, address auto-completion, guest checkout,
+                            inline validation and a clear final confirmation with an order number.</p>
+                    </div>
+                    <div class="box note warn">
+                        <h3>Risky <span class="pill warn">warn</span></h3>
+                        <p>A long single form with optional and mandatory fields mixed together, and error messages
+                            shown only after pressing “Pay”.</p>
+                    </div>
+                    <div class="box note bad">
+                        <h3>Broken <span class="pill bad">bad</span></h3>
+                        <p>Forced account creation, a cart that empties on “back”, and a payment button that gives no
+                            feedback and lets the user click twice.</p>
+                    </div>
+                </div>
+
+                <p>The three versions may have identical visual styling. What separates them is workflow design:
+                    whether state is preserved, whether errors are caught early and explained in plain language, and
+                    whether the user always knows where they are and what happens next.</p>
+            </section>
+
+            <section id="pitfalls">
+                <h2>5. Frequent pitfalls</h2>
+                <ol>
+                    <li><strong>Designing only the happy path.</strong> Real use includes errors, interruptions,
+                        missing data and users who change their mind.</li>
+                    <li><strong>Mirroring the database or the organisation chart.</strong> Screens should follow the
+                        user’s task, not the internal structure of the system.</li>
+                    <li><strong>Hidden modes.</strong> If the same action has different effects depending on an
+                        invisible state, errors are inevitable.</li>
+                    <li><strong>Too many confirmations.</strong> If every action asks “Are you sure?”, users stop
+                        reading. Prefer undo for common actions and confirmation for rare, irreversible ones.</li>
+                    <li><strong>Ignoring context of use.</strong> A workflow tested at a desk may fail on a noisy
+                        factory floor, in a moving vehicle or with gloves on.</li>
+                    <li><strong>Neglecting accessibility.</strong> Workflows that depend on a mouse, colour alone or
+                        tight time limits exclude many users.</li>
+                </ol>
+            </section>
+
+            <section id="qa">
+                <h2>6. Quick questions</h2>
+
+                <details class="box">
+                    <summary>Is a shorter workflow always better?</summary>
+                    <p>Not necessarily. Fewer steps usually help, but compressing a complex decision into one screen
+                        can raise cognitive load and error rates. The goal is the right amount of structure for the
+                        user’s expertise and the risk of the task.</p>
+                </details>
+
+                <details class="box">
+                    <summary>How do I find out what the real workflow is?</summary>
+                    <p>Observe people doing the work (contextual inquiry), interview them, and examine artefacts such
+                        as forms, spreadsheets and sticky notes. The official procedure and the actual practice
+                        often differ, and the differences are where design opportunities hide.</p>
+                </details>
+
+                <details class="box">
+                    <summary>How does AI change interaction design?</summary>
+                    <p>It shifts interfaces from “the user issues commands” to “the user and the system negotiate”.
+                        This makes transparency, explanation, control and graceful error recovery more important,
+                        because the system’s behaviour is less predictable than that of traditional software.</p>
+                </details>
+            </section>
+
+            <section id="conclusion">
+                <h2>7. Conclusion</h2>
+                <blockquote>An interface is a conversation; a workflow is the plot that gives that conversation a
+                    purpose.</blockquote>
+                <p>Designing interaction means shaping each exchange so that it is understandable, efficient and
+                    forgiving. Designing workflow means arranging those exchanges into a sequence that matches how people
+                    think, work and get interrupted. When the two are done well, the technology fades into the
+                    background and the user’s attention stays on the goal. When they are neglected, even the most
+                    sophisticated machine feels hostile.</p>
+                <p>The next article in this section, <a href="usability.html">Usability</a>, looks at the heuristics and measurements used to judge whether an interaction
+                    design is actually working.</p>
+                <p><a class="button" href="usability.html">Next to usability</a></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>HCI - Designing Human-Machine Interfaces · Workflow Design</p>
+    </footer>
+
+</body>
+
+</html>
