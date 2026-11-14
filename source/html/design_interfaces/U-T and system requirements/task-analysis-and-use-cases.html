@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Task analysis, hierarchical task analysis, scenarios and use cases for interface design">
+    <meta name="author" content="Maria Miteva">
+    <title>HCI - Task Analysis and Use Cases</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/design_interfaces/design-interfaces-home.css">
+</head>
+
+<body class="topic-design-interfaces">
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li><details><summary>Input/output devices</summary><ul><li><a href="../../../index.html#topics" tabindex="0">topic1</a></li><li><a href="../../../index.html#topics" tabindex="0">Special topic</a></li></ul></details></li>
+                    <li><details><summary>Designing interfaces</summary><ul>
+                        <li><a href="user-task-system-requirements.html" tabindex="0">User, Task and System Requirements</a></li>
+                        <li><a href="../Inf-architecture/information-architecture-navigation.html" tabindex="0">Information Architecture and Navigation</a></li>
+                        <li><a href="../Interaction%20and%20workflow%20design/interaction-workflow-design.html" tabindex="0">Interaction and Workflow Design</a></li>
+                        <li><a href="../Usability%20and%20UX%20principles/usability-ux-principles.html" tabindex="0">Usability and UX Principles</a></li>
+                        <li><a href="../Prototyping/prototyping-usability-evaluation.html" tabindex="0">Prototyping and Usability Evaluation</a></li>
+                    </ul></details></li>
+                    <li><details><summary>Web accessibility</summary><ul><li><a href="../../../index.html#topics" tabindex="0">topic1</a></li></ul></details></li>
+                    <li><details><summary>Design failures</summary><ul><li><a href="../../../index.html#topics" tabindex="0">topic1</a></li><li><a href="../../../index.html#topics" tabindex="0">topic2</a></li></ul></details></li>
+                    <li><details><summary>Future interfaces</summary><ul><li><a href="../../../index.html#topics" tabindex="0">topic1</a></li><li><a href="../../../index.html#topics" tabindex="0">topic2</a></li><li><a href="../../../index.html#topics" tabindex="0">topic3</a></li></ul></details></li>
+                </ul>
+            </div>
+        </details>
+        <a href="user-task-system-requirements.html" rel="prev">← previous</a>
+        <a href="usability-requirements.html" rel="next">next →</a>
+    </nav>
+
+    <header>
+        <h1>Task Analysis and Use Cases</h1>
+        <p class="lead">How do we go from "users need to do X" to a precise description of the steps, decisions and system responses that make X possible?</p>
+        <p><span class="pill">Designing interfaces</span> <span class="pill">By Maria Miteva</span></p>
+    </header>
+
+    <main id="article" class="sheet">
+        <section>
+            <h2>What is task analysis?</h2>
+            <p>Task analysis is the systematic study of what people do to achieve a goal. Hackos and Redish describe it as a core part of user-centred design: you observe users, identify their goals, and document the tasks they perform in their real environment. The results are often represented as task hierarchies or flow diagrams, depending on what the design team needs to communicate.</p>
+
+            <figure>
+                <!-- CAMBIATO IN .webp -->
+                <img src="../../../images/design_interfaces/U-T%20and%20system%20requirements/task-analysis-flow.webp" alt="A designer drawing a flowchart on a whiteboard to map out user tasks" loading="lazy">
+                <figcaption>Task analysis often results in flowcharts and diagrams.</figcaption>
+            </figure>
+
+            <p>Hierarchical Task Analysis (HTA) is one of the most common techniques. It breaks a high-level task into sub-tasks and operations, showing how smaller steps contribute to the overall goal. This helps designers see where an interface can support users efficiently and where it might introduce unnecessary complexity.</p>
+        </section>
+
+        <section>
+            <h2>Scenarios and use cases</h2>
+            <p>A scenario is a narrative description of a user's interaction with the system: it tells a story about a specific situation, including the user's context, goals and the steps they take. Scenarios are useful for exploring design ideas early, before committing to a detailed specification.</p>
+            <figure>
+                <img src="../../../images/design_interfaces/U-T%20and%20system%20requirements/use-cases-sticky.jpg" alt="Sticky notes on a whiteboard used to brainstorm user scenarios and requirements" loading="lazy">
+                <figcaption>Brainstorming scenarios helps teams explore different user paths.</figcaption>
+            </figure>
+            <p>A use case is more formal. IBM's requirements guidance explains that a use case describes a sequence of actions a system performs that yields an observable result of value to a particular actor. Importantly, use cases describe functional requirements but do not specify the user interface itself. They are the foundation for user experience storyboards, which add the screens, navigation and usability requirements needed to design the interface.</p>
+        </section>
+
+        <section>
+            <h2>User stories vs. use cases</h2>
+            <p>User stories are short, informal statements written from the user's perspective, often in the form "As a [type of user], I want [goal] so that [reason]." They are useful for prioritising work and keeping the focus on user value. Use cases are more detailed and exhaustive: they describe the interactions between the user and the system step by step, including alternative paths and error conditions. Both are valuable, but they serve different purposes in the requirements process.</p>
+        </section>
+
+        <section>
+            <h2>Example: course enrolment</h2>
+            <p>Consider an information system for university course registration. A task analysis might reveal these steps:</p>
+            <ol>
+                <li>Search for a course by name, code or semester.</li>
+                <li>Open the course details and check prerequisites.</li>
+                <li>See how many places are available.</li>
+                <li>Select a section and confirm enrolment.</li>
+                <li>Receive a confirmation and see the updated status.</li>
+            </ol>
+            <p>A use case for the same scenario would describe the system's responses at each step, including what happens if a prerequisite is missing or the course is full. This level of detail guides the design of feedback, validation and error recovery in the interface.</p>
+        </section>
+
+        <section>
+            <h2>Sources</h2>
+            <ul>
+                <li>Hackos, J. T., &amp; Redish, J. C. (1998). <em>User and Task Analysis for Interface Design</em>. Wiley.</li>
+                <li>Heumann, J. (2003). User experience storyboards: Building better UIs with RUP, UML, and use cases. <em>The Rational Edge</em>, IBM.</li>
+                <li>Task analysis concepts (hierarchical task analysis, procedural task analysis). ETH Zurich research collection.</li>
+                <li>Use cases vs. user stories. W3C Wiki and course materials.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+</html>
