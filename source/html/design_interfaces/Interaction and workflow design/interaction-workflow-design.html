@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interaction in human-machine interfaces: loop, styles, principles and models">
+    <meta name="author" content="Massimiliano Cipriani">
+    <title>HCI - Interaction Design</title>
+
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+
+<body class="topic-design-interfaces">
+
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
+
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+
+        <details class="nav-topics">
+            <summary>Topics</summary>
+
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul>
+                                <li><a href="index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="index.html#topics" tabindex="0">Special topic</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details open>
+                            <summary>Designing interfaces</summary>
+                             <ul>
+                                <li>
+                                    <a href="../U-T%20and%20system%20requirements/user-task-system-requirements.html" tabindex="0">
+                                        User, Task and System Requirements
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="../Inf-architecture/information-architecture-navigation.html" tabindex="0">
+                                        Information Architecture and Navigation
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="interaction-workflow-design.html" tabindex="0">
+                                        Interaction and Workflow Design
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="../Usability%20and%20UX%20principles/usability-ux-principles.html" tabindex="0">
+                                        Usability and UX Principles
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="../Prototyping/prototyping-usability-evaluation.html" tabindex="0">
+                                        Prototyping and Usability Evaluation
+                                    </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul>
+                                <li><a href="index.html#topics" tabindex="0">topic1</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="index.html#topics" tabindex="0">topic2</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul>
+                                <li><a href="index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="index.html#topics" tabindex="0">topic2</a></li>
+                                <li><a href="index.html#topics" tabindex="0">topic3</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                </ul>
+            </div>
+        </details>
+
+        <!-- Previous and next links -->
+        <a href="previous_article.html" rel="prev">← previous</a>
+        <a href="workflow-design.html" rel="next">next →</a>
+
+    </nav>
+
+    <!-- Article header -->
+    <header>
+        <h1>Interaction Design</h1>
+        <p class="lead">How people and machines hold a conversation: the loop, the styles, the principles and the models behind every single exchange.</p>
+        <p><span class="pill">Designing interfaces</span> <span class="pill">Interaction</span></p>
+    </header>
+
+    <main id="article">
+        <div class="sheet">
+
+<section id="intro">
+                <h2>1. Why interaction matters</h2>
+                <p>A human-machine interface is never just a screen, a panel or a voice assistant. It is the place
+                    where two very different kinds of system meet: a person, with limited attention, a fallible memory
+                    and goals that are often vague; and a machine, which is fast, literal and perfectly consistent but
+                    has no idea what the person really wants. <strong>Interaction design</strong> is the discipline
+                    that makes that meeting productive.</p>
+                <p>It is useful to separate two closely related ideas. <strong>Interaction</strong> is the moment-by-moment
+                    exchange: the user presses, drags, speaks or glances, and the system responds. <strong>Workflow</strong>
+                    is the larger structure that strings many such exchanges together to accomplish a goal, such as
+                    booking a flight, configuring a medical pump or approving an invoice. A system can have excellent
+                    individual interactions and still be exhausting to use because its workflow forces people to jump
+                    between screens, re-enter data or remember what they were doing three steps ago.</p>
+
+                <p>This first article focuses on interaction: the loop between user and machine, the main interaction styles, the principles that make exchanges smooth, and the models used to predict and measure them. The <a href="workflow-design.html">second article</a> zooms out to workflows, automation and the sequencing of tasks.</p>
+
+                <div class="box note">
+                    <strong>Key idea</strong>
+                    Good interfaces are judged not by how elegant a single button looks, but by how smoothly a person
+                    moves from <em>intention</em> to <em>outcome</em> across the whole task.
+                </div>
+            </section>
+
+            <section id="loop">
+                <h2>2. The interaction loop</h2>
+                <p>Almost every model of human-machine interaction describes a cycle. Donald Norman’s “seven stages of
+                    action” is the best known: the user forms a <em>goal</em>, plans an <em>intention</em>, specifies
+                    an <em>action sequence</em> and <em>executes</em> it; then perceives the new state of the system,
+                    <em>interprets</em> it and <em>evaluates</em> it against the original goal. The cycle repeats until
+                    the goal is reached or abandoned.</p>
+
+                <pre><code>Goal  →  Intention  →  Action sequence  →  Execution
+ ↑                                                  ↓
+ └──  Evaluation  ←  Interpretation  ←  Perception ←┘</code></pre>
+
+                <p>Two gaps can open in this loop, and most usability problems live in one of them:</p>
+                <ul>
+                    <li><strong>Gulf of execution</strong>: the distance between what the user wants to do and what
+                        the interface lets them do. “Where is the export function?” is a gulf-of-execution question.</li>
+                    <li><strong>Gulf of evaluation</strong>: the distance between the system’s actual state and the
+                        user’s ability to perceive and understand it. “Did my file really save?” is a
+                        gulf-of-evaluation question.</li>
+                </ul>
+                <p>Design work consists largely of narrowing these gulfs: making available actions discoverable
+                    (<em>signifiers</em>), making results visible (<em>feedback</em>) and making the relationship
+                    between controls and effects predictable (<em>mapping</em>).</p>
+            </section>
+
+            <section id="styles">
+                <h2>3. Interaction styles</h2>
+                <p>The way a user expresses intent shapes everything else. Over the decades, interfaces have converged
+                    on a handful of styles, each with its own strengths and typical failure modes.</p>
+
+                <div class="box table-scroll" tabindex="0" role="region" aria-label="Comparison of interaction styles">
+                    <table>
+                        <caption>Common interaction styles compared</caption>
+                        <thead>
+                            <tr>
+                                <th>Style</th>
+                                <th>Strengths</th>
+                                <th>Weaknesses</th>
+                                <th>Typical use</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Command line</th>
+                                <td>Powerful, scriptable, very fast for experts</td>
+                                <td>Steep learning curve, poor discoverability</td>
+                                <td>System administration, developer tools</td>
+                            </tr>
+                            <tr>
+                                <th>Menus and forms</th>
+                                <td>Recognition over recall, structured input</td>
+                                <td>Can become deep and slow for frequent tasks</td>
+                                <td>Business applications, settings, data entry</td>
+                            </tr>
+                            <tr>
+                                <th>Direct manipulation</th>
+                                <td>Immediate feedback, reversible, intuitive</td>
+                                <td>Hard for abstract or repetitive operations</td>
+                                <td>Drawing tools, maps, touch interfaces</td>
+                            </tr>
+                            <tr>
+                                <th>Natural language and voice</th>
+                                <td>Hands-free, low barrier to entry</td>
+                                <td>Ambiguity, invisible capabilities, privacy</td>
+                                <td>Assistants, in-car systems, accessibility</td>
+                            </tr>
+                            <tr>
+                                <th>Gesture and multimodal</th>
+                                <td>Natural, flexible, adaptable to context</td>
+                                <td>Fatigue, accidental input, inconsistent conventions</td>
+                                <td>Mobile devices, AR/VR, public displays</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>Real products rarely stick to a single style. A modern photo editor combines direct manipulation
+                    (dragging a slider), menus (choosing a filter), keyboard shortcuts (for experts) and increasingly
+                    natural-language commands. The designer’s task is to make these layers coexist without
+                    contradicting each other.</p>
+            </section>
+
+            <section id="principles">
+                <h2>4. Core principles of good interaction</h2>
+                <p>Whatever the style, a small set of principles recurs across the literature and across industries.</p>
+
+                <div class="grid">
+                    <div class="box">
+                        <h3>Visible feedback</h3>
+                        <p>Every action should produce a perceivable response, quickly. Even a “working…” indicator
+                            is better than silence, because silence makes users repeat or abandon actions.</p>
+                    </div>
+                    <div class="box">
+                        <h3>Constraints</h3>
+                        <p>Make wrong actions hard or impossible: disable invalid options, restrict inputs to valid
+                            ranges, and use sensible defaults.</p>
+                    </div>
+                    <div class="box">
+                        <h3>Consistency</h3>
+                        <p>Similar things should look and behave similarly, both inside the product and relative to
+                            platform conventions users already know.</p>
+                    </div>
+                    <div class="box">
+                        <h3>Recognition over recall</h3>
+                        <p>Show options instead of forcing people to remember them. Working memory holds only a few
+                            items at once.</p>
+                    </div>
+                    <div class="box">
+                        <h3>Reversibility</h3>
+                        <p>Offer undo, cancel and confirmation for destructive operations. Users explore more
+                            confidently when mistakes are cheap.</p>
+                    </div>
+                    <div class="box">
+                        <h3>Progressive disclosure</h3>
+                        <p>Reveal advanced features only when they are needed, so beginners are not overwhelmed and
+                            experts are not blocked.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="modelling">
+                <h2>5. Predicting and measuring interaction</h2>
+                <p>Intuition is valuable, but interaction designers also use quantitative models to compare
+                    alternatives before building them.</p>
+
+                <h3>Fitts’s law</h3>
+                <p>The time to reach a target depends on its distance and its size. Large, close targets are faster
+                    to hit, which is why frequently used buttons should be big and placed near where the pointer
+                    already is, and why screen edges (which cannot be overshot) are so effective.</p>
+                <pre><code>MT = a + b · log₂(D / W + 1)
+
+MT = movement time    D = distance to the target    W = width of the target
+a, b = constants measured empirically for a given device</code></pre>
+
+                <h3>Hick’s law</h3>
+                <p>The time to choose grows with the number of equally likely options, roughly as
+                    <code>T = b · log₂(n + 1)</code>. It does not mean “fewer choices is always better”, but it does
+                    justify grouping, categorising and removing irrelevant options from a decision point.</p>
+
+                <h3>Keystroke-Level Model (KLM)</h3>
+                <p>KLM predicts how long an expert needs to complete a routine task by summing the time of
+                    elementary operators. Typical approximate values are:</p>
+                <ul>
+                    <li><code>K</code> keystroke or button press: about 0.2 s</li>
+                    <li><code>P</code> pointing at a target with a mouse: about 1.1 s</li>
+                    <li><code>H</code> moving the hand between keyboard and mouse: about 0.4 s</li>
+                    <li><code>M</code> mental preparation: about 1.35 s</li>
+                </ul>
+                <p>With KLM, two versions of the same task flow (for example, a three-screen wizard versus a single
+                    form) can be compared on paper. It is limited to error-free, expert behaviour, so it should be
+                    complemented by usability tests with real users.</p>
+            </section>
+
+            <section id="next">
+                <h2>6. Where to go next</h2>
+                <p>Single interactions are the bricks; a task is the wall they build together. Even a perfectly tuned
+                    button, menu or gesture can fail the user if the sequence around it is badly organised. The next
+                    article looks at exactly that: how tasks are decomposed into workflows, how work is shared
+                    between humans and machines, and which pitfalls to avoid.</p>
+                <p><a class="button" href="workflow-design.html">Next: Workflow Design →</a></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>HCI - Designing Human-Machine Interfaces · Interaction Design</p>
+    </footer>
+
+</body>
+
+</html>
