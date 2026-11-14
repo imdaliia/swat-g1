@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Usability in human-machine interfaces: components, heuristics, evaluation and testing">
+    <meta name="author" content="Massimiliano Cipriani">
+    <title>HCI - Usability</title>
+
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+
+<body class="topic-design-interfaces">
+
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
+
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+
+        <details class="nav-topics">
+            <summary>Topics</summary>
+
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul>
+                                <li><a href="index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="index.html#topics" tabindex="0">Special topic</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details open>
+                            <summary>Designing interfaces</summary>
+                        <ul>
+                                <li>
+                                    <a href="../U-T%20and%20system%20requirements/user-task-system-requirements.html" tabindex="0">
+                                        User, Task and System Requirements
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="../Inf-architecture/information-architecture-navigation.html" tabindex="0">
+                                        Information Architecture and Navigation
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="../Interaction%20and%20workflow%20design/interaction-workflow-design.html" tabindex="0">
+                                        Interaction and Workflow Design
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="usability-ux-principles.html" tabindex="0">
+                                        Usability and UX Principles
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="../Prototyping/prototyping-usability-evaluation.html" tabindex="0">
+                                        Prototyping and Usability Evaluation
+                                    </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul>
+                                <li><a href="index.html#topics" tabindex="0">topic1</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="index.html#topics" tabindex="0">topic2</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul>
+                                <li><a href="index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="index.html#topics" tabindex="0">topic2</a></li>
+                                <li><a href="index.html#topics" tabindex="0">topic3</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                </ul>
+            </div>
+        </details>
+
+        <!-- Previous and next links -->
+        <a href="../Interaction%20and%20workflow%20design/workflow-design.html" rel="prev">← previous</a>
+        <a href="ux-principles.html" rel="next">next →</a>
+
+    </nav>
+
+    <!-- Article header -->
+    <header>
+        <h1>Usability</h1>
+        <p class="lead">Can people achieve their goals with the product, quickly, correctly and without frustration? Components, heuristics and methods to find out.</p>
+        <p><span class="pill">Designing interfaces</span> <span class="pill">Usability</span> <span class="pill">Evaluation</span></p>
+    </header>
+
+    <main id="article">
+        <div class="sheet">
+
+            <section id="intro">
+                <h2>1. What is usability?</h2>
+                <p>Usability is the degree to which a product can be used by specific people to achieve specific
+                    goals <strong>effectively</strong>, <strong>efficiently</strong> and with
+                    <strong>satisfaction</strong> in a specified context of use. This is the wording adopted by the
+                    ISO 9241-11 standard, and every word in it matters.</p>
+                <ul>
+                    <li><strong>Effectiveness</strong>: can users complete the task correctly and completely?</li>
+                    <li><strong>Efficiency</strong>: how much time, effort and attention does it cost them?</li>
+                    <li><strong>Satisfaction</strong>: how comfortable and acceptable is the experience?</li>
+                    <li><strong>Context of use</strong>: who the users are, what they want to do, with which
+                        equipment and in which environment.</li>
+                </ul>
+                <p>The last point is the one most often forgotten. Usability is not a property that an interface
+                    simply <em>has</em>: it emerges from the relationship between a particular interface, a particular
+                    user, a particular task and a particular setting. A ticket machine that is perfectly usable for a
+                    commuter who knows the system can be unusable for a tourist in a hurry, with a suitcase, in a
+                    language they do not speak.</p>
+
+                <div class="box note">
+                    <strong>Key idea</strong>
+                    Never ask “is this interface usable?” in the abstract. Ask “usable by whom, for what, and
+                    where?”.
+                </div>
+
+                <p>This first article covers usability: its components, the heuristics used to inspect interfaces,
+                    and the methods used to measure it. The <a href="ux-principles.html">second article</a> widens the
+                    view to the whole user experience.</p>
+            </section>
+
+            <section id="components">
+                <h2>2. The five components of usability</h2>
+                <p>Jakob Nielsen breaks usability down into five quality components. They are useful as a checklist,
+                    because different products need to prioritise them differently.</p>
+
+                <div class="grid">
+                    <div class="box">
+                        <h3>Learnability</h3>
+                        <p>How easily can first-time users accomplish basic tasks? Essential for public kiosks,
+                            websites and anything used rarely.</p>
+                    </div>
+                    <div class="box">
+                        <h3>Efficiency</h3>
+                        <p>Once users have learned the system, how quickly can they perform tasks? Essential for
+                            professional tools used for hours every day.</p>
+                    </div>
+                    <div class="box">
+                        <h3>Memorability</h3>
+                        <p>When users return after a period of not using it, can they re-establish proficiency
+                            without learning everything again?</p>
+                    </div>
+                    <div class="box">
+                        <h3>Errors</h3>
+                        <p>How many errors do users make, how severe are they, and how easily can they recover?
+                            Critical in medical, financial and industrial systems.</p>
+                    </div>
+                    <div class="box">
+                        <h3>Satisfaction</h3>
+                        <p>How pleasant is the system to use? Satisfaction is subjective but measurable, and it
+                            strongly affects whether people keep using a product.</p>
+                    </div>
+                </div>
+
+                <p>Components can conflict. Features that make a tool fast for experts (shortcuts, dense screens,
+                    abbreviations) can hurt learnability for beginners. Good design does not maximise every
+                    component: it chooses a balance based on the real users and their tasks, and often provides
+                    layers so that beginners and experts are both served.</p>
+            </section>
+
+            <section id="heuristics">
+                <h2>3. Nielsen’s ten usability heuristics</h2>
+                <p>Heuristics are broad rules of thumb, not step-by-step recipes. The ten below, formulated in the
+                    1990s and refined since, remain the most widely used framework for inspecting an interface.</p>
+
+                <div class="box table-scroll" tabindex="0" role="region" aria-label="Ten usability heuristics">
+                    <table>
+                        <caption>The ten usability heuristics</caption>
+                        <thead>
+                            <tr>
+                                <th>Heuristic</th>
+                                <th>What it asks for</th>
+                                <th>Typical violation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1. Visibility of system status</th>
+                                <td>Keep users informed about what is happening, through timely feedback</td>
+                                <td>A form that submits with no progress indicator or confirmation</td>
+                            </tr>
+                            <tr>
+                                <th>2. Match between system and the real world</th>
+                                <td>Use the user’s language and concepts, not internal jargon</td>
+                                <td>Error messages showing database codes</td>
+                            </tr>
+                            <tr>
+                                <th>3. User control and freedom</th>
+                                <td>Provide clearly marked exits, undo and redo</td>
+                                <td>A wizard that cannot go back without losing all data</td>
+                            </tr>
+                            <tr>
+                                <th>4. Consistency and standards</th>
+                                <td>Follow platform and industry conventions; same words mean the same thing</td>
+                                <td>“Save”, “Submit” and “Done” used for the same action in different screens</td>
+                            </tr>
+                            <tr>
+                                <th>5. Error prevention</th>
+                                <td>Eliminate error-prone conditions or ask for confirmation before commitment</td>
+                                <td>A “Delete account” button placed right beside “Save”</td>
+                            </tr>
+                            <tr>
+                                <th>6. Recognition rather than recall</th>
+                                <td>Make options and information visible instead of requiring memory</td>
+                                <td>Asking users to remember a code from a previous page</td>
+                            </tr>
+                            <tr>
+                                <th>7. Flexibility and efficiency of use</th>
+                                <td>Offer accelerators such as shortcuts, defaults and customisation for experts</td>
+                                <td>No keyboard shortcuts in a tool used all day</td>
+                            </tr>
+                            <tr>
+                                <th>8. Aesthetic and minimalist design</th>
+                                <td>Show only relevant information; every extra element competes with the useful ones</td>
+                                <td>A dashboard where ten widgets have equal weight</td>
+                            </tr>
+                            <tr>
+                                <th>9. Help users recognise, diagnose and recover from errors</th>
+                                <td>Explain the problem in plain language and suggest a constructive solution</td>
+                                <td>“Invalid input” without saying which field or why</td>
+                            </tr>
+                            <tr>
+                                <th>10. Help and documentation</th>
+                                <td>Provide short, searchable, task-oriented help when it is needed</td>
+                                <td>A 200-page manual with no search</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="inspection">
+                <h2>4. Heuristic evaluation</h2>
+                <p>A <strong>heuristic evaluation</strong> is an inspection method in which a few evaluators examine
+                    an interface and judge it against a set of heuristics. It is cheap, fast and can be done on
+                    early prototypes, which makes it a good first filter before testing with real users.</p>
+
+                <ol>
+                    <li><strong>Prepare.</strong> Define the scope, the user profile and the key tasks to examine.</li>
+                    <li><strong>Evaluate individually.</strong> Several evaluators (typically three to five) go through
+                        the interface independently, at least twice: once to get a feel for the flow, once to look
+                        at each element.</li>
+                    <li><strong>Record problems.</strong> Each issue is described, located and linked to the
+                        heuristic it violates.</li>
+                    <li><strong>Rate severity.</strong> Evaluators score how serious each problem is.</li>
+                    <li><strong>Consolidate.</strong> Findings are merged, duplicates removed and fixes prioritised.</li>
+                </ol>
+
+                <p>Working independently matters: one evaluator finds only a fraction of the problems, and the
+                    combined list from several people is far more complete. Severity is usually rated on a scale
+                    like this:</p>
+
+                <ul>
+                    <li><span class="pill good">1</span> Cosmetic: fix only if time allows.</li>
+                    <li><span class="pill warn">2</span> Minor: low priority, but worth fixing.</li>
+                    <li><span class="pill warn">3</span> Major: important to fix, high priority.</li>
+                    <li><span class="pill bad">4</span> Catastrophe: must be fixed before release.</li>
+                </ul>
+
+                <div class="box note warn">
+                    <strong>Limitation</strong>
+                    Heuristic evaluation relies on expert judgement. It finds many real problems but also
+                    flags some that users would never meet, and it can miss problems that only show up when real
+                    people attempt real tasks. It complements usability testing; it does not replace it.
+                </div>
+            </section>
+
+            <section id="testing">
+                <h2>5. Usability testing and metrics</h2>
+                <p>In a <strong>usability test</strong>, representative users attempt realistic tasks with the
+                    product while observers watch, listen and take notes. In the popular <em>think-aloud</em>
+                    protocol, participants verbalise what they are looking at, expecting and feeling, which exposes
+                    the reasoning behind their mistakes. Tests can be moderated or unmoderated, in a lab or remote,
+                    on a rough prototype or on a finished product.</p>
+
+                <div class="box table-scroll" tabindex="0" role="region" aria-label="Usability metrics">
+                    <table>
+                        <caption>Frequently used usability metrics</caption>
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>What is measured</th>
+                                <th>Relates to</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Task success rate</th>
+                                <td>Percentage of participants who complete a task correctly</td>
+                                <td>Effectiveness</td>
+                            </tr>
+                            <tr>
+                                <th>Time on task</th>
+                                <td>How long a task takes, usually for successful attempts only</td>
+                                <td>Efficiency</td>
+                            </tr>
+                            <tr>
+                                <th>Error rate</th>
+                                <td>Number and severity of mistakes per task</td>
+                                <td>Errors, effectiveness</td>
+                            </tr>
+                            <tr>
+                                <th>Questionnaire scores</th>
+                                <td>Self-reported ease and satisfaction, e.g. SUS</td>
+                                <td>Satisfaction</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>The System Usability Scale (SUS)</h3>
+                <p>SUS is a ten-question questionnaire answered on a five-point agreement scale. Odd-numbered items
+                    are positively worded and even-numbered items negatively worded, which is why the scoring
+                    inverts them:</p>
+                <pre><code>For odd items  (1, 3, 5, 7, 9):   contribution = answer - 1
+For even items (2, 4, 6, 8, 10):  contribution = 5 - answer
+
+SUS score = (sum of the ten contributions) × 2.5        → a value between 0 and 100</code></pre>
+                <p>A score around 68 is commonly cited as average, but SUS is not a percentage: it is best used to
+                    compare versions of the same product or a product against its competitors.</p>
+
+                <div class="box note">
+                    <strong>How many participants?</strong>
+                    As a rule of thumb, a small group of about five users from one user type uncovers a large share of
+                    the major problems, so several small, iterative rounds are usually more valuable than one big
+                    test. Distinct user groups, or quantitative metrics that need statistical confidence, require
+                    more participants.
+                </div>
+            </section>
+
+            <section id="next">
+                <h2>6. Where to go next</h2>
+                <p>Usability tells us whether people can use a product without frustration. But a product can be
+                    perfectly usable and still be boring, untrustworthy or pointless. The next article moves from
+                    usability to the broader <strong>user experience</strong>: emotions, perception, credibility,
+                    accessibility and the process used to design for all of them.</p>
+                <p><a class="button" href="ux-principles.html">Next: UX Principles →</a></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>HCI - Designing Human-Machine Interfaces · Usability</p>
+    </footer>
+
+</body>
+
+</html>
