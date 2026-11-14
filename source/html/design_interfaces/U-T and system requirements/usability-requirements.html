@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Defining measurable usability requirements: learnability, efficiency, memorability, errors and satisfaction">
+    <meta name="author" content="Maria Miteva">
+    <title>HCI - Usability Requirements</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/design_interfaces/design-interfaces-home.css">
+</head>
+
+<body class="topic-design-interfaces">
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../../index.html">HCI</a>
+        <a href="../../../index.html">Home</a>
+        <a href="../../../demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li><details><summary>Input/output devices</summary><ul><li><a href="../../../index.html#topics" tabindex="0">topic1</a></li><li><a href="../../../index.html#topics" tabindex="0">Special topic</a></li></ul></details></li>
+                    <li><details><summary>Designing interfaces</summary><ul>
+                        <li><a href="user-task-system-requirements.html" tabindex="0">User, Task and System Requirements</a></li>
+                        <li><a href="../Inf-architecture/information-architecture-navigation.html" tabindex="0">Information Architecture and Navigation</a></li>
+                        <li><a href="../Interaction%20and%20workflow%20design/interaction-workflow-design.html" tabindex="0">Interaction and Workflow Design</a></li>
+                        <li><a href="../Usability%20and%20UX%20principles/usability-ux-principles.html" tabindex="0">Usability and UX Principles</a></li>
+                        <li><a href="../Prototyping/prototyping-usability-evaluation.html" tabindex="0">Prototyping and Usability Evaluation</a></li>
+                    </ul></details></li>
+                    <li><details><summary>Web accessibility</summary><ul><li><a href="../../../index.html#topics" tabindex="0">topic1</a></li></ul></details></li>
+                    <li><details><summary>Design failures</summary><ul><li><a href="../../../index.html#topics" tabindex="0">topic1</a></li><li><a href="../../../index.html#topics" tabindex="0">topic2</a></li></ul></details></li>
+                    <li><details><summary>Future interfaces</summary><ul><li><a href="../../../index.html#topics" tabindex="0">topic1</a></li><li><a href="../../../index.html#topics" tabindex="0">topic2</a></li><li><a href="../../../index.html#topics" tabindex="0">topic3</a></li></ul></details></li>
+                </ul>
+            </div>
+        </details>
+        <a href="task-analysis-and-use-cases.html" rel="prev">← previous</a>
+        <a href="cognitive-ergonomics-ux-laws.html" rel="next">next →</a>
+    </nav>
+
+    <header>
+        <h1>Defining Usability Requirements</h1>
+        <p class="lead">Usability is not a vague quality. It can be defined, measured and tested through specific criteria that guide design decisions.</p>
+        <p><span class="pill">Designing interfaces</span> <span class="pill">By Maria Miteva</span></p>
+    </header>
+
+    <main id="article" class="sheet">
+        <section>
+            <h2>The five essential usability characteristics</h2>
+            <p>Andreas Holzinger, in a widely cited article for software developers, states that the following five usability characteristics should be part of any software project:</p>
+
+            <figure>
+                <!-- CAMBIATO IN .webp -->
+                <img src="../../../images/design_interfaces/user-task-requirements/usability-testing.webp" alt="A usability testing session where an observer takes notes while a user interacts with a computer" loading="lazy">
+                <figcaption>Testing allows designers to measure if usability requirements are met.</figcaption>
+            </figure>
+
+            <ul>
+                <li><strong>Learnability:</strong> how quickly a user can start working with the system. A learnable interface lets new users accomplish basic tasks on their first encounter without extensive training.</li>
+                <li><strong>Efficiency:</strong> once users have learned the system, how quickly can they perform tasks? Efficiency is about productivity after the learning phase.</li>
+                <li><strong>Memorability:</strong> when users return to the system after a period of non-use, how easily can they re-establish proficiency? Good memorability means they do not have to relearn everything.</li>
+                <li><strong>Errors:</strong> how many errors do users make, how severe are they, and how easily can users recover? A usable system should have a low error rate and no catastrophic errors.</li>
+                <li><strong>Satisfaction:</strong> how pleasant is the system to use? Satisfaction reflects the user's subjective comfort and positive attitude toward the interface.</li>
+            </ul>
+            <p>These five dimensions are also reflected in Jakob Nielsen's well-known definition of usability, which is used in both academia and industry.</p>
+        </section>
+
+        <section>
+            <h2>Turning them into measurable requirements</h2>
+            <p>A usability requirement is only useful if it can be verified. This means expressing it in measurable terms. For example, instead of saying "the system should be efficient," a requirement might state: "An experienced user must be able to complete the course enrolment task in under 90 seconds."</p>
+            <p>Common measures include task completion rate (percentage of users who complete a task successfully), time on task, number of errors, and satisfaction ratings from questionnaires. The ISO 9241 standard and Nielsen's model both provide frameworks for mapping each usability dimension to concrete metrics.</p>
+        </section>
+
+        <section>
+            <h2>Example of a usability requirement</h2>
+            <p>Consider a requirement for the course registration system:</p>
+            <blockquote>
+                <p>"At least 90% of representative users must be able to complete the enrolment workflow successfully on their first attempt, without assistance. The median time on task must not exceed 2 minutes. No user should experience a data-loss error during the process."</p>
+            </blockquote>
+            <p>Requirements like this guide prototyping and usability testing. They make it clear what "good enough" means and provide a basis for evaluating whether the design meets its goals.</p>
+        </section>
+
+        <section>
+            <h2>Sources</h2>
+            <ul>
+                <li>Holzinger, A. (2005). Usability engineering methods for software developers. <em>Communications of the ACM</em>, 48(1), 71–74.</li>
+                <li>Nielsen, J. Usability 101: Introduction to usability. Definition of the five quality components.</li>
+                <li>ISO 9241 and Nielsen usability models: dimensions and example measures. Table 19.1, Oxford Academic.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+</html>

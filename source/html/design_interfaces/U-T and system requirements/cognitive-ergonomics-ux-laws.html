@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cognitive ergonomics and UX laws: mental models, cognitive load, Hick's Law and Fitts's Law">
+    <meta name="author" content="Maria Miteva">
+    <title>HCI - Cognitive Ergonomics and UX Laws</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/design_interfaces/design-interfaces-home.css">
+</head>
+
+<body class="topic-design-interfaces">
+
+    <a class="skip" href="#article">Skip to content</a>
+
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../../index.html">HCI</a>
+        <a href="../../../index.html">Home</a>
+        <a href="../../../demo.html">Demo</a>
+
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../../../index.html#topics" tabindex="0">Special topic</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul>
+                                <li>
+                                    <a href="user-task-system-requirements.html" tabindex="0">
+                                        User, Task and System Requirements
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Inf-architecture/information-architecture-navigation.html" tabindex="0">
+                                        Information Architecture and Navigation
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Interaction%20and%20workflow%20design/interaction-workflow-design.html" tabindex="0">
+                                        Interaction and Workflow Design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Usability%20and%20UX%20principles/usability-ux-principles.html" tabindex="0">
+                                        Usability and UX Principles
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Prototyping/prototyping-usability-evaluation.html" tabindex="0">
+                                        Prototyping and Usability Evaluation
+                                    </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic1</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic2</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic2</a></li>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic3</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+
+        <a href="usability-requirements.html" rel="prev">← previous</a>
+        <a href="../Design-interfaces-home.html" rel="next">back to topic →</a>
+    </nav>
+
+    <header>
+        <h1>Cognitive Ergonomics and UX Laws</h1>
+        <p class="lead">
+            Interfaces should work with the way people think, not against it. A few
+            well-established principles explain why some designs feel effortless and
+            others feel confusing.
+        </p>
+        <p>
+            <span class="pill">Designing interfaces</span>
+            <span class="pill">By Maria Miteva</span>
+        </p>
+    </header>
+
+    <main id="article" class="sheet">
+
+        <section>
+            <h2>Mental models</h2>
+
+            <figure>
+                <img src="../../../images/design_interfaces/user-task-requirements/cognitive-load.jpg" alt="A digital illustration of a human brain merging with computer circuits, representing mental models and cognitive processing" loading="lazy">
+                <figcaption>Cognitive ergonomics studies how the human brain processes interface information.</figcaption>
+            </figure>
+
+            <p>
+                A mental model is the internal representation a user builds of how a
+                system works. People use mental models to predict what will happen when
+                they perform an action. If the interface behaves in a way that matches
+                the user's model, the interaction feels intuitive. If it contradicts
+                that model, the user has to stop, think and often make mistakes.
+            </p>
+            <p>
+                Don Norman's work on design emphasizes that a well-designed product
+                aligns the designer's model with the user's mental model. The "system
+                image" — what the interface actually shows — is the bridge between the
+                two. When that bridge is clear, users can act without conscious effort.
+            </p>
+        </section>
+
+        <section>
+            <h2>Cognitive load</h2>
+            <p>
+                Cognitive load is the amount of mental effort required to complete a
+                task. Every unnecessary element on the screen, every unclear label and
+                every extra decision adds to that load. When cognitive load is high,
+                users make more errors, take longer and feel more frustrated.
+            </p>
+            <p>
+                Design strategies that reduce cognitive load include removing irrelevant
+                information, using familiar patterns, grouping related items, and
+                providing clear feedback so users do not have to remember what happened
+                or guess what to do next. Barbara Webb's HCI lecture notes describe
+                cognitive load as a central concern for interface design and connect it
+                to decision-making and mental models.
+            </p>
+        </section>
+
+        <section>
+            <h2>Hick's Law: more choices, slower decisions</h2>
+            <p>
+                Hick's Law describes the relationship between the number of choices and
+                the time it takes to make a decision. The relationship is logarithmic:
+                adding more options increases decision time, but each additional option
+                adds less extra time than the one before. Mathematically, the law is
+                often written as <em>T = a + b log(n + 1)</em>, where <em>n</em> is the
+                number of options.
+            </p>
+            <p>
+                For interface design, the implication is practical: broad, shallow menus
+                are not automatically better than narrow, deep ones. If options are
+                logically organised and labelled, users can decide faster. If they are
+                presented as a long random list, decision time increases linearly with
+                the number of items.
+            </p>
+        </section>
+
+        <section>
+            <h2>Fitts's Law: reaching a target takes time</h2>
+            <p>
+                Fitts's Law models the time required to move to a target as a function
+                of the target's size and distance. Larger targets that are closer to the
+                user's current position are faster to acquire. Smaller, more distant
+                targets take longer.
+            </p>
+            <p>
+                This law has direct consequences for button placement and sizing.
+                Important actions should be large enough to click or tap easily, and
+                they should be positioned where users can reach them without excessive
+                movement. Placing controls at the edges or corners of the screen can
+                also help, because the cursor cannot overshoot the boundary.
+            </p>
+        </section>
+
+        <section>
+            <h2>Putting it together</h2>
+            <p>
+                Mental models, cognitive load, Hick's Law and Fitts's Law are not
+                abstract theory. They translate directly into design decisions:
+                organise options so users can predict where things are, reduce
+                unnecessary choices, make important targets large and reachable, and
+                provide feedback that confirms the user's mental model. These
+                principles support the usability requirements described on the previous
+                page and help designers build interfaces that feel natural rather than
+                effortful.
+            </p>
+        </section>
+
+        <section>
+            <h2>Sources</h2>
+            <ul>
+                <li>
+                    Webb, B. HCI Lecture 4: Human capabilities — cognitive processing.
+                    University of Edinburgh, School of Informatics.
+                </li>
+                <li>
+                    Sonowal, G. (2026). Psychology of User Behavior. In
+                    <em>User Interface and User Experience</em>. Taylor &amp; Francis.
+                </li>
+                <li>
+                    Norman, D. Mental models and design. Discussed in Lund University
+                    publication on user understanding.
+                </li>
+                <li>
+                    Fitts's Law and target placement. <em>Digital Design in Action</em>.
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+
+</body>
+</html>
