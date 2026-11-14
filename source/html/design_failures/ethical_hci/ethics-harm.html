@@ -1,90 +1,192 @@
-<!-- DRAFT TEXT: THE COST FOR USERS
-     (draft paragraphs, rewrite in your own words before using them;
-      [link] = source of the sentences before it;
-      nothing unverified is included)
+<!DOCTYPE html>
+<html lang="en">
 
-     Title idea: "The cost for users"
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="What attention-capturing design costs its users: whistleblowers, research, the scientific debate and new laws">
+    <meta name="author" content="Tommaso Russo">
+    <title>HCI - The Cost for Users</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/design_failures/design-failures.css">
+</head>
 
-     P1 (intro)
-     If apps are designed to capture as much attention as possible,
-     what does that cost the people who use them, especially young
-     people? In the last few years whistleblowers, researchers,
-     governments and courts have tried to answer. The answer is still
-     debated, so this page presents both the evidence and the doubts.
+<body class="topic-design-failures">
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li><li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQtopics" tabindex="0">Special topic</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li><li><a href="../../index.html#topics" tabindex="0">topic2</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li><li><a href="../../index.html#topics" tabindex="0">topic2</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li><li><a href="../../index.html#topics" tabindex="0">topic2</a></li><li><a href="../../index.html#topics" tabindex="0">topic3</a></li></ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+        <a href="ethics-persuasion.html" rel="prev">← previous</a>
+        <a href="ethics-alternatives.html" rel="next">next →</a>
+    </nav>
 
-     [IMAGE: frances-haugen.jpg, next to P2]
+    <!-- Header (article's title, description and info pills)-->
+    <header>
+        <h1>The cost for users</h1>
+        <p class="lead">If apps are designed to capture as much attention as possible, what does that cost the
+            people who use them, especially young people? In the last few years whistleblowers, researchers,
+            governments and courts have tried to answer. The answer is still debated, so this page presents both
+            the evidence and the doubts.</p>
+        <p><span class="pill">By Tommaso Russo</span> <span class="pill">4 min read</span></p>
+    </header>
 
-     P2 (Frances Haugen)
-     Frances Haugen is a data engineer who worked at Facebook from June
-     2019 to May 2021, in the civic integrity team. She gave tens of
-     thousands of internal Facebook documents to the US Securities and
-     Exchange Commission and to The Wall Street Journal. She revealed her identity on CBS "60 Minutes"
-     on 3 October 2021, and two days later she testified to the US
-     Senate, saying that Facebook "won't make the necessary changes
-     because they have put their astronomical profits before people".
-     She later spoke to the UK and European Parliaments too [https://en.wikipedia.org/wiki/Frances_Haugen].
+    <!-- The actual article -->
+    <main id="article" class="sheet">
+        <section>
+            <h2>Frances Haugen</h2>
+            <figure class="portrait">
+                <img src="../../../images/design_failures/ethical_hci/frances-haugen.jpg"
+                    alt="Portrait of Frances Haugen" loading="lazy">
+                <figcaption>Frances Haugen, 5 October 2021. Photo: Office of Senator Richard Blumenthal, public
+                    domain</figcaption>
+            </figure>
+            <p>Frances Haugen is a data engineer who worked at Facebook from June 2019 to May 2021, in the civic
+                integrity team. She gave tens of thousands of internal Facebook documents to the US Securities and
+                Exchange Commission and to The Wall Street Journal. She revealed her identity on CBS "60 Minutes"
+                on 3 October 2021, and two days later she testified to the US Senate:
+            </p>
+            <blockquote>
+                <p>Facebook "won't make the necessary changes because they have put their astronomical profits
+                    before people".</p>
+                <cite>Frances Haugen, US Senate, 5 October 2021 <sup><a href="#source-1">[1]</a></sup></cite>
+            </blockquote>
+            <p>She later spoke to the UK and European Parliaments too <sup><a href="#source-1">[1]</a></sup>.</p>
+        </section>
 
-     P3 (The Facebook Files)
-     From September 2021 the Wall Street Journal published the
-     documents in a series called "The Facebook Files". One
-     headline said: "Facebook Knows Instagram is Toxic for Teen Girls,
-     Company Documents Show". Facebook had studied the effect of
-     Instagram on young users since 2018, and its internal research said:
-     "we make body issues worse for one in three teenage girls".
-     Boys were affected too: 14% of US teen boys reported negative
-     social comparison. Shortly after, the company paused its
-     planned "Instagram for Kids". Facebook replied that the
-     articles mischaracterised its research [https://en.wikipedia.org/wiki/2021_Facebook_leak].
+        <section>
+            <h2>The Facebook Files</h2>
+            <p>From September 2021 the Wall Street Journal published the documents in a series called "The
+                Facebook Files". One headline said: "Facebook Knows Instagram is Toxic for Teen Girls, Company
+                Documents Show". Facebook had studied the effect of Instagram on young users since 2018, and its
+                internal research said: "we make body issues worse for one in three teenage girls". Boys were
+                affected too: 14% of US teen boys reported negative social comparison.
+            </p>
+            <p>Shortly after, the company paused its planned "Instagram for Kids". Facebook replied that the
+                articles mischaracterised its research <sup><a href="#source-2">[2]</a></sup>.
+            </p>
+        </section>
 
-     P4 (The Anxious Generation)
-     In 2024 the psychologist Jonathan Haidt published "The Anxious
-     Generation". He argues that teen mental health got sharply
-     worse between 2010 and 2015, when smartphones spread, because a
-     "play-based childhood" was replaced by a "phone-based childhood".
-     He names four harms: social deprivation, sleep deprivation,
-     attention fragmentation and addiction. His proposals are
-     phone-free schools, more free play, smartphones later and social
-     media only from 16. The book has been a bestseller for more
-     than two years [https://en.wikipedia.org/wiki/The_Anxious_Generation].
+        <section>
+            <h2>The Anxious Generation</h2>
+            <p>In 2024 the psychologist Jonathan Haidt published "The Anxious Generation". He argues that teen
+                mental health got sharply worse between 2010 and 2015, when smartphones spread, because a
+                "play-based childhood" was replaced by a "phone-based childhood". He names four harms: social
+                deprivation, sleep deprivation, attention fragmentation and addiction. His proposals are
+                phone-free schools, more free play, smartphones later and social media only from 16. The book has
+                been a bestseller for more than two years <sup><a href="#source-3">[3]</a></sup>.
+            </p>
+        </section>
 
-     P5 (the other side)
-     Many researchers disagree. In a review in Nature
-     [https://www.nature.com/articles/d41586-024-00902-2], the psychologist
-     Candice Odgers wrote that most studies do not find a large,
-     consistent negative effect, and that the link might go the other
-     way: unhappy teenagers may simply use social media more. Amy
-     Orben and Andrew Przybylski have also found that the link between
-     smartphones and wellbeing is weak, and some critics speak of a
-     "moral panic". Haidt replied by pointing to experimental
-     studies [https://en.wikipedia.org/wiki/The_Anxious_Generation]. The scientific question is still open.
+        <section>
+            <h2>The other side of the debate</h2>
+            <p>Many researchers disagree. In a review in Nature, the psychologist Candice Odgers wrote that most
+                studies do not find a large, consistent negative effect, and that the link might go the other way:
+                unhappy teenagers may simply use social media more <sup><a href="#source-4">[4]</a></sup>. Amy
+                Orben and Andrew Przybylski have also found that the link between smartphones and well-being is
+                weak, and some critics speak of a "moral panic". Haidt replied by pointing to experimental studies
+                <sup><a href="#source-3">[3]</a></sup>. The scientific question is still open.
+            </p>
+        </section>
 
-     [IMAGE: social-media-addiction.jpg, small, next to P6]
+        <section>
+            <h2>Laws and courts</h2>
+            <figure>
+                <img src="../../../images/design_failures/ethical_hci/social-media-addiction.jpg"
+                    alt="An open hand holding pills that carry the logos of Facebook, Instagram, YouTube and other social networks" loading="lazy">
+                <figcaption>Social media addiction. Image: Today Testing (cropped),
+                    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></figcaption>
+            </figure>
+            <p>Governments have not waited for the debate to end. Australia passed a law in November 2024, partly
+                inspired by Haidt's book <sup><a href="#source-3">[3]</a></sup>, and since 10 December 2025
+                people under 16 cannot have an account on platforms such as Facebook, Instagram, TikTok, Snapchat,
+                X, YouTube and Reddit. Platforms that do not take "reasonable steps" risk fines of up to 49.5
+                million Australian dollars, while children and parents are not punished. Critics worry about the
+                privacy of age checks and called the law a "20th Century response to 21st Century challenges"
+                <sup><a href="#source-5">[5]</a></sup>.
+            </p>
+            <p>The question has also reached the courts. In 2026 two US juries found against the companies over
+                addictive design: 6 million dollars in California, against Meta and Google, and 375 million
+                dollars in New Mexico, against Meta; the companies said they will appeal. Other countries,
+                including India, Indonesia, Denmark, Spain and France, are moving towards limits for children too
+                <sup><a href="#source-6">[6]</a></sup>.
+            </p>
+        </section>
 
-     P6 (Australia's ban)
-     Governments have not waited for the debate to end. Australia
-     passed a law in November 2024, partly inspired by Haidt's book
-     [https://en.wikipedia.org/wiki/The_Anxious_Generation], and since 10 December 2025 people under 16 cannot have an
-     account on platforms such as Facebook, Instagram, TikTok,
-     Snapchat, X, YouTube and Reddit. Platforms that do not take
-     "reasonable steps" risk fines of up to 49.5 million Australian
-     dollars, while children and parents are not punished. Critics
-     worry about the privacy of age checks and called the law a "20th
-     Century response to 21st Century challenges" [https://en.wikipedia.org/wiki/Online_Safety_Amendment_(Social_Media_Minimum_Age)_Act_2024].
+        <section>
+            <h2>Conclusion</h2>
+            <p>Scientists do not agree that social media causes a mental health crisis. But the companies' own
+                research, the courts and many governments show that the concern is taken seriously. And the 2026
+                verdicts were not about social media in general, but about specific design choices, like the ones
+                on the <a href="ethics-mechanics.html">mechanics page</a>. The
+                <a href="ethics-alternatives.html">last page</a> asks what designers, and users, can do
+                differently.
+            </p>
+        </section>
 
-     P7 (courts and other countries)
-     The question has also reached the courts. In 2026 two US juries
-     found against the companies over addictive design: 6 million
-     dollars in California, against Meta and Google, and 375 million
-     dollars in New Mexico, against Meta; the companies said they will
-     appeal. Other countries, including India, Indonesia, Denmark,
-     Spain and France, are moving towards limits for children too [https://thepublicsradio.org/stories/why-infinite-scrolls-inventor-wants-to-kill-his-creation/].
+        <section>
+            <h2>Sources</h2>
+            <ol>
+                <li id="source-1">Wikipedia, "Frances Haugen".
+                    <a href="https://en.wikipedia.org/wiki/Frances_Haugen">en.wikipedia.org</a></li>
+                <li id="source-2">Wikipedia, "2021 Facebook leak".
+                    <a href="https://en.wikipedia.org/wiki/2021_Facebook_leak">en.wikipedia.org</a></li>
+                <li id="source-3">Wikipedia, "The Anxious Generation".
+                    <a href="https://en.wikipedia.org/wiki/The_Anxious_Generation">en.wikipedia.org</a></li>
+                <li id="source-4">Candice L. Odgers, "The great rewiring: is social media really behind an epidemic of
+                    teenage mental illness?", Nature, 29 March 2024.
+                    <a href="https://www.nature.com/articles/d41586-024-00902-2">nature.com</a></li>
+                <li id="source-5">Wikipedia, "Online Safety Amendment (Social Media Minimum Age) Act 2024".
+                    <a href="https://en.wikipedia.org/wiki/Online_Safety_Amendment_(Social_Media_Minimum_Age)_Act_2024">en.wikipedia.org</a></li>
+                <li id="source-6">Adrian Ma, Darian Woods, "Why infinite scroll's inventor wants to kill his creation",
+                    NPR, The Indicator from Planet Money, 7 April 2026 (republished by The Public's Radio).
+                    <a href="https://thepublicsradio.org/stories/why-infinite-scrolls-inventor-wants-to-kill-his-creation/">thepublicsradio.org</a></li>
+            </ol>
+        </section>
+    </main>
 
-     P8 (conclusion)
-     Scientists do not agree that social media causes a mental health
-     crisis. But the companies' own research, the courts and many
-     governments show that the concern is taken seriously. The last
-     page asks what designers, and users, can do differently.
--->
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>
 
 <!-- IMAGE CREDIT: frances-haugen.jpg
      File:   ../../../images/design_failures/ethical_hci/frances-haugen.jpg
@@ -110,6 +212,6 @@
              credit if you crop or edit the image; an edited version
              must be shared under CC BY-SA too; must not suggest
              that the author endorses our site.
-     Note:   low resolution, use it small (not full width).
+     Note:   960x640, shown full width (cropped to 16:9 by style.css).
      Caption example: "Social media addiction. Image: Today Testing,
              CC BY-SA 4.0" -->
