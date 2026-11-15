@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Real investigations involving subscriptions, in-game purchases and cookie consent.">
+    <meta name="author" content="Boukhezna Mohamed Chaker">
+    <title>HCI - Famous Cases and Fines</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/design_failures/design-failures.css">
+</head>
+<body class="topic-design-failures">
+    <!-- Top bar from the group article template -->
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+        <a href="../index.html">Design Failures</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+<li><a href="../../index.html#topics">Input/output devices</a></li>
+                    <li><a href="../../index.html#topics">Designing interfaces</a></li>
+                    <li><a href="../../index.html#topics">Web accessibility</a></li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="../index.html">Design Failures home</a></li>
+                                <li><a href="dark-intro.html">What Are Dark Patterns?</a></li>
+                                <li><a href="dark-taxonomy.html">Types of Dark Patterns</a></li>
+                                <li><a href="dark-scale.html">How Common Are They?</a></li>
+                                <li><a href="dark-cases.html">Famous Cases and Fines</a></li>
+                                <li><a href="dark-law.html">What Does the Law Say?</a></li>
+                                <li><a href="dark-demo.html">Spot the Trick!</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a href="../../index.html#topics">Future interfaces</a></li>
+                </ul>
+            </div>
+        </details>
+        <a href="dark-scale.html" rel="prev">← previous</a>
+        <a href="dark-law.html" rel="next">next →</a>
+    </nav>
+    <!-- Article header -->
+    <header>
+        <h1>Famous Cases and Fines</h1>
+        <p class="lead">Real investigations involving subscriptions, in-game purchases and cookie consent.</p>
+        <p><span class="pill">By Boukhezna Mohamed Chaker</span> <span class="pill">Part 4 of 6</span></p>
+    </header>
+    <main id="article" class="sheet">
+        <section>
+            <h2>When interface decisions become legal cases</h2>
+            <p>Dark patterns can create serious problems when they affect millions of people. Consumer and privacy authorities have investigated companies over confusing purchase flows, difficult cancellations and unfair cookie choices. The examples below are based on public enforcement documents. They concern specific conduct investigated at particular times, not a claim that every current screen from these companies has the same problem.</p>
+            <figure>
+                <img src="../../../images/design_failures/dark_patterns/dark-cases.png" alt="AI-generated fictional online checkout featuring extra service fees, a preselected protection plan, automatic membership renewal, and a data-sharing option." loading="lazy">
+                <figcaption>AI-generated example checkout illustrating deceptive techniques; it is not a screenshot from any of the companies discussed below.</figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>1. Amazon Prime: hard to leave</h2>
+            <p><strong>What happened?</strong> The US Federal Trade Commission (FTC) alleged that Amazon enrolled customers in Prime subscriptions without sufficiently clear consent and made cancellation unnecessarily difficult.</p>
+            <p><strong>The interface:</strong> According to the FTC, some enrolment screens made paid membership easy to select, while the cancellation flow required users to navigate multiple steps.</p>
+            <p><strong>Why it failed:</strong> People who intended to shop or end their membership could instead become or remain subscribers. The interface favoured the company's goal over a straightforward customer choice.</p>
+            <p><strong>Consequences:</strong> In September 2025, Amazon agreed to a <strong>$2.5 billion settlement</strong>: a $1 billion civil penalty and $1.5 billion in consumer redress. The settlement resolved the FTC's allegations. <sup><a href="#source-1">[1]</a></sup></p>
+            <p><strong>Better design:</strong> Explain the subscription price before enrolment, require a clear confirmation and provide an easy-to-find cancellation option.</p>
+        </section>
+        <section>
+            <h2>2. Fortnite: accidental in-game purchases</h2>
+            <p><strong>What happened?</strong> The FTC said that Epic Games used confusing controls that led some Fortnite players to make purchases they had not intended.</p>
+            <p><strong>The interface:</strong> Players could accidentally buy an item when trying to preview it, or when pressing a confusingly assigned button. The authority also described problems with unauthorised charges involving children.</p>
+            <p><strong>Why it failed:</strong> A purchase is an important action. If the screen and buttons do not clearly distinguish previewing from buying, a simple mistake may cost money.</p>
+            <p><strong>Consequences:</strong> A 2023 FTC order required Epic to pay <strong>$245 million</strong> for consumer refunds related to unwanted purchases and billing practices. A separate privacy settlement involved additional penalties; it should not be confused with this amount. <sup><a href="#source-2">[2]</a></sup></p>
+            <p><strong>Better design:</strong> Make preview and purchase controls clearly different, show the cost and ask for confirmation before completing the purchase.</p>
+        </section>
+        <section>
+            <h2>3. Google: unequal cookie choices</h2>
+            <p><strong>What happened?</strong> France's data protection authority, the CNIL, investigated how users could accept or refuse advertising cookies on Google services.</p>
+            <p><strong>The interface:</strong> Accepting cookies could be immediate, while refusing them required additional steps. This made one decision easier than the other.</p>
+            <p><strong>Why it failed:</strong> Consent should represent a genuine preference, not the option a person chooses because the alternative takes more effort.</p>
+            <p><strong>Consequences:</strong> In decisions issued at the end of 2021 and announced in 2022, the CNIL imposed fines totalling <strong>€150 million</strong> on Google companies over the cookie refusal mechanism. <sup><a href="#source-3">[3]</a></sup></p>
+            <p><strong>Better design:</strong> Give users a clear way to accept or refuse non-essential cookies with comparable effort.</p>
+        </section>
+        <section>
+            <h2>4. Facebook: refusing cookies was difficult</h2>
+            <p><strong>What happened?</strong> The CNIL examined the cookie consent system on Facebook's website and identified problems with the refusal path.</p>
+            <p><strong>The interface:</strong> According to the authority, refusing cookies involved more actions than accepting. Some wording in the settings flow was also confusing.</p>
+            <p><strong>Why it failed:</strong> Users faced unnecessary friction when choosing more privacy. The design could push people towards accepting tracking they did not really want.</p>
+            <p><strong>Consequences:</strong> The CNIL fined Facebook Ireland <strong>€60 million</strong> in a decision issued in December 2021. <sup><a href="#source-3">[3]</a></sup></p>
+            <p><strong>Better design:</strong> Present equally visible options and explain clearly what each cookie setting means.</p>
+        </section>
+        <section>
+            <h2>The common lesson</h2>
+            <p>These cases cover different activities: subscriptions, games and privacy. They share one basic problem: the interface made the user's preferred action harder or less predictable than it should have been. In good HCI, a person should understand what will happen before they click. The design should allow them to leave, decline or correct a mistake without unnecessary obstacles.</p>
+        </section>
+        <section>
+            <h2>Sources</h2>
+            <ol>
+                <li id="source-1">US Federal Trade Commission (2025). <cite>FTC Secures Historic $2.5 Billion Settlement Against Amazon</cite>. <a href="https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-secures-historic-25-billion-settlement-against-amazon">Official release</a>.</li>
+                <li id="source-2">US Federal Trade Commission (2023). <cite>FTC Finalizes Order Requiring Epic Games to Pay $245 Million</cite>. <a href="https://www.ftc.gov/news-events/news/press-releases/2023/03/ftc-finalizes-order-requiring-fortnite-maker-epic-games-pay-245-million-tricking-users-making">Official release</a>.</li>
+                <li id="source-3">CNIL (2023). <cite>Evolution of practices on the Web regarding cookies</cite>. <a href="https://www.cnil.fr/en/evolution-practices-web-regarding-cookies-cnil-evaluates-impact-its-action-plan-0">French authority overview</a>.</li>
+            </ol>
+        </section>
+    </main>
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+</html>

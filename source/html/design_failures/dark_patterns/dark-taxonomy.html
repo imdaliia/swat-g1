@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Five strategies from HCI research, plus common tricks found in everyday interfaces.">
+    <meta name="author" content="Boukhezna Mohamed Chaker">
+    <title>HCI - Types of Dark Patterns</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/design_failures/design-failures.css">
+</head>
+<body class="topic-design-failures">
+    <!-- Top bar from the group article template -->
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+        <a href="../index.html">Design Failures</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+<li><a href="../../index.html#topics">Input/output devices</a></li>
+                    <li><a href="../../index.html#topics">Designing interfaces</a></li>
+                    <li><a href="../../index.html#topics">Web accessibility</a></li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="../index.html">Design Failures home</a></li>
+                                <li><a href="dark-intro.html">What Are Dark Patterns?</a></li>
+                                <li><a href="dark-taxonomy.html">Types of Dark Patterns</a></li>
+                                <li><a href="dark-scale.html">How Common Are They?</a></li>
+                                <li><a href="dark-cases.html">Famous Cases and Fines</a></li>
+                                <li><a href="dark-law.html">What Does the Law Say?</a></li>
+                                <li><a href="dark-demo.html">Spot the Trick!</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a href="../../index.html#topics">Future interfaces</a></li>
+                </ul>
+            </div>
+        </details>
+        <a href="dark-intro.html" rel="prev">← previous</a>
+        <a href="dark-scale.html" rel="next">next →</a>
+    </nav>
+    <!-- Article header -->
+    <header>
+        <h1>Types of Dark Patterns</h1>
+        <p class="lead">Five strategies from HCI research, plus common tricks found in everyday interfaces.</p>
+        <p><span class="pill">By Boukhezna Mohamed Chaker</span> <span class="pill">Part 2 of 6</span></p>
+    </header>
+    <main id="article" class="sheet">
+        <section>
+            <h2>Why classify dark patterns?</h2>
+            <p>Dark patterns do not all look the same. Some hide information, others interrupt the user, and some make a simple action unnecessarily long. Researchers group these behaviours into categories so designers can recognise them and compare examples. A useful study by <strong>Gray and colleagues (2018)</strong> describes five broad strategies: nagging, obstruction, sneaking, interface interference and forced action. <sup><a href="#source-1">[1]</a></sup></p>
+            <figure>
+                <img src="../../../images/design_failures/dark_patterns/dark-taxonomy.png" alt="AI-generated examples of five dark pattern tactics: an urgent countdown, a low-stock warning, a preselected extra, a guilt-inducing refusal message, and difficult cancellation." loading="lazy">
+                <figcaption>AI-generated examples of common tactics; the research categories by Gray et al. (2018) are explained below.</figcaption>
+            </figure>
+            <p>These strategies often overlap. A cookie banner may combine a confusing visual hierarchy with repeated reminders. A subscription service may hide important conditions when you join and create obstacles when you try to cancel.</p>
+        </section>
+        <section>
+            <h2>The five main strategies</h2>
+            <h3>1. Nagging</h3>
+            <p>Nagging means repeatedly interrupting users with the same request. For example, an app may ask again and again for notifications to be enabled. A reminder can be helpful, but constant requests may wear down a person until they choose the answer the company wants. Better design respects a refusal and allows people to change settings later.</p>
+            <h3>2. Obstruction</h3>
+            <p>Obstruction makes an action difficult for no good reason. The classic example is the <em>roach motel</em>: joining is easy, but leaving is hard. A service might allow registration in two clicks while cancellation requires searching through several menus, reading retention messages and contacting support.</p>
+            <h3>3. Sneaking</h3>
+            <p>Sneaking happens when important information or an unwanted addition is hidden or delayed. A product may enter the basket without a clear request, or fees may appear only near payment. The user can technically see the information, but it is shown at a moment when they are less likely to stop.</p>
+            <h3>4. Interface interference</h3>
+            <p>Interface interference changes the presentation of choices to favour one result. One option may be bright and large while the alternative is tiny. It also includes confusing wording and <em>confirmshaming</em>, when the refusal says something insulting such as “No thanks, I dislike saving money.” The problem is not colour itself but unfair pressure.</p>
+            <h3>5. Forced action</h3>
+            <p>Forced action requires users to do something unnecessary to complete their original task. For instance, a shop might demand account registration before showing a delivery estimate, even when that information could be displayed without registration. The extra step may collect more data or increase sign-ups.</p>
+        </section>
+        <section>
+            <h2>Common examples</h2>
+            <div class="box">
+                <table>
+                    <caption>How the tricks appear on websites</caption>
+                    <thead><tr><th scope="col">Pattern</th><th scope="col">Example</th><th scope="col">A better choice</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Hidden costs</th><td>Fees appear at the final checkout step.</td><td>Show total cost from the start.</td></tr>
+                        <tr><th scope="row">Difficult cancellation</th><td>Many screens to end a subscription.</td><td>Offer a clear cancellation control.</td></tr>
+                        <tr><th scope="row">Disguised advertisements</th><td>An advertisement looks like a normal article.</td><td>Label advertising clearly.</td></tr>
+                        <tr><th scope="row">Preselected choices</th><td>A marketing newsletter is already checked.</td><td>Leave optional consent unchecked.</td></tr>
+                        <tr><th scope="row">Confirmshaming</th><td>The decline button makes the visitor feel guilty.</td><td>Use neutral words such as “No thanks”.</td></tr>
+                        <tr><th scope="row">Fake urgency</th><td>A countdown resets when the page reloads.</td><td>Only use genuine deadlines.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Princeton researchers later examined dark patterns in shopping websites and organised their observations into <strong>seven broader categories and fifteen types</strong>. This is a different classification from the five strategies above, not a contradiction: the studies answer different questions. <sup><a href="#source-2">[2]</a></sup></p>
+        </section>
+        <section>
+            <h2>How can a designer avoid them?</h2>
+            <p>First, put the user goal at the centre of the design. If someone wants to buy a product, make the price and conditions visible. If they want to say no, give them a straightforward way to refuse. If they want to leave a service, do not create unnecessary steps. Second, test interfaces with real users and ask whether their final choice matches what they meant to do.</p>
+            <p>Good HCI is not about removing every suggestion or commercial offer. A business can advertise, recommend products and explain why a service might be useful. The difference is that an honest interface presents the information clearly and leaves the final decision with the user. The <a href="dark-demo.html">interactive examples</a> later in this section show the difference.</p>
+        </section>
+        <section>
+            <h2>Sources</h2>
+            <ol>
+                <li id="source-1">Gray, C. M. et al. (2018). <cite>The Dark (Patterns) Side of UX Design</cite>. <a href="https://doi.org/10.1145/3173574.3174108">ACM CHI paper</a>.</li>
+                <li id="source-2">Mathur, A. et al. (2019). <cite>Dark Patterns at Scale</cite>. <a href="https://webtransparency.cs.princeton.edu/dark-patterns/">Princeton research</a>.</li>
+                <li id="source-3">Federal Trade Commission (2022). <cite>Bringing Dark Patterns to Light</cite>. <a href="https://www.ftc.gov/reports/bringing-dark-patterns-light">FTC report</a>.</li>
+            </ol>
+        </section>
+    </main>
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+</html>

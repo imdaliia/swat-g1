@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="What research from Princeton University and European consumer authorities tells us.">
+    <meta name="author" content="Boukhezna Mohamed Chaker">
+    <title>HCI - How Common Are Dark Patterns?</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/design_failures/design-failures.css">
+</head>
+<body class="topic-design-failures">
+    <!-- Top bar from the group article template -->
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+        <a href="../index.html">Design Failures</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+<li><a href="../../index.html#topics">Input/output devices</a></li>
+                    <li><a href="../../index.html#topics">Designing interfaces</a></li>
+                    <li><a href="../../index.html#topics">Web accessibility</a></li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="../index.html">Design Failures home</a></li>
+                                <li><a href="dark-intro.html">What Are Dark Patterns?</a></li>
+                                <li><a href="dark-taxonomy.html">Types of Dark Patterns</a></li>
+                                <li><a href="dark-scale.html">How Common Are They?</a></li>
+                                <li><a href="dark-cases.html">Famous Cases and Fines</a></li>
+                                <li><a href="dark-law.html">What Does the Law Say?</a></li>
+                                <li><a href="dark-demo.html">Spot the Trick!</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a href="../../index.html#topics">Future interfaces</a></li>
+                </ul>
+            </div>
+        </details>
+        <a href="dark-taxonomy.html" rel="prev">← previous</a>
+        <a href="dark-cases.html" rel="next">next →</a>
+    </nav>
+    <!-- Article header -->
+    <header>
+        <h1>How Common Are Dark Patterns?</h1>
+        <p class="lead">What research from Princeton University and European consumer authorities tells us.</p>
+        <p><span class="pill">By Boukhezna Mohamed Chaker</span> <span class="pill">Part 3 of 6</span></p>
+    </header>
+    <main id="article" class="sheet">
+        <section>
+            <h2>Are deceptive interfaces rare?</h2>
+            <p>Dark patterns are not limited to a few strange websites. Researchers have found them in online stores, mobile applications and other digital services. Measuring their frequency is difficult, because a pattern may appear only after a user creates an account, attempts to cancel or reaches a particular screen. Different studies examine different kinds of behaviour, so their percentages should not be treated as if they measured exactly the same thing.</p>
+            <figure>
+                <img src="../../../images/design_failures/dark_patterns/dark-scale.png" alt="AI-generated statistics graphic showing 11.1% for shopping websites, 37% for an EU sweep, and 97% for popular apps and websites, based on different samples." loading="lazy">
+                <figcaption>AI-generated graphic of three separate research results; the percentages use different samples and should not be read as a trend.</figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>Princeton: about 11,000 shopping websites</h2>
+            <p>In 2019, researchers including Arunesh Mathur studied approximately <strong>11,000 shopping websites</strong> and around 53,000 product pages. They identified <strong>1,818 dark-pattern instances</strong> across <strong>1,254 websites</strong>, about <strong>11.1%</strong> of their sample. They also classified fifteen types of patterns, from hidden costs to false urgency and social proof. <sup><a href="#source-1">[1]</a></sup></p>
+            <p>Among their findings, <strong>234 instances on 183 websites</strong> showed deceptive behaviour. The study also found third-party companies selling tools that help shops display these patterns. This means some tricks were not simply built by one individual website: they could be added through ready-made services.</p>
+            <p>The 11.1% result is important, but it is <strong>not</strong> a claim that only 11.1% of all websites use dark patterns. The researchers used automated methods focusing on shopping and particular product pages. Patterns hidden inside account settings, subscription cancellation and other areas could be missed. Their measurement is therefore best understood as a lower-bound estimate for the behaviours they could detect.</p>
+        </section>
+        <section>
+            <h2>European Commission: 399 online shops</h2>
+            <p>A European consumer-protection screening carried out in 2022 checked <strong>399 online shops</strong>. Authorities found that <strong>148 shops</strong>, about <strong>37%</strong>, displayed at least one of three examined dark-pattern categories: fake countdown timers, false visual hierarchy or hidden information. The European Commission published these results in January 2023. <sup><a href="#source-2">[2]</a></sup></p>
+            <div class="box">
+                <table>
+                    <caption>Findings from the European screening</caption>
+                    <thead><tr><th scope="col">Behaviour</th><th scope="col">Number of shops</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Fake countdown timers</th><td>42</td></tr>
+                        <tr><th scope="row">Misleading visual hierarchy</th><td>54</td></tr>
+                        <tr><th scope="row">Hidden important information</th><td>70</td></tr>
+                        <tr><th scope="row">At least one of these patterns</th><td>148 of 399</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>The categories could overlap, and the numbers do not describe every possible pattern. For example, 23 of the websites hid information in a way that pushed visitors towards a subscription. Investigators concluded that these practices could potentially breach European consumer law; finding a suspicious pattern in a screening is not automatically the same as a final court decision.</p>
+        </section>
+        <section>
+            <h2>A wider EU study: 97% of popular services</h2>
+            <p>A separate behavioural study for the European Commission examined <strong>75 popular websites and apps</strong> used by EU consumers. It reported that <strong>97%</strong> used at least one dark pattern. Frequently observed techniques included hidden information, preselection, repeated prompts, difficult cancellation and forced registration. <sup><a href="#source-3">[3]</a></sup></p>
+            <p>Why is this result so much higher than Princeton's? The samples and methods are very different. Princeton's automated work looked for particular patterns on shopping product pages. The EU behavioural research examined popular services with a wider view of the experience. It would be misleading to put these numbers on a timeline and announce that dark patterns suddenly increased from 11% to 97%.</p>
+        </section>
+        <section>
+            <h2>What should we learn from these numbers?</h2>
+            <p>Three lessons are useful. First, deceptive design is widespread enough to deserve attention. Second, what researchers measure strongly affects the result. Third, a pattern is not harmless just because it is common. Even a small confusing choice repeated across thousands of transactions can affect many people.</p>
+            <p>For HCI designers, the goal is to identify risky interactions before they reach users. Research, usability testing and transparent choice design can reduce these problems. The next page looks at companies investigated by regulators and shows what can happen when confusing design affects real customers.</p>
+        </section>
+        <section>
+            <h2>Sources</h2>
+            <ol>
+                <li id="source-1">Mathur, A. et al. (2019). <cite>Dark Patterns at Scale: Findings from a Crawl of 11K Shopping Websites</cite>. <a href="https://webtransparency.cs.princeton.edu/dark-patterns/">Princeton project</a>.</li>
+                <li id="source-2">European Commission (2023). <cite>2022 sweep on dark patterns</cite>. <a href="https://commission.europa.eu/topics/consumers/consumer-rights-and-complaints/enforcement-consumer-protection/sweeps_en">Official screening results</a>.</li>
+                <li id="source-3">European Commission (2022). <cite>Behavioural study on unfair commercial practices in the digital environment</cite>. <a href="https://op.europa.eu/en/publication-detail/-/publication/606365bc-d58b-11ec-a95f-01aa75ed71a1">Study overview</a>.</li>
+            </ol>
+        </section>
+    </main>
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+</html>
