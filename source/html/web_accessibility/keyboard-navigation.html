@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Keyboard navigation allows users to browse and interact with websites without a mouse. Learn the standards, implementation patterns, and testing strategies for fully keyboard-accessible web interfaces.">
+    <meta name="author" content="Andrii Synelnyk">
+    <title>HCI - Keyboard Navigation</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/web_accessibility/web-accessibility.css">
+</head>
+
+<body class="topic-web-accessibility">
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../index.html">HCI</a>
+        <a href="../index.html">Home</a>
+        <a href="../demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary>Web accessibility</summary>
+                            <ul>
+                                <li><a href="screen-readers.html" tabindex="0">Screen Readers</a></li>
+                                <li><a href="magnifiers.html" tabindex="0">Magnifiers</a></li>
+                                <li><a href="keyboard-navigation.html" aria-current="page" tabindex="0">Keyboard Navigation</a></li>
+                                <li><a href="high-contrast.html" tabindex="0">High Contrast Themes</a></li>
+                                <li><a href="speech-recognition.html" tabindex="0">Speech Recognition</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+        <a href="magnifiers.html" rel="prev">← previous</a>
+        <a href="high-contrast.html" rel="next">next →</a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Keyboard Navigation</h1>
+        <p class="lead">Enabling full control of web interfaces with just a keyboard — why it matters and how to implement it correctly</p>
+        <p><span class="pill">By Andrii Synelnyk</span> <span class="pill">7 min read</span></p>
+    </header>
+
+    <!-- The actual article -->
+    <main id="article" class="sheet">
+
+        <section>
+            <h2>Why Keyboard Access is a Fundamental Requirement</h2>
+            <p>
+                Keyboard navigation is the bedrock of web accessibility. Any user who cannot operate a mouse —
+                whether due to motor disabilities, tremors, repetitive strain injuries, temporary injuries like a
+                broken arm, or simply a preference for speed — relies on the keyboard to interact with web
+                applications. This group is larger than commonly assumed: power users, developers, and anyone
+                who uses a laptop without a mouse also depend on robust keyboard support.
+            </p>
+            <p>
+                WCAG 2.2 Guideline 2.1 (Keyboard Accessible) states that all functionality must be operable
+                through a keyboard interface, with no specific timing requirements for keystrokes.
+                Failing this guideline effectively locks out a significant portion of users.
+            </p>
+            <figure>
+                <img src="../../images/web_accessibility/keyboard-navigation.png"
+                     alt="Stylized keyboard diagram highlighting navigation and control keys for accessible web browsing"
+                     loading="lazy">
+                <figcaption>Keyboard layout with navigation and shortcut keys used for accessible web interaction</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Standard Keyboard Controls</h2>
+            <p>
+                The browser and operating system together define a standard set of keyboard interactions.
+                Developers should never override these without providing an equivalent or better alternative.
+            </p>
+            <div class="box">
+                <table>
+                    <caption>Standard keyboard controls for web navigation</caption>
+                    <thead>
+                        <tr>
+                            <th>Key / Combination</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>Tab</code></td>
+                            <td>Move focus to the next interactive element</td>
+                        </tr>
+                        <tr>
+                            <td><code>Shift + Tab</code></td>
+                            <td>Move focus to the previous interactive element</td>
+                        </tr>
+                        <tr>
+                            <td><code>Enter</code></td>
+                            <td>Activate a link or button; submit a form</td>
+                        </tr>
+                        <tr>
+                            <td><code>Space</code></td>
+                            <td>Activate a button, checkbox, or radio button; scroll the page</td>
+                        </tr>
+                        <tr>
+                            <td><code>Arrow keys</code></td>
+                            <td>Navigate within a component (e.g. radio group, listbox, tree, slider)</td>
+                        </tr>
+                        <tr>
+                            <td><code>Escape</code></td>
+                            <td>Close a modal dialog, tooltip, or dropdown</td>
+                        </tr>
+                        <tr>
+                            <td><code>Home</code> / <code>End</code></td>
+                            <td>Move to the first / last item in a list or text field</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Focus Management</h2>
+
+            <h3>Visible focus indicators</h3>
+            <p>
+                Every interactive element must display a visible focus indicator when it receives keyboard focus.
+                WCAG 2.4.11 (Focus Appearance, Level AA in WCAG 2.2) requires that focus indicators meet
+                minimum area and contrast requirements. Many designers suppress the browser's default
+                <code>outline</code> for aesthetic reasons — this is a critical accessibility failure.
+            </p>
+            <pre><code>/* ✓ Good: use :focus-visible to show focus only for keyboard navigation */
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* ✗ Bad: removes focus indicator entirely */
+:focus { outline: none; }</code></pre>
+            <div class="box note good">
+                <strong>Use <code>:focus-visible</code>, not <code>:focus</code></strong>
+                <p>
+                    The <code>:focus-visible</code> pseudo-class applies only when the browser determines focus
+                    should be visible — typically keyboard navigation. Mouse clicks on buttons won't show the ring,
+                    satisfying designers without hurting keyboard users.
+                </p>
+            </div>
+
+            <h3>Logical tab order</h3>
+            <p>
+                Focus should move in a logical, predictable sequence that matches the visual and DOM order.
+                Avoid using positive <code>tabindex</code> values (e.g. <code>tabindex="3"</code>) — they
+                override the DOM order and create a confusing navigation experience. Use
+                <code>tabindex="0"</code> to make a non-interactive element focusable, and
+                <code>tabindex="-1"</code> to make an element programmatically focusable but not in the
+                tab sequence.
+            </p>
+
+            <h3>Focus trapping in modals</h3>
+            <p>
+                When a modal dialog opens, keyboard focus must be trapped inside it. Pressing
+                <code>Tab</code> should cycle through the modal's interactive elements, and
+                <code>Escape</code> should close the modal and return focus to the trigger element.
+                Failing to do this causes keyboard users to get lost in the page behind the modal.
+            </p>
+            <pre><code>// When a modal opens:
+modal.setAttribute('aria-modal', 'true');
+firstFocusableElement.focus();
+
+// When the modal closes:
+modal.close();
+triggerButton.focus(); // return focus to where the user was</code></pre>
+
+            <h3>Skip navigation links</h3>
+            <p>
+                On pages with long navigation menus, keyboard users must press Tab many times before reaching
+                the main content. A <strong>skip link</strong> — a visually hidden link that becomes visible on
+                focus and jumps to the main content — solves this problem efficiently.
+            </p>
+            <pre><code>&lt;!-- Place this as the very first element inside &lt;body&gt; --&gt;
+&lt;a class="skip" href="#main-content"&gt;Skip to main content&lt;/a&gt;
+
+&lt;main id="main-content"&gt;...&lt;/main&gt;</code></pre>
+            <p>This page includes a skip link — press Tab on page load to see it appear.</p>
+        </section>
+
+        <section>
+            <h2>Keyboard Traps — The Opposite Problem</h2>
+            <p>
+                While trapping focus inside a modal dialog is intentional and correct, trapping focus in any
+                other context is a severe accessibility violation (WCAG 2.1.2, Level A). A keyboard trap
+                occurs when a user can Tab <em>into</em> a component but cannot Tab <em>out</em> of it
+                without special knowledge or a mouse.
+            </p>
+            <div class="box note warn">
+                <strong>Common keyboard traps to avoid</strong>
+                <p>
+                    Custom date pickers, embedded media players, rich text editors, and third-party widgets are
+                    common sources of keyboard traps. Test each by tabbing into and out of the component using
+                    only the keyboard.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>ARIA Keyboard Interaction Patterns</h2>
+            <p>
+                For custom interactive components that go beyond standard HTML controls, the
+                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/">WAI-ARIA Authoring Practices Guide (APG)</a>
+                defines expected keyboard interaction patterns. Following these patterns ensures that users who have
+                learned one implementation of a component (e.g. a carousel, accordion, or tree view) will
+                recognise the same pattern in another application.
+            </p>
+            <ul>
+                <li><strong>Tabs:</strong> Arrow keys move between tabs; Tab exits the tab strip.</li>
+                <li><strong>Accordion:</strong> Enter / Space toggles panels; Arrow keys move between headers.</li>
+                <li><strong>Combobox / autocomplete:</strong> Arrow keys navigate suggestions; Enter selects.</li>
+                <li><strong>Dialog:</strong> Focus is trapped inside; Escape closes.</li>
+                <li><strong>Menu bar:</strong> Arrow keys navigate items; Escape closes submenus.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Testing Keyboard Accessibility</h2>
+            <p>
+                Testing keyboard navigation requires only a keyboard — no specialist tools. Here is a minimal
+                testing workflow:
+            </p>
+            <ol>
+                <li>Put the mouse out of reach (or disable it in the OS settings).</li>
+                <li>Load the page and immediately press <code>Tab</code> — a skip link should appear.</li>
+                <li>Continue pressing <code>Tab</code> and verify every interactive element receives visible focus.</li>
+                <li>Activate links with <code>Enter</code> and buttons with both <code>Enter</code> and <code>Space</code>.</li>
+                <li>Open any dropdown, dialog, or flyout and verify that focus is managed correctly and
+                    <code>Escape</code> closes it.</li>
+                <li>Fill out and submit every form using only the keyboard.</li>
+            </ol>
+            <div class="box note good">
+                <strong>Automated testing complement</strong>
+                <p>
+                    The <a href="https://www.deque.com/axe/devtools/">axe DevTools</a> browser extension will
+                    flag missing focus indicators, missing labels, and other keyboard-related issues automatically
+                    as a first pass before manual testing.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>

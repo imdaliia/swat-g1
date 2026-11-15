@@ -1,0 +1,38 @@
+/* =========================================================================================================================
+   WEB ACCESSIBILITY: LOCAL STYLES
+
+   What it is for:
+     style.css forces all images into 16:9 with object-fit: cover, which crops non-16:9 images (such as square diagrams).
+     This file ensures all accessibility images and diagrams are shown completely without clipping.
+   ========================================================================================================================= */
+
+#article figure,
+figure.full-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--box);
+    padding: 16px;
+}
+
+#article figure img,
+figure.full-image img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 480px;
+    aspect-ratio: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+#article figcaption,
+figure.full-image figcaption {
+    position: static;
+    margin-top: 12px;
+    margin-right: 0;
+    width: fit-content;
+    max-width: 100%;
+    text-align: center;
+}

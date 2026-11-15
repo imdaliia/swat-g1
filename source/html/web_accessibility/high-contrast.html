@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="High contrast modes and custom colour themes make digital interfaces accessible to users with colour blindness, photophobia, and low vision. Learn the WCAG contrast requirements and how to implement accessible colour systems.">
+    <meta name="author" content="Andrii Synelnyk">
+    <title>HCI - High Contrast and Custom Colour Themes</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/web_accessibility/web-accessibility.css">
+</head>
+
+<body class="topic-web-accessibility">
+
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../index.html">HCI</a>
+        <a href="../index.html">Home</a>
+        <a href="../demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary>Web accessibility</summary>
+                            <ul>
+                                <li><a href="screen-readers.html" tabindex="0">Screen Readers</a></li>
+                                <li><a href="magnifiers.html" tabindex="0">Magnifiers</a></li>
+                                <li><a href="keyboard-navigation.html" tabindex="0">Keyboard Navigation</a></li>
+                                <li><a href="high-contrast.html" aria-current="page" tabindex="0">High Contrast Themes</a></li>
+                                <li><a href="speech-recognition.html" tabindex="0">Speech Recognition</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+        <a href="keyboard-navigation.html" rel="prev">← previous</a>
+        <a href="speech-recognition.html" rel="next">next →</a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>High Contrast and Custom Colour Themes</h1>
+        <p class="lead">Colour contrast, forced-colours mode, and dark themes — designing visual interfaces that work for every user</p>
+        <p><span class="pill">By Andrii Synelnyk</span> <span class="pill">6 min read</span></p>
+    </header>
+
+    <main id="article" class="sheet">
+
+        <section>
+            <h2>Why Colour Matters for Accessibility</h2>
+            <p>
+                Approximately 300 million people worldwide have colour vision deficiency (colour blindness),
+                and many more experience low vision, photophobia (light sensitivity), or age-related contrast
+                sensitivity loss. For these users, an interface that relies
+                on colour alone — to show errors, distinguish states, or convey meaning — becomes difficult or
+                impossible to use.
+            </p>
+            <p>
+                Colour accessibility is not just about choosing "nice" colours. It involves measurable contrast
+                ratios, OS-level colour overrides, and design decisions that ensure colour is never the
+                <em>only</em> way information is communicated.
+            </p>
+            <figure>
+                <img src="../../images/web_accessibility/high-contrast-colors.png"
+                     alt="High contrast color palette demonstrating accessible color pairings and contrast ratios"
+                     loading="lazy">
+                <figcaption>High contrast color palette demonstrating compliant foreground and background combinations</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>WCAG Contrast Requirements</h2>
+            <p>
+                The Web Content Accessibility Guidelines define minimum contrast ratios as Success Criteria.
+                Contrast ratio is a mathematical comparison between the relative luminance of the foreground
+                (text) colour and the background colour, ranging from 1:1 (no contrast) to 21:1 (black on
+                white).
+            </p>
+            <div class="box">
+                <table>
+                    <caption>WCAG 2.2 contrast ratio requirements</caption>
+                    <thead>
+                        <tr>
+                            <th>Content type</th>
+                            <th>Level AA minimum</th>
+                            <th>Level AAA enhanced</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Normal text (below 18pt / 14pt bold)</td>
+                            <td><span class="pill warn">4.5 : 1</span></td>
+                            <td><span class="pill good">7 : 1</span></td>
+                        </tr>
+                        <tr>
+                            <td>Large text (18pt+ / 14pt+ bold)</td>
+                            <td><span class="pill warn">3 : 1</span></td>
+                            <td><span class="pill good">4.5 : 1</span></td>
+                        </tr>
+                        <tr>
+                            <td>UI components and graphical objects (icons, charts)</td>
+                            <td><span class="pill warn">3 : 1</span></td>
+                            <td>No requirement</td>
+                        </tr>
+                        <tr>
+                            <td>Decorative text / logotypes</td>
+                            <td><span class="pill good">No requirement</span></td>
+                            <td>No requirement</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                These ratios apply to text and meaningful non-text content. They do not apply to decorative
+                images, disabled controls, or company logos where the brand colours are prescribed externally.
+            </p>
+            <div class="box note good">
+                <strong>Measure contrast with tools</strong>
+                <p>
+                    Use the <a href="https://www.tpgi.com/color-contrast-checker/">TPGi Colour Contrast Analyser</a>,
+                    browser DevTools (Chrome and Firefox both show contrast ratios in the colour picker), or the
+                    <a href="https://webaim.org/resources/contrastchecker/">WebAIM Contrast Checker</a> to verify
+                    every foreground–background colour pair in your design.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Colour Blindness: Types and Design Implications</h2>
+            <p>
+                Colour vision deficiency comes in several forms. The most common affect red–green discrimination;
+                the rarest affect blue–yellow. A small percentage of people have no colour vision at all
+                (achromatopsia).
+            </p>
+            <div class="box">
+                <table>
+                    <caption>Types of colour vision deficiency</caption>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Affected colours</th>
+                            <th>Prevalence</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Deuteranopia / deuteranomaly</td>
+                            <td>Red – Green (green weak)</td>
+                            <td>~5 % of males</td>
+                        </tr>
+                        <tr>
+                            <td>Protanopia / protanomaly</td>
+                            <td>Red – Green (red weak)</td>
+                            <td>~2.5 % of males</td>
+                        </tr>
+                        <tr>
+                            <td>Tritanopia / tritanomaly</td>
+                            <td>Blue – Yellow</td>
+                            <td>&lt; 0.01 %</td>
+                        </tr>
+                        <tr>
+                            <td>Achromatopsia</td>
+                            <td>All colours (monochromatic)</td>
+                            <td>~0.003 %</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                The practical implication: a red "error" state and a green "success" state may appear identical
+                to a deuteranopic user. Always pair colour with an additional indicator — an icon, a text label,
+                or a pattern.
+            </p>
+            <div class="box note warn">
+                <strong>Colour is not enough on its own</strong>
+                <p>
+                    WCAG 1.4.1 (Use of Colour, Level A) requires that colour is never the <em>only</em> visual
+                    means of conveying information, indicating an action, prompting a response, or distinguishing
+                    a visual element. Supplement colour with text, icons, borders, or patterns.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Dark Mode and User Preference</h2>
+            <p>
+                Many users prefer a dark colour scheme, either for comfort in low-light environments or because
+                their light sensitivity makes bright screens painful. CSS provides the
+                <code>prefers-color-scheme</code> media query to detect the user's OS-level preference and
+                apply an appropriate theme automatically.
+            </p>
+            <pre><code>/* Light theme — default */
+:root {
+    --bg: #edeff3;
+    --text: #222326;
+    --accent: #a8306b;  /* web-accessibility pink */
+}
+
+/* Dark theme — applied automatically when the OS is in dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #101318;
+        --text: #edf0f7;
+        --accent: #f69fca;  /* lighter shade for dark backgrounds */
+    }
+}</code></pre>
+            <p>
+                Notice that the accent colour changes between light and dark themes. A colour that meets 4.5:1
+                contrast on a white background may fail completely on a dark background — always recalculate
+                contrast for each theme variant.
+            </p>
+        </section>
+
+        <section>
+            <h2>Forced Colours / High Contrast Mode</h2>
+            <p>
+                Windows offers a "High Contrast" mode (renamed "Contrast Themes" in Windows 11) which replaces
+                all colours in the interface with a small, user-defined palette of typically 8–16 colours.
+                CSS exposes this through the <code>forced-colors</code> media query and the special
+                <code>forced-colors</code> value.
+            </p>
+            <pre><code>@media (forced-colors: active) {
+    /* Use CSS system keywords for colours in forced-colours mode */
+    .custom-button {
+        color: ButtonText;
+        background-color: ButtonFace;
+        border: 2px solid ButtonBorder;
+    }
+
+    /* Restore forced-colours visibility for decorative backgrounds that
+       carry meaning (e.g. a coloured status badge) */
+    .status-badge {
+        forced-color-adjust: none;
+        background-color: CanvasText;
+        color: Canvas;
+    }
+}</code></pre>
+            <p>
+                Key rules for forced-colours compatibility:
+            </p>
+            <ul>
+                <li>Do not rely on <code>background-image</code> alone to convey information — backgrounds
+                    are removed in forced-colours mode.</li>
+                <li>Borders become the primary way to delineate interactive elements; ensure focusable elements
+                    have a border in forced-colours mode.</li>
+                <li>Use CSS <code>currentColor</code> for SVG icons so they inherit the forced text colour.</li>
+                <li>Test in Windows Contrast Themes: Settings Accessibility Contrast themes.</li>
+            </ul>
+            <div class="box note good">
+                <strong>Emulate in DevTools</strong>
+                <p>
+                    Chrome DevTools Rendering Emulate CSS media feature <code>forced-colors: active</code>
+                    lets you check forced-colours compatibility without switching your OS settings.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Practical Checklist</h2>
+            <ul>
+                <li>All normal text meets 4.5:1 contrast ratio against its background.</li>
+                <li>Large text (18pt+ / 14pt+ bold) meets 3:1 contrast ratio.</li>
+                <li>UI components (icons, form field borders, focus rings) meet 3:1 against adjacent colours.</li>
+                <li>Information is never conveyed by colour alone; icons or text labels are always present.</li>
+                <li>Dark mode is implemented and tested with <code>prefers-color-scheme: dark</code>.</li>
+                <li>The site renders correctly in Windows High Contrast / Contrast Themes mode.</li>
+                <li>Users who prefer <code>prefers-reduced-motion</code> do not see animated colour transitions.</li>
+                <li>All custom colour tokens are defined as CSS custom properties so they can be easily updated.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>
