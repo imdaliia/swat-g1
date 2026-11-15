@@ -1,0 +1,48 @@
+
+/* === Topic homepage grid === */
+
+.grid.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+/* Standard topic cards */
+.grid.topic-grid > .topic-card {
+    min-width: 0;
+    margin: 0;
+}
+
+/* Fifth card: horizontal layout */
+.grid.topic-grid > .topic-card-wide {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Image on the left of the wide card */
+.grid.topic-grid > .topic-card-wide > figure {
+    margin: -20px 0 -20px -20px;
+}
+
+/* Text area */
+.topic-card-content {
+    padding: 10px 10px 10px 0;
+}
+
+/* Mobile layout adjustment*/
+@media (max-width: 600px) {
+
+    .grid.topic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grid.topic-grid > .topic-card-wide {
+        grid-column: auto;
+        grid-template-columns: 1fr;
+    }
+
+}

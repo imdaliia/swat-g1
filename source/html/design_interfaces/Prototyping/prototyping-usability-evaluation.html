@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An introduction to interface prototypes, from low-fidelity sketches and wireframes to clickable prototypes.">
+    <meta name="author" content="Mirco Togni">
+    <title>HCI - Prototyping and Usability Evaluation</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+
+<body class="topic-design-interfaces">
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
+
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul>
+                                <li><a href="../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../index.html#topics" tabindex="0">Special topic</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul>
+                                <li><a href="../U-T%20and%20system%20requirements/user-task-system-requirements.html" tabindex="0">User, Task and System Requirements</a></li>
+                                <li><a href="../Inf-architecture/information-architecture-navigation.html" tabindex="0">Information Architecture and Navigation</a></li>
+                                <li><a href="../Interaction%20and%20workflow%20design/interaction-workflow-design.html" tabindex="0">Interaction and Workflow Design</a></li>
+                                <li><a href="../Usability%20and%20UX%20principles/usability-ux-principles.html" tabindex="0">Usability and UX Principles</a></li>
+                                <li><a href="prototyping-usability-evaluation.html" aria-current="page" tabindex="0">Prototyping and Usability Evaluation</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../index.html#topics" tabindex="0">topic2</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul>
+                                <li><a href="../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../index.html#topics" tabindex="0">topic2</a></li>
+                                <li><a href="../index.html#topics" tabindex="0">topic3</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+
+        <a href="../Usability%20and%20UX%20principles/usability-ux-principles.html" rel="prev">← previous</a>
+        <a href="task-based-usability-testing.html" rel="next">next →</a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Prototyping and Usability Evaluation</h1>
+        <p class="lead">How can an early representation of an interface help us test and improve a design?</p>
+        <p>
+            <span class="pill">Information System Engineering</span>
+            <span class="pill">Part 1 of 3</span>
+        </p>
+    </header>
+
+    <!-- Main content -->
+    <main id="article" class="sheet">
+        <section aria-labelledby="purpose-title">
+            <h2 id="purpose-title">Why create a prototype?</h2>
+            <p>
+                A prototype is an early representation of an interface. It makes a proposed design
+                concrete enough to examine, discuss and test. Instead of evaluating an idea only from
+                a description, users and designers can look at screens and, in some cases, try a task.
+            </p>
+            <p>
+                Prototyping supports the design process before implementation. It can reveal whether
+                the planned content and sequence of screens are understandable, and it provides
+                something that can be evaluated with representative users.
+            </p>
+            <div class="box note">
+                <strong>Key purpose</strong>
+                <p>A prototype is not the finished system. It is a way to make a design testable, discover problems and guide improvements.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="formats-title">
+            <h2 id="formats-title">Three useful prototype formats</h2>
+            <p>
+                The level of detail can vary. The topic guide identifies low-fidelity sketches and
+                wireframes, as well as clickable prototypes, as the core formats to consider.
+            </p>
+
+            <div class="box">
+                <h3>1. Low-fidelity sketches</h3>
+                <p>
+                    Sketches are quick, simple representations of possible screens. They are useful
+                    for exploring an initial idea or comparing different ways to arrange information
+                    before spending time on a more detailed version. Paper prototypes can also be
+                    tested with users early in the design process <sup><a href="#source-1">[1]</a></sup>.
+                </p>
+                <p>
+                    At this stage, the main concern is the proposed structure and the elements that
+                    users will need, rather than polished visual details.
+                </p>
+            </div>
+
+            <div class="box">
+                <h3>2. Wireframes</h3>
+                <p>
+                    Wireframes give a more organized view of a screen. They show where content,
+                    controls and navigation elements may appear, helping the team inspect the page
+                    structure and the relationship between its parts.
+                </p>
+                <p>
+                    A wireframe can make it easier to discuss whether the information needed for a
+                    task is present and arranged in a useful order.
+                </p>
+            </div>
+
+            <div class="box">
+                <h3>3. Clickable prototypes</h3>
+                <p>
+                    A clickable prototype connects screens or interface elements so that a person
+                    can move through a proposed flow. It can represent the main steps of a task
+                    without requiring the complete information system to be implemented.
+                </p>
+                <p>
+                    This format is useful when the team needs to observe how a user moves from one
+                    step to another, where the user expects to go next, and whether the task flow is
+                    understandable. The level of fidelity should match what the team wants to learn
+                    from the test <sup><a href="#source-2">[2]</a></sup>.
+                </p>
+            </div>
+
+            <div class="box table-scroll" tabindex="0" role="region" aria-labelledby="formats-caption">
+                <table>
+                    <caption id="formats-caption">Comparing the three formats</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Format</th>
+                            <th scope="col">What it represents</th>
+                            <th scope="col">Useful when</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Sketch</th>
+                            <td>A quick outline of a possible screen</td>
+                            <td>Exploring an early idea or layout</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Wireframe</th>
+                            <td>The structure and arrangement of page elements</td>
+                            <td>Reviewing content hierarchy and screen organization</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Clickable prototype</th>
+                            <td>A connected sequence of screens or actions</td>
+                            <td>Trying a realistic task flow before implementation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section aria-labelledby="example-title">
+            <h2 id="example-title">Example: prototyping course registration</h2>
+            <p>
+                Consider a university course-registration system. A student needs to find a course,
+                check its prerequisites, understand whether places are available and complete
+                enrolment. A prototype can represent the screens and steps needed for this task.
+            </p>
+            <ol>
+                <li><strong>Sketch:</strong> outline the course list, course details and enrolment screens.</li>
+                <li><strong>Wireframe:</strong> organize the course information, prerequisites, available places and main controls on each screen.</li>
+                <li><strong>Clickable prototype:</strong> connect the screens so a user can attempt the route from finding a course to confirming enrolment.</li>
+            </ol>
+            <p>
+                The example shows how a design can become more concrete while remaining a prototype.
+                The next step is to ask representative users to attempt realistic tasks with it.
+            </p>
+        </section>
+
+        <section aria-labelledby="prepare-title">
+            <h2 id="prepare-title">Prepare a prototype for evaluation</h2>
+            <p>
+                A prototype should contain the parts of the interface needed for the task being
+                examined. Before a test, make sure that the relevant screens and the intended route
+                can be explored by the participant. The prototype does not need to represent every
+                feature of the final system; it needs to make the selected task testable.
+            </p>
+            <div class="box note">
+                <strong>Keep the test focused</strong>
+                <p>Choose a task first, then prepare the screens and interactions needed for a user to attempt it.</p>
+            </div>
+            <p>
+                <a href="task-based-usability-testing.html">Continue to: Task-Based Usability Testing →</a>
+            </p>
+            <p><a href="../Usability%20and%20UX%20principles/ux-principles">← Back to ux principles</a></p>
+        </section>
+
+        <section aria-labelledby="sources-title">
+            <h2 id="sources-title">Sources</h2>
+            <ol>
+                <li id="source-1">
+                    Jakob Nielsen. “Paper Prototyping: Getting User Data Before You Code.”
+                    <cite>Nielsen Norman Group</cite>, April 13, 2003.
+                    <a href="https://www.nngroup.com/articles/paper-prototyping/" target="_blank" rel="noopener">Read the article</a>.
+                </li>
+                <li id="source-2">
+                    Kara Pernice. “UX Prototypes: Low Fidelity vs. High Fidelity.”
+                    <cite>Nielsen Norman Group</cite>, December 18, 2016.
+                    <a href="https://www.nngroup.com/articles/ux-prototype-hi-lo-fidelity/" target="_blank" rel="noopener">Read the article</a>.
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>

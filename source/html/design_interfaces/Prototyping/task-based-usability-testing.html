@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How to conduct task-based usability tests with representative users and realistic tasks.">
+    <meta name="author" content="Mirco Togni">
+    <title>HCI - Task-Based Usability Testing</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+
+<body class="topic-design-interfaces">
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
+
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul>
+                                <li><a href="../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../index.html#topics" tabindex="0">Special topic</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul>
+                                <li><a href="../U-T%20and%20system%20requirements/user-task-system-requirements.html" tabindex="0">User, Task and System Requirements</a></li>
+                                <li><a href="../Inf-architecture/information-architecture-navigation.html" tabindex="0">Information Architecture and Navigation</a></li>
+                                <li><a href="../Interaction%20and%20workflow%20design/interaction-workflow-design.html" tabindex="0">Interaction and Workflow Design</a></li>
+                                <li><a href="../Usability%20and%20UX%20principles/usability-ux-principles.html" tabindex="0">Usability and UX Principles</a></li>
+                                <li><a href="prototyping-usability-evaluation.html" aria-current="page" tabindex="0">Prototyping and Usability Evaluation</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../index.html#topics" tabindex="0">topic2</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul>
+                                <li><a href="../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../index.html#topics" tabindex="0">topic2</a></li>
+                                <li><a href="../index.html#topics" tabindex="0">topic3</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+
+        <a href="prototyping-usability-evaluation.html" rel="prev">← previous</a>
+        <a href="evaluating-results-and-iteration.html" rel="next">next →</a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Task-Based Usability Testing</h1>
+        <p class="lead">How can we observe whether representative users can complete realistic tasks?</p>
+        <p>
+            <span class="pill">Information System Engineering</span>
+            <span class="pill">Part 2 of 3</span>
+        </p>
+    </header>
+
+    <!-- Main content -->
+    <main id="article" class="sheet">
+        <section aria-labelledby="testing-title">
+            <h2 id="testing-title">What is task-based usability testing?</h2>
+            <p>
+                Task-based usability testing evaluates a proposed interface by asking people to
+                attempt tasks that reflect real goals. The focus is on what happens while users try
+                to complete those tasks, not only on whether the design looks clear to its creators.
+            </p>
+            <p>
+                A test can use a prototype, including a clickable prototype, so that the design can
+                be examined before the complete system is implemented. Observing task attempts helps
+                identify where the interface supports users and where problems arise.
+                Tests are most useful when tasks are believable and relevant to the people
+                taking part <sup><a href="#source-1">[1]</a></sup>.
+            </p>
+        </section>
+
+        <section aria-labelledby="users-title">
+            <h2 id="users-title">Choose representative test users</h2>
+            <p>
+                Participants should be representative of the people for whom the information system
+                is intended. Their goals and context of use should be relevant to the tasks being
+                tested. This helps the team understand how the proposed interface works for its
+                intended users.
+            </p>
+            <div class="box note">
+                <strong>Why this matters</strong>
+                <p>A test based only on the designer's own opinion cannot show how other intended users will approach the same task.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="tasks-title">
+            <h2 id="tasks-title">Prepare realistic tasks</h2>
+            <p>
+                A test task should describe something a user needs to accomplish in the system. It
+                should reflect a real goal rather than simply asking a participant to inspect an
+                isolated interface element. The selected tasks should match the purpose of the test
+                and the parts of the prototype that are ready to explore.
+            </p>
+            <h3>Example: a course-registration task</h3>
+            <p>
+                Imagine testing a prototype for university course registration. A realistic task
+                could ask a student to find a course, check its prerequisites, understand whether
+                places are available and complete enrolment.
+            </p>
+            <div class="box">
+                <strong>Example task sequence</strong>
+                <ol>
+                    <li>Find a course that the student wants to take.</li>
+                    <li>Open the course details and check the prerequisites.</li>
+                    <li>Check whether places are available.</li>
+                    <li>Complete the enrolment process in the prototype.</li>
+                </ol>
+            </div>
+            <p>
+                This sequence gives the participant a meaningful goal and gives the observer a clear
+                process to examine from beginning to end.
+            </p>
+        </section>
+
+        <section aria-labelledby="observe-title">
+            <h2 id="observe-title">Observe how users attempt the tasks</h2>
+            <p>
+                During a task, observe the participant's progress through the interface. Record
+                whether the task is completed, where the participant encounters difficulty, whether
+                errors occur and whether help is needed. These observations help explain the results
+                collected during evaluation. Recording clear observations makes it easier to analyse
+                a session and identify useful findings <sup><a href="#source-2">[2]</a></sup>.
+            </p>
+            <div class="box table-scroll" tabindex="0" role="region" aria-labelledby="observation-caption">
+                <table>
+                    <caption id="observation-caption">What to observe during a task</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Observation</th>
+                            <th scope="col">Question to consider</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Task progress</th>
+                            <td>Can the participant move through the required steps?</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Difficulties</th>
+                            <td>At which point does the participant hesitate or become unable to continue?</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Errors</th>
+                            <td>Does the participant make an error while trying to complete the task?</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Help</th>
+                            <td>Does the participant need assistance to proceed?</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Completion</th>
+                            <td>Is the intended task completed?</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section aria-labelledby="sequence-title">
+            <h2 id="sequence-title">A practical testing sequence</h2>
+            <ol>
+                <li><strong>Set the purpose:</strong> decide which part of the interface or task flow needs to be evaluated.</li>
+                <li><strong>Prepare the prototype:</strong> make sure the screens and interactions needed for the task can be explored.</li>
+                <li><strong>Prepare realistic tasks:</strong> use tasks that reflect the goals of the intended users.</li>
+                <li><strong>Invite representative users:</strong> involve people whose context is relevant to the system.</li>
+                <li><strong>Observe and record:</strong> note completion, difficulties, errors and help required.</li>
+                <li><strong>Review the findings:</strong> use the observations to decide what should be examined or changed in the next iteration.</li>
+            </ol>
+            <div class="box note">
+                <strong>Keep the focus on the user</strong>
+                <p>The purpose is to learn how people use the proposed interface, not to test whether participants can guess what the designer intended.</p>
+            </div>
+            <p>
+                <a href="evaluating-results-and-iteration.html">Continue to: Evaluating Results and Iteration →</a>
+            </p>
+            <p><a href="../Design-interfaces-home.html">← Back to Design Interfaces</a></p>
+        </section>
+
+        <section aria-labelledby="sources-title">
+            <h2 id="sources-title">Sources</h2>
+            <ol>
+                <li id="source-1">
+                    GOV.UK User Research Community. “Usability benchmarking a website or whole service.”
+                    <cite>GOV.UK Service Manual</cite>.
+                    <a href="https://www.gov.uk/service-manual/measuring-success/usability-benchmarking-a-website-or-whole-service" target="_blank" rel="noopener">Read the guidance</a>.
+                </li>
+                <li id="source-2">
+                    GOV.UK User Research Community. “Taking notes and recording user research sessions.”
+                    <cite>GOV.UK Service Manual</cite>.
+                    <a href="https://www.gov.uk/service-manual/user-research/taking-notes-and-recording-user-research-sessions" target="_blank" rel="noopener">Read the guidance</a>.
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>
