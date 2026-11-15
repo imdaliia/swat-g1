@@ -1,169 +1,221 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="BUI Emilie">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore how intrusive mobile pop-ups and advertisements affect the browsing experience.">
+    <meta name="author" content="BUI Emilie">
+    <title>Intrusive Pop-ups and Ads | Design Failures</title>
 
-        <title>Intrusive Pop-ups and Ads | Design Failures</title>
-
-        <link rel="stylesheet" href="../../../css/style.css">
-        <link rel="stylesheet" href="../../../css/design_failures/design-failures.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/design_failures/design-failures.css">
 </head>
 
 <body class="topic-design-failures">
 
-        <a href="#main-content" class="skip-link">Skip to content</a>
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
 
-        <nav class="main-nav">
-                <a href="../../index.html">Home</a>
-                <a href="mobile-layouts.html">Previous</a>
-        </nav>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../index.html">Design Failures</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
 
-        <header>
-                <h1>Intrusive Mobile Pop-ups and Ads</h1>
-                <p class="lead">
-                        When advertisements interrupt the mobile browsing experience.
-                </p>
-        </header>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics">Topics</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics">Topics</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics">Topics</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="../index.html">Design Failures</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics">Topics</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
 
-        <main id="main-content">
+        <a href="mobile-layouts.html" rel="prev">← previous</a>
+        <a href="mobile-touch-targets.html" rel="next">next →</a>
+    </nav>
 
-                <!-- INTRODUCTION -->
-                <section>
-                        <h2>Introduction</h2>
+    <!-- Header -->
+    <header>
+        <h1>Intrusive Mobile Pop-ups and Ads</h1>
+        <p class="lead">
+            When advertisements interrupt the mobile browsing experience.
+        </p>
+        <p>
+            <span class="pill">By Emilie Bui</span>
+            <span class="pill">3 min read</span>
+        </p>
+    </header>
 
-                        <p>
-                                Mobile pop-ups and intrusive advertisements can cover
-                                important content and interrupt users while browsing.
-                                On small screens, these interruptions can make websites
-                                frustrating to use.
-                        </p>
-                </section>
+    <!-- The actual article -->
+    <main id="article" class="sheet">
 
-                <!-- CASE STUDY 1 -->
-                <section>
-                        <h2>1. Red Hot Cyber</h2>
+        <!-- INTRODUCTION -->
+        <section>
+            <h2>Introduction</h2>
 
-                        <p>
-                                A promotional pop-up appears over the article as soon
-                                as the page opens. It hides the content and prevents
-                                users from reading normally.
-                        </p>
+            <p>
+                Mobile pop-ups and intrusive advertisements can cover
+                important content and interrupt users while browsing.
+                On small screens, these interruptions can make websites
+                frustrating to use.
+            </p>
+        </section>
 
-                        <figure class="portrait">
-                                <img
-                                        src="../../../images/design_failures/mobile_ux/popup-redhotcyber.jpg"
-                                        alt="Promotional pop-up covering an article on Red Hot Cyber"
-                                >
-                                <figcaption>
-                                        A promotional pop-up hides the article on Red Hot Cyber.
-                                        Screenshot: Tommaso Russo, 5 November 2026.
-                                </figcaption>
-                        </figure>
-                </section>
+        <!-- CASE STUDY 1 -->
+        <section>
+            <h2>1. Red Hot Cyber</h2>
 
-                <!-- CASE STUDY 2 -->
-                <section>
-                        <h2>2. Multiplayer.it</h2>
+            <p>
+                A promotional pop-up appears over the article as soon
+                as the page opens. It hides the content and prevents
+                users from reading normally.
+            </p>
 
-                        <p>
-                                Several advertisements appear on the same screen,
-                                including a floating video and banners covering the text.
-                                The tiny close buttons can also cause accidental clicks.
-                        </p>
+            <figure class="portrait">
+                <img
+                    src="../../../images/design_failures/mobile_ux/popup-redhotcyber.jpg"
+                    alt="Promotional pop-up covering an article on Red Hot Cyber"
+                    loading="lazy">
+                <figcaption>
+                    A promotional pop-up hides the article on Red Hot Cyber.
+                    Screenshot: Tommaso Russo, 5 November 2026.
+                </figcaption>
+            </figure>
+        </section>
 
-                        <figure class="portrait">
-                                <img
-                                        src="../../../images/design_failures/mobile_ux/popup-ads-overlay.jpg"
-                                        alt="Multiple advertisements covering an article on Multiplayer.it"
-                                >
-                                <figcaption>
-                                        Multiple ads interrupt an article on Multiplayer.it.
-                                        Screenshot: Tommaso Russo, 5 November 2026.
-                                </figcaption>
-                        </figure>
-                </section>
+        <!-- CASE STUDY 2 -->
+        <section>
+            <h2>2. Multiplayer.it</h2>
 
-                <!-- WHY IS IT A PROBLEM? -->
-                <section>
-                        <h2>Why Are Intrusive Ads a Problem?</h2>
+            <p>
+                Several advertisements appear on the same screen,
+                including a floating video and banners covering the text.
+                The tiny close buttons can also cause accidental clicks.
+            </p>
 
-                        <div class="box">
-                                <ul>
-                                        <li><strong>Content obstruction:</strong> important information is hidden.</li>
-                                        <li><strong>Interruption:</strong> users cannot read without stopping.</li>
-                                        <li><strong>Difficult navigation:</strong> close buttons are hard to find or click.</li>
-                                        <li><strong>Frustration:</strong> repeated ads make browsing unpleasant.</li>
-                                </ul>
-                        </div>
-                </section>
+            <figure class="portrait">
+                <img
+                    src="../../../images/design_failures/mobile_ux/popup-ads-overlay.jpg"
+                    alt="Multiple advertisements covering an article on Multiplayer.it"
+                    loading="lazy">
+                <figcaption>
+                    Multiple ads interrupt an article on Multiplayer.it.
+                    Screenshot: Tommaso Russo, 5 November 2026.
+                </figcaption>
+            </figure>
+        </section>
 
-                <!-- IMPROVEMENTS -->
-                <section>
-                        <h2>How Can These Problems Be Prevented?</h2>
-                        
-                        <div class="box">
-                                <ul>
-                                        <li>Use small banners instead of full-screen pop-ups.</li>
-                                        <li>Make close buttons visible and easy to tap.</li>
-                                        <li>Avoid displaying too many advertisements.</li>
-                                        <li>Keep the main content accessible at all times.</li>
-                                </ul>
-                        </div>
-                </section>
+        <!-- WHY IS IT A PROBLEM? -->
+        <section>
+            <h2>Why Are Intrusive Ads a Problem?</h2>
 
-                <!-- CONCLUSION -->
-                 <section>
-                        <h2>Conclusion</h2>
+            <div class="box">
+                <ul>
+                    <li><strong>Content obstruction:</strong> important information is hidden.</li>
+                    <li><strong>Interruption:</strong> users cannot read without stopping.</li>
+                    <li><strong>Difficult navigation:</strong> close buttons are hard to find or click.</li>
+                    <li><strong>Frustration:</strong> repeated ads make browsing unpleasant.</li>
+                </ul>
+            </div>
+        </section>
 
-                        <p>
-                                Advertising should never prevent users from accessing
-                                a website's content. A good mobile experience must
-                                balance business needs with usability and readability.
-                        </p>
-                </section>
+        <!-- IMPROVEMENTS -->
+        <section>
+            <h2>How Can These Problems Be Prevented?</h2>
 
-                <!-- REFERENCES -->
-                <section>
-                        <h2>Sources</h2>
+            <div class="box">
+                <ul>
+                    <li>Use small banners instead of full-screen pop-ups.</li>
+                    <li>Make close buttons visible and easy to tap.</li>
+                    <li>Avoid displaying too many advertisements.</li>
+                    <li>Keep the main content accessible at all times.</li>
+                </ul>
+            </div>
+        </section>
 
-                        <ol>
-                                <li>
-                                        <a href="https://developers.google.com/search/docs/appearance/avoid-intrusive-interstitials">
-                                                Google Search Central - Avoid Intrusive Interstitials and Dialogs
-                                        </a>
-                                </li>
+        <!-- CONCLUSION -->
+        <section>
+            <h2>Conclusion</h2>
 
-                                <li>
-                                        <a href="https://multiplayer.it/notizie/multiplayer-plus-abbonamento-contenuti-senza-pubblicita.html">
-                                                Multiplayer.it - Multiplayer+
-                                        </a>
-                                </li>
+            <p>
+                Advertising should never prevent users from accessing
+                a website's content. A good mobile experience must
+                balance business needs with usability and readability.
+            </p>
+        </section>
 
-                                <li>
-                                        <a href="https://support.google.com/webtools/answer/7073774">
-                                                Google - About Mobile Ad Experiences
-                                        </a>
-                                </li>
-                        </ol>
-                </section>
+        <!-- REFERENCES -->
+        <section>
+            <h2>Sources</h2>
 
-        </main>
+            <ol>
+                <li>
+                    <a href="https://developers.google.com/search/docs/appearance/avoid-intrusive-interstitials">
+                        Google Search Central - Avoid Intrusive Interstitials and Dialogs
+                    </a>
+                </li>
 
-        <!-- Previous / Next navigation -->
-         <nav aria-label="Page navigation">
-                <a href="mobile-layouts.html" rel="prev">← Previous</a>
-                <a href="mobile-touch-targets.html" rel="next">Next →</a>
-        </nav>
+                <li>
+                    <a href="https://multiplayer.it/notizie/multiplayer-plus-abbonamento-contenuti-senza-pubblicita.html">
+                        Multiplayer.it - Multiplayer+
+                    </a>
+                </li>
 
-        <!-- FOOTER-->
-        <footer>
-                <p>Design Failures — Mobile UX</p>
-        </footer>
+                <li>
+                    <a href="https://support.google.com/webtools/answer/7073774">
+                        Google - About Mobile Ad Experiences
+                    </a>
+                </li>
+            </ol>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        Software Atelier 1 - Human-Computer Interaction and Digital Accessibility
+    </footer>
 
 </body>
-
 </html>
-

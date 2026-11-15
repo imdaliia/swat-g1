@@ -1,176 +1,229 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="BUI Emilie">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how small mobile touch targets affect usability and accessibility.">
+    <meta name="author" content="BUI Emilie">
+    <title>Mobile Touch Targets | Design Failures</title>
 
-        <title>Mobile Touch Targets | Design Failures</title>
-
-        <link rel="stylesheet" href="../../../css/style.css">
-        <link rel="stylesheet" href="../../../css/design_failures/design-failures.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/design_failures/design-failures.css">
 </head>
 
 <body class="topic-design-failures">
 
-        <a href="#main-content" class="skip-link">Skip to content</a>
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
 
-        <nav class="main-nav">
-                <a href="../../index.html">Home</a>
-        </nav>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../index.html">Design Failures</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
 
-        <header>
-                <h1>Bad Mobile Touch Targets</h1>
-                <p class="lead">
-                        When buttons and links are too small to tap comfortably.
-                </p>
-        </header>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics">Topics</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics">Topics</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics">Topics</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="../index.html">Design Failures</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics">Topics</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
 
-        <main id="main-content">
+        <a href="mobile-popups.html" rel="prev">← previous</a>
+        <a href="mobile-forms.html" rel="next">next →</a>
+    </nav>
 
-                <!-- INTRODUCTION -->
-                <section>
-                        <h2>Introduction</h2>
+    <!-- Header -->
+    <header>
+        <h1>Bad Mobile Touch Targets</h1>
+        <p class="lead">
+            When buttons and links are too small to tap comfortably.
+        </p>
+        <p>
+            <span class="pill">By Emilie Bui</span>
+            <span class="pill">3 min read</span>
+        </p>
+    </header>
 
-                        <p>
-                                Touch targets are interactive elements such as buttons,
-                                links and icons. When they are too small or too close
-                                together, users may accidentally tap the wrong option.
-                        </p>
-                </section>
+    <!-- The actual article -->
+    <main id="article" class="sheet">
 
-                <!-- CASE STUDY -->
-                <section>
-                        <h2>1. EverEye</h2>
+        <!-- INTRODUCTION -->
+        <section>
+            <h2>Introduction</h2>
 
-                        <p>
-                                On EverEye, the option to continue without accepting
-                                cookies is displayed as a small, light-grey link.
-                                Meanwhile, the other options appear as large buttons,
-                                making the smaller option harder to select.
-                        </p>
+            <p>
+                Touch targets are interactive elements such as buttons,
+                links and icons. When they are too small or too close
+                together, users may accidentally tap the wrong option.
+            </p>
+        </section>
 
-                        <figure class="portrait">
-                                <img
-                                        src="../../../images/design_failures/mobile_ux/cookie-everyeye.jpg"
-                                        alt="Cookie consent interface on EverEye with a small link to continue without accepting"
-                                >
-                                <figcaption>
-                                        The option to refuse is the smallest touch target.
-                                        Screenshot: Tommaso Russo, 5 November 2026.
-                                </figcaption>
-                        </figure>
-                </section>
+        <!-- CASE STUDY -->
+        <section>
+            <h2>1. EverEye</h2>
 
-                <!-- PROBLEMS -->
-                <section>
-                        <h2>Why Are Small Touch Targets a Problem?</h2>
+            <p>
+                On EverEye, the option to continue without accepting
+                cookies is displayed as a small, light-grey link.
+                Meanwhile, the other options appear as large buttons,
+                making the smaller option harder to select.
+            </p>
 
-                        <div class="box">
-                                <ul>
-                                        <li><strong>Accidental taps:</strong> users may select the wrong option.</li>
-                                        <li><strong>Difficult navigation:</strong> small buttons are harder to tap.</li>
-                                        <li><strong>Accessibility:</strong> users with motor difficulties may struggle.</li>
-                                        <li><strong>Frustration:</strong> repeated mistakes slow down navigation.</li>
-                                </ul>
-                        </div>
-                </section>
+            <figure class="portrait">
+                <img
+                    src="../../../images/design_failures/mobile_ux/cookie-everyeye.jpg"
+                    alt="Cookie consent interface on EverEye with a small link to continue without accepting"
+                    loading="lazy">
+                <figcaption>
+                    The option to refuse is the smallest touch target.
+                    Screenshot: Tommaso Russo, 5 November 2026.
+                </figcaption>
+            </figure>
+        </section>
 
-                <!-- DESIGN GUIDELINES -->
-                <section>
-                        <h2>2. Design Guidelines</h2>
+        <!-- PROBLEMS -->
+        <section>
+            <h2>Why Are Small Touch Targets a Problem?</h2>
 
-                        <p>
-                                Accessibility guidelines recommend minimum touch target
-                                sizes to make mobile interfaces easier to use.
-                        </p>
+            <div class="box">
+                <ul>
+                    <li><strong>Accidental taps:</strong> users may select the wrong option.</li>
+                    <li><strong>Difficult navigation:</strong> small buttons are harder to tap.</li>
+                    <li><strong>Accessibility:</strong> users with motor difficulties may struggle.</li>
+                    <li><strong>Frustration:</strong> repeated mistakes slow down navigation.</li>
+                </ul>
+            </div>
+        </section>
 
-                        <div class="grid">
-                                <div class="box">
-                                        <h3>Apple</h3>
-                                        <p><strong>44 x 44 pt</strong></p>
-                                        <p>Recommended touch target size.</p>
-                                </div>
+        <!-- DESIGN GUIDELINES -->
+        <section>
+            <h2>2. Design Guidelines</h2>
 
-                                <div class="box">
-                                        <h3>Material Design</h3>
-                                        <p><strong>48 x 48 dp</strong></p>
-                                        <p>Recommended touch target size.</p>
-                                </div>
+            <p>
+                Accessibility guidelines recommend minimum touch target
+                sizes to make mobile interfaces easier to use.
+            </p>
 
-                                <div class="box">
-                                        <h3>WCAG 2.2</h3>
-                                        <p><strong>24 x 24 CSS px</strong></p>
-                                        <p>Minimum target size, subject to exceptions.</p>
-                                </div>
-                        </div>
-                </section>
+            <div class="grid">
+                <div class="box">
+                    <h3>Apple</h3>
+                    <p><strong>44 x 44 pt</strong></p>
+                    <p>Recommended touch target size.</p>
+                </div>
 
-                <!-- IMPROVEMENTS -->
-                <section>
-                        <h2>How Can Touch Targets Be Improved?</h2>
+                <div class="box">
+                    <h3>Material Design</h3>
+                    <p><strong>48 x 48 dp</strong></p>
+                    <p>Recommended touch target size.</p>
+                </div>
 
-                        <div class="box">
-                                <ul>
-                                        <li>Make buttons and links large enough to tap easily.</li>
-                                        <li>Leave sufficient space between interactive elements.</li>
-                                        <li>Keep important actions clearly visible.</li>
-                                        <li>Make all choices easy to find and select.</li>
-                                </ul>
-                        </div>
-                </section>
+                <div class="box">
+                    <h3>WCAG 2.2</h3>
+                    <p><strong>24 x 24 CSS px</strong></p>
+                    <p>Minimum target size, subject to exceptions.</p>
+                </div>
+            </div>
+        </section>
 
-                <!-- CONCLUSION -->
-                <section>
-                        <h2>Conclusion</h2>
+        <!-- IMPROVEMENTS -->
+        <section>
+            <h2>How Can Touch Targets Be Improved?</h2>
 
-                        <p>
-                                Small touch targets can make mobile navigation difficult
-                                and frustrating. Appropriate sizes and spacing create
-                                a more accessible and user-friendly experience.
-                        </p>
-                </section>
+            <div class="box">
+                <ul>
+                    <li>Make buttons and links large enough to tap easily.</li>
+                    <li>Leave sufficient space between interactive elements.</li>
+                    <li>Keep important actions clearly visible.</li>
+                    <li>Make all choices easy to find and select.</li>
+                </ul>
+            </div>
+        </section>
 
-                <!-- REFERENCES -->
-                <section>
-                        <h2>Sources</h2>
+        <!-- CONCLUSION -->
+        <section>
+            <h2>Conclusion</h2>
 
-                        <ol>
-                                <li>
-                                        <a href="https://developer.apple.com/design/human-interface-guidelines/">
-                                                Apple Human Interface Guidelines
-                                        </a>
-                                </li>
+            <p>
+                Small touch targets can make mobile navigation difficult
+                and frustrating. Appropriate sizes and spacing create
+                a more accessible and user-friendly experience.
+            </p>
+        </section>
 
-                                <li>
-                                        <a href="https://m3.material.io/foundations/accessible-design/overview">
-                                                Google Material Design - Accessible Design
-                                        </a>
-                                </li>
+        <!-- REFERENCES -->
+        <section>
+            <h2>Sources</h2>
 
-                                <li>
-                                        <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">
-                                                W3C - WCAG 2.2 Target Size (Minimum)
-                                        </a>
-                                </li>
-                        </ol>
-                </section>
+            <ol>
+                <li>
+                    <a href="https://developer.apple.com/design/human-interface-guidelines/">
+                        Apple Human Interface Guidelines
+                    </a>
+                </li>
 
-        </main>
+                <li>
+                    <a href="https://m3.material.io/foundations/accessible-design/overview">
+                        Google Material Design - Accessible Design
+                    </a>
+                </li>
 
-        <!-- Previous / Next navigation -->
-        <nav aria-label="Page navigation">
-                <a href="mobile-popups.html" rel="prev">← Previous</a>
-                <a href="mobile-forms.html" rel="next">Next →</a>
-        </nav>
+                <li>
+                    <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">
+                        W3C - WCAG 2.2 Target Size (Minimum)
+                    </a>
+                </li>
+            </ol>
+        </section>
 
-        <!-- FOOTER -->
-        <footer>
-                <p>Design Failures — Mobile UX</p>
-        </footer>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        Software Atelier 1 - Human-Computer Interaction and Digital Accessibility
+    </footer>
 
 </body>
-
 </html>
-
