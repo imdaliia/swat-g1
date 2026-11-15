@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compare simple misleading interface examples with clearer, more respectful alternatives.">
+    <meta name="author" content="Boukhezna Mohamed Chaker">
+    <title>HCI - Spot the Trick!</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/design_failures/design-failures.css">
+</head>
+<body class="topic-design-failures">
+    <!-- Top bar from the group article template -->
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+        <a href="../index.html">Design Failures</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+<li><a href="../../index.html#topics">Input/output devices</a></li>
+                    <li><a href="../../index.html#topics">Designing interfaces</a></li>
+                    <li><a href="../../index.html#topics">Web accessibility</a></li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="../index.html">Design Failures home</a></li>
+                                <li><a href="dark-intro.html">What Are Dark Patterns?</a></li>
+                                <li><a href="dark-taxonomy.html">Types of Dark Patterns</a></li>
+                                <li><a href="dark-scale.html">How Common Are They?</a></li>
+                                <li><a href="dark-cases.html">Famous Cases and Fines</a></li>
+                                <li><a href="dark-law.html">What Does the Law Say?</a></li>
+                                <li><a href="dark-demo.html">Spot the Trick!</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a href="../../index.html#topics">Future interfaces</a></li>
+                </ul>
+            </div>
+        </details>
+        <a href="dark-law.html" rel="prev">← previous</a>
+        <a href="../ethical_hci/ethics-mechanics.html" rel="next">next →</a>
+    </nav>
+    <!-- Article header -->
+    <header>
+        <h1>Spot the Trick!</h1>
+        <p class="lead">Compare simple misleading interface examples with clearer, more respectful alternatives.</p>
+        <p><span class="pill">By Boukhezna Mohamed Chaker</span> <span class="pill">Part 6 of 6</span></p>
+    </header>
+    <main id="article" class="sheet">
+        <section>
+            <h2>Learn to recognise a dark pattern</h2>
+            <p>This page presents four small examples made only with ordinary HTML and the site's existing CSS. They are <strong>fictional demonstrations</strong>, not real services. They do not send information or create subscriptions. You can use the checkboxes and open the explanations to see how the same task can be designed in two different ways.</p>
+            <p>Try reading each pair of interfaces as if you were in a hurry. Which one makes the choices easier to understand? Which one pushes you towards the answer preferred by the website? After comparing both, open the explanation below the example.</p>
+            <figure>
+                <img src="../../../images/design_failures/dark_patterns/dark-demo.webp" alt="AI-generated fictional premium free-trial screen on a tablet, with an urgent offer, preselected automatic renewal, a large red Continue button and a small No thanks link." loading="lazy">
+                <figcaption>AI-generated example of urgency, a preselected renewal option and a hard-to-notice refusal link.</figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>Example 1: cookie consent</h2>
+            <div class="grid">
+                <div class="box bad">
+                    <h3>Misleading example</h3>
+                    <p><span class="pill bad">Deceptive</span></p>
+                    <p>For the best experience, agree to all cookies and continue.</p>
+                    <p><strong>ACCEPT ALL COOKIES</strong></p>
+                    <p><small>Other options are hidden in settings.</small></p>
+                </div>
+                <div class="box good">
+                    <h3>Better example</h3>
+                    <p><span class="pill good">Transparent</span></p>
+                    <p>We use optional cookies for analytics. You can accept or reject them.</p>
+                    <p><strong>Accept optional cookies</strong></p>
+                    <p><strong>Reject optional cookies</strong></p>
+                </div>
+            </div>
+            <details>
+                <summary>Reveal the trick in example 1</summary>
+                <p>The first message makes acceptance highly visible while hiding refusal. The second describes the purpose and presents both choices clearly. Consent should not depend on how difficult the refusal button is to find. <sup><a href="#source-1">[1]</a></sup></p>
+            </details>
+        </section>
+        <section>
+            <h2>Example 2: newsletter sign-up</h2>
+            <p>These are real HTML checkboxes. Changing them does not save or send anything.</p>
+            <div class="grid">
+                <div class="box bad">
+                    <h3>Misleading example</h3>
+                    <p><span class="pill bad">Preselected choice</span></p>
+                    <p>Complete your order:</p>
+                    <p><input type="checkbox" id="newsletter-trick" checked> <label for="newsletter-trick">Send me marketing emails.</label></p>
+                    <p>The box has already been checked. A hurried user might miss it.</p>
+                </div>
+                <div class="box good">
+                    <h3>Better example</h3>
+                    <p><span class="pill good">User chooses</span></p>
+                    <p>Complete your order:</p>
+                    <p><input type="checkbox" id="newsletter-fair"> <label for="newsletter-fair">I would like to receive marketing emails (optional).</label></p>
+                    <p>The user must actively choose to subscribe.</p>
+                </div>
+            </div>
+            <details>
+                <summary>Reveal the trick in example 2</summary>
+                <p>The first checkbox is already selected, even though the person only wants to place an order. This can lead to an unwanted subscription to marketing messages. In the clearer version, optional consent is separate, understandable and unchecked by default when opt-in is required. <sup><a href="#source-2">[2]</a></sup></p>
+            </details>
+        </section>
+        <section>
+            <h2>Example 3: cancelling a subscription</h2>
+            <div class="grid">
+                <div class="box bad">
+                    <h3>Misleading example</h3>
+                    <p><span class="pill bad">Obstruction</span></p>
+                    <ol>
+                        <li>Open account settings.</li>
+                        <li>Find a small subscription link.</li>
+                        <li>Read three retention offers.</li>
+                        <li>Contact support to finish.</li>
+                    </ol>
+                    <p><strong>Are you sure you want to lose all the benefits?</strong></p>
+                </div>
+                <div class="box good">
+                    <h3>Better example</h3>
+                    <p><span class="pill good">Simple exit</span></p>
+                    <ol>
+                        <li>Open Subscription settings.</li>
+                        <li>Choose Cancel subscription.</li>
+                        <li>Review the end date and confirm.</li>
+                    </ol>
+                    <p><strong>Your subscription will end on the date shown.</strong></p>
+                </div>
+            </div>
+            <details>
+                <summary>Reveal the trick in example 3</summary>
+                <p>The first design creates obstacles and uses emotional language to discourage cancellation. The second makes the action easy to find and explains the consequences. A company can offer an alternative plan, but it should not trap users in a long process. <sup><a href="#source-3">[3]</a></sup></p>
+            </details>
+        </section>
+        <section>
+            <h2>Example 4: confirmshaming</h2>
+            <div class="grid">
+                <div class="box bad">
+                    <h3>Misleading example</h3>
+                    <p><span class="pill bad">Guilt-based wording</span></p>
+                    <p><strong>Yes, show me the discount.</strong></p>
+                    <p><small>No, I prefer wasting money.</small></p>
+                </div>
+                <div class="box good">
+                    <h3>Better example</h3>
+                    <p><span class="pill good">Neutral choice</span></p>
+                    <p><strong>Show me the discount.</strong></p>
+                    <p><strong>No thanks.</strong></p>
+                </div>
+            </div>
+            <details>
+                <summary>Reveal the trick in example 4</summary>
+                <p>The first version tries to make refusal feel shameful. The second gives users a neutral choice. <sup><a href="#source-3">[3]</a></sup></p>
+            </details>
+        </section>
+        <section>
+            <h2>What makes an interface fair?</h2>
+            <div class="box">
+                <table>
+                    <caption>Three simple design improvements</caption>
+                    <thead><tr><th scope="col">Problem</th><th scope="col">Fair approach</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Hidden or unequal choices</th><td>Show understandable alternatives with similar visibility.</td></tr>
+                        <tr><th scope="row">Unexpected opt-in</th><td>Ask clearly and do not preselect optional permission.</td></tr>
+                        <tr><th scope="row">Difficult exit</th><td>Make cancellation straightforward and confirm the result.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>These examples show that ethical interaction design does not require complicated code. The main change is often a change in the decisions designers make: clearer wording, better defaults and fewer unnecessary steps.</p>
+            <p>When reviewing a page, ask whether a new visitor can recognise the important options and predict the result of selecting one. Check the keyboard order, the labels on controls and the clarity of feedback. If a user has to fight the interface to do something reasonable, the design needs another look. A simple usability test can help: ask a friend to complete a task without explaining where to click. Observe whether they notice the cost, understand the wording and find the option to refuse. If they select something by accident, ask what part of the screen confused them. These small observations are useful because an interface may seem obvious to its creator but not to someone visiting for the first time.</p>
+            <p>After this section, the Design Failures topic continues with <a href="../ethical_hci/ethics-mechanics.html">Ethical HCI</a>, where these ideas connect to broader responsibilities in technology.</p>
+        </section>
+        <section>
+            <h2>Sources</h2>
+            <ol>
+                <li id="source-1">CNIL. <cite>Cookies: refusing should be as easy as accepting</cite>. <a href="https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookies/quels-changements-pour-les-internautes">French data protection guidance</a>.</li>
+                <li id="source-2">European Data Protection Board (2023). <cite>Guidelines on deceptive design patterns</cite>. <a href="https://www.edpb.europa.eu/documents/guideline/guidelines-032022-on-deceptive-design-patterns-in-social-media-platform_en">Official guidance</a>.</li>
+                <li id="source-3">US Federal Trade Commission (2022). <cite>Bringing Dark Patterns to Light</cite>. <a href="https://www.ftc.gov/reports/bringing-dark-patterns-light">FTC report</a>.</li>
+            </ol>
+        </section>
+    </main>
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+</html>

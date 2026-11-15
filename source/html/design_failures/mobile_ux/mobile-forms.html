@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore common mobile form design failures and how to improve usability and accessibility.">
+    <meta name="author" content="BUI Emilie">
+    <title>Mobile Forms & Input Errors | Design Failures</title>
+
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/design_failures/design-failures.css">
+</head>
+
+<body class="topic-design-failures">
+
+    <!-- TOP BAR -->
+    <a class="skip" href="#article">Skip to content</a>
+
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../index.html">Design Failures</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics">Topics</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics">Topics</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics">Topics</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="../index.html">Design Failures</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics">Topics</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+
+        <a href="mobile-touch-targets.html" rel="prev">← previous</a>
+        <a href="../dark_patterns/dark-intro.html" rel="next">next →</a>
+    </nav>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Mobile Forms & Input Errors</h1>
+        <p class="lead">
+            When poorly designed forms make simple tasks difficult.
+        </p>
+        <p>
+            <span class="pill">By Emilie Bui</span>
+            <span class="pill">5 min read</span>
+        </p>
+    </header>
+
+    <!-- MAIN ARTICLE -->
+    <main id="article" class="sheet">
+
+        <!-- INTRODUCTION -->
+        <section>
+            <h2>Introduction</h2>
+
+            <p>
+                Mobile forms are part of many everyday online activities.
+                Users complete them when creating an account, logging in,
+                booking an appointment or purchasing products online.
+                They are an essential way for websites to collect
+                information and allow users to interact with services.
+            </p>
+
+            <p>
+                However, completing a form on a smartphone can be more
+                difficult than completing one on a computer. The screen
+                is smaller, the keyboard takes up part of the display
+                and users enter information with their fingers instead
+                of a physical keyboard.
+            </p>
+
+            <p>
+                Poorly designed input fields, inappropriate keyboards
+                and confusing error messages can make simple tasks
+                frustrating. A good mobile form should be clear,
+                predictable and easy to complete. The design should
+                help users understand what information is required
+                and how to correct mistakes.
+            </p>
+        </section>
+
+        <!-- INPUT FIELDS -->
+        <section>
+            <h2>1. Poorly Designed Input Fields</h2>
+
+            <p>
+                Input fields are the areas where users enter information,
+                such as their name, email address, password or phone
+                number. Their design has a direct impact on how easily
+                people can complete a form.
+            </p>
+
+            <p>
+                On mobile devices, input fields that are too small can
+                make it difficult to read the information already entered
+                or to select a specific part of the text. Unclear labels
+                can also leave users unsure about what they are expected
+                to provide. For example, a field labelled only
+                "Information" does not explain whether the website
+                requires a phone number, an address or something else.
+            </p>
+
+            <p>
+                Labels should clearly describe the purpose of each field.
+                They should remain understandable while users are typing,
+                rather than relying only on placeholder text that
+                disappears when the field is filled in.
+                The W3C Forms Tutorial explains the importance of
+                providing clear labels and instructions to help users
+                understand form controls.
+                <sup><a href="#source-2">[2]</a></sup>
+            </p>
+
+            <p>
+                Forms should also make it easy to select, edit and review
+                entered information. If users cannot easily understand
+                what a field is for, they may enter incorrect information
+                or abandon the form completely.
+            </p>
+        </section>
+
+        <!-- INAPPROPRIATE MOBILE KEYBOARDS -->
+        <section>
+            <h2>2. Inappropriate Mobile Keyboards</h2>
+
+            <p>
+                One important advantage of mobile devices is that the
+                keyboard can change depending on the type of information
+                being entered. However, some websites do not take
+                advantage of this feature.
+            </p>
+
+            <p>
+                For example, when a user needs to enter a phone number,
+                the website should make numerical input convenient.
+                Displaying a standard alphabetic keyboard instead
+                forces the user to switch between letters and numbers
+                or search for the correct keys.
+            </p>
+
+            <p>
+                This creates unnecessary steps and makes the process
+                slower. It can be especially inconvenient when users
+                need to enter several numbers, such as a phone number,
+                postal code or payment information.
+            </p>
+
+            <p>
+                HTML provides different input types that help browsers
+                understand what kind of information a field expects.
+                For example, the <code>type="number"</code> and
+                <code>type="tel"</code> attributes can help provide
+                more appropriate input experiences on supported devices.
+                <sup><a href="#source-1">[1]</a></sup>
+            </p>
+
+            <p>
+                Choosing the appropriate input type makes the interaction
+                more convenient and reduces the effort required from
+                users. Designers should consider the information
+                requested by each field instead of using the same
+                keyboard for every input.
+            </p>
+        </section>
+
+        <!-- CONFUSING ERROR MESSAGES -->
+        <section>
+            <h2>3. Confusing Error Messages</h2>
+
+            <p>
+                Errors are common when completing online forms.
+                Users may forget a required field, enter an invalid
+                email address or choose a password that does not
+                meet the website's requirements.
+                These mistakes should be easy to identify and correct.
+            </p>
+
+            <p>
+                A poorly designed form may display a generic message
+                such as "Something went wrong" without explaining
+                the problem. Users are then forced to guess which
+                field needs to be corrected.
+            </p>
+
+            <!-- FORM VALIDATION IMAGE -->
+            <figure class="portrait">
+                <img
+                    src="../../../images/design_failures/mobile_ux/forms-validation.jpg"
+                    alt="Web form with a generic error message: Input Field contains errors."
+                    loading="lazy">
+                <figcaption>
+                    Unclear error message.
+                    Image: Digital Policy Office, Hong Kong (non-commercial use).
+                </figcaption>
+            </figure>
+
+            <p>
+                A better approach is to display a clear message close
+                to the field containing the error. For example,
+                instead of saying "Invalid input", a website could
+                explain: "Please enter a valid email address."
+                This tells users exactly what needs to be changed.
+                <sup><a href="#source-3">[3]</a></sup>
+            </p>
+
+            <p>
+                Error messages should also be easy to notice and
+                understand. Colour can help identify an incorrect
+                field, but it should not be the only way of communicating
+                the error. Text explanations are important because
+                users need to understand the problem, not simply
+                recognise that something is wrong.
+            </p>
+
+            <p>
+                The W3C Forms Tutorial provides guidance on identifying
+                form errors and giving users information that helps
+                them correct their input.
+                <sup><a href="#source-2">[2]</a></sup>
+            </p>
+        </section>
+
+        <!-- PROBLEMS -->
+        <section>
+            <h2>4. Why Do These Problems Matter?</h2>
+
+            <p>
+                A form that is difficult to complete can affect the
+                entire user experience. Even when users are interested
+                in a product or service, they may stop the process
+                if entering their information becomes too complicated.
+            </p>
+
+            <div class="box">
+                <ul>
+                    <li>
+                        <strong>More mistakes:</strong>
+                        unclear instructions and unsuitable keyboards
+                        increase the possibility of incorrect entries.
+                    </li>
+                    <li>
+                        <strong>Time wasted:</strong>
+                        users may need to repeat steps or correct
+                        information several times.
+                    </li>
+                    <li>
+                        <strong>Accessibility barriers:</strong>
+                        people using assistive technologies may have
+                        difficulties when fields lack clear labels
+                        or error explanations.
+                    </li>
+                    <li>
+                        <strong>Abandoned forms:</strong>
+                        frustrating interactions may cause users
+                        to leave before completing a registration
+                        or purchase.
+                    </li>
+                </ul>
+            </div>
+
+            <p>
+                These issues show that form design is not only about
+                appearance. It is also about helping people complete
+                tasks successfully, without unnecessary confusion
+                or effort.
+            </p>
+        </section>
+
+        <!-- IMPROVEMENTS -->
+        <section>
+            <h2>5. How Can Mobile Forms Be Improved?</h2>
+
+            <p>
+                Designers can make mobile forms more accessible
+                and comfortable by following a few important principles.
+                The goal is to reduce unnecessary effort and guide
+                users through each step.
+            </p>
+
+            <div class="grid">
+
+                <div class="box">
+                    <h3>Clear Input Fields</h3>
+                    <p>
+                        Use readable labels, sufficiently large fields
+                        and clear instructions so users understand
+                        what information is required.
+                    </p>
+                </div>
+
+                <div class="box">
+                    <h3>Appropriate Keyboards</h3>
+                    <p>
+                        Choose suitable input types so users can access
+                        a keyboard adapted to the information they
+                        need to enter.
+                    </p>
+                </div>
+
+                <div class="box">
+                    <h3>Helpful Error Messages</h3>
+                    <p>
+                        Explain what went wrong, identify the relevant
+                        field and tell users how to correct the problem.
+                    </p>
+                </div>
+
+                <div class="box">
+                    <h3>Simple Forms</h3>
+                    <p>
+                        Ask only for necessary information, organise
+                        fields logically and avoid making users repeat
+                        information they have already entered.
+                    </p>
+                </div>
+
+            </div>
+
+            <p>
+                Another useful practice is to preserve information
+                that users have already entered when an error occurs.
+                If the form refreshes and deletes every answer,
+                users may have to start again. Keeping their previous
+                entries makes corrections less frustrating.
+            </p>
+
+            <p>
+                Finally, forms should be tested on actual mobile devices.
+                Designers need to check whether fields are easy to
+                select, labels are readable and error messages remain
+                visible when the keyboard is open. Testing helps reveal
+                problems that may not be obvious when designing
+                a page on a desktop computer.
+            </p>
+        </section>
+
+        <!-- CONCLUSION -->
+        <section>
+            <h2>Conclusion</h2>
+
+            <p>
+                Mobile forms are essential to many online services,
+                but poorly designed fields, inappropriate keyboards
+                and confusing error messages can make them difficult
+                to complete. These problems waste time, create
+                unnecessary mistakes and may prevent users from
+                accessing a service.
+            </p>
+
+            <p>
+                Well-designed forms should be simple, clear and
+                accessible. By using readable labels, appropriate
+                input types and helpful error messages, designers
+                can make mobile interactions more efficient and
+                comfortable for everyone.
+            </p>
+        </section>
+
+        <!-- SOURCES -->
+        <section>
+            <h2>Sources</h2>
+
+            <ol>
+                <li id="source-1">
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input"
+                       target="_blank" rel="noopener noreferrer">
+                        MDN Web Docs - HTML Input Element
+                    </a>
+                </li>
+
+                <li id="source-2">
+                    <a href="https://www.w3.org/WAI/tutorials/forms/"
+                       target="_blank" rel="noopener noreferrer">
+                        W3C - Forms Tutorial
+                    </a>
+                </li>
+
+                <li id="source-3">
+                    <a href="https://www.digitalpolicy.gov.hk/en/our_work/digital_infrastructure/digital_inclusion/accessibility/promulgating_resources/handbook/wcag2aa/9_21_error_suggestion.html"
+                       target="_blank" rel="noopener noreferrer">
+                        Digital Policy Office, Hong Kong - Mobile Application Accessibility Handbook
+                    </a>
+                </li>
+            </ol>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        Software Atelier 1 - Human-Computer Interaction and Digital Accessibility
+    </footer>
+
+</body>
+</html>

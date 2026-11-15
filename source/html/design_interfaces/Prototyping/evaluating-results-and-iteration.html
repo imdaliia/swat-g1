@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Usability measures, interpreting test findings and iterative interface improvement.">
+    <meta name="author" content="Mirco Togni">
+    <title>HCI - Evaluating Results and Iteration</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+
+<body class="topic-design-interfaces">
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
+
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul>
+                                <li><a href="../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../index.html#topics" tabindex="0">Special topic</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul>
+                                <li><a href="../U-T%20and%20system%20requirements/user-task-system-requirements.html" tabindex="0">User, Task and System Requirements</a></li>
+                                <li><a href="../Inf-architecture/information-architecture-navigation.html" tabindex="0">Information Architecture and Navigation</a></li>
+                                <li><a href="../Interaction%20and%20workflow%20design/interaction-workflow-design.html" tabindex="0">Interaction and Workflow Design</a></li>
+                                <li><a href="../Usability%20and%20UX%20principles/usability-ux-principles.html" tabindex="0">Usability and UX Principles</a></li>
+                                <li><a href="prototyping-usability-evaluation.html" aria-current="page" tabindex="0">Prototyping and Usability Evaluation</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../index.html#topics" tabindex="0">topic2</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul>
+                                <li><a href="../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../index.html#topics" tabindex="0">topic2</a></li>
+                                <li><a href="../index.html#topics" tabindex="0">topic3</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+
+        <a href="task-based-usability-testing.html" rel="prev">← previous</a>
+        <a href="../Design-interfaces-home.html" rel="next">next →</a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Evaluating Results and Iteration</h1>
+        <p class="lead">How can test observations and usability measures guide design improvements?</p>
+        <p>
+            <span class="pill">Information System Engineering</span>
+            <span class="pill">Part 3 of 3</span>
+        </p>
+    </header>
+
+    <!-- Main content -->
+    <main id="article" class="sheet">
+        <section aria-labelledby="measures-title">
+            <h2 id="measures-title">Why measure usability?</h2>
+            <p>
+                Usability evaluation combines observations of users attempting tasks with measures
+                that describe the result. Measures help make the evaluation more concrete: they show
+                whether users complete a task, how long it takes, what errors occur and how much help
+                is needed. User-reported ease and satisfaction add the participant's perspective
+                <sup><a href="#source-1">[1]</a></sup>.
+            </p>
+        </section>
+
+        <section aria-labelledby="performance-title">
+            <h2 id="performance-title">Possible usability measures</h2>
+            <p>
+                The topic guide identifies five possible measures. Each one describes a different
+                aspect of the user's experience, so it is useful to consider them together with the
+                observations made during the test. Task completion and time are also central measures
+                in usability benchmarking <sup><a href="#source-2">[2]</a></sup>.
+            </p>
+
+            <div class="box table-scroll" tabindex="0" role="region" aria-labelledby="measures-caption">
+                <table>
+                    <caption id="measures-caption">Measures that can be used in usability evaluation</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Measure</th>
+                            <th scope="col">What it indicates</th>
+                            <th scope="col">Example question</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Task completion rate</th>
+                            <td>Whether users are able to complete the task.</td>
+                            <td>Did the participant complete the intended task?</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Time on task</th>
+                            <td>How long users take to complete a task.</td>
+                            <td>How long did the task take?</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Number of errors</th>
+                            <td>How many errors occur while users attempt the task.</td>
+                            <td>What errors occurred during the attempt?</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Help required</th>
+                            <td>How much assistance users need during the task.</td>
+                            <td>Did the participant need help to proceed?</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">User-reported ease and satisfaction</th>
+                            <td>How easy or satisfactory users say the experience was.</td>
+                            <td>How easy did the participant say the task felt?</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section aria-labelledby="combine-title">
+            <h2 id="combine-title">Consider measures together with observations</h2>
+            <p>
+                A measure describes part of what happened, while an observation can help explain it.
+                For example, a participant may complete a task but make several errors or require
+                assistance. Looking only at completion would miss those difficulties. Similarly, a
+                task may take a long time because the participant is carefully checking information,
+                so the time should be considered alongside what was observed.
+            </p>
+            <div class="box note">
+                <strong>Interpret the whole attempt</strong>
+                <p>Consider task completion, time, errors, help and the participant's reported experience together instead of relying on a single result.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="findings-title">
+            <h2 id="findings-title">Turn findings into design improvements</h2>
+            <p>
+                The purpose of evaluation is not only to collect results. The team should use what it
+                observed and measured to identify aspects of the interface that may need to change.
+                A useful way to review a finding is to connect the user's difficulty to the part of
+                the task or screen where it occurred, then decide what design change could address it.
+            </p>
+            <div class="box">
+                <h3>From observation to revision</h3>
+                <ol>
+                    <li><strong>Describe the problem:</strong> what difficulty did the participant encounter?</li>
+                    <li><strong>Identify where it happened:</strong> which screen or step of the task was involved?</li>
+                    <li><strong>Review the evidence:</strong> consider completion, time, errors, help and user-reported ease.</li>
+                    <li><strong>Propose a change:</strong> revise the relevant part of the interface.</li>
+                    <li><strong>Test again:</strong> check whether the change improves the task attempt.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section aria-labelledby="example-title">
+            <h2 id="example-title">Example: improving course registration</h2>
+            <p>
+                Imagine that a participant testing a course-registration prototype does not notice the
+                prerequisites before trying to enrol. The observation points to a difficulty in the
+                course-information screen. The team could revise how the prerequisite information is
+                presented and then ask users to attempt the same task again.
+            </p>
+            <p>
+                During the next test, the team can check whether participants notice the information,
+                whether they complete the task, whether errors or requests for help decrease, and
+                whether they report that the process is easier to understand.
+            </p>
+        </section>
+
+        <section aria-labelledby="iteration-title">
+            <h2 id="iteration-title">The iterative process</h2>
+            <p>
+                Interface design is iterative. Evaluation findings inform a revision, and further
+                testing checks the effect of that revision. The process can be repeated when problems
+                remain or when a change introduces a new difficulty.
+            </p>
+            <div class="box note">
+                <strong>Key message</strong>
+                <p>Test, learn, revise and test again.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="summary-title">
+            <h2 id="summary-title">Putting the three parts together</h2>
+            <ol>
+                <li>Create a prototype using sketches, wireframes or a clickable version.</li>
+                <li>Test it with representative users performing realistic tasks.</li>
+                <li>Observe problems and consider the five usability measures.</li>
+                <li>Revise the design and test again to evaluate the change.</li>
+            </ol>
+            <p><a href="../Design-interfaces-home.html">Next: return to the Design Interfaces homepage →</a></p>
+        </section>
+
+        <section aria-labelledby="sources-title">
+            <h2 id="sources-title">Sources</h2>
+            <ol>
+                <li id="source-1">
+                    Raluca Budiu. “Usability 101: Introduction to Usability.”
+                    <cite>Nielsen Norman Group</cite>, November 6, 2026.
+                    <a href="https://www.nngroup.com/articles/usability-101-introduction-to-usability/" target="_blank" rel="noopener">Read the article</a>.
+                </li>
+                <li id="source-2">
+                    GOV.UK User Research Community. “Usability benchmarking a website or whole service.”
+                    <cite>GOV.UK Service Manual</cite>.
+                    <a href="https://www.gov.uk/service-manual/measuring-success/usability-benchmarking-a-website-or-whole-service" target="_blank" rel="noopener">Read the guidance</a>.
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>
