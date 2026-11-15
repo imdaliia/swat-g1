@@ -15,7 +15,7 @@
 
 <body class="topic-design-failures">
 
-    <!-- Top bar -->
+    <!-- TOP BAR -->
     <a class="skip" href="#article">Skip to content</a>
 
     <nav class="main-nav" aria-label="Main">
@@ -75,7 +75,7 @@
         <a href="mobile-forms.html" rel="next">next →</a>
     </nav>
 
-    <!-- Header -->
+    <!-- HEADER -->
     <header>
         <h1>Bad Mobile Touch Targets</h1>
         <p class="lead">
@@ -83,11 +83,11 @@
         </p>
         <p>
             <span class="pill">By Emilie Bui</span>
-            <span class="pill">3 min read</span>
+            <span class="pill">5 min read</span>
         </p>
     </header>
 
-    <!-- The actual article -->
+    <!-- MAIN ARTICLE -->
     <main id="article" class="sheet">
 
         <!-- INTRODUCTION -->
@@ -95,21 +95,40 @@
             <h2>Introduction</h2>
 
             <p>
-                Touch targets are interactive elements such as buttons,
-                links and icons. When they are too small or too close
-                together, users may accidentally tap the wrong option.
+                Touch targets are the areas of a screen that users interact
+                with by tapping their fingers. They include buttons, links,
+                icons, checkboxes and other interactive elements.
+                On mobile devices, these elements need to be large enough
+                to select comfortably and accurately.
+            </p>
+
+            <p>
+                Unlike a computer mouse, a finger does not point to a
+                screen with the same precision. This means that small
+                buttons or links placed too close together can easily
+                cause mistakes. A user may tap the wrong option, open
+                an unwanted page or activate an action they did not intend
+                to select.
+            </p>
+
+            <p>
+                Touch target size is therefore an important part of mobile
+                usability and digital accessibility. A good interface
+                should make every important action easy to find and
+                comfortable to use.
             </p>
         </section>
 
-        <!-- CASE STUDY -->
+        <!-- CASE STUDY: EVER EYE -->
         <section>
-            <h2>1. EverEye</h2>
+            <h2>1. EverEye: An Example of Poor Touch Targets</h2>
 
             <p>
-                On EverEye, the option to continue without accepting
-                cookies is displayed as a small, light-grey link.
-                Meanwhile, the other options appear as large buttons,
-                making the smaller option harder to select.
+                The EverEye cookie consent interface provides an example
+                of how touch targets can make a website more difficult
+                to use. The option to continue without accepting cookies
+                appears as a small, light-grey link, while the other
+                choices are displayed as much larger buttons.
             </p>
 
             <figure class="portrait">
@@ -122,64 +141,230 @@
                     Screenshot: Tommaso Russo, 5 November 2026.
                 </figcaption>
             </figure>
+
+            <p>
+                This difference in size and visibility makes the refusal
+                option harder to notice and select, especially on a small
+                screen. Users may have to concentrate more carefully to
+                tap the correct link. They may even select one of the
+                larger buttons by mistake.
+            </p>
+
+            <p>
+                A well-designed consent interface should give users
+                clear and accessible ways to make their choices.
+                Accepting and refusing should both be easy to understand
+                and select. Important choices should not become difficult
+                simply because their buttons or links are smaller.
+            </p>
         </section>
 
         <!-- PROBLEMS -->
         <section>
-            <h2>Why Are Small Touch Targets a Problem?</h2>
+            <h2>2. Why Are Small Touch Targets a Problem?</h2>
+
+            <p>
+                Small touch targets can create several problems during
+                everyday mobile browsing. Even if a website looks visually
+                attractive, it may still be difficult to interact with
+                when its buttons and links are not designed for touch.
+            </p>
 
             <div class="box">
                 <ul>
-                    <li><strong>Accidental taps:</strong> users may select the wrong option.</li>
-                    <li><strong>Difficult navigation:</strong> small buttons are harder to tap.</li>
-                    <li><strong>Accessibility:</strong> users with motor difficulties may struggle.</li>
-                    <li><strong>Frustration:</strong> repeated mistakes slow down navigation.</li>
+                    <li>
+                        <strong>Accidental taps:</strong>
+                        users may select a neighbouring button or link
+                        instead of the option they intended to choose.
+                    </li>
+                    <li>
+                        <strong>Difficult navigation:</strong>
+                        small interactive elements require more precision,
+                        making navigation slower and less comfortable.
+                    </li>
+                    <li>
+                        <strong>Accessibility barriers:</strong>
+                        people with motor difficulties, reduced dexterity
+                        or limited control of their movements may struggle
+                        to use small targets.
+                    </li>
+                    <li>
+                        <strong>User frustration:</strong>
+                        repeatedly tapping the wrong element can make
+                        simple tasks tiring and unpleasant.
+                    </li>
                 </ul>
             </div>
+
+            <p>
+                These difficulties are particularly noticeable when
+                several links or buttons are positioned close together.
+                For example, a row of small icons may be easy to use
+                with a mouse but much harder to select with a finger.
+                Users should not need several attempts to complete
+                a basic action.
+            </p>
+
+            <p>
+                The problem is not limited to people with permanent
+                disabilities. Someone using a phone while walking,
+                holding it with one hand or dealing with a temporary
+                hand injury may also find small targets difficult
+                to use. Accessible design benefits a wider range
+                of users.
+            </p>
         </section>
 
         <!-- DESIGN GUIDELINES -->
         <section>
-            <h2>2. Design Guidelines</h2>
+            <h2>3. Recommended Touch Target Sizes</h2>
 
             <p>
-                Accessibility guidelines recommend minimum touch target
-                sizes to make mobile interfaces easier to use.
+                Several design guidelines provide recommendations
+                for the size of interactive elements. These
+                recommendations help designers create interfaces
+                that are easier to use on touchscreens.
             </p>
 
             <div class="grid">
                 <div class="box">
                     <h3>Apple</h3>
-                    <p><strong>44 x 44 pt</strong></p>
-                    <p>Recommended touch target size.</p>
+                    <p><strong>44 × 44 pt</strong></p>
+                    <p>
+                        Apple's Human Interface Guidelines recommend
+                        touch targets of at least 44 × 44 points
+                        to make controls easier to interact with.
+                        <sup><a href="#source-1">[1]</a></sup>
+                    </p>
                 </div>
 
                 <div class="box">
                     <h3>Material Design</h3>
-                    <p><strong>48 x 48 dp</strong></p>
-                    <p>Recommended touch target size.</p>
+                    <p><strong>48 × 48 dp</strong></p>
+                    <p>
+                        Google's Material Design guidance uses
+                        a 48 × 48 dp touch target as a recommended
+                        size for interactive elements.
+                        <sup><a href="#source-2">[2]</a></sup>
+                    </p>
                 </div>
 
                 <div class="box">
                     <h3>WCAG 2.2</h3>
-                    <p><strong>24 x 24 CSS px</strong></p>
-                    <p>Minimum target size, subject to exceptions.</p>
+                    <p><strong>24 × 24 CSS px</strong></p>
+                    <p>
+                        WCAG 2.2 includes a minimum target size
+                        criterion, with specific exceptions.
+                        <sup><a href="#source-3">[3]</a></sup>
+                    </p>
                 </div>
             </div>
+
+            <p>
+                These measurements use different units, so they should
+                not be compared as if they were exactly the same.
+                Points, density-independent pixels and CSS pixels
+                are different measurement systems.
+            </p>
+
+            <p>
+                The WCAG 2.2 minimum target size criterion also includes
+                exceptions. For example, the spacing between targets
+                and the availability of an equivalent control can
+                affect whether a particular target meets the criterion.
+                Therefore, designers should consider both the size
+                of an element and the space around it.
+                <sup><a href="#source-3">[3]</a></sup>
+            </p>
+        </section>
+
+        <!-- SIZE AND SPACING -->
+        <section>
+            <h2>4. Size Is Not the Only Important Factor</h2>
+
+            <p>
+                Making buttons larger is important, but good touch
+                target design involves more than dimensions.
+                The position, spacing and appearance of interactive
+                elements also influence how easily users can select them.
+            </p>
+
+            <h3>Spacing between elements</h3>
+
+            <p>
+                Buttons and links should have enough space between them.
+                When two interactive elements are placed very close
+                together, users may accidentally activate the wrong one.
+                Sufficient spacing helps reduce this risk and makes
+                an interface feel less crowded.
+            </p>
+
+            <h3>Clear visual appearance</h3>
+
+            <p>
+                Interactive elements should be easy to recognise.
+                Buttons need clear labels, and links should be visually
+                distinguishable from ordinary text. Colour and contrast
+                can also help users identify important actions.
+            </p>
+
+            <h3>Consistent design</h3>
+
+            <p>
+                Similar actions should have a consistent appearance
+                and interaction area throughout a website. If buttons
+                change size or position unexpectedly, users may need
+                more time to understand how to interact with the page.
+            </p>
         </section>
 
         <!-- IMPROVEMENTS -->
         <section>
-            <h2>How Can Touch Targets Be Improved?</h2>
+            <h2>5. How Can Touch Targets Be Improved?</h2>
+
+            <p>
+                Designers can prevent many touch target problems by
+                following a few practical principles when creating
+                mobile interfaces.
+            </p>
 
             <div class="box">
                 <ul>
-                    <li>Make buttons and links large enough to tap easily.</li>
-                    <li>Leave sufficient space between interactive elements.</li>
-                    <li>Keep important actions clearly visible.</li>
-                    <li>Make all choices easy to find and select.</li>
+                    <li>
+                        <strong>Use sufficiently large targets:</strong>
+                        make buttons, links and icons comfortable
+                        to select with a finger.
+                    </li>
+                    <li>
+                        <strong>Leave enough spacing:</strong>
+                        separate interactive elements to reduce
+                        accidental taps.
+                    </li>
+                    <li>
+                        <strong>Make actions visible:</strong>
+                        use clear labels, appropriate contrast
+                        and recognisable button styles.
+                    </li>
+                    <li>
+                        <strong>Keep choices equally accessible:</strong>
+                        important options should not be hidden
+                        behind tiny links or difficult controls.
+                    </li>
+                    <li>
+                        <strong>Test on real devices:</strong>
+                        check that buttons and links are comfortable
+                        to use on different screen sizes.
+                    </li>
                 </ul>
             </div>
+
+            <p>
+                Testing is particularly useful because an interface
+                that works well on a desktop computer may not work
+                as well on a smartphone. Designers should test
+                interactions using touchscreens and consider
+                different users and situations.
+            </p>
         </section>
 
         <!-- CONCLUSION -->
@@ -187,32 +372,46 @@
             <h2>Conclusion</h2>
 
             <p>
-                Small touch targets can make mobile navigation difficult
-                and frustrating. Appropriate sizes and spacing create
-                a more accessible and user-friendly experience.
+                Small mobile touch targets may seem like a minor
+                design detail, but they can have a significant impact
+                on usability and accessibility. Buttons and links
+                that are difficult to tap can cause mistakes,
+                slow down navigation and prevent some users from
+                completing simple tasks comfortably.
+            </p>
+
+            <p>
+                Following established guidelines, providing enough
+                spacing and making interactive elements clearly
+                visible can help prevent these problems.
+                Ultimately, a good mobile interface should make
+                every action easy to find and easy to select.
             </p>
         </section>
 
-        <!-- REFERENCES -->
+        <!-- SOURCES -->
         <section>
             <h2>Sources</h2>
 
             <ol>
-                <li>
-                    <a href="https://developer.apple.com/design/human-interface-guidelines/">
-                        Apple Human Interface Guidelines
+                <li id="source-1">
+                    <a href="https://developer.apple.com/design/human-interface-guidelines/"
+                       target="_blank" rel="noopener noreferrer">
+                        Apple - Human Interface Guidelines
                     </a>
                 </li>
 
-                <li>
-                    <a href="https://m3.material.io/foundations/accessible-design/overview">
-                        Google Material Design - Accessible Design
+                <li id="source-2">
+                    <a href="https://m3.material.io/foundations/accessible-design/overview"
+                       target="_blank" rel="noopener noreferrer">
+                        Google - Material Design, Accessible Design
                     </a>
                 </li>
 
-                <li>
-                    <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">
-                        W3C - WCAG 2.2 Target Size (Minimum)
+                <li id="source-3">
+                    <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html"
+                       target="_blank" rel="noopener noreferrer">
+                        W3C - WCAG 2.2, Target Size (Minimum)
                     </a>
                 </li>
             </ol>
@@ -220,7 +419,7 @@
 
     </main>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
         Software Atelier 1 - Human-Computer Interaction and Digital Accessibility
     </footer>
