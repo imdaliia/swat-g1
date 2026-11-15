@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This article is about why interfaces fail">
+    <meta name="author" content="Daniel Lula">
+    <title>Why Interfaces Fail</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+
+<!--
+Things to do:
+ - update <body> class with correct topic                       (for color consistency)
+ - update "previous" and "next" links                           (in body -> nav)
+ - update title, description and info pills                     (in body -> header)
+ - make your article inside <main> and always have in mind good practices for accessibility
+ -->
+
+<body class="topic-design-failures">
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="index.html">HCI</a>
+        <a href="index.html">Home</a>
+        <a href="demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul><li><a href="historic-intro.html" tabindex="0">Historic UI Design Failures</a></li>
+                                <li><a href="../dark-taxonomy.html" tabindex="0">Dark Patterns & Deceptive Design</a></li>
+                                <li><a href="../ethics-persuasion.html" tabindex="0">Ethical HCI & Attention Economy</a></li>
+                                <li><a href="../mobile-touch-targets.html" tabindex="0">Bad Mobile UX & Touch Targets</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                </ul>
+            </div>
+        </details>
+        <a href="../index.html" rel="prev">← previous</a>
+        <a href="historic-safety.html" rel="next">next →</a>
+    </nav>
+
+    <!-- Header (article's title, description and info pills)-->
+    <header>
+        <h1>Why Interfaces Fail</h1>
+        <p class="lead">Norman’s Two UX Gulfs, Human Error, and System Failure</p>
+        <p><span class="pill">By Daniel Lula</span> <span class="pill">5 min read</span></p>
+    </header>
+
+    <!-- The actual article -->
+    <main id="article" class="sheet">
+        <section>
+            <p>When an individual interacts with any technological system—from a simple wristwatch or microwave to a commercial airliner or nuclear reactor—they
+                face two fundamental cognitive hurdles: figuring out how to operate the system, and determining what happened as a result of their actions.
+                In human-computer interaction theory, these challenges are formally recognized as the <b>Gulf of Execution</b> and the <b>Gulf of Evaluation</b>.
+                Introduced in 1986 by Ed Hutchins, Jim Hollan, and Don Norman, and later popularized in Norman’s seminal work <b>The Design of Everyday Things</b>,
+                these two gulfs describe the cognitive gap between internal human goals and the physical reality of system controls and displays.
+            </p>
+            <figure>
+                <img src="../../../images/design_failures/historic_ui_failures/donald_norman.png" alt="Donald Norman"
+                    loading="lazy">
+               <figcaption>
+                    <a href="https://commons.wikimedia.org/wiki/File:Donald_Norman_at_AWF05.jpg"
+                    >Donald Norman at AWF05</a>
+                    · Photo by Jordan Fischer ·
+                    <a href="https://creativecommons.org/licenses/by/2.0/"
+                    >CC BY 2.0</a>
+                </figcaption>
+            </figure>
+            <p>When interface elements fail to bridge these gulfs, user experience suffers. In low-stakes consumer software,
+                this manifests as user frustration and lost productivity. In safety-critical industrial, medical, and military systems,
+                a failure to bridge these gulfs can lead directly to catastrophic loss of life and financial ruin.</p>
+            </p>
+
+            <h2>The Seven Stages of Action and the Two UX Gulfs</h2>
+            <p>Don Norman conceptualized human-computer interaction as a continuous, cyclical process known as the <b>Seven Stages of Action Model</b>.
+                To accomplish any task, a user moves through a bridge of execution from goal to action, and then through a bridge of evaluation
+                from system state back to goal assessment:</p>
+            <ol>
+                <li><b>Formulating the Goal</b>: Defining what is to be achieved.</li>
+                <li><b>Forming the Intention</b>: Deciding on the general approach to take </li>
+                <li><b>Specifying the Action</b>: Planning the specific sequence of physical actions.</li>
+                <li><b>Executing the Actionb</b>: Performing the physical manipulation of controls.</li>
+                <li><b>Perceiving the System State</b>: Observing the feedback displayed by the system.</li>
+                <li><b>Interpreting the System State</b>: Making sense of the visual, auditory, or tactile feedback.</li>
+                <li><b>Evaluating the Outcome</b>: Comparing the interpreted state with the original goal.</li>
+            </ol>
+            <figure style="width: min(100%, 440px); margin: 1.5rem auto;">
+                <img src="../../../images/design_failures/historic_ui_failures/gulf_of_execution.png" alt="The 7 Stages of Action in Product Design"
+                    loading="lazy" style="height: auto; aspect-ratio: auto; transform: none;">
+                <figcaption>
+                <a href="https://wind4change.com/product-design-don-norman-everyday-things/">
+                    The Seven Stages of Action in Product Design
+                </a>
+                · Source: Wind4Change ·
+                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    CC BY-NC-SA 4.0
+                </a>
+                </figcaption>
+            </figure>
+
+            <h2>The Gulf of Execution</h2>
+            <p>The <b>Gulf of Execution</b> represents the degree to which the interaction possibilities of an artifact correspond to the intentions
+                of the user. It answers the user’s question: “How do I make the system do what I want?”
+                A large Gulf of Execution occurs when the system fails to provide clear signifiers, affordances,
+                physical constraints, or natural mappings that indicate what actions are possible and how they should be performed.
+                If a user must exert substantial mental effort to translate their psychological goal (e.g., "mute the audio")
+                into the system’s physical command sequence (e.g., navigating three sub-menus to locate a toggle), the interface imposes
+                a heavy cognitive load.</p>
+
+            <h2>The Gulf of Evaluation</h2>
+            <p>The <b>Gulf of Evaluation</b> reflects the difficulty users experience when trying to assess the current state of the system
+                and determine whether their expectations have been met. It answers the user’s question: “What state is the system in now,
+                and did my action work?” The Gulf of Evaluation is small when the system provides feedback that is immediately perceptible,
+                unambiguous, and formatted in a way that matches the user’s conceptual model. When feedback is hidden, delayed, deceptive,
+                or presented in cryptic technical codes, the Gulf of Evaluation widens dramatically.</p>
+        </section>
+         <section>
+            <h2>Classifying Human Performance: Slips vs. Mistakes</h2>
+            <p>When human-system interaction breaks down, public investigations and corporate post-mortems frequently cite
+                "human error" as the primary cause. However, cognitive scientists Donald Norman and James Reason demonstrated
+                that human errors are rarely character flaws; rather, they are predictable cognitive outcomes resulting from flawed
+                system design. Human errors fall into two distinct categories based on where the failure occurs in the Seven Stages of Action:
+                 <b>Slips</b> and <b>Mistakes</b>.
+            </p>
+            <div class="box table-scroll" tabindex="0" role="region" aria-labelledby="table-caption">
+                <table>
+                    <caption id="table-caption">Slips and mistakes compared</caption>
+                    <thead>
+                        <tr scope="col">
+                            <th>Error Type</th>
+                            <th>Action Cycle Stage</th>
+                            <th>Underlying Mechanism</th>
+                            <th>Example Scenario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr scope="row">
+                            <td>Slips</td>
+                            <td>Lower Stages (Specifying &amp; Executing Action)</td>
+                            <td>Appropriate goal and plan formed, but physical execution strays due to lapse in attention or muscle memory.</td>
+                            <td>Accidental selection of an adjacent menu item or tapping the wrong button on a crowded touch screen.</td>
+                        </tr>
+                        <tr scope="row">
+                            <td>Mistakes</td>
+                            <td>Upper Stages (Goal Formation &amp; Planning)</td>
+                            <td>Wrong goal established or incorrect plan formed. Physical execution may be flawless, but the plan itself is flawed.</td>
+                            <td>Misinterpreting an ambiguous system alert and initiating a shutdown sequence on a healthy reactor.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <h3>Subcategories of Human Error</h3>
+            <ul>
+                <li><b>Action-Based Slips</b>: Performing a wrong physical action (e.g., flipping the wrong toggle switch because two switches look identical).</li>
+                <li><b>Memory-Lapse Slips</b>: Forgetting a step in a learned procedure (e.g., leaving a key card in a reader after unlocking a door).</li>
+                <li><b>Rule-Based Mistakes</b>: Correctly diagnosing a situation but applying an inappropriate or misremembered rule.</li>
+                <li><b>Knowledge-Based Mistakes</b>: Misdiagnosing an unfamiliar situation because incomplete system knowledge prevents forming an accurate mental model.</li>
+                <li><b>Memory-Lapse Mistakes</b>: Forgetting the ultimate goal or plan during complex problem-solving.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Systemic Causation: James Reason’s "Swiss Cheese" Model</h2>
+            <p>A common misconception in post-accident analysis is that a single bad screen or one operator error is solely
+                responsible for a disaster. In complex systems, catastrophes are virtually never caused by a single isolated point of failure.
+                To explain how complex organizational and technological systems collapse, British psychologist James Reason introduced
+                the <b>Swiss Cheese Model of System Failure</b>. In Reason's framework, an organization's defenses against failure
+                are represented as multiple, parallel slices of Swiss cheese stacked side-by-side.
+                Each slice represents a defensive layer—such as software validation rules, physical hardware interlocks,
+                written operational procedures, visual alarms, and operator training.</p>
+                <figure>
+                <img src="../../../images/design_failures/historic_ui_failures/swiss_cheese_model_2.png" alt="swiss cheese model"
+                    loading="lazy" style="display: block; width: 100%; height: auto; aspect-ratio: auto; object-fit: contain;">
+                <figcaption>
+                <a href="https://commons.wikimedia.org/wiki/File:Swiss_cheese_model_of_accident_causation_with_additional_labels.png">
+                    Swiss Cheese Model with Additional Labels
+                </a>
+                · Diagram by Doveroftke, adapted from
+                <a href="https://commons.wikimedia.org/wiki/File:Swiss_cheese_model_of_accident_causation.png">
+                    Davidmack’s original diagram
+                </a>
+                · <a href="https://creativecommons.org/licenses/by-sa/4.0/">
+                    CC BY-SA 4.0
+                </a>
+                </figcaption>
+            </figure>
+            <h3>Active Failures vs. Latent Conditions</h3>
+            <ul>
+                <li> <b>Active Failures</b>: Unsafe acts committed by operators directly at the human-system interface
+                    (e.g., pushing the wrong button or misreading a gauge). Active failures occur in close temporal and physical proximity
+                    to the event. Their impact is usually short-lived unless aligned with deeper vulnerabilities. </li>
+                <li><b>Latent Conditions</b>: Systemic flaws embedded deep within the system long before an accident occurs—such as poorly written technical documentation,
+                    software race conditions, confusing control layouts, understaffing, or bad maintenance policies.
+                    Latent conditions lie dormant for years until an active failure triggers them.</li>
+            </ul>
+            <p>In an ideal system, every slice of cheese is solid. In reality, every layer contains holes—weaknesses and gaps
+                created by latent conditions and active failures. Crucially, these holes are dynamic: they open, close, and shift
+                position constantly based on workload, stress, and environmental conditions.
+                <br>
+                An accident occurs <b>only when the holes in every single layer momentarily align</b>,
+                creating a clear "trajectory of accident opportunity" that allows a hazard to pass unimpeded through
+                all defensive barriers.</p>
+        </section>
+        <section>
+            <h2>Case Studies Preview (Pages A2 to A5)</h2>
+            <p>The subsequent sections of this series examine real-world disasters across safety-critical
+                industrial controls, emergency alarm infrastructure, financial systems, and mainstream consumer software:</p>
+            <ul>
+                <li><b>Safety-Critical Systems (Page A2)</b>: How cryptic error messages on the Therac-25 radiation machine and deceptive status lights at Three Mile Island
+                    widened the Gulf of Evaluation, resulting in fatal overdoses and core meltdowns.</li>
+                <li><b>Alarms and Controls (Page A3)</b>: How adjacent menu options during the 2018 Hawaii false missile alert and confusing touchscreen
+                    controls on the USS John S. McCain caused island-wide panic and a fatal naval collision.</li>
+                <li><b>Money and Elections (Page A4)</b>: How spatial misalignment on the Palm Beach "butterfly ballot" altered the 2000 U.S.
+                    presidential election, and how an unchecked checkbox in Citibank's Flexcube interface mistakenly transferred $900 million.</li>
+                <li><b>Consumer Software Flops (Page A5)</b>: How intrusive virtual assistants (Clippy), abrupt desktop model changes
+                    (Windows 8), UAC prompt fatigue (Windows Vista), and forced algorithmic redesigns (Snapchat) eroded trust across
+                    millions of users.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Sources</h2>
+            <ol>
+                <li id="source-1"><a href="https://www.google.com/url?sa=E&q=https%3A%2F%2Fwww.nngroup.com%2Farticles%2Ftwo-ux-gulfs%2F"> The Two UX Gulfs: Evaluation and Execution</a></li>
+                <li id="source-2"><a href="https://www.google.com/url?sa=E&q=https%3A%2F%2Fwww.interaction-design.org%2Fliterature%2Fbook%2Fthe-glossary-of-human-computer-interaction%2Fgulf-of-evaluation-and-gulf-of-execution">The Glossary of Human Computer Interaction</a>
+                </li>
+                <li id="source-3"><a href="https://en.wikipedia.org/wiki/Swiss_cheese_model">Swiss cheese model</a></li>
+                <li id="source-4"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8514562/">Understanding the “Swiss Cheese Model” and Its Application to Patient Safety</a></li>
+                <li id="source-5"><a href="https://clinicalriskmanagement.it/swiss-cheese-model/">La teoria del formaggio svizzero</a></li>
+                <li id="source-6"><a href="https://prg.inf.unibe.ch/wp-content/uploads/2023/07/BA_TunahanOzsoy.pdf">Uncovering Gulf of Execution and Gulf of Evaluation in User-Computer Interactions</a></li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>

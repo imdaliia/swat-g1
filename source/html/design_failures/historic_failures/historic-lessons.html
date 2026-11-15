@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This article is about Consumer Lessons Learned">
+    <meta name="author" content="Daniel Lula">
+    <title>Lessons Learned</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+
+<!--
+Things to do:
+ - update <body> class with correct topic                       (for color consistency)
+ - update "previous" and "next" links                           (in body -> nav)
+ - update title, description and info pills                     (in body -> header)
+ - make your article inside <main> and always have in mind good practices for accessibility
+ -->
+
+<body class="topic-design-failures">
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="index.html">HCI</a>
+        <a href="index.html">Home</a>
+        <a href="demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul><li><a href="historic-intro.html" tabindex="0">Historic UI Design Failures</a></li>
+                                <li><a href="../dark-taxonomy.html" tabindex="0">Dark Patterns & Deceptive Design</a></li>
+                                <li><a href="../ethics-persuasion.html" tabindex="0">Ethical HCI & Attention Economy</a></li>
+                                <li><a href="../mobile-touch-targets.html" tabindex="0">Bad Mobile UX & Touch Targets</a></li>
+                            </ul>
+                        </details>
+                    </li>
+
+                </ul>
+            </div>
+        </details>
+        <a href="historic-consumer.html" rel="prev">← previous</a>
+        <a href="../index.html" rel="next">next →</a>
+    </nav>
+
+    <!-- Header (article's title, description and info pills)-->
+    <header>
+        <h1>Lessons Learned</h1>
+        <p class="lead">Cross-Case Taxonomy, Heuristic Mappings, and Design Principles</p>
+        <p><span class="pill">By Daniel Lula</span> <span class="pill">4 min read</span></p>
+    </header>
+
+    <!-- The actual article -->
+    <main id="article" class="sheet">
+        <section>
+            <p>
+                Analyzing historical interface failures reveals that catastrophes across safety-critical, financial, and consumer
+                systems share common design defects. To prevent future failures, designers must evaluate control structures against
+                established usability frameworks and apply rigorous error-reduction strategies.
+            </p>
+
+            <h2>Master Mapping Table: Cases vs. Usability Principles</h2>
+            <p>
+               Before examining systemic mitigation strategies, the table below maps each case study against the specific
+                <b>Jakob Nielsen 10 Usability Heuristics</b> and <b>Don Norman Design Principles</b> it violated:
+            </p>
+            <div class="box table-scroll" tabindex="0" role="region"
+     aria-labelledby="case-studies-caption">
+    <table>
+        <caption id="case-studies-caption">
+            Interface failures across ten case studies
+        </caption>
+        <thead>
+            <tr>
+                <th scope="col">Case Study</th>
+                <th scope="col">Key Interface Failure Mode</th>
+                <th scope="col">Nielsen Heuristic Broken</th>
+                <th scope="col">Norman Principle or Concept</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Therac-25 (1985–87)</th>
+                <td>Cryptic numeric codes such as <code>MALFUNCTION 54</code> and misleading low-dose feedback during a fatal overdose.</td>
+                <td>#9 Help users recognize and diagnose errors; #1 Visibility of system status.</td>
+                <td><strong>Feedback &amp; Conceptual Model</strong> — The displayed dose misrepresented what the machine delivered, and physical interlocks were absent.</td>
+            </tr>
+            <tr>
+                <th scope="row">Three Mile Island (1979)</th>
+                <td>The indicator light showed the electrical signal sent to the valve solenoid rather than the valve’s physical position.</td>
+                <td>#1 Visibility of system status; #2 Match between system and the real world.</td>
+                <td><strong>Feedback &amp; Gulf of Evaluation</strong> — The indicator masked a stuck-open valve.</td>
+            </tr>
+            <tr>
+                <th scope="row">Hawaii Missile Alert (2018)</th>
+                <td>A plain-text menu placed the live alert near the drill option, and the confirmation prompt was vague.</td>
+                <td>#5 Error prevention; #2 Match between system and the real world.</td>
+                <td><strong>Signifiers &amp; Constraints</strong> — The interface lacked clear visual warnings and an alert-specific confirmation.</td>
+            </tr>
+            <tr>
+                <th scope="row">USS <em>John S. McCain</em> (2017)</th>
+                <td>Steering could transfer between touchscreens in backup manual mode, and the throttle controls could operate independently.</td>
+                <td>#1 Visibility of system status; #3 User control and freedom.</td>
+                <td><strong>Affordances &amp; Mapping</strong> — The touchscreen lacked tactile throttle feedback, and the transfer made it difficult to tell which station had steering control.</td>
+            </tr>
+            <tr>
+                <th scope="row">Butterfly Ballot (2000)</th>
+                <td>Candidate names on facing pages were poorly aligned with the central column of punch holes.</td>
+                <td>#2 Match between system and the real world; #6 Recognition rather than recall.</td>
+                <td><strong>Natural Mapping &amp; Signifiers</strong> — The arrows and alternating rows made it easy to associate a candidate with the wrong punch hole.</td>
+            </tr>
+            <tr>
+                <th scope="row">Citibank / Revlon (2020)</th>
+                <td>Flexcube required three checkbox selections to prevent the principal from being transferred.</td>
+                <td>#5 Error prevention; #8 Aesthetic and minimalist design.</td>
+                <td><strong>Feedforward &amp; Constraints</strong> — The form gave no clear preview that approximately $894 million would leave the bank.</td>
+            </tr>
+            <tr>
+                <th scope="row">Clippy / Office (1996–03)</th>
+                <td>The assistant appeared automatically and interrupted writing with suggestions that could miss the context.</td>
+                <td>#3 User control and freedom; #8 Aesthetic and minimalist design.</td>
+                <td><strong>User Agency &amp; Conceptual Model</strong> — Users had limited control over when the assistant intervened.</td>
+            </tr>
+            <tr>
+                <th scope="row">Windows 8 (2012)</th>
+                <td>Windows replaced the familiar Start menu with a full-screen tile layout and hid some controls behind gestures and hot corners.</td>
+                <td>#4 Consistency and standards; #7 Flexibility and efficiency of use.</td>
+                <td><strong>Mental Models &amp; Signifiers</strong> — Familiar navigation cues disappeared, and some new controls were hard to discover.</td>
+            </tr>
+            <tr>
+                <th scope="row">Windows Vista UAC (2006)</th>
+                <td>Frequent security prompts for routine tasks encouraged users to approve them without reading.</td>
+                <td>#5 Error prevention; #8 Aesthetic and minimalist design.</td>
+                <td><strong>Feedback &amp; Habituation</strong> — Repeated prompts made important warnings easier to overlook.</td>
+            </tr>
+            <tr>
+                <th scope="row">Snapchat Redesign (2018)</th>
+                <td>The redesign grouped private messages and friends’ Stories in an algorithmically ranked feed while keeping publisher content in Discover.</td>
+                <td>#4 Consistency and standards; #7 Flexibility and efficiency of use.</td>
+                <td><strong>Conceptual Model &amp; Affordances</strong> — The redesign disrupted familiar ways of finding messages and friends’ Stories.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+            <h2>Recurring UX Failure Patterns</h2>
+            <p>
+                Across all historical domains, five recurring design antipatterns account for the majority of human-system interaction failures:
+            </p>
+
+                        <div class="box">
+                <h2>Recurring UX Failure Patterns</h2>
+                <ol>
+                    <li><strong>Vague confirmation prompts.</strong> “Are you sure?” gives users little information about the action or its consequences.</li>
+                    <li><strong>Misleading system feedback.</strong> An indicator can confirm that a command was sent while leaving the actual physical state unclear.</li>
+                    <li><strong>Habituation and prompt fatigue.</strong> Repeated warnings train users to click through without reading.</li>
+                    <li><strong>Confusing spatial mapping.</strong> Poor alignment or crowded options make it easy to associate a label with the wrong control.</li>
+                    <li><strong>Overreliance on touchscreens.</strong> Replacing physical controls can remove tactile cues that help users identify and operate them by feel.</li>
+                </ol>
+            </div>
+
+            <h2>1. Meaningless Confirmation Prompts</h2>
+            <p>System designers frequently rely on generic confirmation dialogs (e.g., *"Are you sure? [OK] [Cancel]"*) as a safety crutch.
+                As demonstrated in the Hawaii missile alert, generic prompts fail because operators perform them automatically. Effective
+                confirmation must clearly state the **exact scope, target, and irreversible consequences** of the action.</p>
+
+            <h2>2. Deceptive System Feedback</h2>
+            <p>As seen at Three Mile Island and in the Therac-25, interfaces that report command actuation rather than true physical state
+                create lethal Gulfs of Evaluation. System status indicators must always measure and display true functional state.</p>
+
+            <h2>3. Habituation and Prompt Fatigue</h2>
+            <p>
+                When an interface triggers warnings constantly during routine, non-hazardous operations—such as Windows Vista UAC prompts
+                or Therac-25 `MALFUNCTION` pauses—users rapidly form cognitive habituation. Operators learn to bypass the prompt reflexively,
+                destroying the safety barrier.
+            </p>
+            <h2>4. Broken Spatial Mappings</h2>
+            <p>
+                The Palm Beach Butterfly Ballot and Citibank Flexcube form illustrate the danger of breaking natural spatial mappings.
+                Controls, labels, and targets must follow intuitive, top-to-bottom or physical-congruence alignment to prevent cognitive
+                disorientation.
+            </p>
+            <h2>5. Touchscreen Over-reliance</h2>
+            <p>
+                The <b>USS John S. McCain</b> collision highlighted the severe risk of stripping physical controls from high-stress environments.
+                Touchscreens lack physical affordances, shape coding, and tactile feedback, forcing operators to divert visual attention away
+                from the environment to inspect a screen.
+            </p>
+            <h2>Core Principles for Error-Tolerant Interface Design</h2>
+            <p>
+                To bridge the Gulfs of Execution and Evaluation and build resilient human-system interfaces, designers must apply six core principles:
+            </p>
+            <ol>
+                <li><b>Enforce Physical and Soft Constraints</b>: Restrict dangerous actions before they occur.
+                    Use physical interlocks in safety-critical systems and software validation constraints in data entry.</li>
+                <li><b>Provide True State Feedback</b>: Ensure feedback reflects physical reality (e.g., measuring actual valve position
+                    or true radiation output) rather than digital actuation signals.</li>
+                <li><b>Exploit Natural Mappings</b>: Align controls spatially and conceptually with the physical objects they manipulate.</li>
+                <li><b>Design for Error and Resilience</b>: Assume human operators will make slips and mistakes. Provide modeless undo actions, safe recovery paths, and clear error explanations.</li>
+                <li><b>Differentiate High-Consequence Controls</b>: Isolate high-impact actions using color coding, physical safety covers, distinct visual signifiers, and explicit confirmation protocols.</li>
+                <li><b>Validate Against Real User Mental Models</b>: Conduct empirical usability testing with actual operators in realistic, high-stress environments to ensure system images communicate clearly.</li>
+            </ol>
+                <figure style="width: min(100%, 440px); margin: 1.5rem auto;">
+                <img src="../../../images/design_failures/historic_ui_failures/jakob.png" alt="Jakob Nielsen"
+                    loading="lazy" style="display: block; width: 100%; height: auto; aspect-ratio: auto; object-fit: contain;">
+                <figcaption>
+                    Jakob Nielsen ·
+                    <a href="https://1.bp.blogspot.com/_v1x0usN2Fsg/RyYHlbfHE_I/AAAAAAAAAtw/-oH6CO0vBSo/s320/jakob_nielsen.jpg">
+                        Image source (Blogspot)
+                    </a>
+                </figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>Sources</h2>
+            <ol>
+                <li id="source-1"><a href="https://www.nngroup.com/articles/ten-usability-heuristics/">10 Usability Heuristics for User Interface Design</a></li>
+                <li id="source-2">Norman, Donald A. The Design of Everyday Things. Basic Books (Fundamental Principles of Interaction).
+                </li>
+                <li id="source-3">Synthesis of Notebook Sources across Case Studies (Therac-25, Three Mile Island, HI-EMA EAS, NTSB USS *John S. McCain* Report MAR-19-01, Palm Beach Ballot Studies, Citibank Flexcube Court Ruling, Windows Vista UAC, and Snapchat Case Studies).</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>
