@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How cryptic errors and misleading feedback led to the Therac-25 accidents and the Three Mile Island nuclear accident">
+    <meta name="author" content="Daniel Lula">
+    <title>HCI - Safety-Critical Systems</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+
+<body class="topic-design-failures">
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li><li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQtopics" tabindex="0">Special topic</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li><li><a href="../../index.html#topics" tabindex="0">topic2</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li><li><a href="../../index.html#topics" tabindex="0">topic2</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li><li><a href="../../index.html#topics" tabindex="0">topic2</a></li><li><a href="../../index.html#topics" tabindex="0">topic3</a></li></ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+        <a href="historic-intro.html" rel="prev">← previous</a>
+        <a href="historic-alarms.html" rel="next">next →</a>
+    </nav>
+
+    <header>
+        <h1>Safety-Critical Systems</h1>
+        <p class="lead">Cryptic Errors, Misleading Feedback, and Fatal Accidents</p>
+        <p><span class="pill">By Daniel Lula</span> <span class="pill">5 min read</span></p>
+    </header>
+
+    <main id="article" class="sheet">
+        <section>
+            <p>In <b>safety-critical</b> environments—medical radiation therapy, nuclear power generation, aviation,
+                and chemical processing—user interfaces serve as the primary window through which human operators
+                monitor volatile physical processes. When safety-critical interfaces fail to present clear system state
+                information or train operators to ignore warnings, the resulting breakdown in the Gulf of Evaluation can
+                turn routine operational adjustments into lethal events.
+            </p>
+            <p>The Swiss Cheese Model explains how failures across multiple layers of defense can combine to harm patients<sup><a href="#source-4">[4]</a></sup>.</p>
+
+            <h2>Case Study 1: The Therac-25 Radiation Accelerator (1985–1987)</h2>
+            <p>
+                The Therac-25 was a computer-controlled medical linear accelerator produced by Atomic Energy of Canada Limited (AECL)<sup><a href="#source-2">[2]</a></sup>.
+                Designed to deliver dual-mode radiation therapy—low-energy electron therapy and high-energy X-ray (photon) therapy—it
+                was involved in at least six massive radiation overdose accidents between 1985 and 1987, causing severe radiation sickness,
+                <b>permanent paralysis, and multiple deaths <sup><a href="#source-1">[1]</a></sup></b>.
+            </p>
+            <figure style="width: min(100%, 440px); margin: 1.5rem auto;">
+                <img src="../../../images/design_failures/historic_ui_failures/therac25_2.webp" alt="The therac25"
+                    loading="lazy" style="height: auto; aspect-ratio: auto; transform: none;">
+                <figcaption>
+                    <a href="https://commons.wikimedia.org/wiki/File:Therac_25.png">
+                        Therac-25 machine
+                    </a>
+                     Unknown photographer 
+                    <a href="https://commons.wikimedia.org/wiki/File:Therac_25.png#Licensing">
+                        public domain in the U.S. 
+                    </a>
+                </figcaption>
+            </figure>
+
+            <h2>Cryptic Error Messages and Operator Habituation</h2>
+
+            <p>The Therac-25 control console relied on a DEC VT100 terminal. During operation,
+                 the software frequently halted treatment and displayed cryptic error messages consisting
+                 solely of the word `MALFUNCTION` followed by a number from 1 to 64 (e.g.,`MALFUNCTION 54`) <sup><a href="#source-1">[1]</a></sup>.
+            </p>
+            <ul>
+                <li><b>Undocumented Codes</b>: Neither the user operational manual nor the facility maintenance
+                    documentation explained what these numeric codes meant. In reality, `MALFUNCTION 54` indicated a "Dose Input 2" error,
+                    signaling that the radiation monitor detected an incorrect dose rate.</li>
+                <li> <b>Habitation and Prompt Fatigue</b>: The machine was plagued by frequent non-hazardous errors
+                    (such as minor table misalignment or voltage fluctuations), occurring up to 40 times a day in some clinics.
+                    Operators became thoroughly accustomed to these pauses, learning through daily repetition that pressing the
+                    `P` key (Proceed) would unpause the machine and resume treatment without adverse consequences.</li>
+                <li> <b>System Lie / Deceptive State Display</b>: Following a `MALFUNCTION 54` shutdown, the console display indicated that only a
+                    fraction of the prescribed dose had been delivered (e.g., showing 6 monitor units supplied out of 200). In reality,
+                    the unscanned, raw 25 MeV electron beam had delivered a massive dose of 16,500 to 25,000 rads in less than a second over a 1 cm² area.
+                    The extreme radiation density saturated the machine’s ionization chamber sensors, causing them to falsely report a near-zero dose.</li>
+            </ul>
+            <figure >
+                <img src="../../../images/design_failures/historic_ui_failures/therac_25_3.webp" alt="The therac-25"
+                    loading="lazy">
+                <figcaption>
+                    <a href="https://commons.wikimedia.org/wiki/File:Therac_25_54.gif">
+                        Therac-25 “Malfunction 54”
+                    </a>
+                     Ajzh2074 
+                    <a href="https://creativecommons.org/licenses/by-sa/4.0/">
+                        CC BY-SA 4.0
+                    </a>
+                </figcaption>
+            </figure>
+
+            <h2>The Race Condition and Removal of Hardware Interlocks</h2>
+            <p>In earlier models (Therac-6 and Therac-20), mechanical hardware interlocks physically prevented
+                the <b>high-power electron beam</b> from firing unless a heavy lead beam-flattening filter was rotated into position.
+                 On the Therac-25, AECL engineers removed these physical hardware interlocks<sup><a href="#source-3">[3]</a></sup>, relying entirely on software checks
+                 to reduce manufacturing costs. However, the software contained a critical concurrent programming flaw (a race condition):
+            <ol>
+                <li>
+                    An experienced operator rapidly entered treatment parameters, initially typing `X` (for 25 MeV photon mode).
+                </li>
+                <li>Realizing the patient required electron therapy, the operator used the "cursor up" key to edit the field to `E` (electron mode),
+                    hit `ENTER` through the remaining fields, and pressed `B` (Beam On).
+                </li>
+                <li>
+                    If this editing sequence was executed in under eight seconds, the software's data-entry task completed after the magnet-setting
+                    task had already begun. The mode parameter updated in display memory, but the command variable sent to the hardware
+                    remained set to high-energy mode without the flattening filter or scanning magnets in place.
+                </li>
+            </ol>
+            <p>Because the software lacked hardware interlocks and lied about the actual dose delivered, operators repeatedly pressed `P` to proceed,
+            administering up to five consecutive lethal doses to screaming patients before halting  treatment.</p>
+        </section>
+        <section>
+            <h2>Case Study 2: Three Mile Island Nuclear Accident (1979)</h2>
+            <p>On March 28, 1979, Unit 2 of the Three Mile Island nuclear generating station near Harrisburg, Pennsylvania, suffered a partial
+                core meltdown—the worst commercial nuclear disaster in United States history. While mechanical pump failures initiated the event,
+                catastrophic interface design flaws in the main control room prevented operators from understanding the plant’s true state for over
+                two critical hours.<sup><a href="#source-6">[6]</a></sup></p>
+                <figure >
+                <img src="../../../images/design_failures/historic_ui_failures/three_mile_island_3.webp" alt="Three Mile Island"
+                    loading="lazy">
+                <figcaption>
+                    <a href="https://commons.wikimedia.org/wiki/File:Presentation_at_Three_Mile_Island_Nuclear_Plant_Simulator_(28751374767).jpg">
+                        Three Mile Island Nuclear Plant Simulator
+                    </a>
+                       U.S. Nuclear Regulatory Commission ·
+                    <a href="https://creativecommons.org/licenses/by/2.0/">
+                        CC BY 2.0
+                    </a>
+                </figcaption>
+            </figure>
+            <h3>Deceptive Feedback: Actuation Signal vs. Functional Status</h3>
+            <p>
+            Three seconds after condensate pumps tripped, a pressure relief valve known as the Pilot Operated Relief Valve (PORV)
+             automatically opened to relieve excess primary system pressure. Ten seconds later, as pressure dropped to normal limits,
+             the system sent a signal for the PORV to close. However, the valve mechanically jammed open.
+            In the control room, an indicator light labeled `RC-RV2 OPEN` monitored the PORV:
+            </p>
+            <ul>
+                <li> <b>Violation of Human Factors Principles</b>: Contrary to standard military and industrial human engineering standards
+                    (e.g., MIL-STD-1472B), the indicator light was wired to show whether electrical power was being applied to the valve’s closing
+                    solenoid— <b>not the actual physical position of the valve</b> <sup><a href="#source-5">[5]</a></sup>.</li>
+                <li><b>The Gulf of Evaluation</b>: When power to the solenoid was cut, the control panel light turned off.
+                    Operators interpreted the extinguished light as positive confirmation that the PORV was physically closed.</li>
+                    <li>
+                        <b>Catastrophic Misdiagnosis</b>: Because operators believed the valve was shut,
+                        they could not understand why primary system pressure continued to plummet and water levels dropped.
+                        Misinterpreting rising pressurizer water levels, operators manually shut off the emergency high-pressure injection
+                        cooling pumps, believing the primary loop was overfilling. In reality, over 32,000 gallons of reactor coolant were
+                        boiling out through the open PORV, leaving the nuclear core uncovered and initiating a partial meltdown.
+                    </li>
+            </ul>
+            <figure >
+                <img src="../../../images/design_failures/historic_ui_failures/three_mile_island.webp" alt="Three Mile Island"
+                    loading="lazy" >
+               <figcaption>
+                    <a href="https://commons.wikimedia.org/wiki/File:Three_Mile_Island_(color).jpg">
+                        Three Mile Island Nuclear Station (1979)
+                    </a>
+                     U.S. Department of Energy 
+                    <a href="https://commons.wikimedia.org/wiki/File:Three_Mile_Island_(color).jpg#Licensing">
+                        Public domain in the U.S.
+                    </a>
+                </figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>Sources</h2>
+            <ol>
+                <li id="source-1"><a href="https://web.stanford.edu/class/archive/cs/cs295/cs295.1086/papers/Therac-25.pdf"> An investigation of therac-25 accidents</a></li>
+                <li id="source-2"><a href="https://en.wikipedia.org/wiki/Therac-25">therac-25</a>
+                </li>
+                <li id="source-3"><a href="https://computingcases.org/case_materials/therac/supporting_docs/therac_case_narr/Machine_Design.html">therac-25 machine design</a></li>
+                <li id="source-4"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8514562/">Understanding the “Swiss Cheese Model” and Its Application to Patient Safety</a></li>
+                <li id="source-5"><a href="https://en.wikipedia.org/wiki/Three_Mile_Island_accident">Three Mile Island accident</a></li>
+                <li id="source-6"><a href="https://www.geopop.it/lincidente-nucleare-di-three-mile-island-uno-dei-piu-gravi-della-storia-usa-cosa-successe-nel-1979/">L'Incidente nucleare di Three Mile Island</a></li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>

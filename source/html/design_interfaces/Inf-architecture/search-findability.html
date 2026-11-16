@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browsing and searching, information scent, faceted filters, the path from overview to detail and how to test findability">
+    <meta name="author" content="Alessandro Campanari">
+    <title>HCI - Search, Filters and Findability</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/design_interfaces/information-architecture.css">
+</head>
+
+<body class="topic-design-interfaces">
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../../index.html#topics" tabindex="0">Special topic</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul>
+                                <li>
+                                    <a href="../U-T%20and%20system%20requirements/user-task-system-requirements.html" tabindex="0">
+                                        User, Task and System Requirements
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Inf-architecture/information-architecture-navigation.html" tabindex="0">
+                                        Information Architecture and Navigation
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Interaction%20and%20workflow%20design/interaction-workflow-design.html" tabindex="0">
+                                        Interaction and Workflow Design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Usability%20and%20UX%20principles/usability-ux-principles.html" tabindex="0">
+                                        Usability and UX Principles
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Prototyping/prototyping-usability-evaluation.html" tabindex="0">
+                                        Prototyping and Usability Evaluation
+                                    </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics" tabindex="0">topic1</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../../index.html#topics" tabindex="0">topic2</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../../index.html#topics" tabindex="0">topic2</a></li>
+                                <li><a href="../../index.html#topics" tabindex="0">topic3</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+
+        <a href="navigation-systems.html" rel="prev">← previous</a>
+        <a href="../Interaction%20and%20workflow%20design/interaction-workflow-design.html" rel="next">next →</a>
+    </nav>
+
+    <header>
+        <h1>Search, Filters and Findability</h1>
+        <p class="lead">When a site grows, browsing is not enough. Search and filters help people jump
+            straight to what they need.</p>
+        <p><span class="pill">Designing interfaces</span> <span class="pill">By Alessandro Campanari</span></p>
+    </header>
+
+    <main id="article" class="sheet">
+        <section>
+            <h2>Browsing and searching</h2>
+            <p>People browse when they are exploring and search when they know what they want. Most switch
+                between the two.</p>
+            <div class="ia-split">
+                <div class="box note">
+                    <strong>Browsing works when...</strong>
+                    <p>the categories are clear or the user does not know the right words.</p>
+                </div>
+                <div class="box note">
+                    <strong>Searching works when...</strong>
+                    <p>there is a lot of content and the user knows a precise name.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Information scent</h2>
+            <p>People follow clues, like labels and link texts, that tell them they are getting closer to what
+                they want. Pirolli and Card called these clues information scent.</p>
+            <div class="ia-split">
+                <div class="box note bad">
+                    <strong>Weak scent</strong>
+                    <p>A "More info" link next to every course.</p>
+                </div>
+                <div class="box note good">
+                    <strong>Strong scent</strong>
+                    <p>"Prerequisites: Programming Fundamentals 1" shown in the list.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Designing the search box</h2>
+            <ul>
+                <li>Keep the box visible, not hidden behind an icon.</li>
+                <li>Suggest results while people type.</li>
+                <li>Handle typos and synonyms, so "SA1" also finds "Software Atelier 1".</li>
+                <li>When nothing matches, suggest what to try next.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Faceted filters</h2>
+            <p>A facet is a property of an item, like semester or subject. Facets can be combined in any order.
+                Try it: pick a semester and a subject.</p>
+            <div class="box facet-demo">
+                <div class="facet-controls">
+                    <fieldset>
+                        <legend>Semester</legend>
+                        <label><input type="radio" name="semester" id="sem-all" checked> All</label>
+                        <label><input type="radio" name="semester" id="sem-autumn"> Autumn</label>
+                        <label><input type="radio" name="semester" id="sem-spring"> Spring</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Subject</legend>
+                        <label><input type="radio" name="subject" id="subj-all" checked> All</label>
+                        <label><input type="radio" name="subject" id="subj-inf"> Informatics</label>
+                        <label><input type="radio" name="subject" id="subj-math"> Mathematics</label>
+                    </fieldset>
+                </div>
+                <ul class="facet-results">
+                    <li data-semester="autumn" data-subject="informatics"><strong>Software Atelier 1</strong> Autumn, Informatics</li>
+                    <li data-semester="autumn" data-subject="informatics"><strong>Human-Computer Interaction</strong> Autumn, Informatics</li>
+                    <li data-semester="spring" data-subject="informatics"><strong>Programming Fundamentals 2</strong> Spring, Informatics</li>
+                    <li data-semester="autumn" data-subject="mathematics"><strong>Linear Algebra</strong> Autumn, Mathematics</li>
+                    <li data-semester="spring" data-subject="mathematics"><strong>Probability and Statistics</strong> Spring, Mathematics</li>
+                    <li data-semester="spring" data-subject="mathematics"><strong>Discrete Structures</strong> Spring, Mathematics</li>
+                </ul>
+                <p class="facet-count"></p>
+            </div>
+            <div class="box note good">
+                <strong>Guidelines for filters</strong>
+                <ul>
+                    <li>Avoid choices that lead to zero results.</li>
+                    <li>Keep the active filters visible and easy to remove.</li>
+                    <li>Use the same labels as the rest of the site.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>From overview to detail</h2>
+            <blockquote>
+                <p>"Overview first, zoom and filter, then details-on-demand."</p>
+                <cite>Ben Shneiderman, 1996</cite>
+            </blockquote>
+            <ol class="ia-path">
+                <li><span>Catalogue</span></li>
+                <li><span>Search or filter</span></li>
+                <li><span>Results</span></li>
+                <li><span>Course page</span></li>
+                <li><span>Enrol</span></li>
+            </ol>
+            <p>Each step should keep the context of the previous one, for example by remembering the active
+                filters.</p>
+        </section>
+
+        <section>
+            <h2>Testing findability</h2>
+            <dl class="ia-terms">
+                <dt>Card sorting</dt>
+                <dd>Helps decide the categories.</dd>
+                <dt>Tree testing</dt>
+                <dd>Checks if people find items in a text-only menu.</dd>
+                <dt>First-click testing</dt>
+                <dd>Checks where people click first on a screen.</dd>
+            </dl>
+            <p><a class="button" href="../Interaction%20and%20workflow%20design/interaction-workflow-design.html">Next subtopic: Interaction and Workflow Design →</a></p>
+        </section>
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clippy, the Windows 8 Start screen, Vista's UAC prompts and the 2018 Snapchat redesign: when consumer software annoys its users">
+    <meta name="author" content="Daniel Lula">
+    <title>HCI - Consumer Software Flops</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+
+<body class="topic-design-failures">
+
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li><li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQtopics" tabindex="0">Special topic</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li><li><a href="../../index.html#topics" tabindex="0">topic2</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li><li><a href="../../index.html#topics" tabindex="0">topic2</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li><li><a href="../../index.html#topics" tabindex="0">topic2</a></li><li><a href="../../index.html#topics" tabindex="0">topic3</a></li></ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+        <a href="historic-money-votes.html" rel="prev">← previous</a>
+        <a href="historic-lessons.html" rel="next">next →</a>
+    </nav>
+
+    <header>
+        <h1>Consumer Software Flops</h1>
+        <p class="lead">Friction, Intrusion, Prompt Fatigue, and Forced Redesigns</p>
+        <p><span class="pill">By Daniel Lula</span> <span class="pill">5 min read</span></p>
+    </header>
+
+    <main id="article" class="sheet">
+        <section>
+            <p>  While safety-critical disasters result in physical harm, interface
+                 failures in consumer software affect hundreds of millions of daily users.
+                 When software updates break user mental models, introduce intrusive automated assistants,
+                 induce prompt fatigue, or prioritize monetization over usability, user trust collapses—resulting
+                 in mass boycotts, billions in lost market value, and product rollbacks.
+            </p>
+
+            <h2>Case Study 1: Clippy and the Office Assistant (1996–2003)</h2>
+            <p>
+                Introduced in Office 97, Clippit (universally known as "Clippy") was an animated paperclip virtual
+                assistant designed to make Microsoft Word more approachable through social user interfaces.
+            </p>
+            <figure>
+                <img src="../../../images/design_failures/historic_ui_failures/clippy.webp" alt="Clippy, the Microsoft Office assistant shaped like a paper clip"
+                    loading="lazy">
+                <figcaption>
+                    <a href="https://commons.wikimedia.org/wiki/File:Clippy_Agoratry_(20691318355).jpg">
+                        Clippy Agoratry
+                    </a>
+                     terri_bateman 
+                    <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
+                </figcaption>
+            </figure>
+
+            <h2>Intrusiveness, Lack of Context, and Unwanted Social Presence</h2>
+
+            <ul>
+                <li><b>Predictive Engine Failure</b>: Clippy relied on early rule-based behavioral algorithms that attempted to guess user intent.
+                    Typing the word "Dear" automatically triggered Clippy to jump onto the screen, blocking the document text.</li>
+                <li><b>Interruption of Flow</b>: The character forced modal focus away from the user's primary task, forcing users to
+                    interact with the assistant before continuing to type.</li>
+                <li><b>Ignoring User Research</b>: Focus group testing conducted by Microsoft prior to release indicated strong negative reactions,
+                     particularly from female participants who found the character condescending. Microsoft management overrode the research,
+                     shipping Clippy as the default enabled assistant until Office 2003, when it was disabled by default before being permanently
+                     removed in Office 2007. <sup><a href="#source-1">[1]</a></sup></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Case Study 2: Windows 8 and the Removal of the Start Menu (2012)</h2>
+            <p>In 2012, Microsoft released Windows 8, introducing the "Metro" design language
+                aimed at unifying desktop PCs and touch-screen tablets under a single user experience<sup><a href="#source-6">[6]</a></sup>.</p>
+
+                <div class="box table-scroll" tabindex="0" role="region" aria-labelledby="windows-paradigm-caption">
+                <table>
+                    <caption id="windows-paradigm-caption">
+                        Windows 8 paradigm conflict
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Feature</th>
+                            <th scope="col">Windows 7 Desktop</th>
+                            <th scope="col">Windows 8 Metro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Launching apps</th>
+                            <td>Start button opens a menu in the corner</td>
+                            <td>Start opens a full-screen grid of tiles</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">App layout</th>
+                            <td>Desktop apps run in movable windows</td>
+                            <td>Metro apps emphasize full-screen layouts</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Navigation</th>
+                            <td>Visible controls for mouse and keyboard</td>
+                            <td>Some controls appear through edge swipes or hot corners</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+                <figure>
+                <img src="../../../images/design_failures/historic_ui_failures/windows_8_dashboard.webp" alt="Windows 8.1 Start screen with large coloured tiles"
+                    loading="lazy">
+                <figcaption>
+                    <a href="https://commons.wikimedia.org/wiki/File:Start81.png">
+                        Windows 8.1 Start screen (simplified)
+                    </a>
+                      Screenshot: Microsoft 
+                </figcaption>
+            </figure>
+            <h3>Violation of Established Mental Models</h3>
+            <ul>
+                <li><b>Removal of the Anchor</b>: Since 1995, the Start Menu had served as the central navigation anchor for desktop computing.
+                    Windows 8 completely removed the Start button, forcing desktop PC users with traditional mice and keyboards to navigate a full-screen grid of oversized touch tiles.</li>
+                <li><b>Hidden Gestures and Hot Corners</b>: System functions like shutdown, settings,
+                     and app switching were hidden behind invisible screen corners ("hot corners") and edge-swipe gestures.
+                     Desktop users could no longer rely on visual signifiers, creating an immense Gulf of Execution.
+                     User backlash forced Microsoft to release Windows 8.1 to restore the Start button, followed by Windows 10,
+                      which reinstated the desktop menu.
+                </li>
+            </ul>
+            </section>
+            <section>
+                <h2>Case Study 3: Windows Vista User Account Control (UAC) Prompt Fatigue</h2>
+            <p>
+                Released in 2006, Windows Vista introduced User Account Control (UAC) to
+                prevent unauthorized malware from silently elevating system privileges.
+            </p>
+            <figure style="width: min(100%, 440px); margin: 1.5rem auto;">
+                <img src="../../../images/design_failures/historic_ui_failures/uac.webp" alt="Windows User Account Control prompt asking to allow changes
+
+"
+                    loading="lazy" style="height: auto; aspect-ratio: auto; transform: none;">
+                 <figcaption>
+                    UAC prompt
+                     Screenshot source:
+                    <a href="https://s0.stackpointer.io/wp-content/uploads/2009/01/uac-prompt.png">
+                        StackPointer
+                    </a>
+                </figcaption>
+            </figure>
+
+            <h2>Designed to Annoy: Prompt Fatigue and Trained Click-Through</h2>
+
+            <ul>
+                <li><b>Architectural Intent</b>: Microsoft executives publicly acknowledged at security conferences that UAC was deliberately engineered
+                    to annoy users and developers, intentionally creating friction to force software developers to rewrite applications so they wouldn't
+                    require administrative privileges <sup><a href="#source-5">[5]</a></sup>.
+                </li>
+                <li><b>Prompt Fatigue (Habituation)</b>: Routine actions—such as changing the system time, adjusting volume, or launching common utilities—triggered
+                    a dark-screen modal popup. Because prompts appeared constantly during normal computer use, users ceased reading the dialog text.
+                </li>
+                <li><b>Security Paradox</b>: Instead of enhancing security, UAC conditioned millions of users to reflexively click "Continue" or "Allow"
+                    on every prompt, rendering the security barrier completely ineffective when real malware triggered a prompt.</li>
+            </ul>
+            </section>
+            <section>
+                <h2>Case Study 4: The 2018 Snapchat Redesign</h2>
+            <p>
+                In late 2017 and early 2018, Snap Inc. rolled out a massive redesign of the Snapchat mobile application, attempting to separate
+                "social" peer-to-peer interactions from "media" publisher content to increase ad revenue.
+            </p>
+            <figure >
+                <img src="../../../images/design_failures/historic_ui_failures/snaptchat_redesign.webp" alt="Snapchat app after the 2018 redesign
+"
+                    loading="lazy" >
+            <figcaption>
+                Snapchat
+                <a href="https://technofaq.org/wp-content/uploads/2018/10/snapchat.jpg">
+                    Techno FAQ
+                </a>
+            </figcaption>
+            </figure>
+
+            <h2>Mismatched Navigation and Commercial Overreach</h2>
+
+            <ul>
+                <li><b>Jumbling Core Features</b>: The update compressed peer-to-peer private messaging and friends' Stories into a single
+                    "Friends" screen on the left, arranged by an unpredictable algorithm rather than chronological order <sup><a href="#source-2">[2]</a></sup>.
+                </li>
+                <li><b>Isolating Publisher Content</b>: The right-hand screen ("Discover") was dedicated entirely to corporate publishers,
+                    celebrity content, and sponsored ads. Users seeking to view friend updates were forced to navigate past ad-heavy feeds.
+                </li>
+                <li><b>Backlash and Economic Impact</b>: Over 1.2 million users signed a petition on Change.org demanding a rollback.
+                   Among 1,941 App Store reviews of the update in markets where it was already widely available,
+                    83% gave it one or two stars.<sup><a href="#source-3">[3]</a></sup> When celebrity influencer Kylie Jenner tweeted
+                    that she no longer opened the app, Snap Inc.’s market valuation crashed by <b>$1.3 billion</b> in a single trading day.
+                     Snap was eventually forced to issue updates rolling back core layout changes <sup><a href="#source-4">[4]</a></sup>.
+                </li>
+            </ul>
+                <figure style="width: min(100%, 540px); margin: 1.5rem auto;">
+                <img src="../../../images/design_failures/historic_ui_failures/snapchat_redesign_2.webp" alt="Snapchat map showing friends' locations
+"
+                    loading="lazy" style="height: auto; aspect-ratio: auto; transform: none;">
+            <figcaption>
+            Snapchat location sharing
+            <a href="https://4.bp.blogspot.com/-xodEDf7mWQY/WwiSQvMTwvI/AAAAAAAAWa8/vLPYAMuJdSwOGrpLsr_I7p7pntiuLWAkgCLcBGAs/s640/snapchat-ubicacion.jpg">
+                Blogspot
+            </a>
+            </figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>Sources</h2>
+            <ol>
+                <li id="source-1"><a href="https://www.geopop.it/ricordate-lassistente-office-a-forma-di-graffetta-su-microsoft-word-ecco-a-cosa-serviva-clippit/"> Ricordate clippy? </a></li>
+                <li id="source-2"><a href="https://www.onething.design/post/snapchat-redesign-case-study">snapchat redesign case study</a>
+                </li>
+                <li id="source-3"><a href="https://techcrunch.com/2018/01/11/snapchat-redesign-uninstall/">Snapchat’s big redesign bashed in 83% of user reviews</a></li>
+                <li id="source-4"><a href="https://tg24.sky.it/tecnologia/2018/05/12/snapchat-nuova-versione-design">Snapchat, nuova versione bocciata da utenti: torna il vecchio design</a></li>
+                <li id="source-5"><a href="https://arstechnica.com/information-technology/2008/04/vistas-uac-security-prompt-was-designed-to-annoy-you/">Vista’s UAC security prompt was designed to annoy you</a></li>
+                <li id="source-6">Windows 8 Metro Interface and Desktop Start Menu Removal – Microsoft Design Case Studies</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>

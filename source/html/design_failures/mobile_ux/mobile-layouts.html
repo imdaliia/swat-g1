@@ -1,0 +1,449 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore mobile layout failures, their impact on usability and the importance of responsive design.">
+    <meta name="author" content="BUI Emilie">
+    <title>HCI - Mobile Layout Failures</title>
+
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/design_failures/design-failures.css">
+</head>
+
+<body class="topic-design-failures">
+
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
+
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics">Topics</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics">Topics</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics">Topics</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="../index.html">Design Failures</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics">Topics</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+
+        <a href="../historic_failures/historic-lessons.html" rel="prev">← previous</a>
+        <a href="mobile-popups.html" rel="next">next →</a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Mobile Layout Failures</h1>
+        <p class="lead">When websites fail on smaller screens</p>
+        <p>
+            <span class="pill">By Emilie Bui</span>
+            <span class="pill">5 min read</span>
+        </p>
+    </header>
+
+    <!-- The actual article -->
+    <main id="article" class="sheet">
+
+        <!-- Introduction -->
+        <section>
+            <h2>Why Does Mobile Layout Matter?</h2>
+
+            <p>
+                Today, people access websites using many different devices,
+                including desktop computers, tablets and smartphones.
+                However, a website designed for a large computer screen
+                does not always work properly on a smaller screen.
+            </p>
+
+            <p>
+                When a layout does not adapt to the device, users may
+                encounter tiny text, images that are too large, horizontal
+                scrolling and navigation that is difficult to use.
+                These problems can make even simple tasks frustrating.
+            </p>
+
+            <p>
+                Mobile layout is therefore an important part of user
+                experience. A website should allow users to find information,
+                read content and interact with elements comfortably,
+                regardless of the device they are using.
+            </p>
+        </section>
+
+        <!-- What Causes Mobile Layout Failures -->
+        <section>
+            <h2>What Causes Mobile Layout Failures?</h2>
+
+            <p>
+                One common cause is designing a website for a fixed screen
+                width. A layout that looks organised on a desktop computer
+                may become too wide for a smartphone. As a result, users
+                may have to zoom in or scroll horizontally to see the
+                complete content.
+            </p>
+
+            <p>
+                Another problem is poor organisation of elements.
+                Navigation menus, images, columns and buttons may overlap
+                or become difficult to reach when the screen gets smaller.
+                Text can also become too small, making long paragraphs
+                uncomfortable to read.
+            </p>
+
+            <p>
+                These issues often happen when designers focus only on
+                how a website looks on one device instead of considering
+                different screen sizes and ways of interacting with it.
+            </p>
+        </section>
+
+        <!-- Case Study 1 -->
+        <section>
+            <h2>1. Space Jam (1996)</h2>
+
+            <figure class="portrait">
+                <img
+                    src="../../../images/design_failures/mobile_ux/layout-spacejam.jpg"
+                    alt="The original Space Jam website displayed on a smartphone"
+                    loading="lazy">
+                <figcaption>
+                    The 1996 Space Jam website displayed on a phone in 2026.
+                    Screenshot: Tommaso Russo, 5 November 2026.
+                    <sup><a href="#source-1">[1]</a></sup>
+                </figcaption>
+            </figure>
+
+            <p>
+                The original Space Jam website is an example of an older
+                website that was created for the web environment of the
+                1990s. Its layout was designed around the screen sizes
+                and browsing habits of that period.
+            </p>
+
+            <div class="box">
+                <h3>The problem</h3>
+                <p>
+                    The website was not designed to adapt to modern
+                    smartphone screens. Its original layout can be
+                    difficult to navigate when viewed on a narrow display.
+                </p>
+            </div>
+
+            <div class="box">
+                <h3>Why does it fail?</h3>
+                <ul>
+                    <li>Text and links can appear very small.</li>
+                    <li>Users may need to zoom in to read information.</li>
+                    <li>The layout does not make full use of the mobile screen.</li>
+                    <li>Navigation can be uncomfortable on a touchscreen.</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3>How could it be improved?</h3>
+                <p>
+                    A modern version could use a responsive layout,
+                    flexible images and readable typography. Navigation
+                    could also be simplified to make the website easier
+                    to use on smartphones.
+                </p>
+            </div>
+        </section>
+
+        <!-- Case Study 2 -->
+        <section>
+            <h2>2. Berkshire Hathaway</h2>
+
+            <figure class="portrait">
+                <img
+                    src="../../../images/design_failures/mobile_ux/layout-berkshire.jpg"
+                    alt="Berkshire Hathaway website displayed on a smartphone"
+                    loading="lazy">
+
+                <figcaption>
+                    Berkshire Hathaway's website on a smartphone.
+                    Screenshot: Tommaso Russo, 5 November 2026.
+                    <sup><a href="#source-2">[2]</a></sup>
+                </figcaption>
+            </figure>
+
+            <p>
+                Berkshire Hathaway's website provides another example
+                of a traditional web layout. Its simple presentation
+                may work on a desktop screen, but the experience can
+                be less comfortable when using a smartphone.
+            </p>
+
+            <div class="box">
+                <h3>The problem</h3>
+                <p>
+                    The traditional layout is not fully optimised for
+                    mobile browsing. Some elements can be difficult
+                    to read, locate or select on a small screen.
+                </p>
+            </div>
+
+            <div class="box">
+                <h3>Why does it fail?</h3>
+                <ul>
+                    <li>Links may be too close together.</li>
+                    <li>Text and visual elements may not be well adapted.</li>
+                    <li>Navigation can require more effort from users.</li>
+                    <li>The overall experience is less comfortable on mobile.</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3>How could it be improved?</h3>
+                <p>
+                    The website could improve its spacing, typography
+                    and navigation. Important links should be easy to
+                    identify and select, while content should be
+                    organised in a way that fits smaller screens.
+                </p>
+            </div>
+        </section>
+
+        <!-- Impact on User Experience -->
+        <section>
+            <h2>How Do Poor Layouts Affect Users?</h2>
+
+            <p>
+                A poorly adapted layout does more than create visual
+                problems. It can directly affect how people interact
+                with a website and whether they can complete their tasks.
+            </p>
+
+            <div class="box">
+                <ul>
+                    <li>
+                        <strong>Reduced readability:</strong>
+                        Small text and poorly organised content make
+                        information harder to understand.
+                    </li>
+                    <li>
+                        <strong>Difficult navigation:</strong>
+                        Users may struggle to find menus, links and
+                        important information.
+                    </li>
+                    <li>
+                        <strong>More effort:</strong>
+                        Zooming and horizontal scrolling require
+                        additional actions.
+                    </li>
+                    <li>
+                        <strong>Accessibility barriers:</strong>
+                        A difficult layout can create additional
+                        challenges for users with visual or motor
+                        impairments.
+                    </li>
+                    <li>
+                        <strong>Frustration:</strong>
+                        Users may leave the website if they cannot
+                        easily find what they need.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Responsive Design -->
+        <section>
+            <h2>What Is Responsive Design?</h2>
+
+            <p>
+                Responsive design is an approach to web design that
+                allows a website to adapt its layout to different
+                screen sizes and devices. Instead of creating a
+                completely separate website for every device,
+                designers use flexible layouts and elements that
+                adjust to the available space.
+                <sup><a href="#source-3">[3]</a></sup>
+            </p>
+
+            <p>
+                For example, a website may display several columns
+                next to each other on a desktop computer. On a
+                smartphone, these columns can be reorganised into
+                a single vertical layout. Images can also resize
+                to fit the screen, while navigation menus can
+                become more compact.
+            </p>
+
+            <p>
+                The objective is to maintain a consistent and
+                comfortable experience across devices. Users should
+                not have to zoom in or scroll horizontally just
+                to access ordinary content.
+            </p>
+        </section>
+
+        <!-- How to Improve Mobile Layouts -->
+        <section>
+            <h2>How Can Mobile Layouts Be Improved?</h2>
+
+            <p>
+                Good mobile design requires more than simply making
+                everything smaller. Designers need to reorganise
+                content and prioritise the elements that users
+                need most.
+            </p>
+
+            <div class="box">
+                <ul>
+                    <li>
+                        <strong>Use flexible layouts:</strong>
+                        Make elements adapt to the available screen width.
+                    </li>
+                    <li>
+                        <strong>Keep text readable:</strong>
+                        Use appropriate font sizes and comfortable spacing.
+                    </li>
+                    <li>
+                        <strong>Optimise images:</strong>
+                        Ensure images resize without overflowing the screen.
+                    </li>
+                    <li>
+                        <strong>Simplify navigation:</strong>
+                        Make menus and important links easy to find.
+                    </li>
+                    <li>
+                        <strong>Consider accessibility:</strong>
+                        Make content and interactive elements usable
+                        by people with different needs.
+                    </li>
+                    <li>
+                        <strong>Test different devices:</strong>
+                        Check that the website works on different
+                        screen sizes and orientations.
+                    </li>
+                </ul>
+            </div>
+
+            <p>
+                Accessibility guidelines also emphasise that content
+                should remain usable when people change text size
+                or view a page at different dimensions. A well-designed
+                layout should support users rather than force them
+                to adapt to the website.
+                <sup><a href="#source-4">[4]</a></sup>
+            </p>
+        </section>
+
+        <!-- Key Takeaways -->
+        <section>
+            <h2>Key Takeaways</h2>
+
+            <div class="box note">
+                <strong>Good mobile design should:</strong>
+                <ul>
+                    <li>Adapt to different screen sizes.</li>
+                    <li>Keep text readable.</li>
+                    <li>Make links easy to tap.</li>
+                    <li>Organise content clearly.</li>
+                    <li>Provide simple and accessible navigation.</li>
+                    <li>Offer a consistent experience across devices.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section>
+            <h2>Conclusion</h2>
+
+            <p>
+                Mobile layout failures show how a website's design
+                can affect the way people access and interact with
+                information. Websites that are not adapted to smaller
+                screens can become difficult to read, navigate and use.
+            </p>
+
+            <p>
+                Responsive design helps solve these problems by
+                adapting layouts to different devices. By focusing
+                on readability, accessibility and simple navigation,
+                designers can create websites that provide a better
+                experience for all users.
+            </p>
+        </section>
+
+        <!-- Sources -->
+        <section>
+            <h2>Sources</h2>
+
+            <ol>
+                <li id="source-1">
+                    <a href="https://www.spacejam.com/1996/">
+                        Space Jam (1996) official website
+                    </a>
+                </li>
+                <li id="source-2">
+                    <a href="https://www.berkshirehathaway.com/">
+                        Berkshire Hathaway official website
+                    </a>
+                </li>
+                <li id="source-3">
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design">
+                        MDN - Responsive Design
+                    </a>
+                </li>
+                <li id="source-4">
+                    <a href="https://www.w3.org/WAI/">
+                        W3C - Web Accessibility Initiative
+                    </a>
+                </li>
+            </ol>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        Software Atelier 1 - Human-Computer Interaction and Digital Accessibility
+    </footer>
+
+</body>
+</html>

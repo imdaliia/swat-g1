@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How to choose organization schemes and structures, test them with card sorting and tree testing, and write labels people understand">
+    <meta name="author" content="Alessandro Campanari">
+    <title>HCI - Organizing and Labeling Content</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/design_interfaces/information-architecture.css">
+</head>
+
+<body class="topic-design-interfaces">
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../../index.html#topics" tabindex="0">Special topic</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul>
+                                <li>
+                                    <a href="../U-T%20and%20system%20requirements/user-task-system-requirements.html" tabindex="0">
+                                        User, Task and System Requirements
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Inf-architecture/information-architecture-navigation.html" tabindex="0">
+                                        Information Architecture and Navigation
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Interaction%20and%20workflow%20design/interaction-workflow-design.html" tabindex="0">
+                                        Interaction and Workflow Design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Usability%20and%20UX%20principles/usability-ux-principles.html" tabindex="0">
+                                        Usability and UX Principles
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Prototyping/prototyping-usability-evaluation.html" tabindex="0">
+                                        Prototyping and Usability Evaluation
+                                    </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics" tabindex="0">topic1</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../../index.html#topics" tabindex="0">topic2</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul>
+                                <li><a href="../../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../../index.html#topics" tabindex="0">topic2</a></li>
+                                <li><a href="../../index.html#topics" tabindex="0">topic3</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+
+        <a href="information-architecture-navigation.html" rel="prev">← previous</a>
+        <a href="navigation-systems.html" rel="next">next →</a>
+    </nav>
+
+    <header>
+        <h1>Organizing and Labeling Content</h1>
+        <p class="lead">How to group content the way people think, check it with real users and give every
+            group a clear name.</p>
+        <p><span class="pill">Designing interfaces</span> <span class="pill">By Alessandro Campanari</span></p>
+    </header>
+
+    <main id="article" class="sheet">
+        <section>
+            <h2>Every grouping is a decision</h2>
+            <p>Imagine designing the website of a university library: opening hours, the catalogue, room
+                booking, printing, loans. There is no single correct way to sort them, and each choice makes
+                some things easier to find than others.</p>
+            <div class="box">
+                <dl class="ia-terms">
+                    <dt>Scheme</dt>
+                    <dd>The criterion used to form groups: by topic, by date, by task...</dd>
+                    <dt>Structure</dt>
+                    <dd>How the groups are connected to each other.</dd>
+                    <dt>Label</dt>
+                    <dd>The name of a group or a page.</dd>
+                </dl>
+            </div>
+        </section>
+
+        <section>
+            <h2>Choosing a scheme</h2>
+            <p>Exact schemes have one obvious place for every item. Ambiguous schemes need judgement, but they
+                help people who are exploring.</p>
+            <div class="grid">
+                <div class="box">
+                    <span class="pill">exact</span>
+                    <h3>Alphabetical</h3>
+                    <p>Databases A to Z. Useful only if you know the name.</p>
+                </div>
+                <div class="box">
+                    <span class="pill">exact</span>
+                    <h3>Chronological</h3>
+                    <p>Events by date. Works when time is the main question.</p>
+                </div>
+                <div class="box">
+                    <span class="pill warn">ambiguous</span>
+                    <h3>Topic</h3>
+                    <p>Research guides by subject. Natural for exploring.</p>
+                </div>
+                <div class="box">
+                    <span class="pill warn">ambiguous</span>
+                    <h3>Task</h3>
+                    <p>Borrow, Book a room, Print. Matches what people came to do.</p>
+                </div>
+            </div>
+            <p>Sites can combine schemes, but each menu level should use only one:</p>
+            <div class="ia-split">
+                <div class="box note bad">
+                    <strong>Mixed schemes</strong>
+                    <p>Students, Books and journals, Borrow and renew, Lugano campus.</p>
+                </div>
+                <div class="box note good">
+                    <strong>One scheme (tasks)</strong>
+                    <p>Find, Borrow, Study spaces, Get help, Visit.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Choosing a structure</h2>
+            <div class="grid">
+                <div class="box">
+                    <h3>Hierarchy</h3>
+                    <p>Categories inside categories, as in most menus.</p>
+                </div>
+                <div class="box">
+                    <h3>Metadata</h3>
+                    <p>Properties like format or year, combined as filters.</p>
+                </div>
+                <div class="box">
+                    <h3>Links</h3>
+                    <p>Related pages pointing to each other.</p>
+                </div>
+            </div>
+            <p>Sometimes a page belongs in two places. A guide on citing sources fits both "Get help" and
+                "Thesis support", so it can appear in both branches:</p>
+            <div class="box">
+                <ul class="ia-tree">
+                    <li><span>Library</span>
+                        <ul>
+                            <li><span>Get help</span>
+                                <ul>
+                                    <li><span class="is-target">Citing sources</span></li>
+                                </ul>
+                            </li>
+                            <li><span>Thesis support</span>
+                                <ul>
+                                    <li><span class="is-target">Citing sources</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Testing the structure with users</h2>
+            <ol class="ia-path">
+                <li><span>List the content</span></li>
+                <li><span>Card sort</span></li>
+                <li><span>Tree test</span></li>
+                <li><span>Revise</span></li>
+            </ol>
+            <div class="ia-split">
+                <div class="box note">
+                    <strong>Card sorting</strong>
+                    <p>Users sort cards with content names into groups, showing how they think.</p>
+                </div>
+                <div class="box note">
+                    <strong>Tree testing</strong>
+                    <p>Users look for items in a text-only menu, showing where the structure fails.</p>
+                </div>
+            </div>
+            <div class="box">
+                <table>
+                    <caption>Tree test on the library menu (example data)</caption>
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Success</th>
+                            <th>What to do</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Renew a book</th>
+                            <td><span class="pill good">95%</span></td>
+                            <td>Nothing</td>
+                        </tr>
+                        <tr>
+                            <th>Find late return fees</th>
+                            <td><span class="pill warn">55%</span></td>
+                            <td>Add a link from Get help</td>
+                        </tr>
+                        <tr>
+                            <th>Request a book from another library</th>
+                            <td><span class="pill bad">20%</span></td>
+                            <td>Rename "Interlibrary loan"</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Labels: naming what is inside</h2>
+            <p>A label is a promise: people click it because they expect to find something behind it.</p>
+            <div class="box">
+                <table>
+                    <caption>Rewriting labels for the library website</caption>
+                    <thead>
+                        <tr>
+                            <th>Before</th>
+                            <th>After</th>
+                            <th>Why</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="pill bad">Interlibrary loan</span></td>
+                            <td><span class="pill good">Get a book from another library</span></td>
+                            <td>Use the users' words</td>
+                        </tr>
+                        <tr>
+                            <td><span class="pill bad">Services</span></td>
+                            <td><span class="pill good">Printing</span></td>
+                            <td>Be specific</td>
+                        </tr>
+                        <tr>
+                            <td><span class="pill bad">Loans</span></td>
+                            <td><span class="pill good">Borrow</span></td>
+                            <td>Use one term everywhere</td>
+                        </tr>
+                        <tr>
+                            <td><span class="pill bad">More info</span></td>
+                            <td><span class="pill good">Late return fees</span></td>
+                            <td>Make sense on its own</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="box note good">
+                <strong>A quick check for every label</strong>
+                <ul>
+                    <li>Would a first-year student use this word?</li>
+                    <li>Could it be confused with the label next to it?</li>
+                    <li>Is it the same in menus, headings and links?</li>
+                </ul>
+            </div>
+            <p><a class="button" href="navigation-systems.html">Next: Navigation systems →</a></p>
+        </section>
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>
