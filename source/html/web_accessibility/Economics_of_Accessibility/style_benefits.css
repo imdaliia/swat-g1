@@ -40,7 +40,7 @@
     --round: 999px;
 }
 
-.topic-design-interfaces { --accent: #a84a14; }
+.topic-web-accessibility { --accent: #a8306b; }
 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -68,7 +68,7 @@
         --glass-nav-edge: rgba(190, 205, 230, 0.20);
         --glass-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
     }
-    .topic-design-interfaces { --accent: #ffb785; }
+    .topic-web-accessibility { --accent: #f69fca; }
 }
 
 /* === page layout ==================================================================================================== */

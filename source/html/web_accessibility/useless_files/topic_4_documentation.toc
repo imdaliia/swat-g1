@@ -1,0 +1,34 @@
+\contentsline {section}{\numberline {1}WCAG Guidelines and Standards}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Part 1: Web Accessibility Principles (The POUR Framework)}{2}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Principle 1 --- Perceivable}{2}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Principle 2 --- Operable}{2}{subsubsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.3}Principle 3 --- Understandable}{2}{subsubsection.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.4}Principle 4 --- Robust}{2}{subsubsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.2}Part 2: Compliance Levels and Conformance Framework}{3}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}The Three Conformance Levels}{3}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}The Five Conformance Requirements}{3}{subsubsection.1.2.2}%
+\contentsline {section}{\numberline {2}Inclusive design principles}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Introduction:}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Defining inclusive design in the digital era:}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Divers user needs:}{5}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Economics of Accessibility}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}\Large The Financial Benefits of Accessible Digital Design}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Driving Product Innovation and Usability}{8}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Expanding Market Reach and Revenue}{8}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Enhancing Brand Equity and Corporate Reputation}{8}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Mitigating Legal and Operational Risk}{9}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}\Large PC accessibility crisis}{9}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}Introduction and Component Inflation}{9}{subsubsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.7}Market Contraction and Segment Erasure}{9}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Socio-Economic Consequences and Digital Inclusion}{10}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}Conclusion}{10}{subsection.3.9}%
+\contentsline {section}{\numberline {4}Assistive Web Tools and Accessibility Standards}{11}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Assistive Web Tools}{11}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Screen Readers}{11}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Magnifiers}{11}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Keyboard Navigation}{11}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}High Contrast and Custom Color Themes}{12}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Alternative Input and Speech Recognition}{13}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Sources}{14}{section.5}%
+\contentsline {subsection}{\numberline {5.1}links}{14}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}images}{14}{subsection.5.2}%
