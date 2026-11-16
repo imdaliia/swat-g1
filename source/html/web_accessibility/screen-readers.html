@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Screen readers are essential assistive technologies that translate visual web content into speech or Braille, enabling blind and visually impaired users to access the web independently.">
+    <meta name="author" content="Andrii Synelnyk">
+    <title>HCI - Screen Readers</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/web_accessibility/web-accessibility.css">
+</head>
+
+<!--
+Things to do:
+ - update <body> class with correct topic                       (for color consistency)
+ - update "previous" and "next" links                           (in body -> nav)
+ - update title, description and info pills                     (in body -> header)
+ - make your article inside <main> and always have in mind good practices for accessibility
+ -->
+
+<body class="topic-web-accessibility">
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../index.html">HCI</a>
+        <a href="../index.html">Home</a>
+        <a href="../demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary>Web accessibility</summary>
+                            <ul>
+                                <li><a href="screen-readers.html" aria-current="page" tabindex="0">Screen Readers</a></li>
+                                <li><a href="magnifiers.html" tabindex="0">Magnifiers</a></li>
+                                <li><a href="keyboard-navigation.html" tabindex="0">Keyboard Navigation</a></li>
+                                <li><a href="high-contrast.html" tabindex="0">High Contrast Themes</a></li>
+                                <li><a href="speech-recognition.html" tabindex="0">Speech Recognition</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+        <a href="index.html" rel="prev">← previous</a>
+        <a href="magnifiers.html" rel="next">next →</a>
+    </nav>
+
+    <!-- Header (article's title, description and info pills)-->
+    <header>
+        <h1>Screen Readers</h1>
+        <p class="lead">How software translates digital content into speech or Braille — and how developers can support it</p>
+        <p><span class="pill">By Andrii Synelnyk</span> <span class="pill">6 min read</span></p>
+    </header>
+
+    <!-- The actual article -->
+    <main id="article" class="sheet">
+
+        <section>
+            <h2>What is a Screen Reader?</h2>
+            <p>
+                A screen reader is a software application that interprets and renders the content of a screen in
+                an alternative format — most commonly synthesized speech or a refreshable Braille display. Unlike
+                optical character recognition (OCR), screen readers interact directly with a browser's accessibility
+                API and the Document Object Model (DOM), traversing the semantic structure of a page rather
+                than its visual layout.
+            </p>
+            <p>
+                Screen readers are indispensable for people who are blind or have severe visual impairments, but
+                they also benefit users with dyslexia, cognitive differences, and situational disabilities (e.g.
+                driving, bright sunlight). According to the WebAIM Screen Reader User Survey, over 70 % of
+                screen reader users rely on them daily.
+            </p>
+            <figure>
+                <img src="../../images/web_accessibility/screen-reader-user.jpg"
+                     alt="A person using headphones while navigating a laptop with a screen reader"
+                     loading="lazy">
+                <figcaption>A screen reader user listening to web content through synthesized speech</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Popular Screen Readers</h2>
+            <p>
+                Several screen readers dominate the market across different platforms. Each has its own interaction
+                model and keyboard shortcuts, so developers should test with more than one tool.
+            </p>
+            <div class="box">
+                <table>
+                    <caption>Commonly used screen readers by platform</caption>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Platform</th>
+                            <th>Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>NVDA</strong> (NonVisual Desktop Access)</td>
+                            <td>Windows</td>
+                            <td><span class="pill good">Free</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>JAWS</strong> (Job Access With Speech)</td>
+                            <td>Windows</td>
+                            <td><span class="pill warn">Commercial</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>VoiceOver</strong></td>
+                            <td>macOS / iOS</td>
+                            <td><span class="pill good">Built-in</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>TalkBack</strong></td>
+                            <td>Android</td>
+                            <td><span class="pill good">Built-in</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Narrator</strong></td>
+                            <td>Windows</td>
+                            <td><span class="pill good">Built-in</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Orca</strong></td>
+                            <td>Linux (GNOME)</td>
+                            <td><span class="pill good">Free</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>How Screen Readers Work</h2>
+            <p>
+                Screen readers expose an <strong>accessibility tree</strong> — a parallel representation of the DOM
+                that strips presentational markup and exposes only the semantic roles, names, states, and
+                properties of each element. This tree is built using platform-specific accessibility APIs:
+            </p>
+            <ul>
+                <li><strong>Windows:</strong> UI Automation (UIA) and IAccessible2</li>
+                <li><strong>macOS / iOS:</strong> NSAccessibility</li>
+                <li><strong>Android:</strong> AccessibilityService API</li>
+                <li><strong>Cross-platform:</strong> ATK/AT-SPI on Linux</li>
+            </ul>
+            <p>
+                When a user presses a key shortcut, the screen reader queries the accessibility tree for the focused
+                element's role (e.g. <code>button</code>, <code>link</code>), name, and state (e.g.
+                <code>expanded</code>, <code>checked</code>) and announces it via the speech engine.
+            </p>
+            <div class="box note good">
+                <strong>Developer tip</strong>
+                <p>
+                    Open your browser's built-in accessibility tree inspector (Chrome DevTools → Accessibility panel
+                    or Firefox → Accessibility tab) to see exactly what a screen reader will announce for each element.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Semantic HTML is the Foundation</h2>
+            <p>
+                The single most effective practice for screen reader support is using correct, native HTML elements.
+                Native elements carry built-in roles, states, and keyboard behaviour that custom
+                <code>&lt;div&gt;</code>-based widgets must laboriously replicate with ARIA.
+            </p>
+            <div class="box">
+                <table>
+                    <caption>Native elements vs. their ARIA equivalents</caption>
+                    <thead>
+                        <tr>
+                            <th>Native element</th>
+                            <th>Implicit role</th>
+                            <th>Avoid this ARIA workaround</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;button&gt;</code></td>
+                            <td>button</td>
+                            <td><code>&lt;div role="button" tabindex="0"&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;nav&gt;</code></td>
+                            <td>navigation</td>
+                            <td><code>&lt;div role="navigation"&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;main&gt;</code></td>
+                            <td>main</td>
+                            <td><code>&lt;div role="main"&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;input type="checkbox"&gt;</code></td>
+                            <td>checkbox</td>
+                            <td><code>&lt;div role="checkbox"&gt;</code> + JS</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <blockquote>
+                <p>"The first rule of ARIA use is: if you can use a native HTML element or attribute with the
+                semantics and behaviour you require already built in, instead of re-purposing an element and
+                adding an ARIA role, state or property to make it accessible, then do so."</p>
+                <cite>W3C WAI-ARIA Authoring Practices</cite>
+            </blockquote>
+        </section>
+
+        <section>
+            <h2>Key Developer Practices</h2>
+
+            <h3>Meaningful <code>alt</code> text</h3>
+            <p>
+                Every informative image needs an <code>alt</code> attribute whose value conveys the purpose of
+                the image in context. Decorative images should use <code>alt=""</code> so screen readers skip them.
+            </p>
+            <div class="box note warn">
+                <strong>Common mistake</strong>
+                <p>
+                    Writing <code>alt="image"</code> or <code>alt="photo.jpg"</code> is worse than useless — it
+                    creates noise. Write <em>what the image communicates</em>, not what it looks like.
+                </p>
+            </div>
+
+            <h3>Landmark regions</h3>
+            <p>
+                Screen reader users navigate by jumping between landmark regions. Use
+                <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,
+                <code>&lt;footer&gt;</code>, and <code>&lt;aside&gt;</code>. When more than one of the same
+                element appears on a page, distinguish them with <code>aria-label</code>.
+            </p>
+
+            <h3>Live regions for dynamic content</h3>
+            <p>
+                When content updates asynchronously (e.g. a toast notification, a live search result count),
+                wrap it in an <code>aria-live</code> region so the screen reader announces the change
+                without the user having to discover it manually.
+            </p>
+            <pre><code>&lt;div aria-live="polite" aria-atomic="true"&gt;
+  &lt;!-- dynamically injected update messages go here --&gt;
+&lt;/div&gt;</code></pre>
+            <p>Use <code>aria-live="polite"</code> for most updates. Reserve <code>assertive</code> for genuine
+            errors that require immediate attention.</p>
+
+            <h3>Descriptive link text</h3>
+            <p>
+                Screen reader users often browse a list of all links on a page. Links labelled "click here" or
+                "read more" are meaningless out of context. Write links whose text describes the destination:
+                <em>"Read the WCAG 2.2 success criterion for focus appearance"</em>.
+            </p>
+
+            <h3>Heading hierarchy</h3>
+            <p>
+                Headings are the primary navigation mechanism for screen reader users. Use a single
+                <code>&lt;h1&gt;</code> per page, then nest <code>&lt;h2&gt;</code> → <code>&lt;h3&gt;</code>
+                logically. Never skip levels (e.g. jumping from <code>h1</code> to <code>h4</code>) just for
+                visual styling — adjust CSS instead.
+            </p>
+        </section>
+
+        <section>
+            <h2>Testing with a Screen Reader</h2>
+            <p>
+                You do not need to be a daily screen reader user to run basic accessibility tests. Here is a
+                quick checklist for desktop testing with NVDA (Windows) or VoiceOver (macOS):
+            </p>
+            <ul>
+                <li>Turn on the screen reader and navigate the page using <strong>Tab</strong> alone — every
+                    interactive element should be reachable and announce its role and name.</li>
+                <li>Use the screen reader's heading-list command to verify the outline makes sense.</li>
+                <li>Use the screen reader's link-list command to check that every link is self-descriptive.</li>
+                <li>Fill out and submit a form using only the keyboard; listen to any error announcements.</li>
+                <li>Open an image and listen to its <code>alt</code> text.</li>
+            </ul>
+            <div class="box note good">
+                <strong>Automated tools are a starting point, not an end point</strong>
+                <p>
+                    Tools such as axe DevTools, Lighthouse, or WAVE catch about 30–40 % of accessibility issues
+                    automatically. Manual testing with a real screen reader
+                    is irreplaceable.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>
