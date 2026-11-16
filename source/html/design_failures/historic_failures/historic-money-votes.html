@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This article is about Money and Elections">
+    <meta name="author" content="Daniel Lula">
+    <title>Money and Elections</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+
+
+<body class="topic-design-failures">
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li><li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQtopics" tabindex="0">Special topic</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li><li><a href="../../index.html#topics" tabindex="0">topic2</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li><li><a href="../../index.html#topics" tabindex="0">topic2</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li><li><a href="../../index.html#topics" tabindex="0">topic2</a></li><li><a href="../../index.html#topics" tabindex="0">topic3</a></li></ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+        <a href="historic-alarms.html" rel="prev">← previous</a>
+        <a href="historic-consumer.html" rel="next">next →</a>
+    </nav>
+
+    <header>
+        <h1>Money and Elections</h1>
+        <p class="lead">Spatial Misalignment, Checkbox Ambiguity, and Financial Disasters</p>
+        <p><span class="pill">By Daniel Lula</span> <span class="pill">4 min read</span></p>
+    </header>
+
+    <main id="article" class="sheet">
+        <section>
+            <p>Interfaces governing  <b>high-stakes financial transactions</b> and civic elections must adhere to absolute clarity in spatial mapping,
+                visual hierarchy, and form design. When layout choices misalign physical punch targets or obscure payment processing options
+                behind ambiguous checkboxes, millions of votes can be misdirected and hundreds of millions of dollars mistakenly transferred.
+            </p>
+
+            <h2>Case Study 1: The Palm Beach "Butterfly Ballot" (2000 U.S. Presidential Election)</h2>
+            <p>
+                In the 2000 U.S. presidential election, the outcome of the entire national contest hinged on Florida’s 25 electoral votes,
+                where George W. Bush officially defeated Al Gore by a microscopic margin of 537 votes <sup><a href="#source-4">[4]</a></sup>. Controversy centered on Palm Beach County,
+                where an estimated 2,000 to 3,000 Democratic voters accidentally voted for Reform Party candidate Pat Buchanan due to a fatally
+                flawed voting interface known as the "Butterfly Ballot." <sup><a href="#source-3">[3]</a></sup>
+            </p>
+
+            <figure>
+                <img src="../../../images/design_failures/historic_ui_failures/butterfly_ballot_3.webp" alt="Butterfly Ballot"
+                    loading="lazy">
+                <figcaption>
+                    <a href="https://commons.wikimedia.org/wiki/File:Butterfly_Ballot,_Florida_2000_(large).jpg">
+                        Butterfly ballot from Palm Beach County, Florida (2000)
+                    </a>
+                    · Photo by Wikipedia user Anthony ·
+                    <a href="https://commons.wikimedia.org/wiki/File:Butterfly_Ballot,_Florida_2000_(large).jpg#Licensing">
+                        Public domain
+                    </a>
+                </figcaption>
+            </figure>
+
+            <h2>Spatial Misalignment and Broken Mappings</h2>
+            <p>Supervisor of Elections Theresa LePore designed the ballot layout to increase text size for Palm Beach County’s
+                large elderly population. Because ten presidential candidates could not fit on a single page in large font,
+                she placed candidate names across two facing pages, with a single central column of punch holes (chads) in the middle folder hinge.</p>
+
+                <ul>
+                    <li><b>Spatial Mismatch</b>: Voters looking at the left page saw Al Gore listed as the second candidate down, directly
+                        below George W. Bush. Naturally following a visual top-to-bottom spatial order, many voters punched the second
+                        hole in the central column.</li>
+                        <li><b>The Mapped Reality</b>: The second hole actually lined up with an arrow pointing from the <b>right-hand page</b>,
+                             registering a vote for Pat Buchanan.
+                             To vote for Al Gore, a voter had to skip the second hole and punch the third hole.</li>
+                             <li><b>Catastrophic Usability Outcome</b>: Statistical analyses published in the <b>American Political Science Review</b> proved that
+                                 Buchanan’s vote count in Palm Beach County was a statistical anomaly unrepeated in any other U.S. county. In addition
+                                to thousands of miscast votes, over 19,000 ballots in Palm Beach County were invalidated as "overvotes" <sup><a href="#source-4">[4]</a></sup>
+                                because confused citizens punched holes for both Gore and Buchanan.</li>
+                </ul>
+                <figure>
+                <img src="../../../images/design_failures/historic_ui_failures/butterfly_ballot_2.webp" alt="buttterfly ballot"
+                    loading="lazy">
+                <figcaption>
+                    <a href="https://commons.wikimedia.org/wiki/File:Pbc-2000-recount-3_(2535713118).jpg">
+                    Palm Beach County recount (2000)
+                    </a>
+                    Daniel Tobias
+                    <a href="https://creativecommons.org/licenses/by-sa/2.0/">
+                        CC BY-SA 2.0
+                    </a>
+                </figcaption>
+            </figure>
+        </section>
+         <section>
+            <h2>Case Study 2: The Citibank / Revlon Wire Transfer Blunder (2020)</h2>
+            <p>On August 11, 2020, Citibank, acting as administrative agent for a Revlon loan facility, intended to execute an interest payment
+                of $7.8 million to Revlon’s lenders. Instead, Citibank mistakenly wired $894 million<sup><a href="#source-2">[2]</a></sup> of its own corporate funds—paying off
+                the entire principal balance of the loan years ahead of schedule <sup><a href="#source-5">[5]</a></sup>. 
+            </p>
+                <div class="box">
+                <h3>Flexcube Payment Screen</h3>
+                <p>Illustrative reconstruction of the payment interface.</p>
+
+                <dl>
+                    <dt><strong>Principal payout account</strong></dt>
+                    <dd><code>54109822 – INTERNAL</code></dd>
+
+                    <dt><strong>Payment options</strong></dt>
+                    <dd>
+                        Suppress Principal (checked)<br>
+                        Front-Settled Refund (unchecked)
+                    </dd>
+                    <dt><strong>Operator’s intention</strong></dt>
+                    <dd>Send only the $7.8 million interest payment.</dd>
+
+                    <dt><strong>What the system did</strong></dt>
+                    <dd>Sent approximately $894 million to external lenders.</dd>
+                </dl>
+            </div>
+            <h3>Software Configuration and Ambiguous Form Controls</h3>
+            <p>The massive blunder occurred within Citibank’s legacy banking software, Flexcube, during a complex loan restructuring operation:</p>
+            <ul>
+                <li><b>Confusing UI Architecture</b>: To execute the interest-only payment without discharging the underlying loan principal, the
+                    operator had to routing-block the principal transfer. In Flexcube,
+                    this required routing the principal amount to an internal "wash account" and checking specific suppression boxes.</li>
+                    <li><b>Unchecked Checkbox Vulnerability</b>: The primary operator checked the SUPPRESS PRINCIPAL box, believing this alone
+                        would prevent external transfer of principal funds. However, the interface required two additional obscure checkboxes
+                        (`FRONT-SETTLED REFUND` and `PAID-OFF REFUND`) to be configured in tandem to stop the external wire.</li>
+                    <li><b>Triplicate Human Approval Breakdown</b>: The transaction passed through a three-tier approval workflow
+                        (preparer, checker, and approver). All three trained professionals reviewed the screen,
+                        saw that SUPPRESS PRINCIPAL was checked, and signed off<sup><a href="#source-1">[1]</a></sup>. The ambiguous UI layout failed to provide
+                        clear feedforward feedback explaining that $894 million was scheduled to leave the bank.</li>
+                    <li><b>Legal Aftermath</b>: A federal court initially ruled that receiving lenders were entitled to keep over
+                        $500 million of the mistakenly wired funds under the "discharge-for-value"
+                        doctrine, forcing the financial industry to adopt mandatory "Revlon Blocker" clauses in credit contracts.</li>
+            </ul>
+            <figure>
+                <img src="../../../images/design_failures/historic_ui_failures/citybank.webp" alt="Citibank"
+                    loading="lazy" >
+                <figcaption>
+                    <a href="https://commons.wikimedia.org/wiki/File:Citibank_(22431657520).jpg">
+                        Citibank in Washington, D.C.
+                    </a>
+                     Mike Mozart 
+                    <a href="https://creativecommons.org/licenses/by/2.0/">
+                        CC BY 2.0
+                    </a>
+                </figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>Sources</h2>
+            <ol>
+                <li id="source-1"><a href="https://btw.media/en/citibank-revlon-mistaken-payment-control-accountability"> Citibank made a $900 million mistaken payment a control-evidence accountability test</a></li>
+                <li id="source-2"><a href="https://londondaily.com/citi-bank-sent-900-million-to-customers-by-mistake-half-of-them-refuse-to-give-it-back">Citibank sent 900 millions by mistake</a>
+                </li>
+                <li id="source-3"><a href="https://www.gsb.stanford.edu/faculty-research/publications/butterfly-did-it-aberrant-vote-buchanan-palm-beach-county-florida">Butterfly ballot</a></li>
+                <li id="source-4"><a href="https://en.wikipedia.org/wiki/2000_United_States_presidential_election_recount_in_Florida">2000 United States presidential election recount in Florida</a></li>
+                <li id="source-5"> United States District Court, S.D. New York. *In re Citibank August 11, 2020 Wire Transfers*. 520 F. Supp. 3d 562, 2021.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>

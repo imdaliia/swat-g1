@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This article is about Alarms and Controls">
+    <meta name="author" content="Daniel Lula">
+    <title>Alarms and Controls</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+
+
+<body class="topic-design-failures">
+  
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li><li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQtopics" tabindex="0">Special topic</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li><li><a href="../../index.html#topics" tabindex="0">topic2</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li><li><a href="../../index.html#topics" tabindex="0">topic2</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li><li><a href="../../index.html#topics" tabindex="0">topic2</a></li><li><a href="../../index.html#topics" tabindex="0">topic3</a></li></ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+        <a href="historic-safety.html" rel="prev">← previous</a>
+        <a href="historic-money-votes.html" rel="next">next →</a>
+    </nav>
+
+    <header>
+        <h1>Alarms and Controls</h1>
+        <p class="lead">High-Stress Environments, Ambiguous Menus, and Touchscreen Helms</p>
+        <p><span class="pill">By Daniel Lula</span> <span class="pill">4 min read</span></p>
+    </header>
+
+    <main id="article" class="sheet">
+        <section>
+            <p> <b>High-stress operational environments</b> require controls that offer immediate, unambiguous feedback,
+                high tactile contrast, and error-tolerant menu structures. When emergency alert software or military bridge
+                navigation systems rely on cluttered visual menus, ambiguous labels, or non-tactile touchscreens, critical decisions
+                 fail during time-sensitive operations.
+            </p>
+
+            <h2>Case Study 1: The 2018 Hawaii False Missile Alert</h2>
+            <p>
+                On the morning of January 13, 2018, the Hawaii Emergency Management Agency (HI-EMA) inadvertently issued
+                a ballistic missile alert to the entire population of Hawaii. For 38 terror-filled minutes<sup><a href="#source-2">[2]</a></sup>,, residents and visitors
+                received emergency mobile broadcasts stating: <b><i>"BALLISTIC MISSILE THREAT INBOUND TO HAWAII. SEEK IMMEDIATE SHELTER.
+                THIS IS NOT A DRILL."</i></b><sup><a href="#source-1">[1]</a></sup>
+            </p>
+            <div class="box">
+                <h3>HI-EMA Emergency Alert System (EAS) Menu</h3>
+                <p>Illustrative reconstruction of the statewide alert menu.</p>
+
+                <ol>
+                    <li>DRILL – AMBER Alert</li>
+                    <li>DRILL – High Surf Advisory</li>
+                    <li>DRILL – State Only</li>
+                    <li><strong>MISSILE ALERT (LIVE)</strong></li>
+                    <li>Tsunami Warning</li>
+                </ol>
+            </div>
+            <h2>Spatial Proximity and Plain Text Menu Design</h2>
+            <p>The root cause of the false alarm was an interface design that violated basic error-prevention principles:</p>
+            <ul>
+                <li>
+                    <b>Adjacent Menus without Visual Hierarchy</b>: The software interface used to trigger real statewide emergency alerts
+                     was a plain, unstyled HTML drop-down/list menu. The option for an internal test (`DRILL - State Only`) was placed in
+                     direct spatial proximity to the live broadcast option (`MISSILE ALERT (LIVE)`). Both option titles shared nearly identical
+                    typography, font size, and color.
+                </li>
+                <li>
+                    <b>Lack of Distinctive Signifiers</b>: There were no color-coded visual warnings (such as red banners for live alerts vs.
+                     green banners for internal drills), no graphical icons, and no physical separation between routine testing tools
+                    and high-consequence public broadcast controls.
+                </li>
+                <li>
+                    <b>Meaningless Confirmation Prompts</b>: When the operator mistakenly selected `MISSILE ALERT (LIVE)`,
+                    the system presented a generic secondary confirmation popup asking: <b>"Are you sure you want to process this request?"</b>
+                     Because the prompt failed to state *which* alert was about to be processed (e.g., *"You are about to broadcast a
+                     LIVE BALLISTIC MISSILE ALERT to the entire state. Proceed?"*), the operator clicked "OK", believing they were confirming
+                     the routine drill.
+                </li>
+            </ul>
+            <figure style="width: min(100%, 640px); margin: 1.5rem auto;">
+                <img src="../../../images/design_failures/historic_ui_failures/emergency_alert.webp" alt="Phone screen showing the 2018 Hawaii false ballistic missile alert"
+                    loading="lazy" style="height: auto; aspect-ratio: auto; transform: none;">
+                <figcaption>
+                    <a href="https://commons.wikimedia.org/wiki/File:2018_Hawaii_missile_alert_(cropped).jpg">
+                        2018 Hawaii false missile alert
+                    </a>
+                    Screenshot: Apple Inc.
+                </figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>Case Study 2: The USS John S. McCain Collision (2017)</h2>
+            <p>On August 21, 2017, the U.S. Navy guided-missile destroyer <b>USS John S. McCain</b> collided with the Liberian-flagged
+                chemical tanker <b>Alnic MC</b> in the heavily congested Singapore Strait. The collision tore a 28-foot hole in the
+                destroyer’s hull, flooding crew quarters<sup><a href="#source-4">[4]</a></sup> and resulting in the deaths of ten sailors <sup><a href="#source-3">[3]</a> <a href="#source-5">[5]</a></sup>.</p>
+
+                <div class="box table-scroll" tabindex="0" role="region" aria-labelledby="mccain-console-caption">
+                    <table>
+                        <caption id="mccain-console-caption">
+                            USS John S. McCain Ship Control Console (SCC) — Illustrative comparison
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Control or display</th>
+                                <th scope="col">Helm Station</th>
+                                <th scope="col">Lee Helm Station</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Physical steering wheel</th>
+                                <td>Present</td>
+                                <td>None</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Steering (touchscreen)</th>
+                                <td>HELM [ON]</td>
+                                <td>LEE HELM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Port shaft (touchscreen)</th>
+                                <td>87 RPM</td>
+                                <td>44 RPM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Starboard shaft (touchscreen)</th>
+                                <td>87 RPM</td>
+                                <td>87 RPM</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <figure>
+                <img src="../../../images/design_failures/historic_ui_failures/uss_mcain.webp" alt="Damage on the port side of the destroyer USS John S. McCain after the collision"
+                    loading="lazy">
+                <figcaption>
+                    <a href="https://commons.wikimedia.org/wiki/File:US_Navy_170821-N-OU129-022_Damage_to_the_portside_of_USS_John_S._McCain_(DDG_56).jpg">
+                        Port-side damage USS John S. McCain 
+                    </a>
+                     Joshua Fulton 
+                    <a href="https://creativecommons.org/publicdomain/mark/1.0/">
+                        Public domain in the U.S.
+                    </a>
+                </figcaption>
+            </figure>
+            <h3>Complex Touchscreen Interfaces and Unintended Control Transfers</h3>
+            <p>
+            Investigative reports by the National Transportation Safety Board (NTSB) and the U.S. Navy revealed that complex touchscreen
+            interface software directly caused the bridge team to lose control of the vessel:
+            </p>
+            <ul>
+                <li> <b>The Integrated Bridge and Navigation System (IBNS)</b>: The Navy had replaced traditional mechanical throttles and helm controls
+                    with flat-panel LCD touchscreens running a graphical user interface (GUI).</li>
+                <li> <b>Unilateral Control Shift</b>: During transit through dense traffic, the Commanding Officer ordered steering and
+                     thrust control to be split between the Helm Station (steering) and Lee Helm Station (throttles).
+                     However, because the system was operating in "backup manual mode," control could be transferred unilaterally
+                     from one touchscreen terminal to another without requiring confirmation from the station losing control.
+                </li>
+                    <li>
+                        <b>Perceived Loss of Steering</b>: During the transfer of thrust control, a watchstander accidentally
+                        transferred steering control to the Lee Helm station. The physical steering wheel at the Helm Station
+                        immediately lost control of the rudders. The helmsman panicked, announcing a total loss of steering. In reality,
+                        the steering system was functioning perfectly, but control had silently moved to the adjacent screen <sup><a href="#source-3">[3]</a></sup>.
+                    </li>
+                    <li><b>Unganged Throttles and Accelerated Turn</b>: To slow the vessel, the Lee Helmsman lowered
+                        the port propeller speed on his touchscreen. However, transferring control had automatically "unganged"
+                        (disconnected) the port and starboard throttle controls. The Lee Helmsman did not notice that only the port
+                        shaft slowed to 44 RPM while the starboard shaft remained at 87 RPM. The resulting asymmetric thrust accelerated
+                        the destroyer’s sharp left turn directly across the bow of the oncoming tanker.
+                    </li>
+                <li><b>Return to Physical Controls</b>: Following the accident investigation, the U.S.
+                    Navy announced in 2019 that it would strip touchscreen helm controls from all Arleigh Burke-class destroyers,
+                    replacing them entirely with physical steering wheels and mechanical throttles to restore immediate tactile feedback
+                    and physical affordances.</li>
+            </ul>
+            <figure>
+                <img src="../../../images/design_failures/historic_ui_failures/uss_mcain_4.webp" alt="Touchscreen helm stations on the bridge of the USS John S. McCain
+"
+                    loading="lazy">
+               <figcaption>
+                    <a href="https://commons.wikimedia.org/wiki/File:Modern_Helm_and_Lee_Helm_with_touchscreens_and_steering_wheel_used_in_the_US_Navy%27s_Integrated_Bridge_and_Navigation_System_(IBNS).png">
+                        Integrated Bridge and Navigation System
+                    </a>
+                     <a href="https://www.ntsb.gov/investigations/AccidentReports/Reports/MAR1901.pdf">
+                        (NTSB), report MAR-19/01
+                    </a>
+                     <a href="https://creativecommons.org/publicdomain/mark/1.0/">
+                        Public domain in the U.S.
+                    </a>
+                </figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>Sources</h2>
+            <ol>
+                <li id="source-1"><a href="https://dod.hawaii.gov/hiema/false-alert-report/"> False alert report</a></li>
+                <li id="source-2"><a href="https://en.wikipedia.org/wiki/2018_Hawaii_false_missile_alert">2018 Hawaii false missile alert</a>
+                </li>
+                <li id="source-3"><a href="https://www.ntsb.gov/investigations/AccidentReports/Reports/MAR1901.pdf">Collision between US Navy Destroyer John S McCain and Tanker Alnic MC
+                    Singapore Strait, 5 Miles Northeast of Horsburgh Lighthouse</a></li>
+                <li id="source-4"><a href="https://www.navytimes.com/news/your-navy/2017/11/01/crushed-in-their-racks-inside-the-john-s-mccain-disaster/"> Crushed in their racks: Inside the John S. McCain disaster</a></li>
+                <li id="source-5"><a href="https://en.wikipedia.org/wiki/USS_John_S._McCain_and_Alnic_MC_collision">USS John S. McCain and Alnic MC collision</a></li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>
