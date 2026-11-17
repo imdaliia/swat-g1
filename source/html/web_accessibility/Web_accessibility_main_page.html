@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web accessibility Main page">
+    <meta name="author" content="Shalini Denti">
+    <title>HCI - Web accessibility main page</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+    <!-- /* tabindex is needed as without the website isnt accessible thru keybord navigation, and the links are not reachable /* -->
+     <!-- it uses currently place holder values, to be inserted when pages are ready -->
+    <!-- START NAVBAR -->
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="index.html">HCI</a>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul><li><a href="#topics" tabindex="0">topic1</a></li><li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQtopics" tabindex="0">Special topic</a></li></ul> 
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul>
+                                <li>
+                                    <a href="design_interfaces/U-T%20and%20system%20requirements/user-task-system-requirements.html" tabindex="0">
+                                        User, Task and System Requirements
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="design_interfaces/Inf-architecture/information-architecture-navigation.html" tabindex="0">
+                                        Information Architecture and Navigation
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="design_interfaces/Interaction%20and%20workflow%20design/interaction-workflow-design.html" tabindex="0">
+                                        Interaction and Workflow Design
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="design_interfaces/Usability%20and%20UX%20principles/usability-ux-principles.html" tabindex="0">
+                                        Usability and UX Principles
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="design_interfaces/Prototyping/prototyping-usability-evaluation.html" tabindex="0">
+                                        Prototyping and Usability Evaluation
+                                    </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul><li><a href="#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul><li><a href="#topics" tabindex="0">topic1</a></li><li><a href="#topics" tabindex="0">topic2</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul><li><a href="#topics" tabindex="0">topic1</a></li><li><a href="#topics" tabindex="0">topic2</a></li><li><a href="#topics" tabindex="0">topic3</a></li></ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+         <a href="../index.html" rel="prev">← previous</a>
+        <a href="../index.html" rel="next">next →</a>
+    </nav>
+    <!-- STOP NAVBAR -- copy paste this into your HTML file --> 
+
+    <header>
+        <h1>Web accessibility</h1>
+        <p class="lead">Everything you need to know about Web Accessibility!</p>
+    </header>
+
+    <main id="main">
+        <section id="topics">
+            <div class="grid">
+                <div class="box topic-web-accessibility">
+                    <figure><img src="../../images/web_accessibility/WCAG_image.jpeg" alt="WCAG guidelines"></figure>
+                    <h2><a href="WCAG_guidelines/wcag.html">WCAG Guidelines & Standards</a></h2>
+                    <p>Web accessibility principles and compliance levels</p>
+                </div>
+                <div class="box topic-web-accessibility">
+                    <figure><img src="../../images/web_accessibility/Accessibility_design_introduction.png" alt="Inclusive design"></figure>
+                    <h2><a href="Inclusive_design_principles/inclusive_design_definition.html">Inclusive Designing Principles</a></h2>
+                    <p>Designing interfaces for users with diverse abilities.</p>
+
+                        <h3><span class="pill"> <a href="Inclusive_design_principles/inclusive_design_definition.html"> Inclusive design definition</a></span></h3>
+                        <h3><span class="pill"> <a href="Inclusive_design_principles/divers_users_needs.html"> Divers users needs </a></span></h3>
+                        <h3><span class="pill"> <a href="Inclusive_design_principles/disability_types.html">Disability types</a></span></h3>   
+                </div>
+                <div class="box topic-web-accessibility">
+                    <figure><img src="../../images/web_accessibility/Web_economic_images.jpeg" alt="Web economic"></figure>
+                    <h2><a href="Economics_of_Accessibility/benefits.html">Economics accessibility</a></h2>
+                    <p>Financial SEO, and legal benefits of accessible design.</p>
+
+                        <h3><span class="pill"> <a href="Economics_of_Accessibility/benefits.html"> Benefits</a></span></h3>
+                        <h3><span class="pill"> <a href="Economics_of_Accessibility/crisis.html"> Crisis</a></span></h3>
+                        <h3><span class="pill"> <a href="Economics_of_Accessibility/socio-economic.html"> Socio-economics</a></span></h3>
+                </div>
+                <div class="box topic-web-accessibility">
+                    <figure><img src="../../images/web_accessibility/keyboard-navigation.png" alt="Assistive web tools" loading="lazy">
+                    </figure>
+                    <h2><a href="Assistive_web_tools/screen-readers.html">Assistive Web Tools</a></h2>
+                    <p>Screen readers, magnifiers, and keyboard navigation.</p>
+                        
+                        <h3><span class="pill"> <a href="Assistive_web_tools/screen-readers.html">Screen readers </a></span></h3>
+                        <h3><span class="pill"> <a href="Assistive_web_tools/screen-readers.html">Screen Magnifiers </a> </span></h3>
+                        <h3><span class="pill"> <a href="Assistive_web_tools/keyboard-navigation.html"> Keyboard navigation</a></span></h3>
+                        <h3><span class="pill"> <a href="Assistive_web_tools/high-contrast.html"> High-contrast</a></span></h3>
+                        <h3><span class="pill"> <a href="Assistive_web_tools/speech-recognition.html">Speech recognition</a></span></h3>
+                        
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>

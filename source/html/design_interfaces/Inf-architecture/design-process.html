@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alessandro Campanari">
+    <title>Designing and Testing the Architecture</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/design_interfaces/design-interfaces-home.css">
+</head>
+
+<body class="topic-design-interfaces">
+
+    <a class="skip" href="#article">Skip to content</a>
+
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../../../index.html#topics" tabindex="0">Special topic</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul>
+                                <li>
+                                    <a href="../U-T%20and%20system%20requirements/user-task-system-requirements.html" tabindex="0">
+                                        User, Task and System Requirements
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="information-architecture-navigation.html" tabindex="0">
+                                        Information Architecture and Navigation
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Interaction%20and%20workflow%20design/interaction-workflow-design.html" tabindex="0">
+                                        Interaction and Workflow Design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Usability%20and%20UX%20principles/usability-ux-principles.html" tabindex="0">
+                                        Usability and UX Principles
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Prototyping/prototyping-usability-evaluation.html" tabindex="0">
+                                        Prototyping and Usability Evaluation
+                                    </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic1</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic2</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic2</a></li>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic3</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+
+        <a href="navigation.html" rel="prev">← previous</a>
+        <a href="course-example.html" rel="next">next →</a>
+    </nav>
+
+    <header>
+        <h1>Designing and Testing the Architecture</h1>
+        <p class="lead">
+            Card sorting, sitemaps and tree testing: how to build a structure together with users and check that it really works.
+        </p>
+        <p>
+            <span class="pill">Designing interfaces</span>
+        </p>
+    </header>
+
+    <main id="article" class="sheet">
+
+<div>
+<p>
+You can't design a good structure just by guessing at your desk: you involve users, test and fix. Here we cover
+only the methods specific to IA; usability testing in general is in the next part of our topic.
+</p>
+</div>
+
+<section>
+<h2 id="why">4.1 Why people get lost</h2>
+<table>
+  <caption>Table 2 - From principle to design choice</caption>
+  <tr><th>Principle</th><th>In short</th><th>What we do with it</th></tr>
+  <tr><td>Mental models</td><td>People expect systems to work like ones they know</td><td>Group courses by semester and subject</td></tr>
+  <tr><td>Cognitive load</td><td>Working memory is small</td><td>Split long lists into meaningful groups</td></tr>
+  <tr><td>Information scent</td><td>People follow labels that "smell" right</td><td>"Enrol in a course", not "Registration module"</td></tr>
+</table>
+<p>
+<dfn>Information scent</dfn> comes from Pirolli and Card's <i>information foraging theory</i>: people follow the most
+promising trail, like animals looking for food. Vague labels make the trail weak.
+</p>
+</section>
+
+<section>
+<h2 id="methods">4.2 Methods</h2>
+<ol>
+  <li><b>Content inventory</b>: list all existing content to find duplicates, gaps and old pages.</li>
+  <li><b>Card sorting</b>: users group cards into categories that make sense to them (<i>open</i> if they name the
+      groups, <i>closed</i> if the groups are given). For example, students might put "Exam dates" and "Timetable"
+      together, while the office would put exams under "Regulations".</li>
+  <li><b>Sitemap</b>: the resulting structure, drawn before any graphic design (<a href="course-example.html#sitemap">ours here</a>).</li>
+  <li><b>Tree testing</b>: users get only the text menu and must find something, like <q>Where are the prerequisites
+      of Software Atelier I?</q>. It tests the structure alone.</li>
+</ol>
+<p>These steps repeat: test, fix, test again, also because new courses arrive every semester.</p>
+</section>
+
+<section>
+<h2 id="check">4.3 Checklist</h2>
+<ul>
+  <li>Can users <b>guess</b> where something is?</li>
+  <li>Do labels make sense to <b>students</b>, not only to the office?</li>
+  <li>Is there a clear path from <b>overview</b> to <b>details</b> and back?</li>
+  <li>Can users <b>get back</b> after a wrong click?</li>
+</ul>
+<p>In a tree test we measure the <b>success rate</b>, the <b>directness</b> (no going back) and the <b>time</b>.</p>
+</section>
+
+        <section>
+            <h2>Sources</h2>
+            <ul>
+                <li><a href="https://www.oreilly.com/library/view/information-architecture-4th/9781491913529/">Rosenfeld, Morville, Arango - Information Architecture for the Web and Beyond</a></li>
+                <li><a href="https://doi.org/10.1037/0033-295X.106.4.643">Pirolli, Card - Information Foraging</a></li>
+                <li><a href="https://jnd.org/the-design-of-everyday-things-revised-and-expanded/">Norman - The Design of Everyday Things (revised edition)</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+
+</body>
+</html>

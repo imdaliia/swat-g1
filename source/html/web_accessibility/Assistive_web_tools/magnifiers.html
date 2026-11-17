@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Screen magnifiers enlarge digital content to assist users with low vision. Learn how they work and how developers can design magnifier-friendly layouts.">
+    <meta name="author" content="Andrii Synelnyk">
+    <title>HCI - Screen Magnifiers</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../css/web_accessibility/web-accessibility.css">
+</head>
+
+<body class="topic-web-accessibility">
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../index.html">HCI</a>
+        <a href="../index.html">Home</a>
+        <a href="../demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary>Web accessibility</summary>
+                            <ul>
+                                <li><a href="screen-readers.html" tabindex="0">Screen Readers</a></li>
+                                <li><a href="magnifiers.html" aria-current="page" tabindex="0">Magnifiers</a></li>
+                                <li><a href="keyboard-navigation.html" tabindex="0">Keyboard Navigation</a></li>
+                                <li><a href="high-contrast.html" tabindex="0">High Contrast Themes</a></li>
+                                <li><a href="speech-recognition.html" tabindex="0">Speech Recognition</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+        <a href="screen-readers.html" rel="prev">← previous</a>
+        <a href="keyboard-navigation.html" rel="next">next →</a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Screen Magnifiers</h1>
+        <p class="lead">Assistive technology that enlarges digital content for users with low vision — and how to build websites that hold up under zoom</p>
+        <p><span class="pill">By Andrii Synelnyk</span> <span class="pill">5 min read</span></p>
+    </header>
+
+    <!-- The actual article -->
+    <main id="article" class="sheet">
+
+        <section>
+            <h2>Who Needs Magnification?</h2>
+            <p>
+                Low vision is one of the most common visual impairments globally. Unlike blindness, low vision
+                cannot be fully corrected with glasses or contact lenses, leaving users with reduced acuity,
+                restricted field of view, or both. Screen magnifiers bridge this gap by enlarging on-screen
+                content so that users can read and interact with it comfortably.
+            </p>
+            <p>
+                Magnifiers are used by people with conditions such as macular degeneration, glaucoma, diabetic
+                retinopathy, and albinism. They are also widely used by older adults whose visual acuity
+                declines with age. The World Health Organization estimates that at least 2.2 billion people
+                have a vision impairment, of whom approximately 1 billion have moderate or severe impairment
+                that could benefit from magnification aids.
+            </p>
+            <figure>
+                <img src="../../../images/web_accessibility/magnifier-screen.jpg"
+                     alt="A large monitor showing a web page at high zoom with a portion of the content magnified"
+                     loading="lazy">
+                <figcaption>Screen magnification enlarges a portion of the display to assist users with low vision</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Types of Magnification Tools</h2>
+            <p>
+                Magnification can happen at several layers — hardware, operating system, or browser — and the
+                magnification mode affects what layout problems developers need to address.
+            </p>
+            <div class="box">
+                <table>
+                    <caption>Comparison of magnification approaches</caption>
+                    <thead>
+                        <tr>
+                            <th>Tool / Method</th>
+                            <th>Zoom target</th>
+                            <th>Examples</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>OS-level full-screen zoom</strong></td>
+                            <td>Entire display</td>
+                            <td>macOS Zoom, Windows Magnifier (full screen)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>OS-level lens / docked zoom</strong></td>
+                            <td>Region near cursor</td>
+                            <td>Windows Magnifier (lens mode), ZoomText</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Browser zoom</strong></td>
+                            <td>Page layout (reflows)</td>
+                            <td>Ctrl/Cmd + and -, browser settings</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Text-only zoom</strong></td>
+                            <td>Font size only</td>
+                            <td>Firefox text zoom, OS accessibility font size</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dedicated software</strong></td>
+                            <td>Full screen + enhancements</td>
+                            <td>ZoomText, SuperNova Magnifier</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                OS-level magnification captures a bitmap of the screen and enlarges it; the web developer has
+                no direct control over this. <strong>Browser zoom</strong>, however, triggers a full layout
+                reflow and directly exposes weaknesses in CSS design — making it the most important scenario
+                to design and test for.
+            </p>
+        </section>
+
+        <section>
+            <h2>WCAG 1.4.4 — Resize Text</h2>
+            <p>
+                WCAG 2.2 Success Criterion 1.4.4 (Level AA) requires that text can be resized up to
+                <strong>200 %</strong> without assistive technology and without loss of content or
+                functionality. WCAG 1.4.10 (Reflow, Level AA) further
+                requires that content can be presented at <strong>400 %</strong> zoom in a single column without
+                requiring two-dimensional scrolling (except for content that requires it, like data tables or maps).
+            </p>
+            <div class="box note good">
+                <strong>Quick test</strong>
+                <p>
+                    Open your page in Chrome or Firefox, press <code>Ctrl +</code> (or <code>Cmd +</code> on Mac)
+                    until the browser zoom reaches 400 %. Does the content reflow into a single column? Can you
+                    still reach every piece of content and every interactive control without horizontal scrolling?
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Layout Techniques That Support Magnification</h2>
+
+            <h3>Use relative units for text</h3>
+            <p>
+                Set font sizes in <code>rem</code> or <code>em</code> rather than fixed <code>px</code> values.
+                This allows the browser's text-only zoom and OS-level font size preferences to scale typography
+                proportionally, without breaking the surrounding layout.
+            </p>
+            <pre><code>/* Good: scales with user preferences */
+body { font-size: 1.0625rem; }   /* 17px equivalent */
+h2   { font-size: 2rem; }
+
+/*  Bad: ignores user font preferences */
+body { font-size: 17px; }
+h2   { font-size: 32px; }</code></pre>
+
+            <h3>Flexible containers with <code>max-width</code></h3>
+            <p>
+                Use <code>width: 92%; max-width: 72rem;</code> patterns so that content columns narrow at
+                high zoom levels instead of overflowing or requiring horizontal scrolling.
+            </p>
+
+            <h3>Avoid <code>overflow: hidden</code> on text containers</h3>
+            <p>
+                Clipping overflow on elements that contain text will truncate content at high zoom. Prefer
+                <code>overflow: auto</code> or let containers expand vertically.
+            </p>
+
+            <h3>Minimum touch / click target sizes</h3>
+            <p>
+                Zoomed interfaces increase the visual size of elements but the browser's
+                internal coordinate system stays the same. This means a 24 x 24 px button remains
+                24 x 24 CSS pixels at any zoom level. WCAG 2.5.8 recommends a minimum target size of
+                24 x 24 CSS pixels; aim for 44 x 44 CSS pixels or larger for primary actions.
+            </p>
+
+            <h3>Sticky and fixed elements</h3>
+            <p>
+                Sticky navigation bars and fixed overlays consume a large fraction of the viewport at high zoom,
+                sometimes leaving almost no space for content. Keep sticky elements as short as possible and test
+                at 400 % zoom on a standard 1 920 px monitor, which simulates a device width of 480 CSS px.
+            </p>
+            <div class="box note warn">
+                <strong>Watch out for horizontal overflow</strong>
+                <p>
+                    A single element with a fixed pixel width wider than the viewport at the current zoom level
+                    will force a horizontal scrollbar onto the entire page, breaking WCAG 1.4.10. Audit with
+                    browser DevTools by toggling the responsive design mode at 320 px wide.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Dedicated Magnification Software Features</h2>
+            <p>
+                Professional magnification software such as ZoomText or SuperNova adds capabilities beyond
+                simple enlargement:
+            </p>
+            <ul>
+                <li><strong>Focus tracking:</strong> the magnified viewport follows the keyboard focus and text
+                    cursor automatically, so users never lose their place.</li>
+                <li><strong>Colour enhancement:</strong> adjustable contrast, brightness, and hue can be layered
+                    on top of the standard screen rendering.</li>
+                <li><strong>Mouse pointer customisation:</strong> oversized, brightly coloured cursors prevent
+                    pointer loss in a zoomed viewport.</li>
+                <li><strong>Speech integration:</strong> many magnification tools bundle a simplified screen reader
+                    for text-to-speech fallback when zooming alone is not sufficient.</li>
+            </ul>
+            <p>
+                Because dedicated software captures a pixel-level bitmap, the main developer responsibility is
+                to ensure the visual presentation itself is high quality — good contrast, clear typography, and
+                unambiguous focus indicators remain visible even at extreme magnification.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility - Andrii Synelnyk</footer>
+</body>
+
+</html>

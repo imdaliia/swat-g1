@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How voice input went from recording sound to understanding speech.">
+    <meta name="author" content="Francesco">
+    <title>HCI - Speech Recognition &amp; Voice User Interfaces (VUI)</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+
+<body class="topic-io-devices">
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details open>
+                            <summary>Input/output devices</summary>
+                            <ul>
+                                <li><a href="../index.html" tabindex="0">I/O Devices</a></li>
+                                <li><a href="page1.html" tabindex="0">Introduction to Audio &amp; Haptic Interfaces</a></li>
+                                <li><a href="page2.html" tabindex="0">The Evolution of Audio Devices</a></li>
+                                <li><a href="page3.html" aria-current="page" tabindex="0">Speech Recognition &amp; Voice User Interfaces</a></li>
+                                <li><a href="page4.html" tabindex="0">The History of Haptic Feedback</a></li>
+                                <li><a href="page5.html" tabindex="0">Advanced Haptics &amp; The Future of Touch</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+        <a href="page2.html" rel="prev">← previous</a>
+        <a href="page4.html" rel="next">next →</a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Speech Recognition &amp; Voice User Interfaces (VUI)</h1>
+        <p class="lead">Early voice input only recorded sound. Speech recognition turned it into text and commands, and the technology changed completely about every twenty years.</p>
+        <p><span class="pill">By Francesco Corti</span> <span class="pill">2 min read</span></p>
+    </header>
+
+    <!-- The actual article -->
+    <main id="article" class="sheet">
+        <section>
+            <h2>A short timeline</h2>
+            <ul>
+                <li><strong>1952, Audrey:</strong> Researchers at Bell Labs built Audrey, which recognised the digits 0 to 9 spoken by a single speaker<sup><a href="#source-1">[1]</a></sup>.</li>
+                <li><strong>1962, IBM Shoebox:</strong> IBM’s system understood 16 English words.</li>
+                <li><strong>1971–1976, DARPA:</strong> The US defence agency funded a five-year programme aiming for a 1,000-word vocabulary. The HARPY system from Carnegie Mellon met the goal in 1976.</li>
+                <li><strong>1974, DRAGON and Hidden Markov Models:</strong> James and Janet Baker’s DRAGON system used a statistical method, the Hidden Markov Model (HMM), instead of hand-written rules. Probability decides which word was most likely said.</li>
+                <li><strong>1980s, statistics take over:</strong> HMMs became the standard approach, and vocabularies grew from a few hundred words to thousands. In 1984 the Apricot became the first personal computer with built-in speech recognition.</li>
+                <li><strong>1992, telephone call routing:</strong> AT&amp;T deployed an automated service that routed phone calls without a human operator.</li>
+                <li><strong>2010s, deep learning:</strong> Deep neural networks replaced HMMs. Systems became speaker-independent, so users no longer had to train them to their voice<sup><a href="#source-2">[2]</a></sup>. This is the technology behind voice assistants such as Siri and Alexa.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>What a voice interface is</h2>
+            <p>A voice user interface (VUI) lets people control a device by speaking. It combines the audio hardware from the <a href="page2.html">previous page</a> (microphone arrays, noise suppression) with speech recognition software that turns the audio into text and then into an action.</p>
+        </section>
+        <section>
+            <h2>Sources</h2>
+            <ol>
+                <li id="source-1"><a href="https://computerhistory.org/blog/audrey-alexa-hal-and-more/">Computer History Museum: Audrey, Alexa, Hal, and More</a></li>
+                <li id="source-2"><a href="https://en.wikipedia.org/wiki/Speech_recognition">Wikipedia: Speech recognition</a></li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>

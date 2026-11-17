@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alternative input methods and speech recognition software enable users with motor disabilities to control computers and navigate the web through voice commands, eye-tracking, and switch devices.">
+    <meta name="author" content="Andrii Synelnyk">
+    <title>HCI - Alternative Input and Speech Recognition</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../css/web_accessibility/web-accessibility.css">
+</head>
+
+<body class="topic-web-accessibility">
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../index.html">HCI</a>
+        <a href="../index.html">Home</a>
+        <a href="../demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary>Web accessibility</summary>
+                            <ul>
+                                <li><a href="screen-readers.html" tabindex="0">Screen Readers</a></li>
+                                <li><a href="magnifiers.html" tabindex="0">Magnifiers</a></li>
+                                <li><a href="keyboard-navigation.html" tabindex="0">Keyboard Navigation</a></li>
+                                <li><a href="high-contrast.html" tabindex="0">High Contrast Themes</a></li>
+                                <li><a href="speech-recognition.html" aria-current="page" tabindex="0">Speech Recognition</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul><li><a href="../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+        <a href="high-contrast.html" rel="prev">← previous</a>
+        <a href="../Web_accessibility_main_page.html" rel="next">next →</a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Alternative Input and Speech Recognition</h1>
+        <p class="lead">Voice commands, eye tracking, switch access, and head pointers — building web interfaces that work for users who cannot use a standard mouse or keyboard</p>
+        <p><span class="pill">By Andrii Synelnyk</span> <span class="pill">7 min read</span></p>
+    </header>
+
+    <!-- The actual article -->
+    <main id="article" class="sheet">
+
+        <section>
+            <h2>Beyond Keyboard and Mouse</h2>
+            <p>
+                The standard mouse-and-keyboard combination is not accessible to everyone. Users with severe
+                motor disabilities, spinal cord injuries, amyotrophic lateral sclerosis (ALS), cerebral palsy,
+                limb differences, or progressive neurological conditions may be unable to perform the fine
+                motor movements required to use conventional input devices.
+            </p>
+            <p>
+                Alternative input methods allow these users to control a computer — and navigate the web — using
+                the capabilities they do have. The design choices developers make directly determine whether these
+                tools work effectively or fail entirely.
+            </p>
+            <figure>
+                <img src="../../../images/web_accessibility/voice-recognition.png"
+                     alt="Voice recognition and speech input diagram showing sound waves and speech processing"
+                     loading="lazy">
+                <figcaption>Voice recognition and speech input enable hands-free interaction with web interfaces</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Voice Control and Speech Recognition</h2>
+            <p>
+                Speech recognition software translates spoken words into computer commands, mouse movements,
+                and text input. It is the most widely adopted alternative input technology for users with
+                upper-limb disabilities.
+            </p>
+            <div class="box">
+                <table>
+                    <caption>Major speech recognition tools</caption>
+                    <thead>
+                        <tr>
+                            <th>Tool</th>
+                            <th>Platform</th>
+                            <th>Key features</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Dragon NaturallySpeaking</strong> (Nuance)</td>
+                            <td>Windows / Mac</td>
+                            <td>Industry standard, high accuracy, extensive command vocabulary</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Voice Control</strong></td>
+                            <td>macOS / iOS</td>
+                            <td>Built-in, overlays element numbers for voice-clicking</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Voice Access</strong></td>
+                            <td>Android</td>
+                            <td>Built-in, displays element labels for targeting</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Windows Speech Recognition / Voice Access</strong></td>
+                            <td>Windows</td>
+                            <td>Built-in since Windows Vista; enhanced in Windows 11</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>How voice control targets elements</h3>
+            <p>
+                Voice control software like Dragon or macOS Voice Control relies on the
+                <strong>accessible name</strong> of each interactive element to identify it. When a user says
+                <em>"Click Submit"</em>, the software looks for a button whose accessible name is "Submit".
+                If the button's visible label reads "Submit" but its accessible name is computed differently
+                (or is absent), the command fails.
+            </p>
+            <div class="box note warn">
+                <strong>Visible label must match accessible name</strong>
+                <p>
+                    WCAG 2.5.3 (Label in Name, Level A) requires that for components with text labels, the
+                    accessible name contains the visible text. Never use <code>aria-label</code> to give an
+                    element a completely different name from its visible label — voice users won't be able to
+                    target it.
+                </p>
+            </div>
+            <pre><code>&lt;!--  Bad: visible text "Send message" doesn't match aria-label "submit" --&gt;
+&lt;button aria-label="submit"&gt;Send message&lt;/button&gt;
+
+&lt;!-- / Good: aria-label extends the visible label (starts with "Send message") --&gt;
+&lt;button aria-label="Send message to support team"&gt;Send message&lt;/button&gt;
+
+&lt;!-- / Best: use visible text as the accessible name without aria-label --&gt;
+&lt;button&gt;Send message&lt;/button&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>Eye-Tracking Technology</h2>
+            <p>
+                Eye-tracking devices use infrared cameras to follow the user's gaze and translate it into
+                cursor movements. Users can then trigger clicks by dwelling on a target for a set time, blinking,
+                or using an external switch. Eye-tracking is used by people with severe motor disabilities
+                including locked-in syndrome, advanced ALS, and high-level spinal cord injuries.
+            </p>
+            <p>
+                Key considerations for eye-tracking users:
+            </p>
+            <ul>
+                <li><strong>Target size:</strong> Small targets are extremely difficult to hit with gaze alone.
+                    WCAG 2.5.8 recommends a minimum of 24 × 24 CSS pixels; for eye-tracking users, 44 × 44 px
+                    or larger is strongly preferred.</li>
+                <li><strong>Target spacing:</strong> Closely packed interactive elements increase the risk of
+                    unintended activation. Provide at least 8 px of non-interactive space between adjacent targets.</li>
+                <li><strong>No hover-only actions:</strong> Eye-tracking triggers mouse events differently from
+                    a physical mouse. Menus or tooltips that appear only on <code>:hover</code> may not be
+                    accessible to eye-tracking users who cannot sustain hover without triggering a click.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Switch Access</h2>
+            <p>
+                Switch access allows users to control a device with as little as a single physical switch —
+                a large button, a sip-and-puff device (activated by breath), a foot pedal, or a head-mounted
+                sensor. The device cycles through interface elements (a technique called "scanning") and the
+                user activates the switch to select the highlighted item.
+            </p>
+            <p>
+                Because switch access relies on sequential focus traversal — essentially the same mechanism as
+                keyboard navigation — well-implemented keyboard accessibility is the foundation of switch access
+                support. The key additional requirement is predictable, uninterrupted scanning order.
+            </p>
+            <div class="box note good">
+                <strong>Keyboard accessibility = switch access compatibility</strong>
+                <p>
+                    If your interface is fully keyboard accessible with a logical tab order, visible focus indicators,
+                    and proper focus management in modals, it will work correctly with virtually all switch access
+                    devices. No additional code is required.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Head Pointers and Mouth Sticks</h2>
+            <p>
+                Head pointer software (such as Cameramouse or Camera Mouse) translates head movements into
+                cursor movements, using a standard webcam. Users activate clicks by dwelling or via an
+                external switch. Mouth sticks are physical tools held in the mouth to press keyboard keys or
+                touch targets one at a time.
+            </p>
+            <p>
+                Both tools rely on the same design principles as eye-tracking: sufficiently large targets,
+                adequate spacing, no reliance on simultaneous multi-key presses, and no time limits on
+                interactions.
+            </p>
+        </section>
+
+        <section>
+            <h2>Designing for Alternative Input: Core Principles</h2>
+
+            <h3>1. Large, well-spaced targets</h3>
+            <p>
+                Every interactive element - links, buttons, form controls - should have a minimum touch / click
+                target of 44 x 44 CSS pixels. This benefits mouse users, touch users, eye-tracking users, and
+                head-pointer users alike.
+            </p>
+
+            <h3>2. Avoid pointer gesture dependence</h3>
+            <p>
+                WCAG 2.5.1 (Pointer Gestures, Level A) requires that all functionality achievable by multipoint
+                or path-based gestures (e.g. pinch-to-zoom, swipe, drag) also has a single-pointer alternative
+                (e.g. buttons). Multi-step gestures are impossible for many alternative input users.
+            </p>
+
+            <h3>3. No time limits on input</h3>
+            <p>
+                Alternative input is inherently slower than a mouse or keyboard. WCAG 2.2.1 (Timing Adjustable,
+                Level A) requires that any time limits be adjustable, extendable, or removable. Never auto-advance
+                a form step or close a modal after a fixed time.
+            </p>
+
+            <h3>4. Avoid motion-only activation</h3>
+            <p>
+                WCAG 2.5.4 (Motion Actuation, Level A) requires that functionality triggered by device or user
+                motion (shaking, tilting, or gesturing at the device) also has a user interface control
+                equivalent, so users who cannot perform the motion can still access the feature.
+            </p>
+
+            <h3>5. Visible labels on all controls</h3>
+            <p>
+                Icon-only buttons are problematic for voice control users who rely on visible text to issue
+                commands. Provide a visible text label alongside icons, or at minimum a
+                <code>title</code> attribute that appears as a tooltip and can serve as a voice target.
+            </p>
+            <pre><code>&lt;!-- / Good: icon button with both visible text and clear accessible name --&gt;
+&lt;button&gt;
+  &lt;svg aria-hidden="true" focusable="false"&gt;...&lt;/svg&gt;
+  Send
+&lt;/button&gt;
+
+&lt;!-- / Acceptable: icon-only with aria-label matching what a user would say --&gt;
+&lt;button aria-label="Send message"&gt;
+  &lt;svg aria-hidden="true" focusable="false"&gt;...&lt;/svg&gt;
+&lt;/button&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>Testing with Alternative Input Tools</h2>
+            <p>
+                Testing your interface with real alternative input tools reveals issues that automated checks
+                and keyboard-only testing cannot find. Here is a minimal testing approach:
+            </p>
+            <ol>
+                <li>
+                    <strong>macOS Voice Control:</strong> Enable it in System Settings Accessibility Voice Control.
+                    Say <em>"show numbers"</em> to see numbered overlays for all interactive elements, then
+                    say <em>"click [number]"</em> to test activation.
+                </li>
+                <li>
+                    <strong>Dragon:</strong> Say the visible label of every button and link to verify that
+                    voice commands successfully target elements.
+                </li>
+                <li>
+                    <strong>Large pointer simulation:</strong> Increase the mouse cursor size to maximum in OS
+                    settings and use only large, deliberate movements to interact with the page.
+                    Elements that are hard to click precisely are too small.
+                </li>
+                <li>
+                    <strong>No mouse, no keyboard:</strong> Briefly try using only the Tab key to navigate
+                    (simulating switch scanning). Every interaction should be reachable in a reasonable number
+                    of key presses.
+                </li>
+            </ol>
+            <div class="box note good">
+                <strong>Include users in testing</strong>
+                <p>
+                    The most valuable testing involves real users who rely on alternative input daily. Consider
+                    engaging with disability organisations to recruit testers. Their experience will reveal
+                    workflow issues that no tool can simulate.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>
