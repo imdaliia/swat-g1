@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The History of input devices : Overview page 1">
+    <meta name="author" content="Lungu Vlad-Mihai">
+    <title>HCI - Typewriters and Punched cards : Intro</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<!-- 
+Things to do: 
+ - update <body> class with correct topic                       (for color consistency)
+ - update "previous" and "next" links                           (in body -> nav)
+ - update title, description and info pills                     (in body -> header)
+ - make your article inside <main> and always have in mind good practices for accessibility
+ -->
+
+<body class="topic-io-devices">
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="index.html">HCI</a>
+        <a href="../index.html">Home</a>
+        <a href="../demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Subtopics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul><li><a href="../io_devices/indexiodevices.html" tabindex="0">Introduction & Overview</a></li>
+                            <li><a href="../io_devices/page1history.html" tabindex="0">Mechanical Beginnings & Typewriters</a></li>
+                            <li><a href="../io_devices/page2history.html" tabindex="0">The Graphical Revolution and the Mouse</a></li>
+                            <li><a href="../io_devices/page3history.html" tabindex="0">Digitizers, Scanners, and Touch Technology</a></li>
+                            <li><a href="../io_devices/page4history.html" tabindex="0">Modern Inputs, Biometrics & The Future</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+        <a href="page2history.html" rel="next">next →</a>
+    </nav>
+
+    <!-- Header (article's title, description and info pills)-->
+    <header>
+        <h1>History of Input Devices: Mechanical Beginnings & Typewriters</h1>
+        <p class="lead">Where did the keyboard start?</p>
+        <p><span class="pill">By Lungu Vlad-Mihai</span> <span class="pill">2 min read</span></p>
+    </header>
+
+    <!-- The actual article -->
+    <main id="article" class="sheet">
+        <section>
+            <h2>Some history</h2>
+            <p>Long before digital processors existed, humans needed mechanical ways to record and input text efficiently. The earliest input devices relied purely on physical linkages and mechanical force.
+            </p>
+            <figure>
+                <img src="../../images/io_devices/HistoryP2.jpg" alt="typerwriter" height="500">
+                <figcaption>This is how a typewriter looks.</figcaption>
+            </figure>
+            <p><b>The Sholes and Glidden Typewriter (1868)</b><br>
+                The <b>QWERTY</b> Layout: Invented by Christopher Latham Sholes <br>
+                The <b>QWERTY</b> keyboard layout was originally designed to prevent mechanical typewriter arms from jamming by separating commonly used letter pairs.<br>
+                <b>Legacy:</b> Despite electronic evolution, this exact mechanical key arrangement remains the universal standard for text input today.    </p>
+            <div class="box note good">
+                <strong>Interesting fact about typewriters</strong>
+                <p>The longest word you can type using only the top row of a typewriter is "TYPEWRITER" itself!<br>
+Back in the 1870's, when Christopher Latham Sholes and his team were designing the QWERTY keyboard layout, they deliberately placed all the letters required to spell typewriter on the very top row. This allowed early salesmen and demonstrators to type the machine's name blindingly fast with just one swift roll of their fingers to impress potential buyers.
+                </p>
+            </div>
+        </section>
+        <section>
+            <h2>Punched Cards and Early Computing Inputs (1890s - 1950s)</h2>
+            <p>Origins: Herman Hollerith developed a system using punched cardboard cards to process data for the 1890 US Census.
+            </p>
+            <figure>
+                <img src="../../images/io_devices/HistoryP4.png" alt="punch cards" height="700" >
+                <figcaption>This is how punched cards are used. </figcaption>
+            </figure>
+            <p><b>Herman Hollerith’s Tabulating Machine: </b><br>
+                Developed for the 1890 US Census, it used cards with punched holes to represent data mechanically or electrically.
+            <div class="box note good">
+                <strong>Transition to Keypunches: </strong>
+                <p>Operators used specialized typewriter-like keypunch machines 
+                    to encode data onto paper cards or continuous paper tapes, feeding them into early mainframe computers like the IBM 701.
+            </div>
+        </section>
+
+        <section>
+            <h2>Sources</h2>
+            <ol>
+                <li id="source-1">Article by ethw on Christopher Latham Sholes.
+                    <a href="https://ethw.org/Christopher_Latham_Sholes">link to the article</a>
+                </li>
+                <li id="source-2">Article by IBM on Punched cards.
+                    <a href="https://www.ibm.com/history/punched-card">link to the article</a>
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>
