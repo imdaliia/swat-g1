@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pixels that produce their own light, from a personal monitor to a large public display.">
+    <meta name="author" content="Yifei Wang">
+    <title>Modern Emissive Displays: OLED and Direct-view LED - HCI</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/io_devices/visual-outputs.css">
+</head>
+
+<body class="topic-io-devices visual-outputs">
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../index.html">HCI</a>
+        <a href="../index.html">Home</a>
+        <a href="../demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details open>
+                            <summary>Input/output devices</summary>
+                            <ul>
+                                <li><a href="visual-output-crt.html">CRT displays</a></li>
+                                <li><a href="visual-output-lcd-plasma.html">LCD and plasma</a></li>
+                                <li><a href="visual-output-oled-led.html" aria-current="page">OLED and LED</a></li>
+                                <li><a href="visual-output-projection.html">Projection</a></li>
+                                <li><a href="visual-output-electronic-paper.html">Electronic paper</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a href="../index.html#topics">Designing interfaces</a></li>
+                    <li><a href="../index.html#topics">Web accessibility</a></li>
+                    <li><a href="../index.html#topics">Design failures</a></li>
+                    <li><a href="../index.html#topics">Future interfaces</a></li>
+                </ul>
+            </div>
+        </details>
+        <a href="visual-output-lcd-plasma.html" rel="prev">← Previous</a>
+        <a href="visual-output-projection.html" rel="next">Next →</a>
+    </nav>
+
+    <header>
+        <h1>Modern Emissive Displays: OLED and Direct-view LED</h1>
+        <p class="lead">Pixels that produce their own light, from a personal monitor to a large public display.</p>
+        <p><span class="pill">Input/output devices</span> <span class="pill">By Yifei Wang</span></p>
+    </header>
+
+    <main id="article" class="sheet" tabindex="-1">
+        <section id="part-1">
+            <h2>OLED: organic light-emitting materials</h2>
+            <p>In 1987, Ching W. Tang and Steven A. VanSlyke reported an efficient organic electroluminescent diode, an important step toward modern OLED devices. OLED panels use organic materials that emit light when electrically driven. They need no separate backlight. Pixels can switch off in dark areas, giving deep blacks and high contrast. OLED technology now appears in phones, televisions and computer displays.</p>
+            <figure class="vo-figure">
+                <img src="../../images/io_devices/visual-outputs/oled-monitor.jpg" alt="An EIZO FORIS NOVA OLED monitor viewed at an angle, showing its thin display and stand." width="590" height="473" loading="lazy">
+                <figcaption>OLED monitor: EIZO FORIS NOVA. <span>Image: <a href="https://www.eizo.com/library/basics/oled/">EIZO</a>.</span></figcaption>
+            </figure>
+        </section>
+
+        <section id="part-2">
+            <h2>Benefits and trade-offs</h2>
+            <p>Removing the backlight enables thin designs, and some implementations use flexible substrates. Fast pixel response helps moving images. However, prolonged static content can contribute to permanent image retention, or burn-in. Brightness, lifetime and power use depend on the particular panel and displayed content, so OLED does not improve every characteristic equally.</p>
+        </section>
+
+        <section id="part-3">
+            <h2>Direct-view LED and display quality</h2>
+            <p>Direct-view LED uses LEDs as visible picture elements rather than as a backlight behind LCD. Modular systems can form large displays for venues and signage. Pixel pitch, the spacing between pixels, affects suitable viewing distance. MicroLED extends the use of very small inorganic emitters. Resolution, pixel density, refresh rate and HDR describe other aspects of image quality. Apple's Retina naming is a product example, not a separate image-forming technology alongside OLED.</p>
+            <figure class="vo-figure">
+                <img src="../../images/io_devices/visual-outputs/direct-view-led.jpg" alt="A large direct-view LED advertising display installed in a public shopping area." width="900" height="600" loading="lazy">
+                <figcaption>Direct-view LED used for a large public display. <span>Image: <a href="https://solutions.lg.com/us/what-is-direct-view-led">LG</a>.</span></figcaption>
+            </figure>
+            <section class="box table-scroll" aria-label="Comparison of LCD, OLED and direct-view LED" tabindex="0">
+                <table>
+                    <caption>LCD, OLED and direct-view LED compared</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Display</th>
+                            <th scope="col">How it forms the picture</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">LCD with LED backlight</th>
+                            <td>Liquid crystals control light from a separate LED backlight.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">OLED</th>
+                            <td>Organic light-emitting materials produce light in the pixels.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Direct-view LED</th>
+                            <td>LEDs form the visible picture elements themselves.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+        <details class="vo-sources">
+            <summary>Sources and image credits</summary>
+            <ul>
+                <li><a href="https://www.hp.com/us-en/tech-takes/monitors/glossary/panel-types.html">HP: LCD, OLED, Mini-LED and panel types</a></li>
+                <li><a href="https://www.eizo.com/library/basics/oled/">EIZO: LCD and OLED operation and examples</a></li>
+                <li><a href="https://doi.org/10.1063/1.98799">Tang and VanSlyke (1987): Organic electroluminescent diodes</a></li>
+                <li><a href="https://solutions.lg.com/us/what-is-direct-view-led">LG: direct-view LED displays and pixel pitch</a></li>
+                <li><a href="https://support.apple.com/en-au/109039">Apple: Super Retina uses OLED; image retention</a></li>
+            </ul>
+        </details>
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>
