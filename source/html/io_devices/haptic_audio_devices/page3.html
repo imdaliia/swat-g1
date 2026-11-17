@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="How voice input went from recording sound to understanding speech.">
-    <meta name="author" content="Francesco">
+    <meta name="author" content="Francesco Corti">
     <title>HCI - Speech Recognition &amp; Voice User Interfaces (VUI)</title>
     <link rel="stylesheet" href="../../../css/style.css">
 </head>
@@ -25,7 +25,7 @@
                         <details open>
                             <summary>Input/output devices</summary>
                             <ul>
-                                <li><a href="../index.html" tabindex="0">I/O Devices</a></li>
+                                <li><a href="../indexiodevices.html" tabindex="0">I/O Devices</a></li>
                                 <li><a href="page1.html" tabindex="0">Introduction to Audio &amp; Haptic Interfaces</a></li>
                                 <li><a href="page2.html" tabindex="0">The Evolution of Audio Devices</a></li>
                                 <li><a href="page3.html" aria-current="page" tabindex="0">Speech Recognition &amp; Voice User Interfaces</a></li>
@@ -76,15 +76,69 @@
     <main id="article" class="sheet">
         <section>
             <h2>A short timeline</h2>
-            <ul>
-                <li><strong>1952, Audrey:</strong> Researchers at Bell Labs built Audrey, which recognised the digits 0 to 9 spoken by a single speaker<sup><a href="#source-1">[1]</a></sup>.</li>
-                <li><strong>1962, IBM Shoebox:</strong> IBM’s system understood 16 English words.</li>
-                <li><strong>1971–1976, DARPA:</strong> The US defence agency funded a five-year programme aiming for a 1,000-word vocabulary. The HARPY system from Carnegie Mellon met the goal in 1976.</li>
-                <li><strong>1974, DRAGON and Hidden Markov Models:</strong> James and Janet Baker’s DRAGON system used a statistical method, the Hidden Markov Model (HMM), instead of hand-written rules. Probability decides which word was most likely said.</li>
-                <li><strong>1980s, statistics take over:</strong> HMMs became the standard approach, and vocabularies grew from a few hundred words to thousands. In 1984 the Apricot became the first personal computer with built-in speech recognition.</li>
-                <li><strong>1992, telephone call routing:</strong> AT&amp;T deployed an automated service that routed phone calls without a human operator.</li>
-                <li><strong>2010s, deep learning:</strong> Deep neural networks replaced HMMs. Systems became speaker-independent, so users no longer had to train them to their voice<sup><a href="#source-2">[2]</a></sup>. This is the technology behind voice assistants such as Siri and Alexa.</li>
-            </ul>
+            <div class="box table-scroll" tabindex="0" role="region" aria-labelledby="speech-timeline-caption">
+                <table>
+                    <caption id="speech-timeline-caption">Milestones in speech recognition</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Period</th>
+                            <th scope="col">Milestone</th>
+                            <th scope="col">What happened</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1952</th>
+                            <td>Audrey</td>
+                            <td>Researchers at Bell Labs built Audrey, which recognised the digits 0 to 9 spoken by a single speaker<sup><a href="#source-1">[1]</a></sup>.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1962</th>
+                            <td>IBM Shoebox</td>
+                            <td>IBM’s system understood 16 English words.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1971–1976</th>
+                            <td>DARPA</td>
+                            <td>The US defence agency funded a five-year programme aiming for a 1,000-word vocabulary. The HARPY system from Carnegie Mellon met the goal in 1976.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1974</th>
+                            <td>DRAGON and Hidden Markov Models</td>
+                            <td>James and Janet Baker’s DRAGON system used a statistical method, the Hidden Markov Model (HMM), instead of hand-written rules. Probability decides which word was most likely said.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1980s</th>
+                            <td>Statistics take over</td>
+                            <td>HMMs became the standard approach, and vocabularies grew from a few hundred words to thousands. In 1984 the Apricot became the first personal computer with built-in speech recognition.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1992</th>
+                            <td>Telephone call routing</td>
+                            <td>AT&amp;T deployed an automated service that routed phone calls without a human operator.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2010s</th>
+                            <td>Deep learning</td>
+                            <td>Deep neural networks replaced HMMs. Systems became speaker-independent, so users no longer had to train them to their voice<sup><a href="#source-2">[2]</a></sup>. This is the technology behind voice assistants such as Siri and Alexa.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="grid" style="margin: 1.5rem 0;">
+                <figure>
+                    <img src="../../../images/io_devices/haptic_audio_devices/early-speech-recognition.webp" alt="Black-and-white photo of a man speaking into a microphone connected to a large machine" loading="lazy">
+                    <figcaption>An early speech-recognition system</figcaption>
+                </figure>
+                <figure>
+                    <img src="../../../images/io_devices/haptic_audio_devices/hidden-markov-model.webp" alt="Diagram of a Hidden Markov Model with rainy, cloudy and sunny states, transition probabilities and happy or sad outputs" loading="lazy">
+                    <figcaption>A Hidden Markov Model</figcaption>
+                </figure>
+                <figure>
+                    <img src="../../../images/io_devices/haptic_audio_devices/amazon-alexa-devices.webp" alt="Amazon Echo smart speakers displayed in front of an Amazon Alexa sign" loading="lazy">
+                    <figcaption>Amazon Alexa devices</figcaption>
+                </figure>
+            </div>
         </section>
 
         <section>
