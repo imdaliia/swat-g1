@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alessandro Campanari">
+    <title>Navigation Design</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/design_interfaces/design-interfaces-home.css">
+</head>
+
+<body class="topic-design-interfaces">
+
+    <a class="skip" href="#article">Skip to content</a>
+
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../../../index.html#topics" tabindex="0">Special topic</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul>
+                                <li>
+                                    <a href="../U-T%20and%20system%20requirements/user-task-system-requirements.html" tabindex="0">
+                                        User, Task and System Requirements
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="information-architecture-navigation.html" tabindex="0">
+                                        Information Architecture and Navigation
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Interaction%20and%20workflow%20design/interaction-workflow-design.html" tabindex="0">
+                                        Interaction and Workflow Design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Usability%20and%20UX%20principles/usability-ux-principles.html" tabindex="0">
+                                        Usability and UX Principles
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Prototyping/prototyping-usability-evaluation.html" tabindex="0">
+                                        Prototyping and Usability Evaluation
+                                    </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic1</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic2</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic2</a></li>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic3</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+
+        <a href="information-architecture-navigation.html" rel="prev">← previous</a>
+        <a href="design-process.html" rel="next">next →</a>
+    </nav>
+
+    <header>
+        <h1>Navigation Design</h1>
+        <p class="lead">
+            Where am I, where can I go, and how do I get back? Menus, breadcrumbs and the small details that keep users from getting lost.
+        </p>
+        <p>
+            <span class="pill">Designing interfaces</span>
+        </p>
+    </header>
+
+    <main id="article" class="sheet">
+
+<section>
+<p>
+Navigation is the part of the architecture users actually see and click on. At any moment it should answer three
+questions: <b>Where am I? Where can I go? How do I get back?</b> If it doesn't, people start pressing the back
+button a lot.
+</p>
+</section>
+
+<section>
+<h2 id="types">3.1 Types of navigation</h2>
+<p>A system usually mixes several types of navigation, each with its own job:</p>
+<table>
+  <caption>Table 1 - Main types of navigation</caption>
+  <tr><th>Type</th><th>What it's for</th><th>Example</th></tr>
+  <tr><td>Global</td><td>Reaching the main sections from anywhere</td><td>Top menu (Courses, My enrolments, Timetable)</td></tr>
+  <tr><td>Local</td><td>Moving inside the current section</td><td>Sidebar with the subject areas of a semester</td></tr>
+  <tr><td>Contextual</td><td>Linking related content</td><td>Prerequisites written as links</td></tr>
+  <tr><td>Breadcrumbs</td><td>Showing where you are</td><td>Home > Courses > Autumn 2026 > Informatics</td></tr>
+  <tr><td>Supplemental</td><td>Other ways to reach content</td><td>Sitemap, A-Z index, search box</td></tr>
+</table>
+</section>
+
+<section>
+<h2 id="patterns">3.2 Common patterns</h2>
+<p>
+The most common patterns are the <b>top bar</b> for main sections, the <b>sidebar</b> for sub-sections, the
+<b>mega menu</b> and, on small screens, the <b>hamburger menu</b>. Hiding the menu saves space, but people tend
+to forget options they can't see.
+</p>
+<p>
+Small <b>wayfinding cues</b> help a lot: highlighting the current menu item, page titles that match the clicked
+link, and a logo that always leads home. Above all, the menu must be <b>consistent</b>: same place, same items,
+same order on every page.
+</p>
+</section>
+
+<section>
+<h2 id="recover">3.3 Getting back from the wrong path</h2>
+<p>
+Users <i>will</i> click the wrong link sometimes. What matters is that fixing it is cheap: the global menu is always
+there, breadcrumbs take you up one level in one click, and the search box is on every page.
+</p>
+</section>
+
+        <section>
+            <h2>Sources</h2>
+            <ul>
+                <li><a href="https://www.oreilly.com/library/view/information-architecture-4th/9781491913529/">Rosenfeld, Morville, Arango - Information Architecture for the Web and Beyond</a></li>
+                <li><a href="https://sensible.com/dont-make-me-think/">Krug - Don't Make Me Think, Revisited</a></li>
+                <li><a href="https://www.nngroup.com/articles/ten-usability-heuristics/">Nielsen - 10 Usability Heuristics for User Interface Design</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+
+</body>
+</html>

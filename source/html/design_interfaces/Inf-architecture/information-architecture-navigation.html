@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alessandro Campanari">
+    <title>Information Architecture and Navigation</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/design_interfaces/design-interfaces-home.css">
+</head>
+
+<body class="topic-design-interfaces">
+
+    <a class="skip" href="#article">Skip to content</a>
+
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../../../index.html#topics" tabindex="0">Special topic</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul>
+                                <li>
+                                    <a href="../U-T%20and%20system%20requirements/user-task-system-requirements.html" tabindex="0">
+                                        User, Task and System Requirements
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="information-architecture-navigation.html" tabindex="0">
+                                        Information Architecture and Navigation
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Interaction%20and%20workflow%20design/interaction-workflow-design.html" tabindex="0">
+                                        Interaction and Workflow Design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Usability%20and%20UX%20principles/usability-ux-principles.html" tabindex="0">
+                                        Usability and UX Principles
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Prototyping/prototyping-usability-evaluation.html" tabindex="0">
+                                        Prototyping and Usability Evaluation
+                                    </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic1</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic2</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic2</a></li>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic3</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+
+        <a href="../Design-interfaces-home.html" rel="prev">← previous</a>
+        <a href="navigation.html" rel="next">next →</a>
+    </nav>
+
+    <header>
+        <h1>Information Architecture and Navigation</h1>
+        <p class="lead">
+            How do you organize the content of a system so that people find what they need, know where they are, and can get back when they click the wrong thing?
+        </p>
+        <p>
+            <span class="pill">Designing interfaces</span>
+        </p>
+    </header>
+
+    <main id="article" class="sheet">
+
+        <section>
+            <h2>1. What is Information Architecture?</h2>
+            <p>
+                Information architecture (IA) is <b>the structural design of shared information environments</b>:
+                deciding how to organize and name content, so users can find things and understand where they are.
+                The idea was made popular by Rosenfeld and Morville in
+                <cite>Information Architecture for the World Wide Web</cite>, the "polar bear book".
+            </p>
+            <p>
+                Think of a building: before painting the walls, the architect decides where the <b>rooms</b> go
+                (pages), how the <b>corridors</b> connect them (links and menus) and where to put the <b>signs</b>
+                (labels). If this part is done badly, a nice graphic design doesn't save you: users still get lost.
+            </p>
+            <p>
+                IA always balances three things: the <b>users</b> (what they need and how they think), the
+                <b>content</b> (how much there is and what type) and the <b>context</b> (the goals of the
+                organization and the technology). It only makes sense once you know what users need to do. In our
+                example a student has to find a course, check the prerequisites and enrol, and the structure has to
+                make each of these steps easy to reach.
+            </p>
+        </section>
+
+        <section>
+            <h2>2. The Main Components</h2>
+            <p>Rosenfeld and Morville split every information architecture into four systems:</p>
+            <ul>
+                <li><b>Organization</b>: how content is grouped, for example alphabetically, by topic or by task.</li>
+                <li><b>Labeling</b>: how things are called. "Contact us" is better than "Customer Relationship Interface".</li>
+                <li><b>Navigation</b>: how people move around (see the <a href="navigation.html">next page</a>).</li>
+                <li><b>Search</b>: search box, filters and how results are shown.</li>
+            </ul>
+            <p>
+                Most real systems use more than one way of organizing at the same time. An alphabetical list of
+                courses is perfect if you already know the name, but a first-year student who only knows
+                "I need something about programming" is better served by a list grouped by subject.
+            </p>
+            <p>
+                The result is usually drawn as a <b>sitemap</b>. Here you choose between <i>breadth</i> and
+                <i>depth</i>: many options per level and few clicks, or few options and many clicks. Studies show
+                that something moderately wide and shallow works better, because every extra level is one more
+                chance to take the wrong path.
+            </p>
+            <p>
+                In the end all four systems have the same goal, <b>findability</b>: users should be able to guess
+                where something is before even clicking.
+            </p>
+        </section>
+
+        <section>
+            <h2>Continue reading</h2>
+            <div class="grid topic-grid">
+                <div class="box topic-card">
+                    <h3><a href="navigation.html">3. Navigation Design →</a></h3>
+                    <p>Menus, breadcrumbs and how to get back from the wrong path.</p>
+                </div>
+                <div class="box topic-card">
+                    <h3><a href="design-process.html">4. Designing and Testing →</a></h3>
+                    <p>Card sorting, sitemaps and tree testing.</p>
+                </div>
+                <div class="box topic-card">
+                    <h3><a href="course-example.html">5. Example: Course Catalogue →</a></h3>
+                    <p>All the ideas applied to a course registration system.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Sources</h2>
+            <ul>
+                <li><a href="https://www.oreilly.com/library/view/information-architecture-4th/9781491913529/">Rosenfeld, Morville, Arango - Information Architecture for the Web and Beyond</a></li>
+                <li><a href="https://www.microsoft.com/en-us/research/publication/web-page-design-implications-memory-structure-scent-information-retrieval/">Larson, Czerwinski - Web Page Design: Implications of Memory, Structure and Scent</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+
+</body>
+</html>

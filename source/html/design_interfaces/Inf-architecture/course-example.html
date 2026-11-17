@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alessandro Campanari">
+    <title>Example: a Course Catalogue</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/design_interfaces/design-interfaces-home.css">
+</head>
+
+<body class="topic-design-interfaces">
+
+    <a class="skip" href="#article">Skip to content</a>
+
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details>
+                            <summary>Input/output devices</summary>
+                            <ul>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../../../index.html#topics" tabindex="0">Special topic</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul>
+                                <li>
+                                    <a href="../U-T%20and%20system%20requirements/user-task-system-requirements.html" tabindex="0">
+                                        User, Task and System Requirements
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="information-architecture-navigation.html" tabindex="0">
+                                        Information Architecture and Navigation
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Interaction%20and%20workflow%20design/interaction-workflow-design.html" tabindex="0">
+                                        Interaction and Workflow Design
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Usability%20and%20UX%20principles/usability-ux-principles.html" tabindex="0">
+                                        Usability and UX Principles
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Prototyping/prototyping-usability-evaluation.html" tabindex="0">
+                                        Prototyping and Usability Evaluation
+                                    </a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic1</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic2</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic1</a></li>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic2</a></li>
+                                <li><a href="../../../index.html#topics" tabindex="0">topic3</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+
+        <a href="design-process.html" rel="prev">← previous</a>
+        <a href="../Interaction%20and%20workflow%20design/interaction-workflow-design.html" rel="next">next →</a>
+    </nav>
+
+    <header>
+        <h1>Example: a Course Catalogue</h1>
+        <p class="lead">
+            Everything from the previous pages applied to a real system: searching for courses and enrolling at a university.
+        </p>
+        <p>
+            <span class="pill">Designing interfaces</span>
+        </p>
+    </header>
+
+    <main id="article" class="sheet">
+
+<section>
+<p>Here we apply everything to a university <b>course registration system</b>. The student wants to:</p>
+<ol>
+  <li>search for a course and open its page</li>
+  <li>check the prerequisites</li>
+  <li>choose a section and enrol</li>
+  <li>check that the registration went through</li>
+</ol>
+<p>
+We picked this example because it's something we all use, so it's easy to see what goes wrong. There are hundreds
+of courses, they change every semester, and the users go from first-year students who know nothing yet to older
+students who know exactly what they want.
+</p>
+</section>
+
+<section>
+<h2 id="sitemap">5.1 Organization: the sitemap</h2>
+<p>
+Courses follow a <b>hierarchy</b> (semester, subject area, course), the same way students already think about
+their studies. Any course is at most three clicks away. We kept "My enrolments" and "Timetable" at the top level,
+because students open them almost every day and shouldn't have to dig for them.
+</p>
+<ul>
+  <li><b>Home</b>
+    <ul>
+      <li><b>Courses</b>
+        <ul>
+          <li>Autumn 2026
+            <ul>
+              <li>Informatics: Software Atelier I, Programming Fundamentals</li>
+              <li>Mathematics</li>
+              <li>Economics</li>
+            </ul>
+          </li>
+          <li>Spring 2027</li>
+        </ul>
+      </li>
+      <li><b>My enrolments</b></li>
+      <li><b>Timetable</b></li>
+      <li><b>Help and contacts</b></li>
+    </ul>
+  </li>
+</ul>
+</section>
+
+<section>
+<h2>5.2 Labels</h2>
+<table>
+  <caption>Table 3 - Labels before and after</caption>
+  <tr><th>Internal label (bad)</th><th>Student label (good)</th></tr>
+  <tr><td>Didactic Offer Module</td><td>Courses</td></tr>
+  <tr><td>Registration Transactions</td><td>My enrolments</td></tr>
+  <tr><td>Prerequisite Constraints</td><td>What you need before this course</td></tr>
+</table>
+<p>
+The internal labels aren't wrong, they're just written for the people who manage the system. A student reading
+"Didactic Offer Module" has to stop and think, while "Courses" is understood instantly.
+</p>
+</section>
+
+<section>
+<h2>5.3 Navigation, search and filters</h2>
+<p>
+A <b>global</b> top bar is the same on every page, a <b>local</b> sidebar lists the subject areas, prerequisites
+are <b>contextual</b> links, and the <b>breadcrumb</b> shows Home > Courses > Autumn 2026 > Informatics.
+</p>
+<p>
+Students who already know the course can use the search box and narrow results with <b>filters</b> (semester,
+area, language, credits). Each result shows the places still available. The course page follows the
+steps of the task: description, prerequisites, sections, and only at the end the "Enrol" button.
+</p>
+<p>
+Putting "Enrol" at the very top would look faster, but it would push students to enrol before checking if they can
+actually take the course. Filters are also just another way into the same hierarchy, so a student never ends up on a
+page they couldn't reach from the menu.
+</p>
+</section>
+
+<section>
+<h2>5.4 How we would know it works</h2>
+<ul>
+  <li>at least 8 students out of 10 find a course in 3 clicks or less;</li>
+  <li>they find the prerequisites without asking anyone;</li>
+  <li>after a wrong click they get back with the breadcrumb or the menu.</li>
+</ul>
+<p>
+If one of these fails, we don't blame the students: we go back to the labels or the structure, fix them and test again.
+</p>
+<p><small>Accessibility is a requirement here too; the details are covered by the Web Accessibility group.</small></p>
+</section>
+
+<section>
+            <h2>Sources</h2>
+            <ul>
+                <li><a href="https://www.oreilly.com/library/view/information-architecture-4th/9781491913529/">Rosenfeld, Morville, Arango - Information Architecture for the Web and Beyond</a></li>
+                <li><a href="https://sensible.com/dont-make-me-think/">Krug - Don't Make Me Think, Revisited</a></li>
+                <li><a href="https://www.nngroup.com/articles/ten-usability-heuristics/">Nielsen - 10 Usability Heuristics for User Interface Design</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+
+</body>
+</html>
