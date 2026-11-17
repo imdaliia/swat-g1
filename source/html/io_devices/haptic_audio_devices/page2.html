@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="From the PC speaker to sound cards, 3D audio and microphone arrays.">
-    <meta name="author" content="Francesco">
+    <meta name="author" content="Francesco Corti">
     <title>HCI - The Evolution of Audio Devices (Input &amp; Output)</title>
     <link rel="stylesheet" href="../../../css/style.css">
 </head>
@@ -69,21 +69,57 @@
     <header>
         <h1>The Evolution of Audio Devices (Input &amp; Output)</h1>
         <p class="lead">Computer audio went from a single speaker that could only beep to multi-channel sound that places you inside a scene. Microphones followed a similar path, from plain voice capture to smart arrays that pick out one speaker in a noisy room.</p>
-        <p><span class="pill">By Francesco</span> <span class="pill">2 min read</span></p>
+        <p><span class="pill">By Francesco Corti</span> <span class="pill">2 min read</span></p>
     </header>
 
     <!-- The actual article -->
     <main id="article" class="sheet">
         <section>
             <h2>Audio output</h2>
-            <ul>
-                <li><strong>1981, the PC speaker:</strong> For most early IBM PC users the built-in speaker was the only way to make sound. It was limited to simple square waves, and the result was nicknamed the “beeper”<sup><a href="#source-1">[1]</a></sup>.</li>
-                <li><strong>1982, Commodore 64:</strong> It shipped with the SID chip, a three-voice synthesiser with filters and envelopes.</li>
-                <li><strong>1987, AdLib:</strong> The card used a Yamaha FM synthesis chip (the OPL2) with nine programmable voices. Many games adopted it as their music standard.</li>
-                <li><strong>1989, Sound Blaster:</strong> It was AdLib-compatible and added an 8-bit DAC, a converter that turns digital samples into an analog signal. Games could now play recorded sound effects.</li>
-                <li><strong>1990s, wavetable and 16-bit sound:</strong> Wavetable synthesis plays back recorded instrument samples instead of generating tones. Cards like the Gravis Ultrasound (1992) used it, and later Sound Blasters offered 16-bit stereo audio.</li>
-                <li><strong>2001, 3D audio:</strong> Standards such as Environmental Audio Extensions added hardware-accelerated 3D positional sound, the basis of today’s spatial audio in games, cinema and VR.</li>
-            </ul>
+            <div class="box table-scroll" tabindex="0" role="region" aria-labelledby="audio-output-caption">
+                <table>
+                    <caption id="audio-output-caption">Milestones in computer audio output</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Period</th>
+                            <th scope="col">Milestone</th>
+                            <th scope="col">What happened</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1981</th>
+                            <td>The PC speaker</td>
+                            <td>For most early IBM PC users the built-in speaker was the only way to make sound. It was limited to simple square waves, and the result was nicknamed the “beeper”<sup><a href="#source-1">[1]</a></sup>.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1982</th>
+                            <td>Commodore 64</td>
+                            <td>It shipped with the SID chip, a three-voice synthesiser with filters and envelopes.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1987</th>
+                            <td>AdLib</td>
+                            <td>The card used a Yamaha FM synthesis chip (the OPL2) with nine programmable voices. Many games adopted it as their music standard.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1989</th>
+                            <td>Sound Blaster</td>
+                            <td>It was AdLib-compatible and added an 8-bit DAC, a converter that turns digital samples into an analog signal. Games could now play recorded sound effects.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1990s</th>
+                            <td>Wavetable and 16-bit sound</td>
+                            <td>Wavetable synthesis plays back recorded instrument samples instead of generating tones. Cards like the Gravis Ultrasound (1992) used it, and later Sound Blasters offered 16-bit stereo audio.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2001</th>
+                            <td>3D audio</td>
+                            <td>Standards such as Environmental Audio Extensions added hardware-accelerated 3D positional sound, the basis of today’s spatial audio in games, cinema and VR.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <div class="grid" style="margin: 1.5rem 0;">
                 <figure>
                     <img src="../../../images/io_devices/haptic_audio_devices/pc-speaker.webp" alt="A small internal PC speaker with a connector cable and mounting screws" loading="lazy">
