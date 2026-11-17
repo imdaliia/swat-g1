@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="From the PC speaker to sound cards, 3D audio and microphone arrays.">
+    <meta name="author" content="Francesco">
+    <title>HCI - The Evolution of Audio Devices (Input &amp; Output)</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+
+<body class="topic-io-devices">
+    <!-- Top bar -->
+    <a class="skip" href="#article">Skip to content</a>
+    <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="../../index.html">HCI</a>
+        <a href="../../index.html">Home</a>
+        <a href="../../demo.html">Demo</a>
+        <details class="nav-topics">
+            <summary>Topics</summary>
+            <div class="nav-topics-panel liquid-glass">
+                <ul class="nav-categories">
+                    <li>
+                        <details open>
+                            <summary>Input/output devices</summary>
+                            <ul>
+                                <li><a href="../index.html" tabindex="0">I/O Devices</a></li>
+                                <li><a href="page1.html" tabindex="0">Introduction to Audio &amp; Haptic Interfaces</a></li>
+                                <li><a href="page2.html" aria-current="page" tabindex="0">The Evolution of Audio Devices</a></li>
+                                <li><a href="page3.html" tabindex="0">Speech Recognition &amp; Voice User Interfaces</a></li>
+                                <li><a href="page4.html" tabindex="0">The History of Haptic Feedback</a></li>
+                                <li><a href="page5.html" tabindex="0">Advanced Haptics &amp; The Future of Touch</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Designing interfaces</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Web accessibility</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Design failures</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>Future interfaces</summary>
+                            <ul><li><a href="../../index.html#topics" tabindex="0">topic1</a></li></ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </details>
+        <a href="page1.html" rel="prev">← previous</a>
+        <a href="page3.html" rel="next">next →</a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>The Evolution of Audio Devices (Input &amp; Output)</h1>
+        <p class="lead">Computer audio went from a single speaker that could only beep to multi-channel sound that places you inside a scene. Microphones followed a similar path, from plain voice capture to smart arrays that pick out one speaker in a noisy room.</p>
+        <p><span class="pill">By Francesco Corti</span> <span class="pill">2 min read</span></p>
+    </header>
+
+    <!-- The actual article -->
+    <main id="article" class="sheet">
+        <section>
+            <h2>Audio output</h2>
+            <ul>
+                <li><strong>1981, the PC speaker:</strong> For most early IBM PC users the built-in speaker was the only way to make sound. It was limited to simple square waves, and the result was nicknamed the “beeper”<sup><a href="#source-1">[1]</a></sup>.</li>
+                <li><strong>1982, Commodore 64:</strong> It shipped with the SID chip, a three-voice synthesiser with filters and envelopes.</li>
+                <li><strong>1987, AdLib:</strong> The card used a Yamaha FM synthesis chip (the OPL2) with nine programmable voices. Many games adopted it as their music standard.</li>
+                <li><strong>1989, Sound Blaster:</strong> It was AdLib-compatible and added an 8-bit DAC, a converter that turns digital samples into an analog signal. Games could now play recorded sound effects.</li>
+                <li><strong>1990s, wavetable and 16-bit sound:</strong> Wavetable synthesis plays back recorded instrument samples instead of generating tones. Cards like the Gravis Ultrasound (1992) used it, and later Sound Blasters offered 16-bit stereo audio.</li>
+                <li><strong>2001, 3D audio:</strong> Standards such as Environmental Audio Extensions added hardware-accelerated 3D positional sound, the basis of today’s spatial audio in games, cinema and VR.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Audio input</h2>
+            <p>A microphone converts sound into an electrical signal, and a sound card digitises it with an analog-to-digital converter. Modern devices use several microphones together and a technique called <em>beamforming</em>: by combining the signals, the array focuses on sound coming from one direction and suppresses sounds from others. Digital signal processing (DSP) then removes echo, background noise and reverberation, so a smart speaker can hear a voice from across the room
+                <sup><a href="#source-2">[2]</a></sup>.</p>
+        </section>
+        <section>
+            <h2>Sources</h2>
+            <ol>
+                <li id="source-1"><a href="https://en.wikipedia.org/wiki/Sound_card">Wikipedia: Sound card</a></li>
+                <li id="source-2"><a href="https://www.xmos.com/documentation/XM-015450-TM/html/doc/rst/building_blocks.html">XMOS: Building blocks of an audio front-end</a></li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>
+</body>
+
+</html>
