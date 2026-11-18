@@ -1,12 +1,12 @@
 /* === fonts ==================================================================================================== */
 @font-face {
     font-family: "Atkinson";
-    src: url("../fonts/atkinson.woff2") format("woff2");
+    src: url("../../fonts/atkinson.woff2") format("woff2");
     font-weight: 200 800;
 }
 @font-face {
     font-family: "Atkinson";
-    src: url("../fonts/atkinson-italic.woff2") format("woff2");
+    src: url("../../fonts/atkinson-italic.woff2") format("woff2");
     font-weight: 200 800;
     font-style: italic;
 }
@@ -81,7 +81,7 @@ body {
     font-size: 1.0625rem;
     line-height: 1.6;
     font-family: "Atkinson", Arial, sans-serif;
-    background: var(--bg) url("../images/pattern.svg") repeat;
+    background: var(--bg) url("../../images/pattern.svg") repeat;
     background-size: 36rem;
     background-attachment: fixed;
 }
@@ -236,7 +236,7 @@ a { color: var(--accent); }
     pointer-events: none;
     border-bottom: 1px solid;
 }
-nav:not(.main-nav), .main-nav::before, body > footer, .sheet, .liquid-glass, .box, .grid > .box {
+nav:not(.main-nav), .main-nav::before, body > footer, .sheet, .liquid-glass, .box {
     background-color: rgba(var(--glass-rgb), var(--glass-opacity));
     background-image: 
         radial-gradient(ellipse at top left, var(--glass-glow), transparent 65%),
@@ -256,20 +256,6 @@ nav:not(.main-nav), .main-nav::before {
 }
 
 /* === building blocks ==================================================================================================== */
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-    margin-bottom: 16px;
-}
-.grid > * {
-    flex: 0 0 calc((100% - 32px) / 3);
-    min-width: 0;
-    margin: 0;
-}
-.grid h2, .grid h3 { margin: 10px 0 6px; font-size: 1.3rem; }
-
 .box {
     overflow-x: auto;
     margin-bottom: 16px;
@@ -284,10 +270,6 @@ nav:not(.main-nav), .main-nav::before {
 
 .note {
     border-left: 4px solid var(--accent);
-    padding: 10px 15px;
-    background-color: var(--hover);
-    border-radius: 0 var(--radius) var(--radius) 0;
-    margin-bottom: 16px;
 }
 .note > strong:first-child {
     display: block;
@@ -307,20 +289,19 @@ nav:not(.main-nav), .main-nav::before {
 
 blockquote {
     margin: 0 0 1em;
-    padding-left: 20px;
-    border-left: 3px solid var(--accent);
+    padding: 20px;
+    border-left: 4px solid var(--accent);
+    background-color: var(--hover);
+    border-radius: 0 var(--radius) var(--radius) 0;
     font-size: 1.1rem;
-    font-style: italic;
-    color: var(--muted);
+    color: var(--text);
 }
 
 /* === smaller screens ==================================================================================================== */
 @media (max-width: 900px) {
-    .grid > * { flex-basis: calc((100% - 16px) / 2); }
     h1 { font-size: 2.8rem; }
 }
 @media (max-width: 600px) {
-    .grid > * { flex-basis: 100%; }
     h1 { font-size: 2.2rem; }
     h2 { font-size: 1.6rem; }
     body > header { padding-top: 48px; }
