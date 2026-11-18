@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hello! This is the high quality demo page of the website for the Software Atelier 1 course on Human-Computer Interaction and Digital Accessibility. ">
+    <meta name="description"
+        content="Hello! This is the high quality demo page of the website for the Software Atelier 1 course on Human-Computer Interaction and Digital Accessibility. ">
     <meta name="author" content="Giulio Berti">
     <meta name="author" content="Lorenzo Felix">
-    <title>HCI - Theme Demo</title> 
+    <title>HCI - Theme Demo</title>
     <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pager.css">
 </head>
 
 <body>
@@ -159,8 +161,6 @@
                 </ul>
             </div>
         </details>
-        <a href="example-article.html" rel="prev" tabindex="0">← previous</a>
-        <a href="contributions.html" rel="next" tabindex="0">next →</a>
     </nav>
 
     <header>
@@ -196,7 +196,9 @@
                     <ul>
                         <li>Update the <code>&lt;body&gt;</code> class with the correct topic to keep colours
                             consistent.</li>
-                        <li>Update the "previous" and "next" links in the body's <code>&lt;nav&gt;</code>.</li>
+                        <li>Add the page to <code>source/scripts/page-order.txt</code> and run
+                            <code>node source/scripts/update-prev-next.cjs --write</code>: it writes the "Continue
+                            reading" cards at the end of the page.</li>
                         <li>Update the title, description, and info pills in the body's header.</li>
                         <li>Write your article inside <code>&lt;main&gt;</code>, keeping accessibility best</li>
                     </ul>
@@ -323,7 +325,8 @@
             <p>All tables automatically get styled headings, alternating row colours and highlighted rows on hover.
                 Put a wide table inside a
                 <code>box table-scroll</code> to scroll wide content sideways on small screens, using touch
-                or the arrow keys when the box has keyboard focus.</p>
+                or the arrow keys when the box has keyboard focus.
+            </p>
             <div class="box table-scroll" tabindex="0" role="region" aria-labelledby="input-table-caption">
                 <table>
                     <caption id="input-table-caption">Comparing input methods</caption>
@@ -437,7 +440,7 @@
                     <figure><img src="../images/index/square-wheel-bicycle-design-failure.jpg" alt="bicycle"
                             loading="lazy">
                     </figure>
-                    <h3><a href="sample-article.html">See the example article</a></h3>
+                    <h3><a href="example-article.html">See the example article</a></h3>
                     <p>A bicycle with square wheels: what happens when design forgets the people who use it.</p>
                 </div>
                 <div class="box topic-design-failures">
@@ -457,7 +460,8 @@
             <h2>Topic navigation</h2>
             <p>The homepage has a Topics dropdown with two levels: topics and subtopic links. Click a topic
                 row to open its subtopics. Native <code>&lt;details&gt;</code> and
-                <code>&lt;summary&gt;</code> work with a mouse, touch or keyboard, without JavaScript.</p>
+                <code>&lt;summary&gt;</code> work with a mouse, touch or keyboard, without JavaScript.
+            </p>
             <p>Try opening Topics, then Input/output devices. The example subtopic leads to the
                 article template; replace it with your own page links when reusing the menu.</p>
             <nav class="main-nav" aria-label="Topic navigation example">
@@ -479,7 +483,8 @@
                 </details>
             </nav>
             <p>Use Tab to move between links and controls, and Enter or Space to open or close a focused summary.
-                Subtopic links use <code>tabindex="0"</code> so Tab also reaches them in Safari with its default keyboard settings.
+                Subtopic links use <code>tabindex="0"</code> so Tab also reaches them in Safari with its default
+                keyboard settings.
                 Keyboard focus has a visible outline. On phones the panel spans the bar's available width; long menus
                 scroll vertically inside the viewport.</p>
             <pre><code>&lt;nav class="main-nav" aria-label="Main"&gt;
@@ -500,9 +505,10 @@
         &lt;/div&gt;
     &lt;/details&gt;
 &lt;/nav&gt;</code></pre>
-            <p>The article template also demonstrates <code>rel="prev"</code> and <code>rel="next"</code>
-                navigation links. They align to the right of the top bar; update their destinations for your articles.
-                Use <code>aria-current="page"</code> on the link to the current page, as in this demo's top bar.</p>
+            <p>Every article ends with "Continue reading" cards that link to the previous and next page of the
+                reading order. They are generated from <code>source/scripts/page-order.txt</code>, so don't write
+                them by hand. Use <code>aria-current="page"</code> on the link to the current page, as in this
+                demo's top bar.</p>
         </section>
 
         <section>
@@ -528,7 +534,8 @@
             <h3>Dark mode</h3>
             <p>The website follows your device's light or dark appearance through
                 <code>prefers-color-scheme</code>. Change your device appearance to preview both versions of this page.
-                Backgrounds, text, glass surfaces and topic and status colours adapt together; no extra class is needed.</p>
+                Backgrounds, text, glass surfaces and topic and status colours adapt together; no extra class is needed.
+            </p>
             <h3>Responsive grids</h3>
             <p>Resize the window to try the existing image and card grids. They show three columns above 900px,
                 two from 601px to 900px, and one at 600px or below. An incomplete last row stays centred.
@@ -536,11 +543,13 @@
             <h3>Reduced motion</h3>
             <p>Image zoom, the moving image sheen and the card lift on hover run only when
                 <code>prefers-reduced-motion: no-preference</code> matches. Enable reduced motion in your device's
-                accessibility settings to view the page without those effects.</p>
+                accessibility settings to view the page without those effects.
+            </p>
             <h3>Skip to content</h3>
             <p>Press Tab after loading the page to reveal its Skip to content link. Activating it jumps past the
                 navigation to the main content. Keep the link's destination matched to the main element's
-                <code>id</code> when copying the article template.</p>
+                <code>id</code> when copying the article template.
+            </p>
         </section>
 
         <section>
@@ -588,7 +597,8 @@
                         </tr>
                         <tr>
                             <td><code>table-scroll</code></td>
-                            <td>Wrapper for wide tables; add <code>tabindex="0"</code> and an accessible name for keyboard scrolling</td>
+                            <td>Wrapper for wide tables; add <code>tabindex="0"</code> and an accessible name for
+                                keyboard scrolling</td>
                         </tr>
                         <tr>
                             <td><code>note</code></td>
@@ -612,7 +622,8 @@
                         </tr>
                         <tr>
                             <td><code>main-nav</code></td>
-                            <td>Navigation with aligned touch targets, focus outlines and a separate glass background layer</td>
+                            <td>Navigation with aligned touch targets, focus outlines and a separate glass background
+                                layer</td>
                         </tr>
                         <tr>
                             <td><code>nav-topics</code></td>
@@ -630,6 +641,18 @@
                 </table>
             </div>
         </section>
+        <!-- START PAGER: generated by source/scripts/update-prev-next.cjs from page-order.txt, don't edit by hand -->
+        <nav class="pager" aria-label="Continue reading">
+            <a class="pager-prev" href="example-article.html">
+                <span class="pager-direction"><span aria-hidden="true">←</span> previous</span>
+                <span class="pager-title">Example Article</span>
+            </a>
+            <a class="pager-next" href="contributions.html">
+                <span class="pager-direction">next <span aria-hidden="true">→</span></span>
+                <span class="pager-title">Contributions</span>
+            </a>
+        </nav>
+        <!-- STOP PAGER -->
     </main>
 
 

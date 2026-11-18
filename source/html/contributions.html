@@ -10,6 +10,7 @@
     <title>HCI - Contributions</title>
     <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pager.css">
 
     <style>
         td ul { margin: 0; padding-left: 1.2em; }
@@ -40,7 +41,7 @@
                                     <details>
                                         <summary tabindex="0">History of Input Devices</summary>
                                         <ul>
-                                            <li><a href="io_devices/history/page1history.html" tabindex="0">History of Input Devices: Mechanical Beginnings &amp; Typewriters</a></li>
+                                            <li><a href="io_devices/history/page1history.html" tabindex="0">History of Input Devices: Mechanical Beginnings &amp; Typewriters</a></li>
                                             <li><a href="io_devices/history/page2history.html" tabindex="0">The Graphical Revolution and the Mouse</a></li>
                                             <li><a href="io_devices/history/page3history.html" tabindex="0">Digitizers, Scanners, and Touch Technology</a></li>
                                             <li><a href="io_devices/history/page4history.html" tabindex="0">Modern Inputs, Biometrics &amp; The Future</a></li>
@@ -166,8 +167,6 @@
                 </ul>
             </div>
         </details>
-        <a href="demo.html" rel="prev" tabindex="0">← previous</a>
-        <a href="index.html" rel="next" tabindex="0">next →</a>
     </nav>
 
     <!-- Header (page title and description) -->
@@ -218,6 +217,8 @@
                                     <li><strong>Responsive layout and accessibility:</strong> adapted grids, typography and page spacing for tablet and phone screens; implemented a keyboard-visible skip link and kept animated hover effects conditional on the user's reduced-motion preference</li>
                                     <li><strong>Fonts and image assets:</strong> bundled the regular and italic Atkinson fonts with their open-source licence, added homepage images from the shared Canva/FIGMA sketch, and added the SVG background pattern</li>
                                     <li><strong>Presentation:</strong> added and revised the midway presentation slides</li>
+                                    <li><strong>Site maintenance scripts</strong> (with Lorenzo Felix): wrote and documented the three Node.js scripts that sync the main navigation, the favicon links and the previous/next links across all pages</li>
+                                    <li><strong>Final review</strong> (with Lorenzo Felix): made the repository usable on Windows; moved documentation, images and stylesheets into the folders of the project structure and removed duplicates; fixed broken links and topic colours; replaced the top-bar Previous/Next buttons with "Continue reading" cards at the end of every page</li>
                                 </ul>
                             </td>
                         </tr>
@@ -243,10 +244,11 @@
                                         </ul>
                                     </li>
                                     <li><strong>Navigation and keyboard access:</strong> built the compact top bar and Topics dropdown with nested subtopics; rolled out consistent navigation across pages; adjusted relative paths and previous/next links; added contributions-page links, visible focus indicators and fixes that let keyboard users reach submenu links</li>
-                                    <li><strong>Favicon and site maintenance:</strong> added the transparent SVG favicon and rolled it out across the site; wrote and documented three Node.js scripts to sync the homepage’s main navigation while preserving each page’s Previous/Next buttons, and update favicon links with the correct relative paths. Added a separate updater to set the Previous/Next destinations from the site reading order</li>
+                                    <li><strong>Favicon and site maintenance:</strong> added the transparent SVG favicon and rolled it out across the site; wrote and documented, with Giulio Berti, three Node.js scripts to sync the homepage’s main navigation, update favicon links with the correct relative paths, and link every page to the previous and next one from the site reading order</li>
                                     <li><strong>Page integration:</strong> integrated the gesture-based interfaces page and its image, and updated Future Interfaces overview content and Input/output Devices index links</li>
                                     <li><strong>Review and repairs:</strong> fixed broken image paths, folder-name mismatches, source citation IDs, duplicate source entries, HTML syntax and grammar; checked Inclusive Design pages locally in Chrome and Safari and corrected heading hierarchy and text errors</li>
                                     <li><strong>Presentation:</strong> added the introductory slides and PDF, correcting names and duplicate entries</li>
+                                    <li><strong>Final review</strong> (with Giulio Berti): made the repository usable on Windows; moved documentation, images and stylesheets into the folders of the project structure and removed duplicates; fixed broken links and topic colours; replaced the top-bar Previous/Next buttons with "Continue reading" cards at the end of every page</li>
                                 </ul>
                             </td>
                         </tr>
@@ -381,7 +383,7 @@
                                     </ul>
                                 </li>
                                 <li><strong>Stylesheet:</strong> styles of the Designing interfaces overview</li>
-                                <li><strong>Documentation:</strong> <a href="design_interfaces/HMI_Topic_Guide_Design_interfaces.pdf">topic guide</a> (PDF)</li>
+                                <li><strong>Documentation:</strong> <a href="../../docs/topic_documentations/design_interfaces/HMI_Topic_Guide_Design_interfaces.pdf">topic guide</a> (PDF)</li>
                                 <li><strong>Fixes:</strong> links and navigation in the group's pages</li>
                             </ul>
                         </td>
@@ -462,7 +464,7 @@
                                         <li><a href="web_accessibility/Inclusive_design_principles/disability_types.html">Disability types</a></li>
                                     </ul>
                                 </li>
-                                <li><strong>Documentation:</strong> <a href="web_accessibility/LaTex_documetnation_2/topic_4_documentation.pdf">topic documentation</a> (LaTeX)</li>
+                                <li><strong>Documentation:</strong> <a href="../../docs/topic_documentations/web_accessibility/topic_4_documentation.pdf">topic documentation</a> (LaTeX)</li>
                             </ul>
                         </td>
                     </tr>
@@ -661,6 +663,18 @@
                 <p><a href="https://github.com/imdaliia/swat-g1/commits/master/">See every commit on master on GitHub</a></p>
             </div>
         </section>
+        <!-- START PAGER: generated by source/scripts/update-prev-next.cjs from page-order.txt, don't edit by hand -->
+        <nav class="pager" aria-label="Continue reading">
+            <a class="pager-prev" href="demo.html">
+                <span class="pager-direction"><span aria-hidden="true">←</span> previous</span>
+                <span class="pager-title">Theme Demo</span>
+            </a>
+            <a class="pager-next" href="index.html">
+                <span class="pager-direction">next <span aria-hidden="true">→</span></span>
+                <span class="pager-title">Human-Computer Interaction and Digital Accessibility</span>
+            </a>
+        </nav>
+        <!-- STOP PAGER -->
     </main>
 
     <footer>Software Atelier 1 - Human-Computer Interaction and Digital Accessibility</footer>

@@ -1,12 +1,12 @@
 /* === fonts ==================================================================================================== */
 @font-face {
     font-family: "Atkinson";
-    src: url("../fonts/atkinson.woff2") format("woff2");
+    src: url("../../fonts/atkinson.woff2") format("woff2");
     font-weight: 200 800;
 }
 @font-face {
     font-family: "Atkinson";
-    src: url("../fonts/atkinson-italic.woff2") format("woff2");
+    src: url("../../fonts/atkinson-italic.woff2") format("woff2");
     font-weight: 200 800;
     font-style: italic;
 }
@@ -81,7 +81,7 @@ body {
     font-size: 1.0625rem;
     line-height: 1.6;
     font-family: "Atkinson", Arial, sans-serif;
-    background: var(--bg) url("../images/pattern.svg") repeat;
+    background: var(--bg) url("../../images/pattern.svg") repeat;
     background-size: 36rem;
     background-attachment: fixed;
 }
@@ -285,16 +285,6 @@ nav:not(.main-nav), .main-nav::before {
     color: var(--accent);
     white-space: nowrap;
     display: inline-block;
-}
-
-blockquote {
-    margin: 0 0 1em;
-    padding: 20px;
-    border-left: 4px solid var(--accent);
-    background-color: var(--hover);
-    border-radius: 0 var(--radius) var(--radius) 0;
-    font-size: 1.1rem;
-    color: var(--text);
 }
 
 /* === smaller screens ==================================================================================================== */
