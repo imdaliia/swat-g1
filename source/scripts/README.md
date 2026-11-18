@@ -52,3 +52,10 @@ node source/scripts/update-prev-next.cjs --write
 
 The script requires only Node.js. It updates the two button destinations in each
 listed page's main navbar and checks all listed pages before writing.
+
+Each button also gets an `aria-label` naming its destination, such as
+`aria-label="Next: Keyboard Navigation"`, so screen readers announce where the
+link goes instead of "right arrow next". The name is the destination's first
+`<h1>`, or its `<title>` without the "HCI" prefix or suffix when the page has no
+`<h1>`. The visible text and arrows stay unchanged. Rerun the script after
+changing a page heading so the labels stay current.
