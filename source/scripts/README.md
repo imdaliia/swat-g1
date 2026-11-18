@@ -1,3 +1,5 @@
+Special-Homemade GitHub _Local_ Actions:
+
 # Navbar updater
 
 Edit the main navbar in [the homepage](../html/index.html), then preview propagation from the repository root:
@@ -33,3 +35,20 @@ node source/scripts/update-favicon.cjs --write
 ```
 
 The script computes the relative path to [favicon.svg](../images/favicon.svg) for each page. It replaces existing standard favicon links without duplicating them, preserves other icon types, and leaves the body untouched. Empty pages are skipped; malformed nonempty pages stop the run before any files are written. Like the navbar updater, it requires only Node.js, works from any working directory, and previews by default.
+
+# Previous/Next updater
+
+Edit [page-order.txt](page-order.txt) to set the reading sequence. List one path
+relative to `source/html` per line, using literal spaces in folder names. The
+sequence wraps from the last page back to the first. The list starts with the
+site's existing reading sequence. Pages outside the list are untouched.
+
+Preview and then apply from the repository root:
+
+```sh
+node source/scripts/update-prev-next.cjs
+node source/scripts/update-prev-next.cjs --write
+```
+
+The script requires only Node.js. It updates the two button destinations in each
+listed page's main navbar and checks all listed pages before writing.
