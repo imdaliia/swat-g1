@@ -1,3 +1,42 @@
+/*
+SUBTOPIC FUTURE INTERFACES - CSS
+This file contains the CSS specific to the future interfaces
+subtopic.
+Please don't alter it.
+Author: Edoardo Fiorini
+*/
+
 figure {
-    width: 100%;
+  float: right;
+  width: 100%;
+  text-indent: 0;
+  border: thin silver solid;
+  margin: 0.5em;
+  padding: 0.3em;
+}
+
+figcaption {
+  text-align: left;
+  font-style: italic;
+  font-size: smaller;
+  color:#e8e8e8;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* Mobile layout adjustment, up to screen size of larger mobiles and tablets */
+@media (max-width: 768px) {
+
+  figure {
+    float: right;
+    width: 90%;
+    margin: 0.3em;
+    padding: 0.1em;
+  }
+  figcaption {
+  text-align: center;
+  font-size: x-small;
+}
 }
