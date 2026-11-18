@@ -252,7 +252,9 @@
                     <ul>
                         <li>Update the <code>&lt;body&gt;</code> class with the correct topic to keep colours
                             consistent.</li>
-                        <li>Update the "previous" and "next" links in the body's <code>&lt;nav&gt;</code>.</li>
+                        <li>Add the page to <code>source/scripts/page-order.txt</code> and run
+                            <code>node source/scripts/update-prev-next.cjs --write</code>: it writes the "Continue
+                            reading" cards at the end of the page.</li>
                         <li>Update the title, description, and info pills in the body's header.</li>
                         <li>Write your article inside <code>&lt;main&gt;</code>, keeping accessibility best</li>
                     </ul>
@@ -559,9 +561,10 @@
         &lt;/div&gt;
     &lt;/details&gt;
 &lt;/nav&gt;</code></pre>
-            <p>The article template also demonstrates <code>rel="prev"</code> and <code>rel="next"</code>
-                navigation links. They align to the right of the top bar; update their destinations for your articles.
-                Use <code>aria-current="page"</code> on the link to the current page, as in this demo's top bar.</p>
+            <p>Every article ends with "Continue reading" cards that link to the previous and next page of the
+                reading order. They are generated from <code>source/scripts/page-order.txt</code>, so don't write
+                them by hand. Use <code>aria-current="page"</code> on the link to the current page, as in this
+                demo's top bar.</p>
         </section>
 
         <section>
