@@ -53,9 +53,19 @@ node source/scripts/update-prev-next.cjs --write
 The script requires only Node.js. It updates the two button destinations in each
 listed page's main navbar and checks all listed pages before writing.
 
-Each button also gets an `aria-label` naming its destination, such as
-`aria-label="Next: Keyboard Navigation"`, so screen readers announce where the
-link goes instead of "right arrow next". The name is the destination's first
-`<h1>`, or its `<title>` without the "HCI" prefix or suffix when the page has no
-`<h1>`. The visible text and arrows stay unchanged. Rerun the script after
-changing a page heading so the labels stay current.
+Each button also gets an `aria-label` and a `title` naming its destination, such
+as `"Next: Keyboard Navigation"`. Screen readers announce where the link goes
+instead of "right arrow next", and mouse users see it as a tooltip. The name is
+the destination's first `<h1>`, or its `<title>` without the "HCI" prefix or
+suffix when the page has no `<h1>`. The visible text and arrows stay unchanged.
+
+At the end of every listed page, right before `</main>`, the script also writes
+two "Continue reading" cards with the full title of the previous and next page.
+They sit between `<!-- START PAGER -->` and `<!-- STOP PAGER -->`: don't edit
+them by hand, the script rewrites that block on every run. Their look lives in
+[pager.css](../css/pager.css), which the script links in each page's `<head>`
+right after the last stylesheet. `style.css` is not touched. On phones the
+cards stack, one per row.
+
+Rerun the script after changing a page heading so the labels and cards stay
+current.
