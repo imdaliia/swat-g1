@@ -7,10 +7,6 @@ const write = args[0] === '--write';
 const htmlRoot = path.resolve(__dirname, '../html');
 const pagerCssFile = path.resolve(__dirname, '../css/pager.css');
 const mainNav = /<nav\b[^>]*\saria-label=["']Main["'][^>]*>[\s\S]*?<\/nav>/gi;
-const anchor = /<a\b[^>]*>/gi;
-const sequenceRel = /\srel=(["'])(prev|next)\1/i;
-const href = /(\shref=)(["'])[^"']*\2/i;
-const labels = { prev: 'Previous', next: 'Next' };
 const pagerBlock = /^[ \t]*<!-- START PAGER[\s\S]*?<!-- STOP PAGER -->[ \t]*(?:\r?\n)?/m;
 const pagerLink = /<link\b[^>]*\shref=(["'])[^"']*pager\.css\1[^>]*>/i;
 const stylesheet = /<link\b[^>]*\srel=(["'])stylesheet\1[^>]*>/gi;
@@ -18,13 +14,6 @@ const stylesheet = /<link\b[^>]*\srel=(["'])stylesheet\1[^>]*>/gi;
 // Relative, URL-encoded link from one file to another (folders may contain spaces).
 function link(from, to) {
     return path.relative(path.dirname(from), to).split(path.sep).map(encodeURIComponent).join('/');
-}
-
-// Sets an attribute on an opening tag, replacing it if it is already there.
-function setAttribute(tag, name, value) {
-    const existing = new RegExp(`\\s${name}=(["'])[^"']*\\1`, 'i');
-    const attribute = ` ${name}="${value}"`;
-    return existing.test(tag) ? tag.replace(existing, () => attribute) : tag.replace(/\s*\/?>$/, end => attribute + end);
 }
 
 // The destination's name: its first <h1> outside the navbar, or else its <title>
@@ -37,29 +26,6 @@ function pageName(html, file) {
     const name = heading || title;
     if (!name) throw new Error(`Expected an <h1> or a <title> in ${file}`);
     return name.replace(/"/g, '&quot;');
-}
-
-// Top bar: destination, aria-label (screen readers) and title (tooltip) of the two buttons.
-function rewriteButtons(html, file, destinations, names) {
-    const navs = [...html.matchAll(mainNav)];
-    if (navs.length !== 1) throw new Error(`Expected one main navbar in ${file}`);
-
-    const nav = navs[0];
-    const seen = new Set();
-    const updated = nav[0].replace(anchor, tag => {
-        const rel = tag.match(sequenceRel)?.[2].toLowerCase();
-        if (!rel) return tag;
-        if (seen.has(rel) || !href.test(tag)) {
-            throw new Error(`Expected one ${rel} button with an href in ${file}`);
-        }
-        seen.add(rel);
-        const url = link(file, destinations[rel]);
-        const label = `${labels[rel]}: ${names.get(destinations[rel])}`;
-        const linked = tag.replace(href, (_, attribute, quote) => `${attribute}${quote}${url}${quote}`);
-        return setAttribute(setAttribute(linked, 'aria-label', label), 'title', label);
-    });
-    if (seen.size !== 2) throw new Error(`Expected Previous and Next buttons in ${file}`);
-    return html.slice(0, nav.index) + updated + html.slice(nav.index + nav[0].length);
 }
 
 // End of the page: the "Continue reading" cards, right before </main>.
@@ -142,9 +108,7 @@ try {
             prev: files[(index + files.length - 1) % files.length],
             next: files[(index + 1) % files.length],
         };
-        let updated = rewriteButtons(html, file, destinations, names);
-        updated = rewritePager(updated, file, destinations, names, eol);
-        updated = rewriteStylesheet(updated, file, eol);
+        const updated = rewriteStylesheet(rewritePager(html, file, destinations, names, eol), file, eol);
         if (updated !== html) changes.push({ file, updated });
     }
     for (const { file, updated } of changes) {

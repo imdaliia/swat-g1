@@ -47,7 +47,8 @@ function navbarFor(template, existing, file) {
     const localSequence = oldLinks.filter(match => sequenceLink.test(match[0]));
     const templateSequence = [...template.matchAll(anchor)].filter(match => sequenceLink.test(match[0]));
     // Previous/Next describe the article sequence, not the shared menu.
-    if (localSequence.length !== templateSequence.length) {
+    // Without them in the homepage, they are removed from every page: the template has no slot for them.
+    if (templateSequence.length && localSequence.length !== templateSequence.length) {
         throw new Error(`Previous/Next structure differs in ${file}; review this page manually.`);
     }
     const oldCurrent = new Map();
